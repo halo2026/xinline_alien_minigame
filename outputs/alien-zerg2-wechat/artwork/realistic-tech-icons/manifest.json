@@ -1,0 +1,229 @@
+{
+  "generator": "built-in image_gen",
+  "icons": [
+    {
+      "key": "tech-machine:power",
+      "name": "重弹强化",
+      "prompt": "Use case: stylized-concept. Asset type: one square inventory icon for a hardcore realistic science-fiction tower defense game. Subject: HEAVY AMMUNITION RESEARCH FRAGMENT, a compact titanium ballistic research cartridge containing three large tungsten-tipped armor-piercing rounds, bolted worn gunmetal casing, machined steel bevels, tiny restrained amber status LEDs. Realistic physically based 3D product rendering, military industrial engineering, believable mass, brushed metal micro-scratches, sharp functional shapes. Three-quarter top-down view, object centered filling 82% of square, isolated on flat very dark navy #07121b background. Strong readable silhouette at 64px, clear bright steel highlights, dark cavities, no excessive fine visual noise. No text, letters, numbers, logos, borders, frames, interface, collage, cartoon, vector pictogram, flat illustration, cute rounded plastic, magical effects. This is a physical technology module, not an abstract symbol. Output only this single icon.",
+      "path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-aafda39f-ff82-4d4c-9768-c39e434fd2a9.png",
+      "savedPath": "/Users/ryan/Documents/Codex/2026-09-07/x20/outputs/alien-zerg2-wechat/artwork/realistic-tech-icons/tech-machine-power.png"
+    },
+    {
+      "key": "tech-shotgun:fan",
+      "name": "扇面扩展",
+      "prompt": "Use case: stylized-concept. Asset type: SINGLE square inventory icon in a coherent hardcore photoreal science-fiction military game asset series. Subject: a wedge-shaped shotgun spread-control assembly with five short barrel apertures fanned outward, machined steel recoil housing. Realistic physically based 3D product render, believable functional engineering, dark gunmetal and brushed titanium with selective copper, machined bevels, small screws, slight wear, tactile layered depth, restrained practical colored status lights. Three-quarter top-down camera, compact complete object centered filling 80% of square with clear margin, isolated on uniform very dark navy #07121b. Strong silhouette legible at 64px, crisp bright steel edge highlights, dark mechanical cavities. NO text, letters, numbers, watermark, UI frame, border, decorative glyph, collage, cartoon, flat/vector icon, cute plastic, excessive glow or particles. Render only one physical module.",
+      "path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-1baa0256-0d39-4f09-bf6f-198202c9ab1d.png",
+      "savedPath": "/Users/ryan/Documents/Codex/2026-09-07/x20/outputs/alien-zerg2-wechat/artwork/realistic-tech-icons/tech-shotgun-fan.png"
+    },
+    {
+      "key": "tech-shotgun:push",
+      "name": "冲击弹药",
+      "prompt": "Use case: stylized-concept. Asset type: SINGLE square inventory icon in a coherent hardcore photoreal science-fiction military game asset series. Subject: two broad blunt-nosed kinetic shotgun shells in an industrial impact piston loading cradle, copper impact rings. Realistic physically based 3D product render, believable functional engineering, dark gunmetal and brushed titanium with selective copper, machined bevels, small screws, slight wear, tactile layered depth, restrained practical colored status lights. Three-quarter top-down camera, compact complete object centered filling 80% of square with clear margin, isolated on uniform very dark navy #07121b. Strong silhouette legible at 64px, crisp bright steel edge highlights, dark mechanical cavities. NO text, letters, numbers, watermark, UI frame, border, decorative glyph, collage, cartoon, flat/vector icon, cute plastic, excessive glow or particles. Render only one physical module.",
+      "path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-da63667c-a07d-428f-898a-1ed3d5153fdd.png",
+      "savedPath": "/Users/ryan/Documents/Codex/2026-09-07/x20/outputs/alien-zerg2-wechat/artwork/realistic-tech-icons/tech-shotgun-push.png"
+    },
+    {
+      "key": "tech-machine:range",
+      "name": "远程校准",
+      "prompt": "Use case: stylized-concept. Asset type: SINGLE square inventory icon in a coherent hardcore photoreal science-fiction military game asset series. Subject: a compact ballistic rangefinding module with one long laser collimator tube, adjustable steel rails and amber sensor lens. Realistic physically based 3D product render, believable functional engineering, dark gunmetal and brushed titanium with selective copper, machined bevels, small screws, slight wear, tactile layered depth, restrained practical colored status lights. Three-quarter top-down camera, compact complete object centered filling 80% of square with clear margin, isolated on uniform very dark navy #07121b. Strong silhouette legible at 64px, crisp bright steel edge highlights, dark mechanical cavities. NO text, letters, numbers, watermark, UI frame, border, decorative glyph, collage, cartoon, flat/vector icon, cute plastic, excessive glow or particles. Render only one physical module.",
+      "path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-1e845f06-ba49-472a-b3f0-1510cbb33864.png",
+      "savedPath": "/Users/ryan/Documents/Codex/2026-09-07/x20/outputs/alien-zerg2-wechat/artwork/realistic-tech-icons/tech-machine-range.png"
+    },
+    {
+      "key": "tech-sniper:power",
+      "name": "聚焦狙击",
+      "prompt": "Use case: stylized-concept. Asset type: SINGLE square inventory icon in a coherent hardcore photoreal science-fiction military game asset series. Subject: a precision sniper focusing scope with one large cyan glass objective lens, concentric metal focusing rings and a slim rail mount. Realistic physically based 3D product render, believable functional engineering, dark gunmetal and brushed titanium with selective copper, machined bevels, small screws, slight wear, tactile layered depth, restrained practical colored status lights. Three-quarter top-down camera, compact complete object centered filling 80% of square with clear margin, isolated on uniform very dark navy #07121b. Strong silhouette legible at 64px, crisp bright steel edge highlights, dark mechanical cavities. NO text, letters, numbers, watermark, UI frame, border, decorative glyph, collage, cartoon, flat/vector icon, cute plastic, excessive glow or particles. Render only one physical module.",
+      "path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-e455debb-570c-43e7-bb7c-a7efab64840d.png",
+      "savedPath": "/Users/ryan/Documents/Codex/2026-09-07/x20/outputs/alien-zerg2-wechat/artwork/realistic-tech-icons/tech-sniper-power.png"
+    },
+    {
+      "key": "tech-sniper:range",
+      "name": "超距瞄准",
+      "prompt": "Use case: stylized-concept. Asset type: SINGLE square inventory icon in a coherent hardcore photoreal science-fiction military game asset series. Subject: a long slender telescopic sniper rangefinder with two offset optical lenses and extended silver measurement rail, cyan sensors. Realistic physically based 3D product render, believable functional engineering, dark gunmetal and brushed titanium with selective copper, machined bevels, small screws, slight wear, tactile layered depth, restrained practical colored status lights. Three-quarter top-down camera, compact complete object centered filling 80% of square with clear margin, isolated on uniform very dark navy #07121b. Strong silhouette legible at 64px, crisp bright steel edge highlights, dark mechanical cavities. NO text, letters, numbers, watermark, UI frame, border, decorative glyph, collage, cartoon, flat/vector icon, cute plastic, excessive glow or particles. Render only one physical module.",
+      "path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-3920d0c1-c200-4bb1-96e1-956fc9141ed6.png",
+      "savedPath": "/Users/ryan/Documents/Codex/2026-09-07/x20/outputs/alien-zerg2-wechat/artwork/realistic-tech-icons/tech-sniper-range.png"
+    },
+    {
+      "key": "tech-frost:ice",
+      "name": "深度冷冻",
+      "prompt": "Use case: stylized-concept. Asset type: SINGLE square inventory icon in a coherent hardcore photoreal science-fiction military game asset series. Subject: a thick cryogenic freeze-core module with frost-coated circular steel chamber and cyan coolant visible through glass. Realistic physically based 3D product render, believable functional engineering, dark gunmetal and brushed titanium with selective copper, machined bevels, small screws, slight wear, tactile layered depth, restrained practical colored status lights. Three-quarter top-down camera, compact complete object centered filling 80% of square with clear margin, isolated on uniform very dark navy #07121b. Strong silhouette legible at 64px, crisp bright steel edge highlights, dark mechanical cavities. NO text, letters, numbers, watermark, UI frame, border, decorative glyph, collage, cartoon, flat/vector icon, cute plastic, excessive glow or particles. Render only one physical module.",
+      "path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-8005ce01-5081-4083-998f-72e12e44e374.png",
+      "savedPath": "/Users/ryan/Documents/Codex/2026-09-07/x20/outputs/alien-zerg2-wechat/artwork/realistic-tech-icons/tech-frost-ice.png"
+    },
+    {
+      "key": "tech-flame:blast",
+      "name": "高温燃烧",
+      "prompt": "Use case: stylized-concept. Asset type: SINGLE square inventory icon in a coherent hardcore photoreal science-fiction military game asset series. Subject: a flamethrower ignition chamber with scorched steel nozzle, visible orange-hot ceramic core and reinforced fuel coupling. Realistic physically based 3D product render, believable functional engineering, dark gunmetal and brushed titanium with selective copper, machined bevels, small screws, slight wear, tactile layered depth, restrained practical colored status lights. Three-quarter top-down camera, compact complete object centered filling 80% of square with clear margin, isolated on uniform very dark navy #07121b. Strong silhouette legible at 64px, crisp bright steel edge highlights, dark mechanical cavities. NO text, letters, numbers, watermark, UI frame, border, decorative glyph, collage, cartoon, flat/vector icon, cute plastic, excessive glow or particles. Render only one physical module.",
+      "path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-d7d8d196-3447-4e3e-ad4f-4e5667fe7201.png",
+      "savedPath": "/Users/ryan/Documents/Codex/2026-09-07/x20/outputs/alien-zerg2-wechat/artwork/realistic-tech-icons/tech-flame-blast.png"
+    },
+    {
+      "key": "tech-flame:range",
+      "name": "延伸火流",
+      "prompt": "Use case: stylized-concept. Asset type: SINGLE square inventory icon in a coherent hardcore photoreal science-fiction military game asset series. Subject: a long narrow flamethrower extension nozzle with two braided fuel lines, heatshield fins and tiny orange ignition light. Realistic physically based 3D product render, believable functional engineering, dark gunmetal and brushed titanium with selective copper, machined bevels, small screws, slight wear, tactile layered depth, restrained practical colored status lights. Three-quarter top-down camera, compact complete object centered filling 80% of square with clear margin, isolated on uniform very dark navy #07121b. Strong silhouette legible at 64px, crisp bright steel edge highlights, dark mechanical cavities. NO text, letters, numbers, watermark, UI frame, border, decorative glyph, collage, cartoon, flat/vector icon, cute plastic, excessive glow or particles. Render only one physical module.",
+      "path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-674b2de2-1acb-4439-b002-dd950c2b6ed4.png",
+      "savedPath": "/Users/ryan/Documents/Codex/2026-09-07/x20/outputs/alien-zerg2-wechat/artwork/realistic-tech-icons/tech-flame-range.png"
+    },
+    {
+      "key": "tech-frost:clock",
+      "name": "持久低温",
+      "prompt": "Use case: stylized-concept. Asset type: SINGLE square inventory icon in a coherent hardcore photoreal science-fiction military game asset series. Subject: a compact twin-cylinder cryogenic reservoir with insulated steel tanks and a circular pressure regulator, restrained icy blue light. Realistic physically based 3D product render, believable functional engineering, dark gunmetal and brushed titanium with selective copper, machined bevels, small screws, slight wear, tactile layered depth, restrained practical colored status lights. Three-quarter top-down camera, compact complete object centered filling 80% of square with clear margin, isolated on uniform very dark navy #07121b. Strong silhouette legible at 64px, crisp bright steel edge highlights, dark mechanical cavities. NO text, letters, numbers, watermark, UI frame, border, decorative glyph, collage, cartoon, flat/vector icon, cute plastic, excessive glow or particles. Render only one physical module.",
+      "path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-78afb806-714b-47a1-9332-030d69b36b15.png",
+      "savedPath": "/Users/ryan/Documents/Codex/2026-09-07/x20/outputs/alien-zerg2-wechat/artwork/realistic-tech-icons/tech-frost-clock.png"
+    },
+    {
+      "key": "tech-chain:power",
+      "name": "高压电弧",
+      "prompt": "Use case: stylized-concept. Asset type: SINGLE square inventory icon in a coherent hardcore photoreal science-fiction military game asset series. Subject: a high voltage arc capacitor with two heavy copper coils and separated steel electrode prongs with a small violet spark. Realistic physically based 3D product render, believable functional engineering, dark gunmetal and brushed titanium with selective copper, machined bevels, small screws, slight wear, tactile layered depth, restrained practical colored status lights. Three-quarter top-down camera, compact complete object centered filling 80% of square with clear margin, isolated on uniform very dark navy #07121b. Strong silhouette legible at 64px, crisp bright steel edge highlights, dark mechanical cavities. NO text, letters, numbers, watermark, UI frame, border, decorative glyph, collage, cartoon, flat/vector icon, cute plastic, excessive glow or particles. Render only one physical module.",
+      "path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-a388e6a8-be90-4f95-9742-5e8c22140392.png",
+      "savedPath": "/Users/ryan/Documents/Codex/2026-09-07/x20/outputs/alien-zerg2-wechat/artwork/realistic-tech-icons/tech-chain-power.png"
+    },
+    {
+      "key": "tech-chain:chain",
+      "name": "连锁增幅",
+      "prompt": "Use case: stylized-concept. Asset type: SINGLE square inventory icon in a coherent hardcore photoreal science-fiction military game asset series. Subject: three connected relay nodes linked by thick armored cables, dark metal housings and violet energy contacts. Realistic physically based 3D product render, believable functional engineering, dark gunmetal and brushed titanium with selective copper, machined bevels, small screws, slight wear, tactile layered depth, restrained practical colored status lights. Three-quarter top-down camera, compact complete object centered filling 80% of square with clear margin, isolated on uniform very dark navy #07121b. Strong silhouette legible at 64px, crisp bright steel edge highlights, dark mechanical cavities. NO text, letters, numbers, watermark, UI frame, border, decorative glyph, collage, cartoon, flat/vector icon, cute plastic, excessive glow or particles. Render only one physical module.",
+      "path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-51808cb2-1d6b-4560-a3cf-8074ee1ba37d.png",
+      "savedPath": "/Users/ryan/Documents/Codex/2026-09-07/x20/outputs/alien-zerg2-wechat/artwork/realistic-tech-icons/tech-chain-chain.png"
+    },
+    {
+      "key": "tech-cannon:power",
+      "name": "高爆装药",
+      "prompt": "Use case: stylized-concept. Asset type: SINGLE square inventory icon in a coherent hardcore photoreal science-fiction military game asset series. Subject: a single large artillery shell with removable steel nosecone and exposed orange explosive charge chamber in armored cradle. Realistic physically based 3D product render, believable functional engineering, dark gunmetal and brushed titanium with selective copper, machined bevels, small screws, slight wear, tactile layered depth, restrained practical colored status lights. Three-quarter top-down camera, compact complete object centered filling 80% of square with clear margin, isolated on uniform very dark navy #07121b. Strong silhouette legible at 64px, crisp bright steel edge highlights, dark mechanical cavities. NO text, letters, numbers, watermark, UI frame, border, decorative glyph, collage, cartoon, flat/vector icon, cute plastic, excessive glow or particles. Render only one physical module.",
+      "path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-ac495aae-d5e0-41d0-99d3-52399728eeaa.png",
+      "savedPath": "/Users/ryan/Documents/Codex/2026-09-07/x20/outputs/alien-zerg2-wechat/artwork/realistic-tech-icons/tech-cannon-power.png"
+    },
+    {
+      "key": "tech-cannon:blast",
+      "name": "爆破扩散",
+      "prompt": "Use case: stylized-concept. Asset type: SINGLE square inventory icon in a coherent hardcore photoreal science-fiction military game asset series. Subject: a spherical segmented artillery fragmentation warhead partly enclosed in a hexagonal metal safety collar, amber core. Realistic physically based 3D product render, believable functional engineering, dark gunmetal and brushed titanium with selective copper, machined bevels, small screws, slight wear, tactile layered depth, restrained practical colored status lights. Three-quarter top-down camera, compact complete object centered filling 80% of square with clear margin, isolated on uniform very dark navy #07121b. Strong silhouette legible at 64px, crisp bright steel edge highlights, dark mechanical cavities. NO text, letters, numbers, watermark, UI frame, border, decorative glyph, collage, cartoon, flat/vector icon, cute plastic, excessive glow or particles. Render only one physical module.",
+      "path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-b3bd82cc-09a4-4e8a-95e0-5865c2c45698.png",
+      "savedPath": "/Users/ryan/Documents/Codex/2026-09-07/x20/outputs/alien-zerg2-wechat/artwork/realistic-tech-icons/tech-cannon-blast.png"
+    },
+    {
+      "key": "tech-howitzer:blast",
+      "name": "重型爆破",
+      "prompt": "Use case: stylized-concept. Asset type: SINGLE square inventory icon in a coherent hardcore photoreal science-fiction military game asset series. Subject: three stubby mortar bomblets clustered around a heavy central canister with red-orange arming indicators. Realistic physically based 3D product render, believable functional engineering, dark gunmetal and brushed titanium with selective copper, machined bevels, small screws, slight wear, tactile layered depth, restrained practical colored status lights. Three-quarter top-down camera, compact complete object centered filling 80% of square with clear margin, isolated on uniform very dark navy #07121b. Strong silhouette legible at 64px, crisp bright steel edge highlights, dark mechanical cavities. NO text, letters, numbers, watermark, UI frame, border, decorative glyph, collage, cartoon, flat/vector icon, cute plastic, excessive glow or particles. Render only one physical module.",
+      "path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-b22e63b3-264a-4d26-b904-a94e7498e6cc.png",
+      "savedPath": "/Users/ryan/Documents/Codex/2026-09-07/x20/outputs/alien-zerg2-wechat/artwork/realistic-tech-icons/tech-howitzer-blast.png"
+    },
+    {
+      "key": "tech-howitzer:push",
+      "name": "震荡冲击",
+      "prompt": "Use case: stylized-concept. Asset type: SINGLE square inventory icon in a coherent hardcore photoreal science-fiction military game asset series. Subject: a circular shockwave transducer built from nested steel plates and three heavy hydraulic pistons, orange pressure core. Realistic physically based 3D product render, believable functional engineering, dark gunmetal and brushed titanium with selective copper, machined bevels, small screws, slight wear, tactile layered depth, restrained practical colored status lights. Three-quarter top-down camera, compact complete object centered filling 80% of square with clear margin, isolated on uniform very dark navy #07121b. Strong silhouette legible at 64px, crisp bright steel edge highlights, dark mechanical cavities. NO text, letters, numbers, watermark, UI frame, border, decorative glyph, collage, cartoon, flat/vector icon, cute plastic, excessive glow or particles. Render only one physical module.",
+      "path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-c6629313-fa1a-4480-8c12-60987c8566ad.png",
+      "savedPath": "/Users/ryan/Documents/Codex/2026-09-07/x20/outputs/alien-zerg2-wechat/artwork/realistic-tech-icons/tech-howitzer-push.png"
+    },
+    {
+      "key": "tech-rocket:power",
+      "name": "高能战斗部",
+      "prompt": "Use case: stylized-concept. Asset type: SINGLE square inventory icon in a coherent hardcore photoreal science-fiction military game asset series. Subject: a compact rocket warhead with sharp steel cone, cutaway copper energy core and armored green-lit mounting cradle. Realistic physically based 3D product render, believable functional engineering, dark gunmetal and brushed titanium with selective copper, machined bevels, small screws, slight wear, tactile layered depth, restrained practical colored status lights. Three-quarter top-down camera, compact complete object centered filling 80% of square with clear margin, isolated on uniform very dark navy #07121b. Strong silhouette legible at 64px, crisp bright steel edge highlights, dark mechanical cavities. NO text, letters, numbers, watermark, UI frame, border, decorative glyph, collage, cartoon, flat/vector icon, cute plastic, excessive glow or particles. Render only one physical module.",
+      "path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-60796a3d-41f1-4434-9baa-84f29b748f30.png",
+      "savedPath": "/Users/ryan/Documents/Codex/2026-09-07/x20/outputs/alien-zerg2-wechat/artwork/realistic-tech-icons/tech-rocket-power.png"
+    },
+    {
+      "key": "tech-rocket:range",
+      "name": "增程推进",
+      "prompt": "Use case: stylized-concept. Asset type: SINGLE square inventory icon in a coherent hardcore photoreal science-fiction military game asset series. Subject: a miniature rocket booster propulsion module with four visible exhaust bells, steel fuel tank and restrained green ignition light. Realistic physically based 3D product render, believable functional engineering, dark gunmetal and brushed titanium with selective copper, machined bevels, small screws, slight wear, tactile layered depth, restrained practical colored status lights. Three-quarter top-down camera, compact complete object centered filling 80% of square with clear margin, isolated on uniform very dark navy #07121b. Strong silhouette legible at 64px, crisp bright steel edge highlights, dark mechanical cavities. NO text, letters, numbers, watermark, UI frame, border, decorative glyph, collage, cartoon, flat/vector icon, cute plastic, excessive glow or particles. Render only one physical module.",
+      "path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-6e9dba58-1099-4f51-a0a0-20ddfa2cc734.png",
+      "savedPath": "/Users/ryan/Documents/Codex/2026-09-07/x20/outputs/alien-zerg2-wechat/artwork/realistic-tech-icons/tech-rocket-range.png"
+    },
+    {
+      "key": "tech-shrink:clock",
+      "name": "持续压缩",
+      "prompt": "Use case: stylized-concept. Asset type: SINGLE square inventory icon in a coherent hardcore photoreal science-fiction military game asset series. Subject: a gravity containment capacitor with stacked steel toroidal rings enclosing a violet energized cylinder. Realistic physically based 3D product render, believable functional engineering, dark gunmetal and brushed titanium with selective copper, machined bevels, small screws, slight wear, tactile layered depth, restrained practical colored status lights. Three-quarter top-down camera, compact complete object centered filling 80% of square with clear margin, isolated on uniform very dark navy #07121b. Strong silhouette legible at 64px, crisp bright steel edge highlights, dark mechanical cavities. NO text, letters, numbers, watermark, UI frame, border, decorative glyph, collage, cartoon, flat/vector icon, cute plastic, excessive glow or particles. Render only one physical module.",
+      "path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-91cccace-24fb-4434-9547-2eca7b1b79d2.png",
+      "savedPath": "/Users/ryan/Documents/Codex/2026-09-07/x20/outputs/alien-zerg2-wechat/artwork/realistic-tech-icons/tech-shrink-clock.png"
+    },
+    {
+      "key": "tech-wave:fan",
+      "name": "宽域震波",
+      "prompt": "Use case: stylized-concept. Asset type: SINGLE square inventory icon in a coherent hardcore photoreal science-fiction military game asset series. Subject: a wide fan-shaped acoustic emitter array with five curved steel vanes and teal emitter surfaces. Realistic physically based 3D product render, believable functional engineering, dark gunmetal and brushed titanium with selective copper, machined bevels, small screws, slight wear, tactile layered depth, restrained practical colored status lights. Three-quarter top-down camera, compact complete object centered filling 80% of square with clear margin, isolated on uniform very dark navy #07121b. Strong silhouette legible at 64px, crisp bright steel edge highlights, dark mechanical cavities. NO text, letters, numbers, watermark, UI frame, border, decorative glyph, collage, cartoon, flat/vector icon, cute plastic, excessive glow or particles. Render only one physical module.",
+      "path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-028061f5-19ef-4606-a473-5c91520c19f2.png",
+      "savedPath": "/Users/ryan/Documents/Codex/2026-09-07/x20/outputs/alien-zerg2-wechat/artwork/realistic-tech-icons/tech-wave-fan.png"
+    },
+    {
+      "key": "tech-shrink:shrink",
+      "name": "强效压缩",
+      "prompt": "Use case: stylized-concept. Asset type: SINGLE square inventory icon in a coherent hardcore photoreal science-fiction military game asset series. Subject: a gravity compression lens held by four inward-facing mechanical claws, violet glass core and massive dark alloy frame. Realistic physically based 3D product render, believable functional engineering, dark gunmetal and brushed titanium with selective copper, machined bevels, small screws, slight wear, tactile layered depth, restrained practical colored status lights. Three-quarter top-down camera, compact complete object centered filling 80% of square with clear margin, isolated on uniform very dark navy #07121b. Strong silhouette legible at 64px, crisp bright steel edge highlights, dark mechanical cavities. NO text, letters, numbers, watermark, UI frame, border, decorative glyph, collage, cartoon, flat/vector icon, cute plastic, excessive glow or particles. Render only one physical module.",
+      "path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-6514124e-49ab-45a1-acae-534a1606b152.png",
+      "savedPath": "/Users/ryan/Documents/Codex/2026-09-07/x20/outputs/alien-zerg2-wechat/artwork/realistic-tech-icons/tech-shrink-shrink.png"
+    },
+    {
+      "key": "tech-wave:push",
+      "name": "强力推进",
+      "prompt": "Use case: stylized-concept. Asset type: SINGLE square inventory icon in a coherent hardcore photoreal science-fiction military game asset series. Subject: a force-wave ram with three forward-facing circular steel emitter pistons, thick mechanical housing and teal cores. Realistic physically based 3D product render, believable functional engineering, dark gunmetal and brushed titanium with selective copper, machined bevels, small screws, slight wear, tactile layered depth, restrained practical colored status lights. Three-quarter top-down camera, compact complete object centered filling 80% of square with clear margin, isolated on uniform very dark navy #07121b. Strong silhouette legible at 64px, crisp bright steel edge highlights, dark mechanical cavities. NO text, letters, numbers, watermark, UI frame, border, decorative glyph, collage, cartoon, flat/vector icon, cute plastic, excessive glow or particles. Render only one physical module.",
+      "path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-37fb836c-9994-4e49-861c-990af2972b47.png",
+      "savedPath": "/Users/ryan/Documents/Codex/2026-09-07/x20/outputs/alien-zerg2-wechat/artwork/realistic-tech-icons/tech-wave-push.png"
+    },
+    {
+      "key": "chip-attack",
+      "name": "攻击",
+      "prompt": "Use case: stylized-concept. Asset type: SINGLE square inventory icon in a coherent hardcore photoreal science-fiction military game asset series. Subject: a square plug-in military enhancement microchip with exposed copper power coils and a miniature steel projectile core. Realistic physically based 3D product render, believable functional engineering, dark gunmetal and brushed titanium with selective copper, machined bevels, small screws, slight wear, tactile layered depth, restrained practical colored status lights. Three-quarter top-down camera, compact complete object centered filling 80% of square with clear margin, isolated on uniform very dark navy #07121b. Strong silhouette legible at 64px, crisp bright steel edge highlights, dark mechanical cavities. NO text, letters, numbers, watermark, UI frame, border, decorative glyph, collage, cartoon, flat/vector icon, cute plastic, excessive glow or particles. Render only one physical module.",
+      "path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-bfed4c60-57b1-4d30-b657-83df9f73706f.png",
+      "savedPath": "/Users/ryan/Documents/Codex/2026-09-07/x20/outputs/alien-zerg2-wechat/artwork/realistic-tech-icons/chip-attack.png"
+    },
+    {
+      "key": "chip-haste",
+      "name": "射速",
+      "prompt": "Use case: stylized-concept. Asset type: SINGLE square inventory icon in a coherent hardcore photoreal science-fiction military game asset series. Subject: a square plug-in military enhancement microchip containing a miniature rotary feed gear and three parallel gold contacts, amber status light. Realistic physically based 3D product render, believable functional engineering, dark gunmetal and brushed titanium with selective copper, machined bevels, small screws, slight wear, tactile layered depth, restrained practical colored status lights. Three-quarter top-down camera, compact complete object centered filling 80% of square with clear margin, isolated on uniform very dark navy #07121b. Strong silhouette legible at 64px, crisp bright steel edge highlights, dark mechanical cavities. NO text, letters, numbers, watermark, UI frame, border, decorative glyph, collage, cartoon, flat/vector icon, cute plastic, excessive glow or particles. Render only one physical module.",
+      "path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-1939c483-d8eb-40d5-a111-d67d9337bd6a.png",
+      "savedPath": "/Users/ryan/Documents/Codex/2026-09-07/x20/outputs/alien-zerg2-wechat/artwork/realistic-tech-icons/chip-haste.png"
+    },
+    {
+      "key": "chip-hp",
+      "name": "生命",
+      "prompt": "Use case: stylized-concept. Asset type: SINGLE square inventory icon in a coherent hardcore photoreal science-fiction military game asset series. Subject: a square plug-in military enhancement microchip containing two green bioreactor ampoules protected by a steel cage. Realistic physically based 3D product render, believable functional engineering, dark gunmetal and brushed titanium with selective copper, machined bevels, small screws, slight wear, tactile layered depth, restrained practical colored status lights. Three-quarter top-down camera, compact complete object centered filling 80% of square with clear margin, isolated on uniform very dark navy #07121b. Strong silhouette legible at 64px, crisp bright steel edge highlights, dark mechanical cavities. NO text, letters, numbers, watermark, UI frame, border, decorative glyph, collage, cartoon, flat/vector icon, cute plastic, excessive glow or particles. Render only one physical module.",
+      "path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-bd80ff21-78e7-428f-808f-7d33956b0dd1.png",
+      "savedPath": "/Users/ryan/Documents/Codex/2026-09-07/x20/outputs/alien-zerg2-wechat/artwork/realistic-tech-icons/chip-hp.png"
+    },
+    {
+      "key": "chip-crit",
+      "name": "暴击",
+      "prompt": "Use case: stylized-concept. Asset type: SINGLE square inventory icon in a coherent hardcore photoreal science-fiction military game asset series. Subject: a square plug-in military enhancement microchip with a red precision targeting lens and needle-shaped tungsten penetrator. Realistic physically based 3D product render, believable functional engineering, dark gunmetal and brushed titanium with selective copper, machined bevels, small screws, slight wear, tactile layered depth, restrained practical colored status lights. Three-quarter top-down camera, compact complete object centered filling 80% of square with clear margin, isolated on uniform very dark navy #07121b. Strong silhouette legible at 64px, crisp bright steel edge highlights, dark mechanical cavities. NO text, letters, numbers, watermark, UI frame, border, decorative glyph, collage, cartoon, flat/vector icon, cute plastic, excessive glow or particles. Render only one physical module.",
+      "path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-ddaffbf5-6a6c-47cb-9fec-7dc8afcb3f8e.png",
+      "savedPath": "/Users/ryan/Documents/Codex/2026-09-07/x20/outputs/alien-zerg2-wechat/artwork/realistic-tech-icons/chip-crit.png"
+    },
+    {
+      "key": "chip-repair",
+      "name": "修复",
+      "prompt": "Use case: stylized-concept. Asset type: SINGLE square inventory icon in a coherent hardcore photoreal science-fiction military game asset series. Subject: a square plug-in military enhancement microchip with a tiny precision robotic repair clamp and a green nanofluid capsule. Realistic physically based 3D product render, believable functional engineering, dark gunmetal and brushed titanium with selective copper, machined bevels, small screws, slight wear, tactile layered depth, restrained practical colored status lights. Three-quarter top-down camera, compact complete object centered filling 80% of square with clear margin, isolated on uniform very dark navy #07121b. Strong silhouette legible at 64px, crisp bright steel edge highlights, dark mechanical cavities. NO text, letters, numbers, watermark, UI frame, border, decorative glyph, collage, cartoon, flat/vector icon, cute plastic, excessive glow or particles. Render only one physical module.",
+      "path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-3ab80c72-bfb2-41c8-99e1-f42ac4695858.png",
+      "savedPath": "/Users/ryan/Documents/Codex/2026-09-07/x20/outputs/alien-zerg2-wechat/artwork/realistic-tech-icons/chip-repair.png"
+    },
+    {
+      "key": "chip-armor",
+      "name": "护甲",
+      "prompt": "Use case: stylized-concept. Asset type: SINGLE square inventory icon in a coherent hardcore photoreal science-fiction military game asset series. Subject: a square plug-in military enhancement microchip carrying three overlapping thick steel armor plates with visible bolts. Realistic physically based 3D product render, believable functional engineering, dark gunmetal and brushed titanium with selective copper, machined bevels, small screws, slight wear, tactile layered depth, restrained practical colored status lights. Three-quarter top-down camera, compact complete object centered filling 80% of square with clear margin, isolated on uniform very dark navy #07121b. Strong silhouette legible at 64px, crisp bright steel edge highlights, dark mechanical cavities. NO text, letters, numbers, watermark, UI frame, border, decorative glyph, collage, cartoon, flat/vector icon, cute plastic, excessive glow or particles. Render only one physical module.",
+      "path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-85909a72-33d4-4807-93ce-aebde9b7d82a.png",
+      "savedPath": "/Users/ryan/Documents/Codex/2026-09-07/x20/outputs/alien-zerg2-wechat/artwork/realistic-tech-icons/chip-armor.png"
+    },
+    {
+      "key": "chip-wheel",
+      "name": "轮刀",
+      "prompt": "Use case: stylized-concept. Asset type: SINGLE square inventory icon in a coherent hardcore photoreal science-fiction military game asset series. Subject: a square plug-in military enhancement microchip containing a prominent circular serrated steel cutting wheel, heavy axle bearing and amber status light. Realistic physically based 3D product render, believable functional engineering, dark gunmetal and brushed titanium with selective copper, machined bevels, small screws, slight wear, tactile layered depth, restrained practical colored status lights. Three-quarter top-down camera, compact complete object centered filling 80% of square with clear margin, isolated on uniform very dark navy #07121b. Strong silhouette legible at 64px, crisp bright steel edge highlights, dark mechanical cavities. NO text, letters, numbers, watermark, UI frame, border, decorative glyph, collage, cartoon, flat/vector icon, cute plastic, excessive glow or particles. Render only one physical module.",
+      "path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-211f989c-ed4a-48fc-98ff-f1a6f7a5a805.png",
+      "savedPath": "/Users/ryan/Documents/Codex/2026-09-07/x20/outputs/alien-zerg2-wechat/artwork/realistic-tech-icons/chip-wheel.png"
+    },
+    {
+      "key": "chip-move",
+      "name": "移动",
+      "prompt": "Use case: stylized-concept. Asset type: SINGLE square inventory icon in a coherent hardcore photoreal science-fiction military game asset series. Subject: a square plug-in military enhancement microchip with a miniature mechanical turbine impeller and two silver acceleration vanes, blue status light. Realistic physically based 3D product render, believable functional engineering, dark gunmetal and brushed titanium with selective copper, machined bevels, small screws, slight wear, tactile layered depth, restrained practical colored status lights. Three-quarter top-down camera, compact complete object centered filling 80% of square with clear margin, isolated on uniform very dark navy #07121b. Strong silhouette legible at 64px, crisp bright steel edge highlights, dark mechanical cavities. NO text, letters, numbers, watermark, UI frame, border, decorative glyph, collage, cartoon, flat/vector icon, cute plastic, excessive glow or particles. Render only one physical module.",
+      "path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-97327f31-21f1-400b-a9ad-8309e1351430.png",
+      "savedPath": "/Users/ryan/Documents/Codex/2026-09-07/x20/outputs/alien-zerg2-wechat/artwork/realistic-tech-icons/chip-move.png"
+    },
+    {
+      "key": "chip-grenade",
+      "name": "榴弹",
+      "prompt": "Use case: stylized-concept. Asset type: SINGLE square inventory icon in a coherent hardcore photoreal science-fiction military game asset series. Subject: a square plug-in military enhancement microchip with a miniature ribbed grenade warhead in a safety clamp, orange arming lens. Realistic physically based 3D product render, believable functional engineering, dark gunmetal and brushed titanium with selective copper, machined bevels, small screws, slight wear, tactile layered depth, restrained practical colored status lights. Three-quarter top-down camera, compact complete object centered filling 80% of square with clear margin, isolated on uniform very dark navy #07121b. Strong silhouette legible at 64px, crisp bright steel edge highlights, dark mechanical cavities. NO text, letters, numbers, watermark, UI frame, border, decorative glyph, collage, cartoon, flat/vector icon, cute plastic, excessive glow or particles. Render only one physical module.",
+      "path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-89cb9e48-c266-4247-abf3-2589dcf79cd0.png",
+      "savedPath": "/Users/ryan/Documents/Codex/2026-09-07/x20/outputs/alien-zerg2-wechat/artwork/realistic-tech-icons/chip-grenade.png"
+    },
+    {
+      "key": "chip-cooldown",
+      "name": "榴弹冷却",
+      "prompt": "Use case: stylized-concept. Asset type: SINGLE square inventory icon in a coherent hardcore photoreal science-fiction military game asset series. Subject: a square plug-in military enhancement microchip containing a grenade feed chamber wrapped in copper cooling tubes and blue coolant reservoir. Realistic physically based 3D product render, believable functional engineering, dark gunmetal and brushed titanium with selective copper, machined bevels, small screws, slight wear, tactile layered depth, restrained practical colored status lights. Three-quarter top-down camera, compact complete object centered filling 80% of square with clear margin, isolated on uniform very dark navy #07121b. Strong silhouette legible at 64px, crisp bright steel edge highlights, dark mechanical cavities. NO text, letters, numbers, watermark, UI frame, border, decorative glyph, collage, cartoon, flat/vector icon, cute plastic, excessive glow or particles. Render only one physical module.",
+      "path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-1f1df8af-8390-4862-8d0d-b3c5d9edaff8.png",
+      "savedPath": "/Users/ryan/Documents/Codex/2026-09-07/x20/outputs/alien-zerg2-wechat/artwork/realistic-tech-icons/chip-cooldown.png"
+    }
+  ]
+}

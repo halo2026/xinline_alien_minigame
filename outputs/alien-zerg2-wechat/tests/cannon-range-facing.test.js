@@ -1,0 +1,7 @@
+const test=require('node:test'),assert=require('node:assert/strict');
+for(const root of ['../shared','../../alien-wolf-wechat/shared']){
+ const {Game}=require(root+'/core'),{View}=require(root+'/view');
+ test(root+' cannon sprite faces travel, with no extra half turn',()=>{for(const angle of [0,Math.PI/2,Math.PI,-Math.PI/2]){let rotation;View.prototype.tacticalSprite.call({sprite(...args){rotation=args[5];}},598,0,0,0,.18,angle);assert.equal(rotation,angle);}});
+ test(root+' basic and upgraded cannon remain close range; rocket remains long range',()=>{const g=new Game();for(const rank of [0,1,5])for(const [branch,range,minRange]of [[0,250,80],[1,210,50]]){const t={id:12205,x:800,y:800,angle:0,techBranch:branch,techRank:rank,techSpec:0},s=g.towerStats(t);assert.equal(s.range,range);assert.equal(s.minRange,minRange);assert.equal(g.fireArtillery(t,{x:800+range+1,y:800},s),false);assert.equal(g.bullets.length,0);g.fireArtillery(t,{x:800+range-1,y:800},s);assert(g.bullets.length>0);g.bullets=[];}assert(g.towerStats({id:12205,techBranch:2}).range>=500);});
+ test(root+' arcing shell points along its visible trajectory uphill and downhill',()=>{const g=new Game(),b={mode:'cannon',sx:0,sy:0,tx:200,ty:0,arc:35,life:1,visualScale:1};for(const age of [.2,.8]){b.age=age;let rotation;const v={game:g,circle(){},tacticalSprite:View.prototype.tacticalSprite,sprite(){},ctx:{save(){},restore(){},translate(){},rotate(a){rotation=a;}}};View.prototype.drawArtillery.call(v,b);assert(age<.5?rotation<0:rotation>0);assert(Math.cos(rotation)>0);}});
+}

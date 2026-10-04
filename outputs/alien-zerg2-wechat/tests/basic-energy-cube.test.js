@@ -1,0 +1,6 @@
+const test=require('node:test'),assert=require('node:assert/strict');
+for(const root of ['../shared','../../alien-wolf-wechat/shared']){
+const {Game}=require(root+'/core'),{View}=require(root+'/view');
+test(root+' base energy shoots discrete cubes; operator conversion restores flame',()=>{const g=new Game(),t={id:12202,x:900,y:900,angle:0,techBranch:null,techRank:0};assert.equal(g.towerStats(t).mode,'energy');g.fire(t,'energy');const b=g.bullets[0];assert.equal(b.kind,'energy');assert.equal(b.vx,420);assert.equal(g.trails.length,0);assert.equal(b.life*b.vx,g.towerStats(t).range+40);assert.equal(b.damage,300);assert.equal(g.fx.some(f=>f.kind==='flamemuzzle'),false);g.state='playing';g.gold=10000;g.towers=[t];g.progress.operators['12202:0']=true;assert(g.upgradePlacedTower(t,0,-1));assert.equal(g.towerStats(t).mode,'flame');g.fireFlame(t);assert.equal(g.bullets.at(-1).kind,'flamethrower');});
+test(root+' energy projectile uses larger yellow square geometry',()=>{const rects=[],c={save(){},restore(){},translate(){},rotate(){},fillRect(...args){rects.push({args,color:this.fillStyle});}};View.prototype.drawEnergyCube.call({ctx:c},{x:100,y:100,angle:0});assert(rects.some(r=>r.args[2]===12&&r.args[3]===12&&r.color==='#eab82b'));});
+}

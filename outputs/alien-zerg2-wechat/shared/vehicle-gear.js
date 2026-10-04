@@ -1,0 +1,86 @@
+(function(){
+const dist=(a,b)=>Math.hypot(a.x-b.x,a.y-b.y),clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+function segment(p,a,b){const dx=b.x-a.x,dy=b.y-a.y,t=clamp(((p.x-a.x)*dx+(p.y-a.y)*dy)/(dx*dx+dy*dy||1),0,1);return Math.hypot(p.x-a.x-dx*t,p.y-a.y-dy*t);}
+function footDirection(angle){return {index:Math.round(Math.acos(clamp(Math.sin(angle),-1,1))/Math.PI*32),flip:Math.cos(angle)<0};}
+const footSources=[1,0,3,2,4,5,6,7,8,9,10,11,12,13,14,16,15,18,20,17,22,19,24,21,26,23,28,25,30,27,29,31,32];
+const footOffsets=[[3.6,21.9],[15.2,8.4],[29.3,12.3],[30.8,8.4],[38.1,6.2],[36.4,7.3],[42.3,1.9],[42.3,-0.4],[46.3,-0.4],[45,-3.6],[54.6,-8.1],[43.9,-8.8],[56.9,-10.5],[40.7,-14.2],[58.4,-15],[55.6,-18.9],[40.2,-20.5],[52.1,-25.3],[45.4,-30.3],[37.8,-39.3],[36.2,-32.5],[35.6,-42],[32.6,-35.5],[22.8,-43],[18,-38.8],[22.9,-44.5],[11.7,-40.3],[17.6,-44.7],[5.1,-39.2],[4.9,-42.6],[-2.4,-41.2],[-0.5,-44.2],[-3.7,-39.9]];
+function footMuzzle(p,angle){const d=footDirection(angle),q=footOffsets[d.index];return {x:p.x+q[0]*(d.flip?-1:1),y:p.y-25+q[1]};}
+function install(Game,P,D){P.S.installGame(Game,P);const p=Game.prototype;
+ p.syncEquipmentEffects=function(stats){const u=this.player,old=u.vehicleGear||{};u.onFoot=false;this.progress.onFoot=false;u.vehicleGear=P.equippedGear(this.progress);u.equipmentSkills={};u.baseArmor=u.armor;u.wheelDamage=stats.melee_fight||0;u.grenadeBonus=stats.throw_atk||0;if(u.vehicleGear.loader&&!old.loader)u.grenadeUses=2;u.doubleGrenade=!!u.vehicleGear.loader||!!u.pickedDoubleGrenade;if(!u.doubleGrenade)u.grenadeUses=Math.min(1,u.grenadeUses||1);u.airCd=u.airCd??10;if(!u.vehicleGear.antiair){u.airSalvo=null;u.airCd=10;}u.wheelCd=u.wheelCd??.25;};
+ // Capture a lethal transition once; scheduled follow-up blasts keep the death position.
+ p.setOnFoot=function(enabled){if(enabled||this.player.hp<=0)return false;this.progress.onFoot=!!enabled;this.player.onFoot=!!enabled;this.player.vx=this.player.vy=0;this.move={x:0,y:0};this.player.stepPhase=0;this.progressDirty=true;return true;};
+ const update=p.update;p.update=function(dt){const u=this.player,x=u.x,y=u.y;const result=update.call(this,dt);const travel=dist(u,{x,y});u.footMoving=u.onFoot&&u.hp>0&&travel>.05&&travel<80;if(u.footMoving)u.stepPhase=(u.stepPhase||0)+travel/95;return result;};
+ const muzzle=p.muzzle;p.muzzle=function(from,angle,kind){return from===this.player&&from.onFoot?footMuzzle(from,angle):muzzle.call(this,from,angle,kind);};
+ const hurt=p.hurt;p.hurt=function(target,...args){const alive=target===this.player&&target.hp>0,result=hurt.call(this,target,...args);if(alive&&target.hp<=0&&target.vehicleGear?.nuke){const gear=target.vehicleGear.nuke,origin={x:target.x,y:target.y};this.gearNukes??=[];for(let i=0;i<gear.tier;i++){const angle=this.random()*Math.PI*2,r=i?Math.sqrt(this.random())*100:0;this.gearNukes.push({x:origin.x+Math.cos(angle)*r,y:origin.y+Math.sin(angle)*r,at:this.time+i*.2,damage:gear.stats.nuke_damage});}this.updateGearNukes();}return result;};
+ p.updateGearNukes=function(){const queue=this.gearNukes||[];this.gearNukes=queue.filter(b=>b.at>this.time+1e-8);for(const b of queue)if(b.at<=this.time+1e-8){this.tacticalFX(3214,b.x,b.y-185);for(const e of this.enemies)if(e.hp>0&&!e.hidden&&!e.chest&&dist(e,b)<=320)this.damage(e,b.damage,'explosion');this.events.push('nuke');}};
+ p.repairBuildings=function(dt){this.gearRepairs=[];const u=this.player,gear=u.vehicleGear?.repair;if(!gear||u.hp<=0||this.cleanup)return;
+ // Wolf's exit HP is an escape counter, not a repairable building.
+ const targets=new Set([...(D.campaign?.exitPoint||D.campaignConfig?.convoy?[]:(this.refineries||[this.refinery])),...(this.buildings||[]),...(this.towers||[]),...(this.tacticalTowers||[])]);
+ for(const b of targets)if(b&&b!==u&&!b.enemy&&b.hp>0&&Number.isFinite(b.maxHp)&&b.hp<b.maxHp&&dist(b,u)<=180){b.hp=Math.min(b.maxHp,b.hp+gear.stats.repair_rate*dt);this.gearRepairs.push(b);}
+ };
+ const take=p.take;p.take=function(item){if(item.doubleGrenade)this.player.pickedDoubleGrenade=true;return take.call(this,item);};
+ p.updateEquipmentEffects=function(dt){this.updateGearNukes();this.repairBuildings(dt);const u=this.player,g=u.vehicleGear||{};this.gearTracks??=[];this.gearMissiles??=[];this.gearSlashes??=[];this.ramContacts??=new Set();const prev=this.gearPrevious||{x:u.x,y:u.y},travel=dist(prev,u);this.gearPrevious={x:u.x,y:u.y};
+ this.gearSlashes=this.gearSlashes.filter(f=>this.time-f.born<.24);
+ this.gearTracks=this.gearTracks.filter(t=>this.time-t.born<18);
+ if(g.fire){u.fireCycleStart??=this.time;u.fireActive=(this.time-u.fireCycleStart)%20<10;}else{u.fireCycleStart=null;u.fireActive=false;}
+ // Each ground segment stays at its world position and expires by age only.
+ if(g.fire&&u.fireActive&&u.hp>0&&!this.cleanup&&travel>.5&&travel<80&&(this.hasGround?.(u.x,u.y)??true)){
+  const last=this.gearTracks.at(-1);if(!last||dist(last.b,u)>16){const a=last&&this.time-last.born<.5&&dist(last.b,prev)<80?last.b:prev;this.gearTracks.push({a:{...a},b:{x:u.x,y:u.y},born:this.time,dps:g.fire.stats.trail_dps*2});}
+ }
+ // Unequipping stops new tracks; existing fire finishes its natural lifetime.
+ if(u.hp>0&&!this.cleanup){
+  if(u.wheelDamage>0){u.wheelCd-=dt;if(u.wheelCd<=1e-8){u.wheelCd+=.25;let hit=false;for(const e of this.enemies)if(e.hp>0&&!e.air&&!e.hidden&&!e.chest&&dist(e,u)<=100){this.damage(e,u.wheelDamage*.25,'wheel');hit=true;}if(hit)this.gearSlashes.push({x:u.x,y:u.y,angle:u.angle,born:this.time});}}
+  const contacts=new Set();for(const e of this.enemies){if(e.hp<=0||e.air||e.hidden||e.chest)continue;const nativeScale=D.unitTypes[e.id]?.scale||e.scale||1,small=!(e.boss)&&nativeScale<.85;if(!small)continue;const radius=22+nativeScale*35,dx=e.x-u.x,dy=e.y-u.y,front=dx*Math.cos(u.angle)+dy*Math.sin(u.angle);if(segment(e,prev,u)>radius||front< -12)continue;contacts.add(e);if(!g.ram||travel<.5||travel>80||this.ramContacts.has(e)||(e.ramNext||0)>this.time)continue;
+   const outward=Math.atan2(dy,dx),angle=u.angle+Math.atan2(Math.sin(outward-u.angle),Math.cos(outward-u.angle))*.65,distance=g.ram.tier*100*clamp(1-nativeScale,.2,.8);e.ramNext=this.time+.8;e.lastHitAngle=angle;e.ramImpulse={angle,left:distance,speed:distance/.25};this.damage(e,g.ram.stats.ram_damage,'ram');if(e.hp<=0){const corpse=this.corpses.find(c=>c.serial===this.kills);if(corpse)corpse.ramDistance=distance;}}
+  this.ramContacts=contacts;
+  if(g.antiair){u.airCd=Math.max(0,u.airCd-dt);if(!u.airSalvo&&u.airCd<=0&&this.enemies.some(e=>e.air&&!e.hidden&&e.hp>0&&dist(e,u)<900)){u.airSalvo={left:[1,2,4,6][g.antiair.tier-1],next:this.time};u.airCd=10;}
+   const salvo=u.airSalvo;if(salvo&&this.time+1e-8>=salvo.next){const targets=this.enemies.filter(e=>e.air&&!e.hidden&&e.hp>0&&dist(e,u)<1000).sort((a,b)=>{const committed=e=>this.gearMissiles.filter(m=>m.target===e).reduce((n,m)=>n+m.damage,0);return (a.hp-committed(a)<=0)-(b.hp-committed(b)<=0)||dist(a,u)-dist(b,u);});const e=targets[0];if(e){const a=u.angle-Math.PI/3,damage=Math.max(g.antiair.stats.air_damage,([12509,12516].includes(e.id)&&!e.boss)?e.maxHp*(g.antiair.tier===4?1:.5):0);this.gearMissiles.push({x:u.x,y:u.y-20,angle:a,target:e,point:{x:e.x,y:e.y},damage,speed:430,age:0,trail:[]});this.events.push('throw');}salvo.left--;salvo.next+=.2;if(!salvo.left||!e)u.airSalvo=null;}
+  }
+ }else{u.airSalvo=null;this.ramContacts.clear();}
+ for(const e of this.enemies){if(e.hp<=0||e.hidden||e.air||e.chest)continue;if(e.ramImpulse){const n=e.ramImpulse,step=Math.min(n.left,n.speed*dt);for(let i=0;i<step;i+=3){const d=Math.min(3,step-i),x=e.x+Math.cos(n.angle)*d,y=e.y+Math.sin(n.angle)*d;if(this.nav.blocked(x,y)||!(this.hasGround?.(x,y)??true)){n.left=0;break;}e.x=x;e.y=y;}n.left-=step;e.frozen=Math.max(e.frozen||0,dt+.01);e.route=[];if(n.left<=0)e.ramImpulse=null;}
+  const track=this.gearTracks.find(t=>this.time-t.born<4&&segment(e,t.a,t.b)<30);if(track){e.gearBurnUntil=this.time+2;e.gearBurnDps=track.dps;}
+  if(e.gearBurnUntil>this.time){e.gearBurnTick=(e.gearBurnTick||0)+dt;if(e.gearBurnTick>=.25-1e-8){this.damage(e,e.gearBurnDps*e.gearBurnTick,'gearFire');e.gearBurnTick=0;}}else if(e.gearBurnTick){this.damage(e,(e.gearBurnDps||0)*e.gearBurnTick,'gearFire');e.gearBurnTick=0;}
+ }
+ for(const m of this.gearMissiles){m.age+=dt;const target=m.target;if(target?.hp>0&&!target.hidden)m.point={x:target.x,y:target.y};else m.target=null;const q=m.point,d=dist(m,q),heading=Math.atan2(q.y-m.y,q.x-m.x),turn=Math.atan2(Math.sin(heading-m.angle),Math.cos(heading-m.angle));m.angle+=clamp(turn,-(m.age>4?20:3.8)*dt,(m.age>4?20:3.8)*dt);const speed=Math.max(m.speed,(target?.speed||0)+150),old={x:m.x,y:m.y};m.x+=Math.cos(m.angle)*speed*dt;m.y+=Math.sin(m.angle)*speed*dt;m.trail.push(old);if(m.trail.length>18)m.trail.shift();if(segment(q,old,m)<16||(m.age>5&&d<speed*dt+16)||(!m.target&&m.age>6)){m.done=true;if(m.target)this.damage(m.target,m.damage,'antiair');this.missileAirburst(q);this.events.push('grenade');}}
+ this.gearMissiles=this.gearMissiles.filter(m=>!m.done);
+ this.updateSatellites(dt);
+ };
+ p.updateSatellites=function(dt){
+ const hosts=[this.player,...this.towers],active=new Set();this.satelliteHosts??=new Set();
+ for(const h of hosts){const gear=h===this.player?h.vehicleGear?.satellite:this.towerGear(h).satellite;
+ if(!gear||this.cleanup||h.hp<=0||h.life<=0){h.satellites=[];continue;}active.add(h);
+ const n=gear.tier,r=h===this.player?64:76,phase=this.time*1.8;
+ if(h.satelliteGear!==gear.id||h.satellites?.length!==n){h.satelliteGear=gear.id;h.satellites=Array.from({length:n},(_,i)=>({x:h.x+Math.cos(phase+i*Math.PI*2/n)*r,y:h.y+Math.sin(phase+i*Math.PI*2/n)*r,mode:'orbit',cooldown:.3+i*.15,trail:[]}));}
+ for(let i=0;i<n;i++){const s=h.satellites[i],a=phase+i*Math.PI*2/n,home={x:h.x+Math.cos(a)*r,y:h.y+Math.sin(a)*r};s.cooldown=Math.max(0,s.cooldown-dt);
+ if(s.mode==='orbit'){s.x=home.x;s.y=home.y;s.trail=[];if(s.cooldown<=0){const tangent={x:-Math.sin(a),y:Math.cos(a)},enemies=this.enemies.filter(e=>{if(e.hp<=0||e.hidden||e.chest||dist(e,h)>255)return false;const dx=e.x-s.x,dy=e.y-s.y,d=Math.hypot(dx,dy);return d>1&&(dx*tangent.x+dy*tangent.y)/d>=.85;});enemies.sort((a,b)=>h.satellites.filter(q=>q.target===a).length-h.satellites.filter(q=>q.target===b).length||dist(a,h)-dist(b,h));if(enemies[0]){s.target=enemies[0];s.mode='attack';s.flight=0;}}}
+ else {s.flight=(s.flight||0)+dt;if(s.mode==='attack'&&(!s.target||s.target.hp<=0||s.target.hidden||s.target.chest||!this.enemies.includes(s.target)||dist(s.target,h)>450||s.flight>1.5)){s.mode='return';s.target=null;}
+ const q=s.mode==='attack'?s.target:home,d=dist(s,q),step=(s.mode==='attack'?520:Math.max(600,(h.speed||0)+250))*dt;s.trail.push({x:s.x,y:s.y});if(s.trail.length>7)s.trail.shift();
+ if(d<=step+(s.mode==='attack'?12:0)){s.x=q.x;s.y=q.y;if(s.mode==='attack'){const target=s.target;this.damage(target,gear.stats.satellite_damage,'satellite');this.effect('laserlight',s.x,s.y,.65,{life:.2});s.mode='return';s.target=null;}else{s.mode='orbit';s.cooldown=1.2;s.trail=[];}}
+ else{s.x+=(q.x-s.x)*step/d;s.y+=(q.y-s.y)*step/d;}
+ }
+ }
+ }
+ for(const h of this.satelliteHosts)if(!active.has(h))h.satellites=[];this.satelliteHosts=active;
+ };
+ P.S.installTowerGame(Game,P,D);
+}
+function installView(View,P,A){const p=View.prototype;
+ p.drawPlayerBody=function(x,y,scale=1){const g=this.game,u=g.player;if(!u.onFoot){this.anim('car','stand',x,y,.7*scale,u.angle,g.time);this.anim(A.towerUnits[6013].role,g.time-(u.shotAt??-100)<.12?'attack':'stand',x,y,A.towerUnits[6013].renderScale*scale,u.gunAngle,g.time);return;}this.drawFootHero(x,y,scale);};
+ p.drawFootHero=function(x,y,scale=1){const u=this.game.player,c=this.ctx,atlas=this.images.pages[A.pages.indexOf('on-foot.png')];if(!atlas)return;const aim=footDirection(u.gunAngle),walk=footDirection(u.footMoving?u.angle:u.gunAngle),phase=u.stepPhase||0,row=[0,1,0,2][Math.floor(phase*4)%4],bob=Math.sin(phase*Math.PI*4)*1.1;
+ const part=(d,r,upper)=>{c.save();c.translate(x,y-25*scale+bob*scale);c.scale((d.flip?-1:1)*.75*scale,.75*scale);if(upper){const recoil=Math.max(0,1-(this.game.time-(u.shotAt??-100))/.13);c.translate(-Math.cos(u.gunAngle)*(d.flip?-1:1)*recoil*2,-Math.sin(u.gunAngle)*recoil);c.beginPath();c.rect(-64,-66,192,70);if(footSources[d.index]<9)c.rect(7,4,50,18);c.clip();c.drawImage(atlas,d.index%11*192,Math.floor(d.index/11)*128,192,128,-64,-76,192,128);}else c.drawImage(atlas,d.index%11*192+20,r*384+Math.floor(d.index/11)*128+76,88,52,-44,0,88,52);c.restore();};
+ part(walk,row,false);part(aim,0,true);
+ };
+ const death=p.drawVehicleDeath;p.drawVehicleDeath=function(){if(!this.game.player.onFoot)return death.call(this);const d=this.game.vehicleDeath;if(!d)return;const c=this.ctx;c.save();c.translate(d.x,d.y);c.rotate(-Math.PI/2);c.globalAlpha=.45;this.drawFootHero(0,0,.8);c.restore();};
+ p.drawVehicleGear=function(air){const c=this.ctx,g=this.game;c.save();if(!air){for(const t of g.gearTracks||[]){if(this.worldVisible&&!this.worldVisible(t.b.x,t.b.y,100))continue;const a=Math.atan2(t.b.y-t.a.y,t.b.x-t.a.x),age=Math.max(0,g.time-t.born),fade=Math.max(0,Math.min(1,age/.12)*Math.min(1,(4-age)/.8)),seed=Math.abs(Math.sin(t.b.x*12.9898+t.b.y*78.233)*43758.5453)%1;
+ for(const side of [-1,1]){const dx=-Math.sin(a)*19*side,dy=Math.cos(a)*19*side,x=t.b.x+dx,y=t.b.y+dy;this.sprite(A.groups.wheelScorch[Math.floor(seed*8)%8],x,y,.48,false,a+seed*.7,Math.min(.55,(18-age)*.1));if(age>=4)continue;const frame=(Math.floor(age/.05)+Math.floor(seed*32)+(side===1?13:0))%32,scale=(.65+.4*Math.min(1,age/.7))*(.88+seed*.24);c.globalCompositeOperation='lighter';this.sprite(A.groups.wheelFire[frame],x,y+3,scale,false,(seed-.5)*.35,fade*.72);c.globalCompositeOperation='source-over';}
+ }}else{
+ for(const h of g.satelliteHosts||[])for(const s of h.satellites||[]){if(this.worldVisible&&!this.worldVisible(s.x,s.y,100))continue;c.save();c.strokeStyle='#59d9ff';c.lineWidth=3;c.globalAlpha=.5;if(s.trail.length){c.beginPath();c.moveTo(s.trail[0].x,s.trail[0].y-18);for(const q of s.trail)c.lineTo(q.x,q.y-18);c.lineTo(s.x,s.y-18);c.stroke();}c.globalAlpha=1;c.translate(s.x,s.y-18);const metal=c.createRadialGradient(-4,-5,1,0,0,12);metal.addColorStop(0,'#e0eef4');metal.addColorStop(.45,'#536c7c');metal.addColorStop(1,'#111d29');c.fillStyle=metal;c.beginPath();c.arc(0,0,11,0,Math.PI*2);c.fill();c.strokeStyle='#a6cfdf';c.lineWidth=1.4;c.stroke();c.fillStyle='#102c3c';c.fillRect(-12,-3,24,6);c.shadowColor='#42dfff';c.shadowBlur=s.mode==='attack'?16:8;c.fillStyle='#8ef5ff';c.beginPath();c.arc(0,0,4.5,0,Math.PI*2);c.fill();c.shadowBlur=0;c.restore();}
+ // A drawn wrench remains legible on devices without symbol fonts.
+ for(const b of g.gearRepairs||[]){if(this.worldVisible&&!this.worldVisible(b.x,b.y,180))continue;c.save();c.translate(b.x,b.y-65);c.globalAlpha=.55+.45*(.5+.5*Math.sin(g.time*Math.PI*1.5));c.fillStyle='#112b30';c.beginPath();c.arc(0,0,19,0,Math.PI*2);c.fill();c.rotate(-.65);c.strokeStyle='#8ffff0';c.lineWidth=5;c.lineCap='round';c.beginPath();c.moveTo(0,12);c.lineTo(0,-3);c.stroke();c.beginPath();c.arc(0,-7,7,-.3,Math.PI+.3);c.stroke();c.restore();}
+ for(const e of g.enemies)if(e.hp>0&&e.gearBurnUntil>g.time&&(!this.worldVisible||this.worldVisible(e.x,e.y,150))){const list=A.groups.flamehit;this.sprite(list[Math.floor((g.time+e.x*.01)*14)%list.length],e.x,e.y+10,.42);for(let i=0;i<5;i++){const t=(g.time*.65+i/5)%1,px=e.x+Math.sin(i*2.3+g.time)*10+t*18,py=e.y-12-t*85,r=5+t*13;c.fillStyle='rgba(57,53,54,'+(.42*(1-t))+')';c.beginPath();c.arc(px,py,r,0,Math.PI*2);c.fill();}}
+ for(const f of g.gearSlashes||[]){c.globalAlpha=Math.max(0,1-(g.time-f.born)/.24);c.strokeStyle='#c9faff';c.lineWidth=5;for(const side of [-1,1]){c.beginPath();c.arc(f.x,f.y,74, f.angle+side*1.1-.7,f.angle+side*1.1+.7);c.stroke();}c.globalAlpha=1;}
+ for(const m of g.gearMissiles||[])if(!this.worldVisible||this.worldVisible(m.x,m.y,180))this.drawTacticalRocket(m);
+ }c.restore();};
+}
+const api={install,installView,segment,footDirection,footMuzzle};if(typeof module!=='undefined')module.exports=api;else globalThis.VehicleGear=api;
+})();

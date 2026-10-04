@@ -1,0 +1,1 @@
+(function(){const info={"label": "1004-03:37", "builtAt": "2026-10-04T03:37:31+08:00", "timezone": "Asia/Shanghai"};if(typeof module!=="undefined")module.exports=info;else globalThis.AlienBuild=info;})();

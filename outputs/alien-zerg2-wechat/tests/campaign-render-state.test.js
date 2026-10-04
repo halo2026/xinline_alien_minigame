@@ -1,0 +1,13 @@
+const test=require('node:test'),assert=require('node:assert/strict');
+const {createCanvas}=require('../../../work/gear-render/node_modules/@napi-rs/canvas');
+const factory=require('../shared/defense-campaign'),art=require('../shared/defense-art');
+function scene(id){const stage=factory.create(require('../shared/'+id+'-data'),art),canvas=createCanvas(420,900),ctx=canvas.getContext('2d'),image=createCanvas(16,16);let depth=0;const save=ctx.save.bind(ctx),restore=ctx.restore.bind(ctx);ctx.save=()=>{depth++;save();};ctx.restore=()=>{depth--;restore();};const v=new stage.api.View(ctx,{pages:stage.art.pages.map(()=>image),terrain:image,portraits:image},420,900),g=v.game;g.start();v.entryGame=g;v.insertion=null;g.progress.battleIntroStep=3;g.progress.resourceIntroStep=5;v.inventoryOpen=false;v.worldVisible=()=>true;return {stage,v,g,ctx,depth:()=>depth};}
+function neutral(s){assert.equal(s.depth(),0);const m=s.ctx.getTransform();assert.deepEqual([m.a,m.b,m.c,m.d,m.e,m.f],[1,0,0,1,0,0]);}
+test('defense campaigns do not inherit the first mission side ambush; every ground entrance draws cleanly',()=>{
+ for(const id of ['scorpion2','snake3','fish3','airship3','fortress2']){const s=scene(id);assert.equal(s.stage.data.ambush,null);const seen=new Set();for(const event of s.stage.data.waves.flat()){if(seen.has(event.spawn)||s.stage.data.unitTypes[event.unit]?.air)continue;seen.add(event.spawn);s.g.enemies=[];const e=s.g.spawn(event);if(e.air)continue;e.x=e.emergeFrom.x;e.y=e.emergeFrom.y;assert.doesNotThrow(()=>s.v.draw(),id+' spawn '+event.spawn);neutral(s);}}
+});
+test('an unavailable side-cave point cannot interrupt drawing an emerging enemy',()=>{const s=scene('scorpion2');s.stage.data.ambush={sideCave:true,spawn:999999};const e=s.g.spawn(s.stage.data.waves[0][0]);e.air=false;e.x=e.emergeFrom.x;e.y=e.emergeFrom.y;s.v.draw();neutral(s);});
+test('interrupted enemy animation restores world transform and the following frame recovers',()=>{
+ const s=scene('scorpion2'),e=s.g.spawn(s.stage.data.waves[0][0]);e.air=false;e.x=e.emergeFrom.x;e.y=e.emergeFrom.y;const anim=s.v.anim;s.v.anim=function(role,...args){if(role===String(e.id))throw Error('injected enemy render failure');return anim.call(this,role,...args);};assert.throws(()=>s.v.draw(),/injected enemy/);neutral(s);s.v.anim=anim;for(let i=0;i<5;i++){s.v.draw();neutral(s);}
+});
+test('sprite image failure balances its own canvas state',()=>{const s=scene('scorpion2'),draw=s.ctx.drawImage;s.ctx.drawImage=()=>{throw Error('image failure');};assert.throws(()=>s.v.sprite('crystalicon',10,20,.5,false,.7),/image failure/);neutral(s);s.ctx.drawImage=draw;s.v.draw();neutral(s);});

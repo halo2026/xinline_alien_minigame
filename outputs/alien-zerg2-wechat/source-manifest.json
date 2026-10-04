@@ -1,0 +1,39 @@
+{
+  "reference": "Map snapshot from SVN HEAD r57068; terrain last changed r57062. Other assets use the existing local source working copy, including local gore changes.",
+  "sha256": {
+    "map/world/yxys_zerg_002.dat": "18cc81f9c074772576fe9dc4667dd755b249fdd41481265d12c376805bfcdd01",
+    "map/world/yxys_zerg_002.ter": "e4dac480981dac651789155c5c9e79d883a419ae7d4a86a14feba21b03e2579e",
+    "tabs/tab_unit.lua": "bd2e76469edefe33ca5aeab959d01fd38a048ba8e70dc13bd8da8101bd894557",
+    "tabs/tab_skill.lua": "73c534795af93d0f12c9cdaaec842201fcb272d07e15a81092cc510b5a7fcc74",
+    "tabs/tab_item.lua": "6136834916421defa7ab3b828ac0070c19c427657565ff0e7b049a4cd3e53296",
+    "tabs/tab_map.lua": "d618fc92fddd434147d7bad874707deff7de8bab0fbc5053aa26e60ca4493f29",
+    "scripts/util/core/effect.lua": "95ff1ab3115611d4cc84ac2589438172f227fece93b35e6bb73fe87b6ea7d99a",
+    "tabs/model/tab_model_unit.lua": "1044c81dd9d864cdbb2757330d7fff1f61e82f45fdfb0fee52838b24f2e12b55",
+    "scripts/game_start.lua": "a0b7a988e3efde930d3d15f36eb1d976acd47e764ba7d14e5bff6ed0f1d25625"
+  },
+  "mapUpdate": {
+    "repositoryRevision": 57068,
+    "terrainLastChangedRevision": 57062,
+    "terrainDate": "2026-09-08T08:39:21.685396Z",
+    "sizeBefore": [
+      1792,
+      1792
+    ],
+    "sizeAfter": [
+      1792,
+      2048
+    ],
+    "unchangedOldTiles": 784,
+    "appendedTiles": 112,
+    "unchangedComparedFiles": [
+      "map/world/yxys_zerg_002.dat",
+      "tabs/tab_unit.lua",
+      "tabs/tab_skill.lua",
+      "tabs/tab_effect.lua",
+      "tabs/tab_map.lua",
+      "tabs/model/tab_model_unit.lua",
+      "tabs/model/tab_model_effect.lua",
+      "scripts/game_start.lua"
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+# Airship sand roads and blue carrier elevated shadow
+
+Eight unique spawn/path pairs from airship3 waves follow existing waypoint coordinates. All native wave units are airborne or hover; roads are ground cues under authored attack routes, not a change to flight/navigation. Width156. Baked existing desert.jpg with textured darker compacted sand, soft shoulders, sparse tread marks and deterministic gravel; preserve source baseline/map/routes in source-art/airship-roads. Repeatable tools/pave-airship-roads.py. Terrain alpha clips roads; no runtime draw layers added.5951 previously buildable cells now road2; existing full-footprint rule rejects road building; >100 adjacent legal sites verified. Waves, navigation bounds, obstacle blocks, zero ground cells unchanged.
+
+Blue carrier MODEL:UNIT_BLUE_CARRIER gets ground-pass shadow x+18scale,y+62scale,39x17scale soft elliptical rings. Removes old close-contact circle only for this family. Respects hidden/dead/void/offscreen/shrink and renders before structures. No balance or collision changes. Actual battle and isolated blue carrier screenshot reviewed.
+
+7 tests pass:3airship road +4canvas restore/entrance regressions. Actual airship90simsec with desert composition and canvas state assertions passed. Build0.10.02.1542 total31187586 main2092459,17packages. No save changes. Experience Upload Successfully verified0.10.02.1542. Identical Development Preview30289KB expiry10/02 16:13 verified. No publication pending.

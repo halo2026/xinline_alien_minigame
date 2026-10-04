@@ -1,0 +1,658 @@
+[
+  {
+    "model": "UNIT_Hydralisk",
+    "stem": "hydralisk",
+    "units": [
+      {
+        "id": 13044,
+        "name": "刺蛇宝宝(主基地)"
+      },
+      {
+        "id": 13054,
+        "name": "TD-刺蛇宝宝"
+      }
+    ],
+    "frames": 160,
+    "actions": [
+      "attack",
+      "skill",
+      "stand",
+      "walk"
+    ],
+    "paths": [
+      "outputs/alien-mac/source/XLFramework/Projects/alien_source/data/image/unit/hydralisk_world.plist",
+      "outputs/alien-mac/source/XLFramework/Projects/alien_source/data/image/unit/hydralisk_battle.plist"
+    ]
+  },
+  {
+    "model": "UNIT_WORM",
+    "stem": "worm",
+    "units": [
+      {
+        "id": 11366,
+        "name": "蠕虫"
+      },
+      {
+        "id": 11630,
+        "name": "小分裂虫"
+      },
+      {
+        "id": 12893,
+        "name": "虫潮-蠕虫"
+      },
+      {
+        "id": 12925,
+        "name": "虫潮-蠕虫--虫潮专用"
+      }
+    ],
+    "frames": 100,
+    "actions": [
+      "attack",
+      "stand",
+      "walk"
+    ],
+    "paths": [
+      "outputs/alien-mac/source/XLFramework/Projects/alien_source/data/image/unit/worm_world.plist",
+      "outputs/alien-mac/source/XLFramework/Projects/alien_source/data/image/unit/worm_battle.plist"
+    ]
+  },
+  {
+    "model": "HERO_ALIEN_QUEEN",
+    "stem": "alien_queen",
+    "units": [
+      {
+        "id": 11529,
+        "name": "boss-异形"
+      },
+      {
+        "id": 11530,
+        "name": "boss-黑色异形2"
+      },
+      {
+        "id": 11531,
+        "name": "boss-异形女王"
+      },
+      {
+        "id": 11533,
+        "name": "小异形"
+      },
+      {
+        "id": 11537,
+        "name": "小异形"
+      },
+      {
+        "id": 11538,
+        "name": "透明异形"
+      },
+      {
+        "id": 11636,
+        "name": "[防守]小异形"
+      },
+      {
+        "id": 11704,
+        "name": "[防守]小异形"
+      },
+      {
+        "id": 11705,
+        "name": "小异形--elite"
+      },
+      {
+        "id": 11708,
+        "name": "小异形"
+      },
+      {
+        "id": 11803,
+        "name": "boss-异形女王"
+      },
+      {
+        "id": 11856,
+        "name": "透明异形"
+      },
+      {
+        "id": 12307,
+        "name": "boss-空中堡垒"
+      },
+      {
+        "id": 16100,
+        "name": "小异形"
+      },
+      {
+        "id": 17030,
+        "name": "小异形"
+      },
+      {
+        "id": 17031,
+        "name": "小异形"
+      },
+      {
+        "id": 17032,
+        "name": "大异形"
+      },
+      {
+        "id": 17035,
+        "name": "boss-异形女王"
+      },
+      {
+        "id": 17226,
+        "name": "异形女王elite ver.ex002"
+      }
+    ],
+    "frames": 96,
+    "actions": [
+      "attack",
+      "skill",
+      "stand",
+      "walk"
+    ],
+    "paths": [
+      "outputs/alien-mac/source/XLFramework/Projects/alien_source/data/image/unit/alien_queen_world.plist",
+      "outputs/alien-mac/source/XLFramework/Projects/alien_source/data/image/unit/alien_queen_battle.plist"
+    ]
+  },
+  {
+    "model": "HERO_ZERG_AREIAL_NEST",
+    "stem": "zergaerialnest",
+    "units": [],
+    "frames": 48,
+    "actions": [
+      "attack",
+      "skill",
+      "stand",
+      "walk"
+    ],
+    "paths": [
+      "outputs/alien-mac/source/XLFramework/Projects/alien_source/data/image/unit/zergaerialnest_world.plist",
+      "outputs/alien-mac/source/XLFramework/Projects/alien_source/data/image/unit/zergaerialnest_battle.plist"
+    ]
+  },
+  {
+    "model": "UNIT_METAL_BRAIN",
+    "stem": "metal_brain",
+    "units": [
+      {
+        "id": 11306,
+        "name": "钢铁大脑怪"
+      },
+      {
+        "id": 11713,
+        "name": "钢铁大脑怪"
+      },
+      {
+        "id": 11926,
+        "name": "钢铁大脑怪"
+      },
+      {
+        "id": 11927,
+        "name": "钢铁大脑怪"
+      },
+      {
+        "id": 12499,
+        "name": "钢铁大脑怪巨大型--魔眼2BOSS"
+      },
+      {
+        "id": 12523,
+        "name": "冰霜大脑怪"
+      },
+      {
+        "id": 12806,
+        "name": "钢铁大脑怪巨大型ver.ex001"
+      },
+      {
+        "id": 17016,
+        "name": "钢铁大脑怪巨大型ver.ex001"
+      },
+      {
+        "id": 17224,
+        "name": "钢铁大脑怪elite ver.ex002"
+      }
+    ],
+    "frames": 165,
+    "actions": [
+      "attack",
+      "skill",
+      "stand",
+      "walk"
+    ],
+    "paths": [
+      "outputs/alien-mac/source/XLFramework/Projects/alien_source/data/image/unit/metal_brain_world.plist",
+      "outputs/alien-mac/source/XLFramework/Projects/alien_source/data/image/unit/metal_brain_battle.plist"
+    ]
+  },
+  {
+    "model": "UNIT_METAL_SPIDER",
+    "stem": "metal_spider",
+    "units": [
+      {
+        "id": 11539,
+        "name": "巨大机械蜘蛛-随机迷宫版"
+      },
+      {
+        "id": 12206,
+        "name": "S4boss-巨大机械蜘蛛"
+      },
+      {
+        "id": 12324,
+        "name": "铁血仲裁者"
+      },
+      {
+        "id": 12326,
+        "name": "铁血仲裁者--幻影"
+      },
+      {
+        "id": 12951,
+        "name": "红色机械蜘蛛ver.ex002"
+      },
+      {
+        "id": 13210,
+        "name": "铁血战士--火焰"
+      },
+      {
+        "id": 13211,
+        "name": "铁血战士--幻影"
+      },
+      {
+        "id": 16014,
+        "name": "boss出场"
+      },
+      {
+        "id": 16022,
+        "name": "问号箱"
+      },
+      {
+        "id": 17008,
+        "name": "光球蜘蛛巨大型ver.ex001"
+      },
+      {
+        "id": 17218,
+        "name": "机械蜘蛛ver.ex002"
+      }
+    ],
+    "frames": 153,
+    "actions": [
+      "attack",
+      "dead",
+      "skill",
+      "stand",
+      "walk"
+    ],
+    "paths": [
+      "outputs/alien-mac/source/XLFramework/Projects/alien_source/data/image/unit/metal_spider_world.plist",
+      "outputs/alien-mac/source/XLFramework/Projects/alien_source/data/image/unit/metal_spider_battle.plist"
+    ]
+  },
+  {
+    "model": "UNIT_METAL_SPIDER2",
+    "stem": "metal_spider2",
+    "units": [
+      {
+        "id": 12013,
+        "name": "机械蜘蛛BOSS"
+      },
+      {
+        "id": 12057,
+        "name": "巨大机械蜘蛛-无敌的"
+      },
+      {
+        "id": 12498,
+        "name": "测试用木桩"
+      },
+      {
+        "id": 17501,
+        "name": "战役BOSS矿山巨兽"
+      }
+    ],
+    "frames": 165,
+    "actions": [
+      "attack",
+      "dead",
+      "skill",
+      "stand",
+      "walk"
+    ],
+    "paths": [
+      "outputs/alien-mac/source/XLFramework/Projects/alien_source/data/image/unit/metal_spider2_world.plist",
+      "outputs/alien-mac/source/XLFramework/Projects/alien_source/data/image/unit/metal_spider2_battle.plist"
+    ]
+  },
+  {
+    "model": "UNIT_NEST",
+    "stem": "nest",
+    "units": [
+      {
+        "id": 11054,
+        "name": "主基地虫巢装饰"
+      },
+      {
+        "id": 11534,
+        "name": "boss-虫巢"
+      },
+      {
+        "id": 11558,
+        "name": "套娃底"
+      },
+      {
+        "id": 11567,
+        "name": "吐球虫巢"
+      },
+      {
+        "id": 11726,
+        "name": "虫巢"
+      },
+      {
+        "id": 11800,
+        "name": "小型虫巢"
+      },
+      {
+        "id": 11802,
+        "name": "开门的小型虫巢"
+      },
+      {
+        "id": 11825,
+        "name": "boss-虫巢"
+      },
+      {
+        "id": 11838,
+        "name": "boss-虫巢"
+      },
+      {
+        "id": 12506,
+        "name": "透明虫巢"
+      },
+      {
+        "id": 12507,
+        "name": "小型虫巢"
+      },
+      {
+        "id": 12910,
+        "name": "虫潮-小型虫巢"
+      },
+      {
+        "id": 12914,
+        "name": "虫潮-吐球虫巢"
+      },
+      {
+        "id": 17020,
+        "name": "虫巢(塔防地图)"
+      }
+    ],
+    "frames": 44,
+    "actions": [
+      "stand",
+      "walk"
+    ],
+    "paths": [
+      "outputs/alien-mac/source/XLFramework/Projects/alien_source/data/image/unit/nest_world.plist"
+    ]
+  },
+  {
+    "model": "UNIT_NEST2",
+    "stem": "nest2",
+    "units": [
+      {
+        "id": 5246,
+        "name": "新喷毒虫巢(不攻击)"
+      },
+      {
+        "id": 5248,
+        "name": "新喷毒虫巢(不喷毒球)"
+      },
+      {
+        "id": 5250,
+        "name": "新喷毒虫巢2(喷毒)"
+      }
+    ],
+    "frames": 20,
+    "actions": [
+      "attack",
+      "stand"
+    ],
+    "paths": [
+      "outputs/alien-mac/source/XLFramework/Projects/alien_source/data/image/unit/nest2_world.plist",
+      "outputs/alien-mac/source/XLFramework/Projects/alien_source/data/image/unit/nest2_battle.plist"
+    ]
+  },
+  {
+    "model": "UNIT_NEST3",
+    "stem": "nest3",
+    "units": [
+      {
+        "id": 5247,
+        "name": "新喷毒虫巢(不攻击)"
+      },
+      {
+        "id": 5249,
+        "name": "新喷毒虫巢(不喷毒球)"
+      },
+      {
+        "id": 5251,
+        "name": "新喷毒虫巢3(喷毒)"
+      },
+      {
+        "id": 11930,
+        "name": "新喷毒虫巢3_掉充能塔"
+      }
+    ],
+    "frames": 20,
+    "actions": [
+      "attack",
+      "stand"
+    ],
+    "paths": [
+      "outputs/alien-mac/source/XLFramework/Projects/alien_source/data/image/unit/nest3_world.plist",
+      "outputs/alien-mac/source/XLFramework/Projects/alien_source/data/image/unit/nest3_battle.plist"
+    ]
+  },
+  {
+    "model": "UNIT_EGG",
+    "stem": "egg",
+    "units": [
+      {
+        "id": 5103,
+        "name": "虫卵"
+      },
+      {
+        "id": 11532,
+        "name": "虫卵(生产小异形)"
+      },
+      {
+        "id": 11540,
+        "name": "虫卵(生产星河虫)"
+      },
+      {
+        "id": 11577,
+        "name": "能量球"
+      },
+      {
+        "id": 12536,
+        "name": "掉加血道具的虫卵(虫族战役召唤物)"
+      },
+      {
+        "id": 12538,
+        "name": "虫卵--无掉落"
+      },
+      {
+        "id": 12824,
+        "name": "虫卵(虫族战役召唤物)"
+      },
+      {
+        "id": 12825,
+        "name": "虫卵(虫族战役召唤物2)"
+      },
+      {
+        "id": 12826,
+        "name": "虫卵(虫族战役召唤物2)"
+      },
+      {
+        "id": 12833,
+        "name": "虫卵(虫族战役召唤物2)--召唤章鱼"
+      },
+      {
+        "id": 12988,
+        "name": "虫卵--召唤虫子"
+      },
+      {
+        "id": 12991,
+        "name": "巨大虫卵--召唤虫子"
+      },
+      {
+        "id": 12992,
+        "name": "虫卵--营救士兵"
+      },
+      {
+        "id": 13002,
+        "name": "虫卵(会攻击)"
+      }
+    ],
+    "frames": 156,
+    "actions": [
+      "attack",
+      "dead",
+      "stand",
+      "walk"
+    ],
+    "paths": [
+      "outputs/alien-mac/source/XLFramework/Projects/alien_source/data/image/unit/egg_world.plist",
+      "outputs/alien-mac/source/XLFramework/Projects/alien_source/data/image/unit/egg_battle.plist"
+    ]
+  },
+  {
+    "model": "UNIT_EGG2",
+    "stem": "egg2",
+    "units": [
+      {
+        "id": 5148,
+        "name": "虫卵-空心"
+      },
+      {
+        "id": 13003,
+        "name": "虫卵-空心(会攻击)"
+      }
+    ],
+    "frames": 156,
+    "actions": [
+      "attack",
+      "dead",
+      "stand",
+      "walk"
+    ],
+    "paths": [
+      "outputs/alien-mac/source/XLFramework/Projects/alien_source/data/image/unit/egg2_world.plist",
+      "outputs/alien-mac/source/XLFramework/Projects/alien_source/data/image/unit/egg2_battle.plist"
+    ]
+  },
+  {
+    "model": "HERO_gazer",
+    "stem": "gazer",
+    "units": [
+      {
+        "id": 11872,
+        "name": "小眼球"
+      },
+      {
+        "id": 12152,
+        "name": "光球"
+      },
+      {
+        "id": 12202,
+        "name": "S2boss-眼球2"
+      },
+      {
+        "id": 12519,
+        "name": "眼球塔"
+      },
+      {
+        "id": 12524,
+        "name": "光球"
+      },
+      {
+        "id": 12527,
+        "name": "滑轨菊花塔"
+      },
+      {
+        "id": 12533,
+        "name": "S2boss-眼球2"
+      },
+      {
+        "id": 12549,
+        "name": "深色光球"
+      },
+      {
+        "id": 12916,
+        "name": "虫潮-眼球BOSS--虫潮"
+      },
+      {
+        "id": 12917,
+        "name": "虫潮-小眼球--虫潮"
+      },
+      {
+        "id": 12933,
+        "name": "虫潮-召唤出来的小眼球--虫潮"
+      },
+      {
+        "id": 17033,
+        "name": "S2boss-小眼球"
+      },
+      {
+        "id": 17036,
+        "name": "S2boss-眼球2"
+      },
+      {
+        "id": 17502,
+        "name": "战役BOSS魔眼"
+      }
+    ],
+    "frames": 72,
+    "actions": [
+      "attack",
+      "dead",
+      "stand",
+      "walk"
+    ],
+    "paths": [
+      "outputs/alien-mac/source/XLFramework/Projects/alien_source/data/image/unit/gazer_world.plist",
+      "outputs/alien-mac/source/XLFramework/Projects/alien_source/data/image/unit/gazer_battle.plist"
+    ]
+  },
+  {
+    "model": "HERO_gazer2",
+    "stem": "gazer2",
+    "units": [
+      {
+        "id": 12521,
+        "name": "眼球塔小BOSS"
+      }
+    ],
+    "frames": 54,
+    "actions": [
+      "attack",
+      "skill",
+      "stand",
+      "walk"
+    ],
+    "paths": [
+      "outputs/alien-mac/source/XLFramework/Projects/alien_source/data/image/unit/gazer2_world.plist",
+      "outputs/alien-mac/source/XLFramework/Projects/alien_source/data/image/unit/gazer2_battle.plist"
+    ]
+  },
+  {
+    "model": "HERO_gazer3",
+    "stem": "gazer3",
+    "units": [
+      {
+        "id": 12201,
+        "name": "S2boss-眼球1"
+      }
+    ],
+    "frames": 54,
+    "actions": [
+      "attack",
+      "skill",
+      "stand",
+      "walk"
+    ],
+    "paths": [
+      "outputs/alien-mac/source/XLFramework/Projects/alien_source/data/image/unit/gazer3_world.plist",
+      "outputs/alien-mac/source/XLFramework/Projects/alien_source/data/image/unit/gazer3_battle.plist"
+    ]
+  }
+]

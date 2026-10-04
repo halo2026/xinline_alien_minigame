@@ -1,0 +1,678 @@
+[
+  {
+    "id": 20102,
+    "name": "装填电机Ⅰ·原型",
+    "quality": 1,
+    "requiredLevel": 1,
+    "stats": {
+      "throw_atk": 100
+    }
+  },
+  {
+    "id": 20102,
+    "name": "装填电机Ⅰ·改良",
+    "quality": 1,
+    "requiredLevel": 5,
+    "stats": {
+      "throw_atk": 116
+    }
+  },
+  {
+    "id": 20102,
+    "name": "装填电机Ⅰ·强化",
+    "quality": 1,
+    "requiredLevel": 10,
+    "stats": {
+      "throw_atk": 136
+    }
+  },
+  {
+    "id": 20102,
+    "name": "装填电机Ⅰ·精工",
+    "quality": 1,
+    "requiredLevel": 15,
+    "stats": {
+      "throw_atk": 156
+    }
+  },
+  {
+    "id": 20102,
+    "name": "装填电机Ⅰ·战术",
+    "quality": 1,
+    "requiredLevel": 20,
+    "stats": {
+      "throw_atk": 176
+    }
+  },
+  {
+    "id": 20102,
+    "name": "装填电机Ⅰ·精锐",
+    "quality": 1,
+    "requiredLevel": 25,
+    "stats": {
+      "throw_atk": 196
+    }
+  },
+  {
+    "id": 20102,
+    "name": "装填电机Ⅰ·高能",
+    "quality": 1,
+    "requiredLevel": 30,
+    "stats": {
+      "throw_atk": 216
+    }
+  },
+  {
+    "id": 20104,
+    "name": "反应装甲Ⅰ·原型",
+    "quality": 1,
+    "requiredLevel": 1,
+    "stats": {
+      "hp_max": 120
+    }
+  },
+  {
+    "id": 20104,
+    "name": "反应装甲Ⅰ·改良",
+    "quality": 1,
+    "requiredLevel": 5,
+    "stats": {
+      "hp_max": 139.2
+    }
+  },
+  {
+    "id": 20104,
+    "name": "反应装甲Ⅰ·强化",
+    "quality": 1,
+    "requiredLevel": 10,
+    "stats": {
+      "hp_max": 163.2
+    }
+  },
+  {
+    "id": 20104,
+    "name": "反应装甲Ⅰ·精工",
+    "quality": 1,
+    "requiredLevel": 15,
+    "stats": {
+      "hp_max": 187.2
+    }
+  },
+  {
+    "id": 20104,
+    "name": "反应装甲Ⅰ·战术",
+    "quality": 1,
+    "requiredLevel": 20,
+    "stats": {
+      "hp_max": 211.2
+    }
+  },
+  {
+    "id": 20104,
+    "name": "反应装甲Ⅰ·精锐",
+    "quality": 1,
+    "requiredLevel": 25,
+    "stats": {
+      "hp_max": 235.2
+    }
+  },
+  {
+    "id": 20104,
+    "name": "反应装甲Ⅰ·高能",
+    "quality": 1,
+    "requiredLevel": 30,
+    "stats": {
+      "hp_max": 259.2
+    }
+  },
+  {
+    "id": 20204,
+    "name": "反应装甲Ⅱ·改良",
+    "quality": 2,
+    "requiredLevel": 5,
+    "stats": {
+      "hp_max": 300,
+      "def_physic": 4
+    }
+  },
+  {
+    "id": 20204,
+    "name": "反应装甲Ⅱ·强化",
+    "quality": 2,
+    "requiredLevel": 10,
+    "stats": {
+      "hp_max": 360,
+      "def_physic": 4.8
+    }
+  },
+  {
+    "id": 20204,
+    "name": "反应装甲Ⅱ·精工",
+    "quality": 2,
+    "requiredLevel": 15,
+    "stats": {
+      "hp_max": 420,
+      "def_physic": 5.6
+    }
+  },
+  {
+    "id": 20204,
+    "name": "反应装甲Ⅱ·战术",
+    "quality": 2,
+    "requiredLevel": 20,
+    "stats": {
+      "hp_max": 480,
+      "def_physic": 6.4
+    }
+  },
+  {
+    "id": 20204,
+    "name": "反应装甲Ⅱ·精锐",
+    "quality": 2,
+    "requiredLevel": 25,
+    "stats": {
+      "hp_max": 540,
+      "def_physic": 7.2
+    }
+  },
+  {
+    "id": 20204,
+    "name": "反应装甲Ⅱ·高能",
+    "quality": 2,
+    "requiredLevel": 30,
+    "stats": {
+      "hp_max": 600,
+      "def_physic": 8
+    }
+  },
+  {
+    "id": 20302,
+    "name": "装填电机Ⅲ·强化",
+    "quality": 3,
+    "requiredLevel": 10,
+    "stats": {
+      "atk_bullet": 7.7,
+      "throw_atk": 220
+    }
+  },
+  {
+    "id": 20302,
+    "name": "装填电机Ⅲ·精工",
+    "quality": 3,
+    "requiredLevel": 15,
+    "stats": {
+      "atk_bullet": 8.47,
+      "throw_atk": 264
+    }
+  },
+  {
+    "id": 20302,
+    "name": "装填电机Ⅲ·战术",
+    "quality": 3,
+    "requiredLevel": 20,
+    "stats": {
+      "atk_bullet": 9.24,
+      "throw_atk": 308
+    }
+  },
+  {
+    "id": 20302,
+    "name": "装填电机Ⅲ·精锐",
+    "quality": 3,
+    "requiredLevel": 25,
+    "stats": {
+      "atk_bullet": 10.01,
+      "throw_atk": 352
+    }
+  },
+  {
+    "id": 20302,
+    "name": "装填电机Ⅲ·高能",
+    "quality": 3,
+    "requiredLevel": 30,
+    "stats": {
+      "atk_bullet": 10.78,
+      "throw_atk": 396
+    }
+  },
+  {
+    "id": 20309,
+    "name": "高级防毒装甲·强化",
+    "quality": 3,
+    "requiredLevel": 10,
+    "stats": {
+      "hp_max": 770,
+      "def_physic": 7.7,
+      "def_poison": 7.7
+    }
+  },
+  {
+    "id": 20309,
+    "name": "高级防毒装甲·精工",
+    "quality": 3,
+    "requiredLevel": 15,
+    "stats": {
+      "hp_max": 924,
+      "def_physic": 9.24,
+      "def_poison": 8.47
+    }
+  },
+  {
+    "id": 20309,
+    "name": "高级防毒装甲·战术",
+    "quality": 3,
+    "requiredLevel": 20,
+    "stats": {
+      "hp_max": 1078,
+      "def_physic": 10.78,
+      "def_poison": 9.24
+    }
+  },
+  {
+    "id": 20309,
+    "name": "高级防毒装甲·精锐",
+    "quality": 3,
+    "requiredLevel": 25,
+    "stats": {
+      "hp_max": 1232,
+      "def_physic": 12.32,
+      "def_poison": 10.01
+    }
+  },
+  {
+    "id": 20309,
+    "name": "高级防毒装甲·高能",
+    "quality": 3,
+    "requiredLevel": 30,
+    "stats": {
+      "hp_max": 1386,
+      "def_physic": 13.86,
+      "def_poison": 10.78
+    }
+  },
+  {
+    "id": 20203,
+    "name": "刀片轮毂Ⅱ·改良",
+    "quality": 2,
+    "requiredLevel": 5,
+    "stats": {
+      "melee_fight": 100,
+      "dodge_rate": 2
+    }
+  },
+  {
+    "id": 20203,
+    "name": "刀片轮毂Ⅱ·强化",
+    "quality": 2,
+    "requiredLevel": 10,
+    "stats": {
+      "melee_fight": 120,
+      "dodge_rate": 2.2
+    }
+  },
+  {
+    "id": 20203,
+    "name": "刀片轮毂Ⅱ·精工",
+    "quality": 2,
+    "requiredLevel": 15,
+    "stats": {
+      "melee_fight": 140,
+      "dodge_rate": 2.4
+    }
+  },
+  {
+    "id": 20203,
+    "name": "刀片轮毂Ⅱ·战术",
+    "quality": 2,
+    "requiredLevel": 20,
+    "stats": {
+      "melee_fight": 160,
+      "dodge_rate": 2.6
+    }
+  },
+  {
+    "id": 20203,
+    "name": "刀片轮毂Ⅱ·精锐",
+    "quality": 2,
+    "requiredLevel": 25,
+    "stats": {
+      "melee_fight": 180,
+      "dodge_rate": 2.8
+    }
+  },
+  {
+    "id": 20203,
+    "name": "刀片轮毂Ⅱ·高能",
+    "quality": 2,
+    "requiredLevel": 30,
+    "stats": {
+      "melee_fight": 200,
+      "dodge_rate": 3
+    }
+  },
+  {
+    "id": 20301,
+    "name": "量子水晶雷达·强化",
+    "quality": 3,
+    "requiredLevel": 10,
+    "stats": {
+      "crystal_rate": 11,
+      "crystal_carry": 110,
+      "dodge_rate": 2.2
+    }
+  },
+  {
+    "id": 20301,
+    "name": "量子水晶雷达·精工",
+    "quality": 3,
+    "requiredLevel": 15,
+    "stats": {
+      "crystal_rate": 12.1,
+      "crystal_carry": 132,
+      "dodge_rate": 2.42
+    }
+  },
+  {
+    "id": 20301,
+    "name": "量子水晶雷达·战术",
+    "quality": 3,
+    "requiredLevel": 20,
+    "stats": {
+      "crystal_rate": 13.2,
+      "crystal_carry": 154,
+      "dodge_rate": 2.64
+    }
+  },
+  {
+    "id": 20301,
+    "name": "量子水晶雷达·精锐",
+    "quality": 3,
+    "requiredLevel": 25,
+    "stats": {
+      "crystal_rate": 14.3,
+      "crystal_carry": 176,
+      "dodge_rate": 2.86
+    }
+  },
+  {
+    "id": 20301,
+    "name": "量子水晶雷达·高能",
+    "quality": 3,
+    "requiredLevel": 30,
+    "stats": {
+      "crystal_rate": 15.4,
+      "crystal_carry": 198,
+      "dodge_rate": 3.08
+    }
+  },
+  {
+    "id": 20217,
+    "name": "闪电发生器·改良",
+    "quality": 2,
+    "requiredLevel": 5,
+    "stats": {
+      "atk_bullet": 4,
+      "def_thunder": 4
+    }
+  },
+  {
+    "id": 20217,
+    "name": "闪电发生器·强化",
+    "quality": 2,
+    "requiredLevel": 10,
+    "stats": {
+      "atk_bullet": 4.4,
+      "def_thunder": 4.4
+    }
+  },
+  {
+    "id": 20217,
+    "name": "闪电发生器·精工",
+    "quality": 2,
+    "requiredLevel": 15,
+    "stats": {
+      "atk_bullet": 4.8,
+      "def_thunder": 4.8
+    }
+  },
+  {
+    "id": 20217,
+    "name": "闪电发生器·战术",
+    "quality": 2,
+    "requiredLevel": 20,
+    "stats": {
+      "atk_bullet": 5.2,
+      "def_thunder": 5.2
+    }
+  },
+  {
+    "id": 20217,
+    "name": "闪电发生器·精锐",
+    "quality": 2,
+    "requiredLevel": 25,
+    "stats": {
+      "atk_bullet": 5.6,
+      "def_thunder": 5.6
+    }
+  },
+  {
+    "id": 20217,
+    "name": "闪电发生器·高能",
+    "quality": 2,
+    "requiredLevel": 30,
+    "stats": {
+      "atk_bullet": 6,
+      "def_thunder": 6
+    }
+  },
+  {
+    "id": 20401,
+    "name": "极寒碎片·强化",
+    "quality": 5,
+    "requiredLevel": 10,
+    "stats": {
+      "atk_bullet": 19.8,
+      "weapon_crit_equip": 4.4
+    }
+  },
+  {
+    "id": 20401,
+    "name": "极寒碎片·精工",
+    "quality": 5,
+    "requiredLevel": 15,
+    "stats": {
+      "atk_bullet": 21.78,
+      "weapon_crit_equip": 4.84
+    }
+  },
+  {
+    "id": 20401,
+    "name": "极寒碎片·战术",
+    "quality": 5,
+    "requiredLevel": 20,
+    "stats": {
+      "atk_bullet": 23.76,
+      "weapon_crit_equip": 5.28
+    }
+  },
+  {
+    "id": 20401,
+    "name": "极寒碎片·精锐",
+    "quality": 5,
+    "requiredLevel": 25,
+    "stats": {
+      "atk_bullet": 25.74,
+      "weapon_crit_equip": 5.72
+    }
+  },
+  {
+    "id": 20401,
+    "name": "极寒碎片·高能",
+    "quality": 5,
+    "requiredLevel": 30,
+    "stats": {
+      "atk_bullet": 27.72,
+      "weapon_crit_equip": 6.16
+    }
+  },
+  {
+    "id": 20401,
+    "name": "极寒碎片·尖端",
+    "quality": 5,
+    "requiredLevel": 35,
+    "stats": {
+      "atk_bullet": 29.7,
+      "weapon_crit_equip": 6.6
+    }
+  },
+  {
+    "id": 20401,
+    "name": "极寒碎片·先进",
+    "quality": 5,
+    "requiredLevel": 40,
+    "stats": {
+      "atk_bullet": 31.68,
+      "weapon_crit_equip": 7.04
+    }
+  },
+  {
+    "id": 20403,
+    "name": "超合金装甲·强化",
+    "quality": 5,
+    "requiredLevel": 10,
+    "stats": {
+      "def_physic": 22,
+      "hp_max": 1650
+    }
+  },
+  {
+    "id": 20403,
+    "name": "超合金装甲·精工",
+    "quality": 5,
+    "requiredLevel": 15,
+    "stats": {
+      "def_physic": 26.4,
+      "hp_max": 1980
+    }
+  },
+  {
+    "id": 20403,
+    "name": "超合金装甲·战术",
+    "quality": 5,
+    "requiredLevel": 20,
+    "stats": {
+      "def_physic": 30.8,
+      "hp_max": 2310
+    }
+  },
+  {
+    "id": 20403,
+    "name": "超合金装甲·精锐",
+    "quality": 5,
+    "requiredLevel": 25,
+    "stats": {
+      "def_physic": 35.2,
+      "hp_max": 2640
+    }
+  },
+  {
+    "id": 20403,
+    "name": "超合金装甲·高能",
+    "quality": 5,
+    "requiredLevel": 30,
+    "stats": {
+      "def_physic": 39.6,
+      "hp_max": 2970
+    }
+  },
+  {
+    "id": 20403,
+    "name": "超合金装甲·尖端",
+    "quality": 5,
+    "requiredLevel": 35,
+    "stats": {
+      "def_physic": 44,
+      "hp_max": 3300
+    }
+  },
+  {
+    "id": 20403,
+    "name": "超合金装甲·先进",
+    "quality": 5,
+    "requiredLevel": 40,
+    "stats": {
+      "def_physic": 48.4,
+      "hp_max": 3630
+    }
+  },
+  {
+    "id": 20405,
+    "name": "暴风雨·强化",
+    "quality": 5,
+    "requiredLevel": 10,
+    "stats": {
+      "atk_bullet": 16.5,
+      "weapon_crit_equip": 3.3
+    }
+  },
+  {
+    "id": 20405,
+    "name": "暴风雨·精工",
+    "quality": 5,
+    "requiredLevel": 15,
+    "stats": {
+      "atk_bullet": 18.15,
+      "weapon_crit_equip": 3.63
+    }
+  },
+  {
+    "id": 20405,
+    "name": "暴风雨·战术",
+    "quality": 5,
+    "requiredLevel": 20,
+    "stats": {
+      "atk_bullet": 19.8,
+      "weapon_crit_equip": 3.96
+    }
+  },
+  {
+    "id": 20405,
+    "name": "暴风雨·精锐",
+    "quality": 5,
+    "requiredLevel": 25,
+    "stats": {
+      "atk_bullet": 21.45,
+      "weapon_crit_equip": 4.29
+    }
+  },
+  {
+    "id": 20405,
+    "name": "暴风雨·高能",
+    "quality": 5,
+    "requiredLevel": 30,
+    "stats": {
+      "atk_bullet": 23.1,
+      "weapon_crit_equip": 4.62
+    }
+  },
+  {
+    "id": 20405,
+    "name": "暴风雨·尖端",
+    "quality": 5,
+    "requiredLevel": 35,
+    "stats": {
+      "atk_bullet": 24.75,
+      "weapon_crit_equip": 4.95
+    }
+  },
+  {
+    "id": 20405,
+    "name": "暴风雨·先进",
+    "quality": 5,
+    "requiredLevel": 40,
+    "stats": {
+      "atk_bullet": 26.4,
+      "weapon_crit_equip": 5.28
+    }
+  }
+]

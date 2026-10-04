@@ -1,0 +1,5 @@
+# 启动封面 v2
+
+使用内置 image_gen 编辑 v1。工作区原图 launch-cover-v2.png；加载页运行时资源 assets/launch-cover.jpg。
+
+Edit this existing game launch poster. Change ONLY the title typography area at the top. Preserve every character, face, hairstyle, weapon, creature, spaceship, planet, lighting, framing, and the entire underlying illustration unchanged. Replace existing text 美少女星河战队 completely. The complete exact new Chinese title is 异星要塞之星河战队. Set it as two intentional typographic lines: primary large title 异星要塞 in monumental metallic pale-gold block Chinese lettering, and secondary text 之星河战队 beneath it at about 50 percent of primary letter height using visibly different condensed forward-slanted angular sci-fi lettering in luminous silver with icy blue edges, a small linking 之 and stronger 星河战队. Elegant restrained horizontal metallic accents, cinematic hierarchy, perfectly legible exact Chinese characters, no extra text. Fit all typography inside original top title region without covering any faces. Maintain the original portrait dimensions, retain dark quiet lower area for a coded loading bar. Do not add UI, bar, logos, credits, QR codes or watermarks.

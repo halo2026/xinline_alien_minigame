@@ -1,0 +1,624 @@
+{
+  "trials": 3000,
+  "operatorTypes": 11,
+  "fragmentTypes": 22,
+  "fragmentCosts": [
+    10,
+    20,
+    50,
+    100,
+    200
+  ],
+  "chipCosts": [
+    100,
+    200,
+    500,
+    800,
+    1200
+  ],
+  "scenarios": [
+    {
+      "profile": "new",
+      "count": 20,
+      "batch": 10,
+      "stats": {
+        "operators": {
+          "mean": 1.127,
+          "p10": 0,
+          "median": 1,
+          "p90": 2
+        },
+        "fragments": {
+          "mean": 47.14333333333333,
+          "p10": 30,
+          "median": 45,
+          "p90": 65
+        },
+        "chips": {
+          "mean": 195.188,
+          "p10": 157,
+          "median": 196,
+          "p90": 233
+        },
+        "kryptonite": {
+          "mean": 4.064333333333333,
+          "p10": 2,
+          "median": 4,
+          "p90": 7
+        },
+        "gear": {
+          "mean": 1.9906666666666666,
+          "p10": 0,
+          "median": 2,
+          "p90": 4
+        },
+        "red": {
+          "mean": 0.08866666666666667,
+          "p10": 0,
+          "median": 0,
+          "p90": 0
+        },
+        "usableGear": {
+          "mean": 0.23333333333333334,
+          "p10": 0,
+          "median": 0,
+          "p90": 1
+        },
+        "allUnlocked": {
+          "mean": 0,
+          "p10": 0,
+          "median": 0,
+          "p90": 0
+        },
+        "researchUpgrades": {
+          "mean": 0.2763333333333333,
+          "p10": 0,
+          "median": 0,
+          "p90": 1
+        },
+        "maxResearchRank": {
+          "mean": 0.26466666666666666,
+          "p10": 0,
+          "median": 0,
+          "p90": 1
+        }
+      }
+    },
+    {
+      "profile": "new",
+      "count": 30,
+      "batch": 10,
+      "stats": {
+        "operators": {
+          "mean": 1.644,
+          "p10": 1,
+          "median": 2,
+          "p90": 3
+        },
+        "fragments": {
+          "mean": 70.90666666666667,
+          "p10": 50,
+          "median": 70,
+          "p90": 95
+        },
+        "chips": {
+          "mean": 292.47633333333334,
+          "p10": 246,
+          "median": 293,
+          "p90": 339
+        },
+        "kryptonite": {
+          "mean": 6.092,
+          "p10": 3,
+          "median": 6,
+          "p90": 9
+        },
+        "gear": {
+          "mean": 2.9856666666666665,
+          "p10": 1,
+          "median": 3,
+          "p90": 5
+        },
+        "red": {
+          "mean": 0.14266666666666666,
+          "p10": 0,
+          "median": 0,
+          "p90": 1
+        },
+        "usableGear": {
+          "mean": 0.35033333333333333,
+          "p10": 0,
+          "median": 0,
+          "p90": 1
+        },
+        "allUnlocked": {
+          "mean": 0,
+          "p10": 0,
+          "median": 0,
+          "p90": 0
+        },
+        "researchUpgrades": {
+          "mean": 0.725,
+          "p10": 0,
+          "median": 1,
+          "p90": 2
+        },
+        "maxResearchRank": {
+          "mean": 0.5456666666666666,
+          "p10": 0,
+          "median": 1,
+          "p90": 1
+        }
+      }
+    },
+    {
+      "profile": "new",
+      "count": 50,
+      "batch": 10,
+      "stats": {
+        "operators": {
+          "mean": 2.605,
+          "p10": 1,
+          "median": 3,
+          "p90": 4
+        },
+        "fragments": {
+          "mean": 118.37833333333333,
+          "p10": 90,
+          "median": 120,
+          "p90": 150
+        },
+        "chips": {
+          "mean": 488.5826666666667,
+          "p10": 427,
+          "median": 489,
+          "p90": 548
+        },
+        "kryptonite": {
+          "mean": 10.103,
+          "p10": 6,
+          "median": 10,
+          "p90": 14
+        },
+        "gear": {
+          "mean": 5.009333333333333,
+          "p10": 2,
+          "median": 5,
+          "p90": 8
+        },
+        "red": {
+          "mean": 0.238,
+          "p10": 0,
+          "median": 0,
+          "p90": 1
+        },
+        "usableGear": {
+          "mean": 0.5836666666666667,
+          "p10": 0,
+          "median": 0,
+          "p90": 2
+        },
+        "allUnlocked": {
+          "mean": 0,
+          "p10": 0,
+          "median": 0,
+          "p90": 0
+        },
+        "researchUpgrades": {
+          "mean": 2.118333333333333,
+          "p10": 1,
+          "median": 2,
+          "p90": 4
+        },
+        "maxResearchRank": {
+          "mean": 0.9063333333333333,
+          "p10": 1,
+          "median": 1,
+          "p90": 1
+        }
+      }
+    },
+    {
+      "profile": "new",
+      "count": 100,
+      "batch": 10,
+      "stats": {
+        "operators": {
+          "mean": 4.687333333333333,
+          "p10": 3,
+          "median": 5,
+          "p90": 6
+        },
+        "fragments": {
+          "mean": 237.99333333333334,
+          "p10": 200,
+          "median": 240,
+          "p90": 280
+        },
+        "chips": {
+          "mean": 978.6793333333334,
+          "p10": 895,
+          "median": 978,
+          "p90": 1063
+        },
+        "kryptonite": {
+          "mean": 20.091333333333335,
+          "p10": 15,
+          "median": 20,
+          "p90": 26
+        },
+        "gear": {
+          "mean": 9.989333333333333,
+          "p10": 6,
+          "median": 10,
+          "p90": 14
+        },
+        "red": {
+          "mean": 0.4656666666666667,
+          "p10": 0,
+          "median": 0,
+          "p90": 1
+        },
+        "usableGear": {
+          "mean": 1.1703333333333332,
+          "p10": 0,
+          "median": 1,
+          "p90": 3
+        },
+        "allUnlocked": {
+          "mean": 0,
+          "p10": 0,
+          "median": 0,
+          "p90": 0
+        },
+        "researchUpgrades": {
+          "mean": 7.180666666666666,
+          "p10": 5,
+          "median": 8,
+          "p90": 9
+        },
+        "maxResearchRank": {
+          "mean": 1.1186666666666667,
+          "p10": 1,
+          "median": 1,
+          "p90": 2
+        }
+      }
+    },
+    {
+      "profile": "new",
+      "count": 300,
+      "batch": 10,
+      "stats": {
+        "operators": {
+          "mean": 8.796666666666667,
+          "p10": 8,
+          "median": 9,
+          "p90": 10
+        },
+        "fragments": {
+          "mean": 728.525,
+          "p10": 660,
+          "median": 725,
+          "p90": 800
+        },
+        "chips": {
+          "mean": 2949.068333333333,
+          "p10": 2802,
+          "median": 2950,
+          "p90": 3099
+        },
+        "kryptonite": {
+          "mean": 60.208666666666666,
+          "p10": 51,
+          "median": 60,
+          "p90": 70
+        },
+        "gear": {
+          "mean": 30.063,
+          "p10": 23,
+          "median": 30,
+          "p90": 37
+        },
+        "red": {
+          "mean": 1.4126666666666667,
+          "p10": 0,
+          "median": 1,
+          "p90": 3
+        },
+        "usableGear": {
+          "mean": 3.531,
+          "p10": 1,
+          "median": 3,
+          "p90": 6
+        },
+        "allUnlocked": {
+          "mean": 0.25533333333333336,
+          "p10": 0,
+          "median": 0,
+          "p90": 1
+        },
+        "researchUpgrades": {
+          "mean": 23.952,
+          "p10": 22,
+          "median": 24,
+          "p90": 25
+        },
+        "maxResearchRank": {
+          "mean": 2,
+          "p10": 2,
+          "median": 2,
+          "p90": 2
+        }
+      }
+    },
+    {
+      "profile": "new",
+      "count": 100,
+      "batch": 1,
+      "stats": {
+        "operators": {
+          "mean": 5.626333333333333,
+          "p10": 4,
+          "median": 6,
+          "p90": 8
+        },
+        "fragments": {
+          "mean": 235.92166666666665,
+          "p10": 195,
+          "median": 235,
+          "p90": 275
+        },
+        "chips": {
+          "mean": 976.6706666666666,
+          "p10": 894,
+          "median": 977,
+          "p90": 1061
+        },
+        "kryptonite": {
+          "mean": 20.057666666666666,
+          "p10": 15,
+          "median": 20,
+          "p90": 26
+        },
+        "gear": {
+          "mean": 10.01,
+          "p10": 6,
+          "median": 10,
+          "p90": 14
+        },
+        "red": {
+          "mean": 0.4713333333333333,
+          "p10": 0,
+          "median": 0,
+          "p90": 1
+        },
+        "usableGear": {
+          "mean": 1.179,
+          "p10": 0,
+          "median": 1,
+          "p90": 3
+        },
+        "allUnlocked": {
+          "mean": 0.0033333333333333335,
+          "p10": 0,
+          "median": 0,
+          "p90": 0
+        },
+        "researchUpgrades": {
+          "mean": 7.846666666666667,
+          "p10": 5,
+          "median": 8,
+          "p90": 10
+        },
+        "maxResearchRank": {
+          "mean": 1.0926666666666667,
+          "p10": 1,
+          "median": 1,
+          "p90": 1
+        }
+      }
+    },
+    {
+      "profile": "new",
+      "count": 300,
+      "batch": 1,
+      "stats": {
+        "operators": {
+          "mean": 9.158333333333333,
+          "p10": 8,
+          "median": 9,
+          "p90": 10
+        },
+        "fragments": {
+          "mean": 727.7516666666667,
+          "p10": 655,
+          "median": 725,
+          "p90": 800
+        },
+        "chips": {
+          "mean": 2948.3533333333335,
+          "p10": 2800,
+          "median": 2949,
+          "p90": 3096
+        },
+        "kryptonite": {
+          "mean": 60.18,
+          "p10": 51,
+          "median": 60,
+          "p90": 70
+        },
+        "gear": {
+          "mean": 30.067,
+          "p10": 23,
+          "median": 30,
+          "p90": 37
+        },
+        "red": {
+          "mean": 1.424,
+          "p10": 0,
+          "median": 1,
+          "p90": 3
+        },
+        "usableGear": {
+          "mean": 3.5316666666666667,
+          "p10": 1,
+          "median": 3,
+          "p90": 6
+        },
+        "allUnlocked": {
+          "mean": 0.417,
+          "p10": 0,
+          "median": 0,
+          "p90": 1
+        },
+        "researchUpgrades": {
+          "mean": 24.298666666666666,
+          "p10": 23,
+          "median": 24,
+          "p90": 26
+        },
+        "maxResearchRank": {
+          "mean": 2,
+          "p10": 2,
+          "median": 2,
+          "p90": 2
+        }
+      }
+    },
+    {
+      "profile": "all",
+      "count": 100,
+      "batch": 10,
+      "stats": {
+        "operators": {
+          "mean": 0,
+          "p10": 0,
+          "median": 0,
+          "p90": 0
+        },
+        "fragments": {
+          "mean": 249.75333333333333,
+          "p10": 210,
+          "median": 250,
+          "p90": 290
+        },
+        "chips": {
+          "mean": 990.2886666666667,
+          "p10": 905,
+          "median": 992,
+          "p90": 1072
+        },
+        "kryptonite": {
+          "mean": 19.963333333333335,
+          "p10": 15,
+          "median": 20,
+          "p90": 26
+        },
+        "gear": {
+          "mean": 9.991333333333333,
+          "p10": 6,
+          "median": 10,
+          "p90": 14
+        },
+        "red": {
+          "mean": 0.4666666666666667,
+          "p10": 0,
+          "median": 0,
+          "p90": 1
+        },
+        "usableGear": {
+          "mean": 1.1696666666666666,
+          "p10": 0,
+          "median": 1,
+          "p90": 3
+        },
+        "allUnlocked": {
+          "mean": 1,
+          "p10": 1,
+          "median": 1,
+          "p90": 1
+        },
+        "researchUpgrades": {
+          "mean": 9.400666666666666,
+          "p10": 9,
+          "median": 9,
+          "p90": 10
+        },
+        "maxResearchRank": {
+          "mean": 1.0003333333333333,
+          "p10": 1,
+          "median": 1,
+          "p90": 1
+        }
+      }
+    },
+    {
+      "profile": "all",
+      "count": 300,
+      "batch": 10,
+      "stats": {
+        "operators": {
+          "mean": 0,
+          "p10": 0,
+          "median": 0,
+          "p90": 0
+        },
+        "fragments": {
+          "mean": 750.3066666666666,
+          "p10": 680,
+          "median": 750,
+          "p90": 825
+        },
+        "chips": {
+          "mean": 2969.97,
+          "p10": 2824,
+          "median": 2972,
+          "p90": 3113
+        },
+        "kryptonite": {
+          "mean": 60.06766666666667,
+          "p10": 50,
+          "median": 60,
+          "p90": 70
+        },
+        "gear": {
+          "mean": 30.047333333333334,
+          "p10": 23,
+          "median": 30,
+          "p90": 37
+        },
+        "red": {
+          "mean": 1.4173333333333333,
+          "p10": 0,
+          "median": 1,
+          "p90": 3
+        },
+        "usableGear": {
+          "mean": 3.5446666666666666,
+          "p10": 1,
+          "median": 3,
+          "p90": 6
+        },
+        "allUnlocked": {
+          "mean": 1,
+          "p10": 1,
+          "median": 1,
+          "p90": 1
+        },
+        "researchUpgrades": {
+          "mean": 25.269333333333332,
+          "p10": 25,
+          "median": 25,
+          "p90": 26
+        },
+        "maxResearchRank": {
+          "mean": 2,
+          "p10": 2,
+          "median": 2,
+          "p90": 2
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "shared/view.js": "4b3e991e59d9fe9faaa797d730e959800e5bff2eef3cc4b1eaf86ceb3cef2473",
+  "shared/defense-campaign.js": "f4350ee9127d254769969490494db4d34adea15dcf054f107c0aa17b42f3106e",
+  "minigame/shared/view.js": "4b3e991e59d9fe9faaa797d730e959800e5bff2eef3cc4b1eaf86ceb3cef2473",
+  "minigame/shared/defense-campaign.js": "f4350ee9127d254769969490494db4d34adea15dcf054f107c0aa17b42f3106e",
+  "tests/campaign-render-state.test.js": "6adf2266d65c7e55c4584f5168e444f23f4a822ef5150a850f00cedab0667a63",
+  "shared/build-info.js": "623216ac6cac3d5225cffb9294eff6438afcdbb11dc428f42b4effb07d0f0f59"
+}

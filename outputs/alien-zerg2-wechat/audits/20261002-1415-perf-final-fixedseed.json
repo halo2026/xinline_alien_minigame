@@ -1,0 +1,46 @@
+{
+  "wave": 9,
+  "enemies": 194,
+  "maxEnemies": 208,
+  "towers": 20,
+  "corpses": 128,
+  "fx": 61,
+  "bullets": 38,
+  "cache": 38,
+  "update": 4331.22648700001,
+  "draw": 8116.390725000021,
+  "maxU": 11.692708000000039,
+  "maxD": 91.4984999999997,
+  "frames": 7200,
+  "draws": 1200,
+  "stats": {
+    "updateTactics": {
+      "ms": 30.8003460000009,
+      "calls": 7200
+    },
+    "updateEquipmentEffects": {
+      "ms": 138.48682100006454,
+      "calls": 7200
+    },
+    "nearest": {
+      "ms": 1213.0974769996778,
+      "calls": 146354
+    },
+    "blocked": {
+      "ms": 1002.8821280002735,
+      "calls": 6849764
+    },
+    "clear": {
+      "ms": 1219.957265999708,
+      "calls": 132927
+    },
+    "towerStats": {
+      "ms": 45.77648099993348,
+      "calls": 174727
+    },
+    "route": {
+      "ms": 46.42027300000154,
+      "calls": 972
+    }
+  }
+}

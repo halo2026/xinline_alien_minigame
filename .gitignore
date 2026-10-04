@@ -1,0 +1,29 @@
+/*
+!/.gitignore
+!/README.md
+!/outputs/
+/outputs/*
+!/outputs/alien-zerg2-wechat/
+!/outputs/alien-wolf-wechat/
+**/.DS_Store
+**/__pycache__/
+**/*.pyc
+**/.svn/
+**/node_modules/
+**/project.private.config.json
+**/USER-PREFERENCES.md
+**/iphone-profile.json
+**/.env*
+**/*.pem
+**/*.key
+**/miniprogram/
+**/minigame/assets*/
+**/minigame/shared/
+
+# Project source assets and collaboration instructions
+!/source-art/
+!/AGENTS.md
+# Generated package code and local save snapshots
+**/minigame/defense-code/
+/outputs/alien-zerg2-wechat/player-save/
+/outputs/alien-wolf-wechat/player-save/

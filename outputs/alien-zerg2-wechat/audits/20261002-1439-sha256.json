@@ -1,0 +1,7 @@
+{
+  "shared/scorpion2-data.js": "98561022ad7ab3485e7ff8cd4a785f786779fd375120679ebdbf43cee6dfc375",
+  "assets/scorpion2-terrain.png": "85b17c45ce625f94ceb27c1c222f7a93b1b8c41cd16c12a6e17519f9e299b630",
+  "source-art/scorpion-roads/routes.json": "1859eb3a1883c6888b7dec97654ee1f8fcb4bf1c06c33d4f54c4f24bbe38ac16",
+  "tools/pave-scorpion-roads.py": "2d371c41be816e4d3d6bd2ae734b57a5743effcaef3768f5c27ab5ad1db954f3",
+  "shared/build-info.js": "4bc5d5bc36cea278e665da3e66f2e73c374b1c013fe9bb63c3c6102f307932b0"
+}

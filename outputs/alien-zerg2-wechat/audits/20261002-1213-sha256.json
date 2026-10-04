@@ -1,0 +1,11 @@
+{
+  "shared/progression.js": "fd8b978a06af29abcc5ba05b99180f04ba6939c8c43671d3fc98a1c63aac1401",
+  "shared/view.js": "bf10e791ea5be7989d9ab48d70080e68928a24f5d364cbde1543248b56aa55c7",
+  "shared/bestiary.js": "5428716b523df8944761a18994adc8e20fe5faa3189f7dda40b919f6cef3cd1c",
+  "minigame/game.js": "1bdbd94ee9eb97835a4b9abca05ff7146de28d7bad1894a5bf3448140fc4467e",
+  "minigame/shared/progression.js": "fd8b978a06af29abcc5ba05b99180f04ba6939c8c43671d3fc98a1c63aac1401",
+  "minigame/shared/view.js": "bf10e791ea5be7989d9ab48d70080e68928a24f5d364cbde1543248b56aa55c7",
+  "minigame/defense-code/bestiary.js": "5428716b523df8944761a18994adc8e20fe5faa3189f7dda40b919f6cef3cd1c",
+  "shared/build-info.js": "32d499416dbbea47b07f2f6eadd7d7b12e80da79a5e871b40f3b7e84b0920c65",
+  "tests/campaign-save-safety.test.js": "150ac7c79ccf06903bee71803165ab79e60afea931987ff03fb092e0e31b766a"
+}

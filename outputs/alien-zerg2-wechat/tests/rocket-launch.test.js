@@ -1,0 +1,9 @@
+const test=require('node:test'),assert=require('node:assert/strict');
+for(const [stage,base,old,scale]of [['alien-zerg2-wechat',672,840,1],['alien-wolf-wechat',571.2,714,.8]]){
+ const {Game}=require('../../'+stage+'/shared/core'),A=require('../../'+stage+'/shared/art-data');
+ test(stage+' rocket paired launchers match all 32 rendered directions',()=>{const g=new Game();g.start();for(let i=0;i<32;i++){const angle=-i*Math.PI/16,t={id:12205,techBranch:2,techSpec:0,techRank:1,x:800,y:800,angle},row=1+Math.round(Math.acos(Math.sin(angle))/Math.PI*16),f=A.frames[A.groups[A.towerUnits[6022].role].anim.attack[row][0]],s=A.towerUnits[6022].renderScale*scale,points=[];
+  for(let side=0;side<2;side++){t.rocketSalvo={index:side};g.launchArtillery(t,{x:1100,y:1100},g.towerStats(t));const b=g.bullets.at(-1);points.push(b);const localX=(b.sx-t.x)/(s*(Math.cos(angle)<0?-1:1))-f.ox,localY=(b.sy-t.y)/s-f.oy;assert(localX>=0&&localX<=f.w);assert(localY>=0&&localY<=f.h);assert.equal(g.artilleryPose(b,0).x,b.sx);assert.equal(g.artilleryPose(b,0).y,b.sy);}
+  assert(Math.hypot(points[0].sx-points[1].sx,points[0].sy-points[1].sy)>15*scale);
+ }});
+ test(stage+' rocket cannot acquire beyond reduced research range',()=>{const g=new Game();g.start();for(let spec=0;spec<2;spec++)for(let rank=1;rank<=5;rank++){const t={id:12205,techBranch:2,techSpec:spec,techRank:rank,x:800,y:800,angle:0},stats=g.towerStats(t);assert(stats.range<=old*(1+(spec===1?.15*rank:0))*.8+1e-8);assert.equal(g.fireArtillery(t,{x:800+stats.range+1,y:800},stats),false);assert.equal(g.fireArtillery(t,{x:800+stats.minRange-1,y:800},stats),false);assert.equal(g.fireArtillery(t,{x:800+stats.range-1,y:800,air:true},stats),true);assert.equal(g.fireArtillery(t,{x:800+stats.range-1,y:800},stats),true);assert.equal(t.rocketSalvo.index,1);g.time+=stats.salvoGap+1e-8;g.updateRocketSalvo(t);assert.equal(g.bullets.at(-1).mode,'rocket');}});
+}

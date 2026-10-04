@@ -1,0 +1,11 @@
+## 2026-10-02 12:13 — SHIPPED 0.10.02.1213
+
+User reports persistent data resetting on campaign change. Exact incident trigger remains UNCONFIRMED; no captured player error/save. Do not claim poor networking is the root cause: cloud offline tests retain local progress. Confirmed destructive fallback: View swallowed load exceptions then created fresh; progression.restore caught parse/schema/migration exceptions and returned fresh; switching immediately persisted that replacement.
+
+Protection applied main/wolf progression and views: only absent data (null/undefined/empty storage string) creates fresh; nonempty invalid saves throw PROGRESS_LOAD_FAILED with cause. View propagates read failures and defers migration writes until normal flush. Mini game selectMission uses live game snapshot, aborts failed flush, writes pre-transition snapshot KEY+:campaign-backup, initializes target fully before saving/attaching it, saves correct lastCampaign, detaches old view only after success; exceptions retain original battle/menu. KEY and cloud epoch remain 20260924-1506. No user data reset or recovery attempted. Existing historical progress recovery NOT established. Protection is implemented but specific original incident diagnosis still open.
+
+New tests/campaign-save-safety.test.js six regression scenarios: corrupt/nonempty data, thrown reads, construction side effects, storage read failure during handoff, failed write/image/constructor/start retaining old view, 3 rounds of all 8 campaigns preserving level/currency/XP/allocation/archive/clears. 36 tests pass with cloud-save, campaign-supplies, restart-game; packaged and wolf facade strict/valid restore verified.
+
+User requested fix for dim bestiary. Removed undiscovered sprite alpha .6 in list and .63 in details; all sprites now alpha1, rumors/discovery text preserved, elite gold effects unchanged. Mirrored wolf. 18 bestiary tests pass. Actual canvas list/detail rendering reviewed. User image outputs/bestiary-full-color.png.
+
+Package30844241 total2088860 main16packages, within limits. Checksums audits/20261002-1213-sha256.json. Upload Successfully verified version0.10.02.1213; identical Development Preview29954KB expiry10/02 12:41 verified. No publication pending.

@@ -1,0 +1,58 @@
+{
+  "runtime": "v22.14.0",
+  "note": "Desktop native Canvas CPU timing; 390x844 logical pixels, DPR 2. Fixed enemy counts and positions; no claim about phone FPS.",
+  "scenarios": [
+    {
+      "enemies": 100,
+      "render": {
+        "meanMs": 11.800564371428582,
+        "p95Ms": 13.893917000000101
+      },
+      "update": {
+        "meanMs": 1.3185365833333258,
+        "p95Ms": 1.165124999999989
+      },
+      "calls": {
+        "fillRect": 608,
+        "drawImage": 463,
+        "createRadialGradient": 97,
+        "save": 610,
+        "createLinearGradient": 200,
+        "strokeRect": 100,
+        "fillText": 10
+      },
+      "updatePartsMsPerFrame": {
+        "nearest": 0.08830635555556733,
+        "updateYoda": 0.0027375333333212537,
+        "towerStats": 0.006071505555582411
+      },
+      "remainingEnemies": 100
+    },
+    {
+      "enemies": 300,
+      "render": {
+        "meanMs": 12.955339228571399,
+        "p95Ms": 14.045582999999851
+      },
+      "update": {
+        "meanMs": 2.937052783333302,
+        "p95Ms": 1.6044160000001284
+      },
+      "calls": {
+        "fillRect": 1208,
+        "drawImage": 663,
+        "createRadialGradient": 97,
+        "save": 1210,
+        "createLinearGradient": 600,
+        "strokeRect": 300,
+        "fillText": 10
+      },
+      "updatePartsMsPerFrame": {
+        "nearest": 0.21641973888887506,
+        "updateYoda": 0.0016067055555393178,
+        "towerStats": 0.0025234277777725664
+      },
+      "remainingEnemies": 300
+    }
+  ]
+}

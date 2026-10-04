@@ -1,0 +1,20 @@
+{
+  "description": "异星要塞异虫Ⅱ原关卡移植",
+  "miniprogramRoot": "minigame/",
+  "compileType": "game",
+  "appid": "wx290826620512561a",
+  "projectname": "alien-zerg2",
+  "setting": {
+    "es6": true,
+    "minified": true,
+    "urlCheck": false
+  },
+  "simulatorPluginLibVersion": {},
+  "packOptions": {
+    "ignore": [],
+    "include": []
+  },
+  "editorSetting": {},
+  "isGameTourist": false,
+  "cloudfunctionRoot": "cloudfunctions/"
+}

@@ -1,0 +1,435 @@
+TAP version 13
+# Subtest: point budget honors milestones, old saves receive unspent points, spent points survive reload
+ok 1 - point budget honors milestones, old saves receive unspent points, spent points survive reload
+  ---
+  duration_ms: 3.303083
+  ...
+# Subtest: crossing level five awards two, leveling heals and does not auto-spend
+ok 2 - crossing level five awards two, leveling heals and does not auto-spend
+  ---
+  duration_ms: 0.916
+  ...
+# Subtest: class curves are monotonic; invalid allocations cannot mint points
+ok 3 - class curves are monotonic; invalid allocations cannot mint points
+  ---
+  duration_ms: 0.303542
+  ...
+# Subtest: energy gates tactical cards without discarding them; regen and old weapon pickup restore energy
+ok 4 - energy gates tactical cards without discarding them; regen and old weapon pickup restore energy
+  ---
+  duration_ms: 2.473375
+  ...
+# Subtest: armor reduces damage without random evasion and UI allocation persists while paused
+ok 5 - armor reduces damage without random evasion and UI allocation persists while paused
+  ---
+  duration_ms: 2.383125
+  ...
+# Subtest: mobility changes actual fire interval and movement speed; critical player projectiles deal double damage
+ok 6 - mobility changes actual fire interval and movement speed; critical player projectiles deal double damage
+  ---
+  duration_ms: 0.448167
+  ...
+# Subtest: integrated armory allocation updates live stats, persists, and leaves inventory untouched
+ok 7 - integrated armory allocation updates live stats, persists, and leaves inventory untouched
+  ---
+  duration_ms: 1.967334
+  ...
+# Subtest: horizontal attribute buttons allocate their own stat and title shows level and available points
+ok 8 - horizontal attribute buttons allocate their own stat and title shows level and available points
+  ---
+  duration_ms: 3.180625
+  ...
+# Subtest: computing improves real regeneration and old XP keeps level progress on new curve
+ok 9 - computing improves real regeneration and old XP keeps level progress on new curve
+  ---
+  duration_ms: 0.688958
+  ...
+# Subtest: primary attributes retain main roles with limited secondary benefits
+ok 10 - primary attributes retain main roles with limited secondary benefits
+  ---
+  duration_ms: 2.780041
+  ...
+# Subtest: secondary benefits remain weaker than corresponding primary attributes
+ok 11 - secondary benefits remain weaker than corresponding primary attributes
+  ---
+  duration_ms: 2.255541
+  ...
+# Subtest: allocation preview is side-effect free; cancel keeps points and confirm matches preview
+ok 12 - allocation preview is side-effect free; cancel keeps points and confirm matches preview
+  ---
+  duration_ms: 4.840541
+  ...
+# Subtest: music stays off and crowded effects are reduced without delayed queues
+ok 13 - music stays off and crowded effects are reduced without delayed queues
+  ---
+  duration_ms: 1.3065
+  ...
+# Subtest: machine-gun sprite longitudinal direction follows bullet travel in all quadrants
+ok 14 - machine-gun sprite longitudinal direction follows bullet travel in all quadrants
+  ---
+  duration_ms: 4.4235
+  ...
+# Subtest: front grenade heading remains independent of automatic gun targeting
+ok 15 - front grenade heading remains independent of automatic gun targeting
+  ---
+  duration_ms: 1.767709
+  ...
+# Subtest: machine-gun muzzle and flash share original 32-direction offsets
+ok 16 - machine-gun muzzle and flash share original 32-direction offsets
+  ---
+  duration_ms: 2.072458
+  ...
+# Subtest: monster remains use their own atlas fragments and live through landing before fading
+ok 17 - monster remains use their own atlas fragments and live through landing before fading
+  ---
+  duration_ms: 2.692
+  ...
+# Subtest: Yoda winds up, damages a ground area once, plays full attack, then returns to stand
+ok 18 - Yoda winds up, damages a ground area once, plays full attack, then returns to stand
+  ---
+  duration_ms: 3.212125
+  ...
+# Subtest: Yoda ignores air and chest targets, acquires ground enemies within source 600 radius
+ok 19 - Yoda ignores air and chest targets, acquires ground enemies within source 600 radius
+  ---
+  duration_ms: 0.586875
+  ...
+# Subtest: Yoda attack frames use 120ms and stop at final frame; idle and walk stay separate
+ok 20 - Yoda attack frames use 120ms and stop at final frame; idle and walk stay separate
+  ---
+  duration_ms: 1.828542
+  ...
+# Subtest: laser hit is full scale at source box center and follows a living target
+ok 21 - laser hit is full scale at source box center and follows a living target
+  ---
+  duration_ms: 1.419292
+  ...
+# Subtest: bullet collision uses source burst instead of unrelated cannon explosion; grenade has no bullet flash
+ok 22 - bullet collision uses source burst instead of unrelated cannon explosion; grenade has no bullet flash
+  ---
+  duration_ms: 0.681292
+  ...
+# Subtest: laser uses its own splash light, bullet trail fades after projectile expires
+ok 23 - laser uses its own splash light, bullet trail fades after projectile expires
+  ---
+  duration_ms: 1.635333
+  ...
+# Subtest: original map identity, object count, eight waves and final boss
+ok 24 - original map identity, object count, eight waves and final boss
+  ---
+  duration_ms: 1.056792
+  ...
+# Subtest: source clocks and all eight spawns remain navigable
+ok 25 - source clocks and all eight spawns remain navigable
+  ---
+  duration_ms: 25.325084
+  ...
+# Subtest: grenade consumes two energy, respects cooldown and moving inertia
+ok 26 - grenade consumes two energy, respects cooldown and moving inertia
+  ---
+  duration_ms: 1.843791
+  ...
+# Subtest: grenade is ground-only and normal radius is 120
+ok 27 - grenade is ground-only and normal radius is 120
+  ---
+  duration_ms: 4.72975
+  ...
+# Subtest: tower pickup has separate inventory and leaves occupied tactic slot intact
+ok 28 - tower pickup has separate inventory and leaves occupied tactic slot intact
+  ---
+  duration_ms: 1.092166
+  ...
+# Subtest: purchase, cancelled placement, resource shortage preserve resources
+ok 29 - purchase, cancelled placement, resource shortage preserve resources
+  ---
+  duration_ms: 3.223834
+  ...
+# Subtest: automatic aiming ignores manual aim and grenade impact has source orientation and cleanup
+ok 30 - automatic aiming ignores manual aim and grenade impact has source orientation and cleanup
+  ---
+  duration_ms: 1.679875
+  ...
+# Subtest: freeze excludes boss, shield expires, dead ally does not revive
+ok 31 - freeze excludes boss, shield expires, dead ally does not revive
+  ---
+  duration_ms: 0.786
+  ...
+# Subtest: full four-minute schedule produces all 593 enemies without stuck spawnpoints or invalid coordinates
+ok 32 - full four-minute schedule produces all 593 enemies without stuck spawnpoints or invalid coordinates
+  ---
+  duration_ms: 1206.148959
+  ...
+# Subtest: boss death triggers source skill9120 victory after four seconds even with survivors
+ok 33 - boss death triggers source skill9120 victory after four seconds even with survivors
+  ---
+  duration_ms: 1.047292
+  ...
+# Subtest: image loading resolves wrapped native proxy objects without Promise assimilation
+ok 34 - image loading resolves wrapped native proxy objects without Promise assimilation
+  ---
+  duration_ms: 1.697458
+  ...
+# Subtest: grenade rejects insufficient energy without projectile or cooldown
+ok 35 - grenade rejects insufficient energy without projectile or cooldown
+  ---
+  duration_ms: 0.315958
+  ...
+# Subtest: enemy fire expires into its six-frame native burst rather than generic flame
+ok 36 - enemy fire expires into its six-frame native burst rather than generic flame
+  ---
+  duration_ms: 2.069875
+  ...
+# Subtest: acid does not manufacture a cannon impact effect
+ok 37 - acid does not manufacture a cannon impact effect
+  ---
+  duration_ms: 0.576291
+  ...
+# Subtest: melee claws and sparks remain at the struck location, with attack direction
+ok 38 - melee claws and sparks remain at the struck location, with attack direction
+  ---
+  duration_ms: 8.957875
+  ...
+# Subtest: fire impact damages once and its visual expires without reapplying damage
+ok 39 - fire impact damages once and its visual expires without reapplying damage
+  ---
+  duration_ms: 3.887792
+  ...
+# Subtest: legacy five-slot saves migrate into matching eight slots without losing XP or items
+ok 40 - legacy five-slot saves migrate into matching eight slots without losing XP or items
+  ---
+  duration_ms: 2.54275
+  ...
+# Subtest: wrong category is rejected atomically; each category supports their matching slot counts
+ok 41 - wrong category is rejected atomically; each category supports their matching slot counts
+  ---
+  duration_ms: 1.844084
+  ...
+# Subtest: 24 warehouse cells exclude worn gear; full warehouse prevents pickup and unequip but permits replacement
+ok 42 - 24 warehouse cells exclude worn gear; full warehouse prevents pickup and unequip but permits replacement
+  ---
+  duration_ms: 0.588
+  ...
+# Subtest: discard frees one warehouse cell, leaves one world item and can be picked up exactly once
+ok 43 - discard frees one warehouse cell, leaves one world item and can be picked up exactly once
+  ---
+  duration_ms: 1.759042
+  ...
+# Subtest: legacy overflow is retained, not truncated, and fills a newly freed warehouse cell
+ok 44 - legacy overflow is retained, not truncated, and fills a newly freed warehouse cell
+  ---
+  duration_ms: 0.59025
+  ...
+# Subtest: sketch layout opens contextual detail, equips and unequips
+ok 45 - sketch layout opens contextual detail, equips and unequips
+  ---
+  duration_ms: 6.9525
+  ...
+# Subtest: version two reduction preserves every item and remaps category slots
+ok 46 - version two reduction preserves every item and remaps category slots
+  ---
+  duration_ms: 0.717833
+  ...
+# Subtest: warehouse drag equips empty slots, swaps occupied slots, rejects mismatches and cancels safely
+ok 47 - warehouse drag equips empty slots, swaps occupied slots, rejects mismatches and cancels safely
+  ---
+  duration_ms: 1.098
+  ...
+# Subtest: worn drag returns to target warehouse cell; occupied target finds free space and full bag retains gear
+ok 48 - worn drag returns to target warehouse cell; occupied target finds free space and full bag retains gear
+  ---
+  duration_ms: 1.257458
+  ...
+# Subtest: nine-slot save migrates third turret into warehouse while preserving allocation
+ok 49 - nine-slot save migrates third turret into warehouse while preserving allocation
+  ---
+  duration_ms: 1.904917
+  ...
+# Subtest: flamethrower emits source projectile and muzzle light in all 32 directions
+ok 50 - flamethrower emits source projectile and muzzle light in all 32 directions
+  ---
+  duration_ms: 1.315083
+  ...
+# Subtest: flame travels before damage, penetrates enemies once each, deals half to air and expires
+ok 51 - flame travels before damage, penetrates enemies once each, deals half to air and expires
+  ---
+  duration_ms: 2.883875
+  ...
+# Subtest: flame hitting a wall terminates with source impact
+ok 52 - flame hitting a wall terminates with source impact
+  ---
+  duration_ms: 0.495833
+  ...
+# Subtest: flame uses original forward orientation and 2.4 scale; source impact contains all 20 frames
+ok 53 - flame uses original forward orientation and 2.4 scale; source impact contains all 20 frames
+  ---
+  duration_ms: 1.981459
+  ...
+# Subtest: eight-wave full clear yields only two levels from Lv7 on the slower curve
+ok 54 - eight-wave full clear yields only two levels from Lv7 on the slower curve
+  ---
+  duration_ms: 1.507292
+  ...
+# Subtest: compact bottom equipment entry replaces upper right button and opens armory
+ok 55 - compact bottom equipment entry replaces upper right button and opens armory
+  ---
+  duration_ms: 4.426
+  ...
+# Subtest: former energy pillars are buildable, decorative terrain is cleared without invisible collisions
+ok 56 - former energy pillars are buildable, decorative terrain is cleared without invisible collisions
+  ---
+  duration_ms: 6.050166
+  ...
+# Subtest: Mini Game registers touch after assets are ready and supports native touch coordinates
+ok 57 - Mini Game registers touch after assets are ready and supports native touch coordinates
+  ---
+  duration_ms: 7.499917
+  ...
+# Subtest: all four weapons quantize every facing sector and wrap continuously
+ok 58 - all four weapons quantize every facing sector and wrap continuously
+  ---
+  duration_ms: 4.028333
+  ...
+# Subtest: shotgun pellets share barrel attachment despite spread, one muzzle flash per volley
+ok 59 - shotgun pellets share barrel attachment despite spread, one muzzle flash per volley
+  ---
+  duration_ms: 2.123917
+  ...
+# Subtest: vehicle gun sprite and muzzle use vehicle position with no extra height offset
+ok 60 - vehicle gun sprite and muzzle use vehicle position with no extra height offset
+  ---
+  duration_ms: 4.322917
+  ...
+# Subtest: grenade uses original hull attachment, independently of gun facing, without shifting aim point
+ok 61 - grenade uses original hull attachment, independently of gun facing, without shifting aim point
+  ---
+  duration_ms: 1.182208
+  ...
+# Subtest: atlas preserves source top-origin anchors without a second Y inversion
+ok 62 - atlas preserves source top-origin anchors without a second Y inversion
+  ---
+  duration_ms: 0.605083
+  ...
+# Subtest: async subpackage resource reconstruction preserves every original asset byte
+ok 63 - async subpackage resource reconstruction preserves every original asset byte
+  ---
+  duration_ms: 233.139375
+  ...
+# Subtest: WeChat page cold start, hide/show, and unload have one animation loop
+ok 64 - WeChat page cold start, hide/show, and unload have one animation loop
+  ---
+  duration_ms: 47.560708
+  ...
+# Subtest: tank XP crosses multiple levels, heals fully and stays distinct from weapon level
+ok 65 - tank XP crosses multiple levels, heals fully and stays distinct from weapon level
+  ---
+  duration_ms: 3.225833
+  ...
+# Subtest: equipped items are unique; inventory, equipment and stats survive reload
+ok 66 - equipped items are unique; inventory, equipment and stats survive reload
+  ---
+  duration_ms: 1.461542
+  ...
+# Subtest: equipment changes do not grant free full heals and failed equips do not mutate inventory
+ok 67 - equipment changes do not grant free full heals and failed equips do not mutate inventory
+  ---
+  duration_ms: 0.971833
+  ...
+# Subtest: gear drops at intervals of four or five waves; pickup persists once
+ok 68 - gear drops at intervals of four or five waves; pickup persists once
+  ---
+  duration_ms: 3.900292
+  ...
+# Subtest: save adapter restores level; retries failed writes; overlay pauses combat; camera zoom only
+ok 69 - save adapter restores level; retries failed writes; overlay pauses combat; camera zoom only
+  ---
+  duration_ms: 1.029042
+  ...
+# Subtest: invalid saves fall back safely and level cap does not overflow
+ok 70 - invalid saves fall back safely and level cap does not overflow
+  ---
+  duration_ms: 1.15825
+  ...
+# Subtest: roadside placement works far from energy pillars; roads and void cannot be built on
+ok 71 - roadside placement works far from energy pillars; roads and void cannot be built on
+  ---
+  duration_ms: 3.21175
+  ...
+# Subtest: roadside towers cannot overlap and failed placement retains the card
+ok 72 - roadside towers cannot overlap and failed placement retains the card
+  ---
+  duration_ms: 2.111875
+  ...
+# Subtest: all accepted tower footprints exclude blended road cells and void
+ok 73 - all accepted tower footprints exclude blended road cells and void
+  ---
+  duration_ms: 3.707417
+  ...
+# Subtest: same cards stack; different cards coexist; tower storage remains independent
+ok 74 - same cards stack; different cards coexist; tower storage remains independent
+  ---
+  duration_ms: 2.252458
+  ...
+# Subtest: charge is atomic: unsupported, dead, paused, cooldown, energy shortage
+ok 75 - charge is atomic: unsupported, dead, paused, cooldown, energy shortage
+  ---
+  duration_ms: 176.378167
+  ...
+# Subtest: all thirteen original cards release and clean up without invalid positions
+ok 76 - all thirteen original cards release and clean up without invalid positions
+  ---
+  duration_ms: 7336.261959
+  ...
+# Subtest: missiles acquire moving targets; ten launches at 100ms cadence
+ok 77 - missiles acquire moving targets; ten launches at 100ms cadence
+  ---
+  duration_ms: 95.964334
+  ...
+# Subtest: shield protects and expires; ice excludes boss and restores movement
+ok 78 - shield protects and expires; ice excludes boss and restores movement
+  ---
+  duration_ms: 146.121959
+  ...
+# Subtest: shrink is local, cannot compound, excludes boss and restores exact size
+ok 79 - shrink is local, cannot compound, excludes boss and restores exact size
+  ---
+  duration_ms: 153.639125
+  ...
+# Subtest: native Zerg II pools do not invent tactical drops on ordinary monsters
+ok 80 - native Zerg II pools do not invent tactical drops on ordinary monsters
+  ---
+  duration_ms: 0.507334
+  ...
+# Subtest: native card icons and effect cells exist, including both summoned tower models
+ok 81 - native card icons and effect cells exist, including both summoned tower models
+  ---
+  duration_ms: 0.111458
+  ...
+# Subtest: nuclear pulses apply 3300 three times to ground targets, not airborne targets
+ok 82 - nuclear pulses apply 3300 three times to ground targets, not airborne targets
+  ---
+  duration_ms: 0.942416
+  ...
+# Subtest: satellite deals three pulses, delayed bombs stack then detonate together
+ok 83 - satellite deals three pulses, delayed bombs stack then detonate together
+  ---
+  duration_ms: 1.821084
+  ...
+# Subtest: freezing a flyer grounds it temporarily then restores air status
+ok 84 - freezing a flyer grounds it temporarily then restores air status
+  ---
+  duration_ms: 42.406958
+  ...
+# Subtest: touching each visible card activates that card without moving joystick
+ok 85 - touching each visible card activates that card without moving joystick
+  ---
+  duration_ms: 5.049209
+  ...
+1..85
+# tests 85
+# suites 0
+# pass 85
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 8247.599959

@@ -1,0 +1,8 @@
+{
+  "shared/airship3-data.js": "0c63d89aeefef93357d92c8bccd09c1872918853a774d4f3348966bd02e77647",
+  "shared/view.js": "6c0d9e4818fd7d892fb0ef5c14ce52790b4c9243d4501436dc4968ce27215f55",
+  "assets/airship-desert.jpg": "84efa8230dcf2f0bf856d1aea1831e3d82f966e78c14840f05fca274a9666334",
+  "tools/pave-airship-roads.py": "0bcc62341d2eaf06be69cb6dab0998c119cac6964a6296eaa0325297b20c8349",
+  "source-art/airship-roads/routes.json": "483ba9985e561d7841a7f3383155cb20359034a2cb3e1896bd2a87ca67c3cee7",
+  "shared/build-info.js": "a9672c5f9f3c8302a08126bc5ce7ae5589b01f496303a01edbb242a9ab05ec2e"
+}

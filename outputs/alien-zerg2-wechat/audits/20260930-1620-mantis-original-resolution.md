@@ -1,0 +1,9 @@
+# 0.9.30.1620 — original-resolution mantis
+
+User requested original image import after blur diagnosis. Rebuilt all45 frames directly from original400x400 RGBA with transparent-bound cropping ONLY. No resizing, no palette quantization, no lossy compression. Four generated PNG pages tank-mantis-0..3 (862358,1124062,993565,793502 bytes), atlas per-crop RGBA bytes equal original crops verified by import recipe. Preserved world anchor200,271.428571 and current1.3175 entity scale (15% smaller than initial). New frame ow/oh equal full-resolution crop dimensions. Runtime and archive pages regenerated, main/wolf catalog synced. Original attack/stand/walk/birth/dead animations preserved. No combat/save changes.
+
+work/import-mantis.py now produces original-resolution atlases and does NOT rewrite vehicle assets. Removed superseded generated tank-mantis.png, original source frames intact. provenance.json updated. Current package guard total30MiB (old20MiB was unnecessarily restrictive); conservative2MiB main/per-subpackage retained. Cocos official engine documentation https://docs.cocos.com/creator/3.8/manual/zh/editor/publish/subpackage.html lists WeChat30M total; WeChat direct doc fetch unavailable, actual UploadSuccessfully confirms this24.35MB package accepted. Package24350462 total/main2084935,13packages. Existing vehicle palette conversions from1533 are unchanged.
+
+21 tests pass (tank-mantis+bestiary) after packaging; initial prebuild archive check correctly found not-yet-built page mapping, rerun passed after build. All45frame exactpixel checks pass. Actual battle render inspected work/mantis-spray.png; useroutputs/mantis-original-resolution.png. Prior lowresolution comparison work/mantis-before-original.png.
+
+BOTH VERIFIED: Upload Successfully; identical Development Preview23618KB expiry9/30 16:48. Save epoch preserved. No pending publication.

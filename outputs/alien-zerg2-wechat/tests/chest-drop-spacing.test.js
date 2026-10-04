@@ -1,0 +1,6 @@
+const test=require('node:test'),assert=require('node:assert/strict');
+for(const root of ['../shared','../../alien-wolf-wechat/shared']){
+ const {Game}=require(root+'/core');
+ test(root+' nearby chest drops remain separated and retain full reward count',()=>{const g=new Game();g.hasGround=()=>true;g.nav.blocked=()=>false;for(let i=0;i<5;i++)assert(g.addGroundPickup({lootChest:true,count:1,x:500+i*12,y:500}));assert.equal(g.pickups.length,5);for(let i=0;i<5;i++)for(let j=0;j<i;j++)assert(Math.hypot(g.pickups[i].x-g.pickups[j].x,g.pickups[i].y-g.pickups[j].y)>=62);for(const p of g.pickups)assert(g.take(p));assert.equal(g.chestCount(),5);});
+ test(root+' narrow ground merges count instead of losing loot or placing it beyond terrain',()=>{const g=new Game();g.hasGround=(x,y)=>Math.hypot(x-500,y-500)<12;g.nav.blocked=()=>false;g.addGroundPickup({lootChest:true,count:1,x:500,y:500,pickupAfter:1});g.addGroundPickup({lootChest:true,count:2,x:500,y:500,pickupAfter:2});assert.equal(g.pickups.length,1);assert.equal(g.pickups[0].count,3);assert.equal(g.pickups[0].pickupAfter,2);assert(g.take(g.pickups[0]));assert.equal(g.chestCount(),3);assert.equal(g.addGroundPickup({lootChest:true,x:-100,y:-100}),false);});
+}

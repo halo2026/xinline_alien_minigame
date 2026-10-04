@@ -1,0 +1,66 @@
+{
+  "deviceOrientation": "portrait",
+  "showStatusBar": false,
+  "subpackages": [
+    {
+      "name": "assets1",
+      "root": "assets1"
+    },
+    {
+      "name": "assets2",
+      "root": "assets2"
+    },
+    {
+      "name": "assets3",
+      "root": "assets3"
+    },
+    {
+      "name": "assets4",
+      "root": "assets4"
+    },
+    {
+      "name": "assets5",
+      "root": "assets5"
+    },
+    {
+      "name": "assets6",
+      "root": "assets6"
+    },
+    {
+      "name": "assets7",
+      "root": "assets7"
+    },
+    {
+      "name": "assets8",
+      "root": "assets8"
+    },
+    {
+      "name": "assets9",
+      "root": "assets9"
+    },
+    {
+      "name": "assets10",
+      "root": "assets10"
+    },
+    {
+      "name": "assets11",
+      "root": "assets11"
+    },
+    {
+      "name": "assets12",
+      "root": "assets12"
+    },
+    {
+      "name": "assets13",
+      "root": "assets13"
+    },
+    {
+      "name": "assets14",
+      "root": "assets14"
+    },
+    {
+      "name": "defense-code",
+      "root": "defense-code"
+    }
+  ]
+}
