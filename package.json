@@ -1,0 +1,22 @@
+{
+  "name": "xinline-alien-minigame",
+  "version": "0.0.0",
+  "private": true,
+  "description": "异星要塞小游戏本地开发与验证入口",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "python3 outputs/alien-zerg2-wechat/tools/package-game.py",
+    "dev": "npm run build && python3 -m http.server 8787 --bind 127.0.0.1 --directory outputs/alien-zerg2-wechat",
+    "test": "npm run build && node --test outputs/alien-zerg2-wechat/tests/*.test.js outputs/alien-wolf-wechat/tests/*.test.js",
+    "test:smoke": "npm run build && node --test outputs/alien-zerg2-wechat/tests/packaged-startup.test.js outputs/alien-zerg2-wechat/tests/package.test.js outputs/alien-zerg2-wechat/tests/defense-campaigns.test.js outputs/alien-zerg2-wechat/tests/cloud-save.test.js outputs/alien-zerg2-wechat/tests/image-loader.test.js",
+    "test:render": "node --test outputs/alien-zerg2-wechat/tests/airship-render-budget.test.js outputs/alien-zerg2-wechat/tests/campaign-render-state.test.js outputs/alien-zerg2-wechat/tests/remains-edge.test.js outputs/alien-zerg2-wechat/tests/sprite-fast-path.test.js outputs/alien-zerg2-wechat/tests/stain-cache.test.js outputs/alien-zerg2-wechat/tests/greenstar-visuals.test.js",
+    "bestiary:data": "node outputs/alien-zerg2-wechat/tools/update-bestiary-strength.cjs"
+  },
+  "devDependencies": {
+    "@napi-rs/canvas": "1.0.10",
+    "esbuild": "^0.28.2",
+    "fflate": "^0.8.3"
+  }
+}

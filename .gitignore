@@ -23,7 +23,15 @@
 # Project source assets and collaboration instructions
 !/source-art/
 !/AGENTS.md
+!/package.json
+!/package-lock.json
+!/DEVELOPMENT.md
 # Generated package code and local save snapshots
 **/minigame/defense-code/
+**/minigame/level-code/
 /outputs/alien-zerg2-wechat/player-save/
 /outputs/alien-wolf-wechat/player-save/
+
+# Development handoff and audit records
+!/ALIEN_MINIGAME_HANDOFF.md
+!/audits/

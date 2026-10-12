@@ -59,8 +59,20 @@
       "root": "assets14"
     },
     {
+      "name": "assets15",
+      "root": "assets15"
+    },
+    {
+      "name": "assets16",
+      "root": "assets16"
+    },
+    {
       "name": "defense-code",
       "root": "defense-code"
+    },
+    {
+      "name": "level-code",
+      "root": "level-code"
     }
   ]
 }

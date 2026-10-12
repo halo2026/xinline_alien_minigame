@@ -1,0 +1,13 @@
+# Operator star portraits — 2026-10-10
+
+22 portraits for the 11 existing operators, 2 and 3 stars. Generated with the built-in image_gen tool using the original operator-portraits.jpg atlas and the approved 2-star machine gun portrait as style reference. Each original generated PNG is preserved here; manifest.json records source paths, character index, tier and role. No existing 1-star character is replaced.
+
+Prompt template (one call per character/tier):
+
+Use case: identity-preserve. ONE {stars}-star {role} operator portrait for a sci-fi tower defense game. Input image 1 is a character atlas: only use character number {index+1} from the LEFT ({identity in manifest}). Preserve that designated character's face, gender, hairstyle, color palette and weapon class; IGNORE other characters. Image 2 is approved STYLE and composition only; do not copy its pink-haired identity unless designated character is index 1. Match polished hand-painted anime game portrait, detailed materials, dark navy hangar, thin gunmetal frame and portrait 2:3 upper-thigh framing with a clear large face. 2-star upgrade: more refined functional tactical armor and weapon, restrained gold rank accents. 3-star upgrade: visibly more advanced elite powered armor, richer gold armor trim, higher technology upgraded weapon, confident veteran presence. More advanced than the approved 2-star style, while preserving character identity. Single ADULT character in practical armor with fully covered chest and torso, holding role-appropriate weapon; no exaggerated anatomy. Exactly {stars} small golden five-point stars at upper left, within frame. No text, letters, QR codes, watermarks, slogans, other characters or comparison panels.
+
+The first machine-gun preview and initial machine-gun 3-star / shotgun 2-star used equivalent earlier prompts emphasizing original identity, role, refined shoulder/forearm armor, cyan weapon details and the exact number of stars. Later prompts explicitly specify practical coverage.
+
+`tools/build-operator-stars.py` assembles runtime atlas. Columns follow original art order (index 0–10); row 0 is 2-star, row 1 is 3-star. Runtime uses normalized 240×360 source cells with image-size scaling. Thumbnail crops leave room for explicit UI rank badges, full-body reveal preserves the baked stars. Full-resolution sources are excluded from game packaging.
+
+Rocket operator corrected twice per user feedback. Final 2/3-star portraits regenerated from the ORIGINAL portrait crop only, not the rejected male variants: slender adult woman, brown bob, olive flight suit, backpack rocket pods, control grips only. Exact final prompts are recorded in manifest.json.

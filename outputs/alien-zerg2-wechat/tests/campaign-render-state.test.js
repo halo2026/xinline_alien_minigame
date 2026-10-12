@@ -1,5 +1,5 @@
 const test=require('node:test'),assert=require('node:assert/strict');
-const {createCanvas}=require('../../../work/gear-render/node_modules/@napi-rs/canvas');
+const {createCanvas}=require('@napi-rs/canvas');
 const factory=require('../shared/defense-campaign'),art=require('../shared/defense-art');
 function scene(id){const stage=factory.create(require('../shared/'+id+'-data'),art),canvas=createCanvas(420,900),ctx=canvas.getContext('2d'),image=createCanvas(16,16);let depth=0;const save=ctx.save.bind(ctx),restore=ctx.restore.bind(ctx);ctx.save=()=>{depth++;save();};ctx.restore=()=>{depth--;restore();};const v=new stage.api.View(ctx,{pages:stage.art.pages.map(()=>image),terrain:image,portraits:image},420,900),g=v.game;g.start();v.entryGame=g;v.insertion=null;g.progress.battleIntroStep=3;g.progress.resourceIntroStep=5;v.inventoryOpen=false;v.worldVisible=()=>true;return {stage,v,g,ctx,depth:()=>depth};}
 function neutral(s){assert.equal(s.depth(),0);const m=s.ctx.getTransform();assert.deepEqual([m.a,m.b,m.c,m.d,m.e,m.f],[1,0,0,1,0,0]);}

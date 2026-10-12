@@ -37,6 +37,20 @@ test('player restart persists across devices and stale progress cannot resurrect
  await save(stale.store,{...stale.store.load(),xp:1});assert(stale.store.blocked);
  const reopened=device(b);await reopened.store.start();assert.equal(reopened.store.load().level,1);assert.equal(reopened.store.load().kryptonite,0);assert.equal(reopened.store.load().lastCampaign,'zerg');assert.equal(other.store.load().level,7);
 });
-test('20260923 test epoch starts empty and preserves previous phone and simulator saves',async()=>{const b=backend();for(const slot of ['phone-v1','simulator']){const old=await b.call({action:'read',epoch:'20260921-1227',slot});await b.call({action:'write',epoch:'20260921-1227',slot,owner:old.owner,revision:0,operation:'previous-test-run',data:{...P.fresh(),level:5,chips:123}});const fresh=await b.call({action:'read',epoch:'20260923-2140',slot});assert.notEqual(fresh.owner,old.owner);assert.equal(fresh.record,null);assert.equal((await b.call({action:'read',epoch:'20260921-1227',slot})).record.data.chips,123);}assert(P.KEY.endsWith('20260924-1506'));assert.equal(require('../shared/cloud-config').epoch,'20260924-1506');});
+test('20260923 test epoch starts empty and preserves previous phone and simulator saves',async()=>{const b=backend();for(const slot of ['phone-v1','simulator']){const old=await b.call({action:'read',epoch:'20260921-1227',slot});await b.call({action:'write',epoch:'20260921-1227',slot,owner:old.owner,revision:0,operation:'previous-test-run',data:{...P.fresh(),level:5,chips:123}});const fresh=await b.call({action:'read',epoch:'20260923-2140',slot});assert.notEqual(fresh.owner,old.owner);assert.equal(fresh.record,null);assert.equal((await b.call({action:'read',epoch:'20260921-1227',slot})).record.data.chips,123);}});
 
 test('20260924 epoch starts empty without loading 20260923 progress',async()=>{const b=backend();for(const slot of ['phone-v1','simulator']){const old=await b.call({action:'read',epoch:'20260923-2140',slot});await b.call({action:'write',epoch:'20260923-2140',slot,owner:old.owner,revision:0,operation:'previous-test-run',data:{...P.fresh(),level:5,chips:123}});const fresh=await b.call({action:'read',epoch:'20260924-1506',slot});assert.notEqual(fresh.owner,old.owner);assert.equal(fresh.record,null);}});
+
+test('current reset starts empty for phone and simulator and cannot import previous epoch',async()=>{
+ const config=require('../shared/cloud-config');assert.equal(config.epoch,'20261009-0028');assert(P.KEY.endsWith(config.epoch));
+ const b=backend();for(const slot of ['player','simulator']){
+  const old=await b.call({action:'read',slot,epoch:'20261008-1722'});
+  await b.call({action:'write',slot,epoch:'20261008-1722',owner:old.owner,revision:0,operation:'old-reset-test',data:{...P.fresh(),level:30,kryptonite:9999}});
+  const current=await b.call({action:'read',slot,epoch:config.epoch});assert.notEqual(current.owner,old.owner);assert.equal(current.record,null);
+  const local={get:()=>null,set:()=>{}};
+  const store=new CloudSave({local,key:P.KEY,call:e=>b.call({...e,slot,epoch:config.epoch}),delay:100000});
+  assert.equal(await store.start(),null);await save(store,P.fresh());
+  const data=store.load();assert.equal(data.level,1);for(const key of ['xp','chips','kryptonite'])assert.equal(data[key],0);
+  assert.equal(data.inventory.filter(P.isChest).length,0);assert.deepEqual(data.actFirstClearRewards,{});assert.equal(require('../shared/store').unlocked(data),false);
+ }
+});

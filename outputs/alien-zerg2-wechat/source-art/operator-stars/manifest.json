@@ -1,0 +1,180 @@
+[
+  {
+    "index": 0,
+    "stars": 2,
+    "role": "machine gun",
+    "identity": "pink-red ponytail",
+    "generated_path": "/Users/wangxin/.codex/generated_images/01a11b5f-0921-7d31-bf93-0cfa512b8823/exec-40baba1d-9b9e-4aef-92f3-0beef462342b.png",
+    "file": "operator-00-2star.png"
+  },
+  {
+    "index": 0,
+    "stars": 3,
+    "role": "machine gun",
+    "identity": "pink-red high side ponytail, confident red eyes, adult woman, black/teal tactical armor, heavy machine gun",
+    "generated_path": "/Users/wangxin/.codex/generated_images/01a11b5f-0921-7d31-bf93-0cfa512b8823/exec-4fa35197-d4e4-4e85-b73e-e5dcfce5a087.png",
+    "file": "operator-00-3star.png"
+  },
+  {
+    "index": 1,
+    "stars": 2,
+    "role": "shotgun",
+    "identity": "adult blonde woman with long golden twin ponytails and small brown beret, brown tactical outfit, black shotgun",
+    "generated_path": "/Users/wangxin/.codex/generated_images/01a11b5f-0921-7d31-bf93-0cfa512b8823/exec-78c1b1fc-7763-4f41-8335-dd6e66a77c73.png",
+    "file": "operator-01-2star.png"
+  },
+  {
+    "index": 1,
+    "stars": 3,
+    "role": "shotgun",
+    "identity": "adult blonde woman with long golden twin ponytails and small brown beret, brown tactical outfit, black shotgun",
+    "generated_path": "/Users/wangxin/.codex/generated_images/01a11b5f-0921-7d31-bf93-0cfa512b8823/exec-c8adc4b6-f258-4ebd-9d2a-adf3ceb4c123.png",
+    "file": "operator-01-3star.png"
+  },
+  {
+    "index": 2,
+    "stars": 2,
+    "role": "sniper",
+    "identity": "adult silver-white haired woman with medium bob and hair ornament, reserved expression, black-and-white long tactical coat, long precision sniper rifle",
+    "generated_path": "/Users/wangxin/.codex/generated_images/01a11b5f-0921-7d31-bf93-0cfa512b8823/exec-f9b9d7a1-6092-445e-b628-a6aaeff756f1.png",
+    "file": "operator-02-2star.png"
+  },
+  {
+    "index": 2,
+    "stars": 3,
+    "role": "sniper",
+    "identity": "adult silver-white haired woman with medium bob and hair ornament, reserved expression, black-and-white long tactical coat, long precision sniper rifle",
+    "generated_path": "/Users/wangxin/.codex/generated_images/01a11b5f-0921-7d31-bf93-0cfa512b8823/exec-8fa18337-467c-4aec-9def-d8d1a2ed882c.png",
+    "file": "operator-02-3star.png"
+  },
+  {
+    "index": 3,
+    "stars": 2,
+    "role": "flamethrower",
+    "identity": "adult red-haired woman with flame-theme head ornament, energetic expression, orange heavy flamethrower",
+    "generated_path": "/Users/wangxin/.codex/generated_images/01a11b5f-0921-7d31-bf93-0cfa512b8823/exec-fba0d955-53b0-41e1-9a23-a1e99a0cb886.png",
+    "file": "operator-03-2star.png"
+  },
+  {
+    "index": 3,
+    "stars": 3,
+    "role": "flamethrower",
+    "identity": "adult red-haired woman with flame-theme head ornament, energetic expression, orange heavy flamethrower",
+    "generated_path": "/Users/wangxin/.codex/generated_images/01a11b5f-0921-7d31-bf93-0cfa512b8823/exec-52347fa0-93ad-4d01-a1ba-c625e958263c.png",
+    "file": "operator-03-3star.png"
+  },
+  {
+    "index": 4,
+    "stars": 2,
+    "role": "freeze ray",
+    "identity": "adult long pale icy-blue haired woman with blue eyes, ice-blue and white tactical outfit, large blue freezing weapon",
+    "generated_path": "/Users/wangxin/.codex/generated_images/01a11b5f-0921-7d31-bf93-0cfa512b8823/exec-46649143-85bf-4bb0-975e-64e9c334eed6.png",
+    "file": "operator-04-2star.png"
+  },
+  {
+    "index": 4,
+    "stars": 3,
+    "role": "freeze ray",
+    "identity": "adult long pale icy-blue haired woman with blue eyes, ice-blue and white tactical outfit, large blue freezing weapon",
+    "generated_path": "/Users/wangxin/.codex/generated_images/01a11b5f-0921-7d31-bf93-0cfa512b8823/exec-30ef96ae-88b3-438e-b92a-9c84d66d2759.png",
+    "file": "operator-04-3star.png"
+  },
+  {
+    "index": 5,
+    "stars": 2,
+    "role": "chain lightning",
+    "identity": "adult blonde-brown bob-haired woman, black metallic armor and red cape, holding a futuristic electric hammer",
+    "generated_path": "/Users/wangxin/.codex/generated_images/01a11b5f-0921-7d31-bf93-0cfa512b8823/exec-f5c12a00-7d47-425e-88e1-4783fe3b22c6.png",
+    "file": "operator-05-2star.png"
+  },
+  {
+    "index": 5,
+    "stars": 3,
+    "role": "chain lightning",
+    "identity": "adult blonde-brown bob-haired woman, black metallic armor and red cape, holding a futuristic electric hammer",
+    "generated_path": "/Users/wangxin/.codex/generated_images/01a11b5f-0921-7d31-bf93-0cfa512b8823/exec-4aaaf8c1-0a6c-4a7a-a171-ad34a223e842.png",
+    "file": "operator-05-3star.png"
+  },
+  {
+    "index": 6,
+    "stars": 2,
+    "role": "cannon",
+    "identity": "adult long brown-haired woman, white and pale blue futuristic armor, heavy shoulder cannon",
+    "generated_path": "/Users/wangxin/.codex/generated_images/01a11b5f-0921-7d31-bf93-0cfa512b8823/exec-1b740a1b-fe64-4377-83ff-9d5acd68f388.png",
+    "file": "operator-06-2star.png"
+  },
+  {
+    "index": 6,
+    "stars": 3,
+    "role": "cannon",
+    "identity": "adult long brown-haired woman, white and pale blue futuristic armor, heavy shoulder cannon",
+    "generated_path": "/Users/wangxin/.codex/generated_images/01a11b5f-0921-7d31-bf93-0cfa512b8823/exec-6229c54b-93a8-4adc-8103-cce9c721fc12.png",
+    "file": "operator-06-3star.png"
+  },
+  {
+    "index": 7,
+    "stars": 2,
+    "role": "howitzer",
+    "identity": "adult long silver-lavender haired woman, white and dark navy armor, twin futuristic heavy artillery cannon assemblies",
+    "generated_path": "/Users/wangxin/.codex/generated_images/01a11b5f-0921-7d31-bf93-0cfa512b8823/exec-5f58aa31-7aef-4335-8b53-c802a649f23b.png",
+    "file": "operator-07-2star.png"
+  },
+  {
+    "index": 7,
+    "stars": 3,
+    "role": "howitzer",
+    "identity": "adult long silver-lavender haired woman, white and dark navy armor, twin futuristic heavy artillery cannon assemblies",
+    "generated_path": "/Users/wangxin/.codex/generated_images/01a11b5f-0921-7d31-bf93-0cfa512b8823/exec-e9e84b36-f58d-43db-afc8-3f35050b7d79.png",
+    "file": "operator-07-3star.png"
+  },
+  {
+    "index": 8,
+    "stars": 2,
+    "role": "rocket launcher",
+    "identity": "Adult woman with short chestnut bob, slender feminine silhouette, fitted olive flight suit, BACK-MOUNTED rocket pods only, hands on small control grips",
+    "generated_path": "/Users/wangxin/.codex/generated_images/01a11b5f-0921-7d31-bf93-0cfa512b8823/exec-3d0a22cc-337e-4498-b0c0-2982a7d16cb0.png",
+    "file": "operator-08-2star.png",
+    "prompt": "Use case: identity-preserve. Redesign ONLY the exact ORIGINAL female rocket-artillery operator in the attached reference into a 2-star upgraded portrait. This ORIGINAL image is the sole identity and body reference. Preserve her feminine face, large warm reddish-brown eyes, short chestnut-brown layered bob swept around the cheeks, gentle confident expression, and SLENDER FEMALE BODY with narrow shoulders, slim arms, small hands, natural bust and defined slim waist. Adult anime woman, beautiful but practical military specialist. CRITICAL: NOT a man, NOT a bulky soldier, NOT broad shoulders, NO muscle bulk, NO beard. Keep her olive-green fitted military flight suit and brown/orange backpack harness rather than thick torso armor. Weapon configuration must faithfully match original: twin rocket-launcher pods mounted on the BACKPACK BEHIND HER SHOULDERS, with orange rocket tubes visible to either side of her upper body. The ONLY weapons are these BACK-MOUNTED ROCKET PODS. Her hands hold two SMALL control grips at waist level, as in original, or rest on their controls: absolutely NO rifle, NO handheld rocket tube, NO gun crossing the torso, NO extra weapon. 2-star: refined flight suit material, modest upgraded shoulder guards that remain compact, improved backpack pod casing with small gold details. Polished hand-painted anime mobile game portrait matching the original woman's recognizable identity, portrait 2:3 head-to-upper-thigh composition. Dark blue subtle sci-fi hangar background and thin futuristic metal frame. Exactly 2 small gold five-point stars in the upper left. Remove all original slogans, names, QR codes and marketing layout: no words, no logos, no text. The original reference's slim feminine silhouette and backpack-only weapon layout are mandatory."
+  },
+  {
+    "index": 8,
+    "stars": 3,
+    "role": "rocket launcher",
+    "identity": "Adult woman with short chestnut bob, slender feminine silhouette, fitted olive flight suit, BACK-MOUNTED rocket pods only, hands on small control grips",
+    "generated_path": "/Users/wangxin/.codex/generated_images/01a11b5f-0921-7d31-bf93-0cfa512b8823/exec-340e2a7b-d30f-4080-b605-1f0c33626d26.png",
+    "file": "operator-08-3star.png",
+    "prompt": "Use case: identity-preserve. Redesign ONLY the exact ORIGINAL female rocket-artillery operator in the attached reference into a 3-star upgraded portrait. This ORIGINAL image is the sole identity and body reference. Preserve her feminine face, large warm reddish-brown eyes, short chestnut-brown layered bob swept around the cheeks, gentle confident expression, and SLENDER FEMALE BODY with narrow shoulders, slim arms, small hands, natural bust and defined slim waist. Adult anime woman, beautiful but practical military specialist. CRITICAL: NOT a man, NOT a bulky soldier, NOT broad shoulders, NO muscle bulk, NO beard. Keep her olive-green fitted military flight suit and brown/orange backpack harness rather than thick torso armor. Weapon configuration must faithfully match original: twin rocket-launcher pods mounted on the BACKPACK BEHIND HER SHOULDERS, with orange rocket tubes visible to either side of her upper body. The ONLY weapons are these BACK-MOUNTED ROCKET PODS. Her hands hold two SMALL control grips at waist level, as in original, or rest on their controls: absolutely NO rifle, NO handheld rocket tube, NO gun crossing the torso, NO extra weapon. 3-star: more advanced fitted suit and elegant gold trim, compact articulated wrist guards, sophisticated glowing circuitry on the back-mounted rocket pods, a visibly elite version without adding bulk. Polished hand-painted anime mobile game portrait matching the original woman's recognizable identity, portrait 2:3 head-to-upper-thigh composition. Dark blue subtle sci-fi hangar background and thin futuristic metal frame. Exactly 3 small gold five-point stars in the upper left. Remove all original slogans, names, QR codes and marketing layout: no words, no logos, no text. The original reference's slim feminine silhouette and backpack-only weapon layout are mandatory."
+  },
+  {
+    "index": 9,
+    "stars": 2,
+    "role": "shrinking ray",
+    "identity": "adult purple-haired woman, white and lavender futuristic lab combat coat, compact purple ray gun",
+    "generated_path": "/Users/wangxin/.codex/generated_images/01a11b5f-0921-7d31-bf93-0cfa512b8823/exec-fb77e607-9fcf-4be9-b742-8f713bdc2a83.png",
+    "file": "operator-09-2star.png"
+  },
+  {
+    "index": 9,
+    "stars": 3,
+    "role": "shrinking ray",
+    "identity": "adult purple-haired woman, white and lavender futuristic lab combat coat, compact purple ray gun",
+    "generated_path": "/Users/wangxin/.codex/generated_images/01a11b5f-0921-7d31-bf93-0cfa512b8823/exec-7090085c-6ca9-4341-8c87-925092318375.png",
+    "file": "operator-09-3star.png"
+  },
+  {
+    "index": 10,
+    "stars": 2,
+    "role": "shockwave",
+    "identity": "adult short white-haired woman with orange head ornament, white-and-orange futuristic combat outfit, chunky blue shockwave energy weapon",
+    "generated_path": "/Users/wangxin/.codex/generated_images/01a11b5f-0921-7d31-bf93-0cfa512b8823/exec-3c00d2af-dc64-4f57-99f2-3f61939faae5.png",
+    "file": "operator-10-2star.png"
+  },
+  {
+    "index": 10,
+    "stars": 3,
+    "role": "shockwave",
+    "identity": "adult short white-haired woman with orange head ornament, white-and-orange futuristic combat outfit, chunky blue shockwave energy weapon",
+    "generated_path": "/Users/wangxin/.codex/generated_images/01a11b5f-0921-7d31-bf93-0cfa512b8823/exec-893cbeee-8319-4416-a900-afb96ee963a1.png",
+    "file": "operator-10-3star.png"
+  }
+]

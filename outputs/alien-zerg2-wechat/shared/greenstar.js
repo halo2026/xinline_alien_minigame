@@ -15,7 +15,7 @@ for(const [id,[source,scale,name]]of Object.entries(roster)){
 // The vehicle is larger than the reference hero. Expand layout spacing, not combat sprites.
 const layoutScale=1.5,point=q=>({...q,x:q.x*layoutScale,y:q.y*layoutScale});
 D.sourceSize=[...D.size];D.layoutScale=layoutScale;D.flankRoutes=D.flankRoutes.map(r=>({...r,points:r.points.map(([x,y])=>point({x,y}))}));D.size=D.size.map(n=>n*layoutScale);D.units=D.units.map(u=>{const q=[...u];q[3]*=layoutScale;q[4]*=layoutScale;return q;});
-D.campaignConfig={...D.campaignConfig,playerStart:point(D.campaignConfig.playerStart),objective:point(D.campaignConfig.objective),objectives:D.campaignConfig.objectives.map(point)};
+D.campaignConfig={...D.campaignConfig,playerStart:point(D.campaignConfig.playerStart),objective:{...point(D.campaignConfig.objective),scale:D.campaignConfig.objective.scale*1.15},objectives:D.campaignConfig.objectives.map(q=>({...point(q),scale:q.scale*1.15}))};
 D.campaignConfig.jointLanding=true;D.campaignConfig.playerStart={x:D.campaignConfig.objective.x+165,y:D.campaignConfig.objective.y-115};
 D.navigationBounds=Object.fromEntries(Object.entries(D.navigationBounds).map(([key,value])=>[key,value*layoutScale]));
 D.buildTerrain={cellSize:16,cols:Math.ceil(D.size[0]/16),rows:Math.ceil(D.size[1]/16)};D.buildTerrain.cells=Array.from({length:D.buildTerrain.cols*D.buildTerrain.rows},(_,i)=>Number(data.buildTerrain.cells[Math.min(data.buildTerrain.rows-1,Math.floor(Math.floor(i/D.buildTerrain.cols)*16/D.layoutScale/16))*data.buildTerrain.cols+Math.min(data.buildTerrain.cols-1,Math.floor((i%D.buildTerrain.cols)*16/D.layoutScale/16))]));

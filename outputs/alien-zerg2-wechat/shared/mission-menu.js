@@ -1,22 +1,26 @@
 (function(){
 const build=typeof module!=='undefined'?require('./build-info'):globalThis.AlienBuild;
 const missions=[
-{id:'zerg',title:'异虫',source:'yxys_zerg_002',art:0,waves:10,objective:'守护精炼厂 · 第一幕1–10波 / 第二幕11–20波',runtime:true},
-{id:'zerg1',title:'护矿使者',source:'yxys_zerg_001',art:7,waves:7,objective:'护送矿车 · 第一幕1–7波 / 第二幕8–14波',runtime:true},
-{id:'snake3',title:'双头蛇窟Ⅲ',source:'yxys_snake_03',art:1,waves:7,objective:'守护基地 · 第一幕1–7波 / 第二幕8–14波',runtime:true},
-{id:'airship3',title:'母舰Ⅲ',source:'yxys_airship_03',art:3,waves:7,objective:'守护基地 · 第一幕1–7波 / 第二幕8–14波',runtime:true},
-{id:'greenstar',title:'氪石矿脉',source:'td_009_jmhj',art:6,waves:15,objective:'守护三座矿厂 · 第一幕1–15波 / 第二幕16–30波',runtime:true},
-{id:'fish3',title:'母巢护卫Ⅲ',source:'yxys_fish_03',art:2,waves:8,objective:'守护基地 · 第一幕1–8波 / 第二幕9–16波',runtime:true},
-{id:'fortress2',title:'空中堡垒Ⅱ',source:'yxys_mechanics_002',art:4,waves:9,objective:'守护基地 · 第一幕1–9波 / 第二幕10–18波',runtime:true},
-{id:'scorpion2',title:'地狱魔蝎Ⅱ',source:'yxys_scorpion_02',art:5,waves:9,objective:'守护基地 · 第一幕1–9波 / 第二幕10–18波',runtime:true}];
+{id:'zerg',title:'异虫',source:'yxys_zerg_002',art:0,waves:8,objective:'守护矿厂 · 两幕16波',runtime:true},
+{id:'mine4',title:'4号矿坑',source:'mine4',art:8,waves:7,objective:'螺旋防线 · 两幕14波',runtime:true},
+{id:'zerg1',title:'护矿使者',source:'yxys_zerg_001',art:7,waves:7,objective:'护送矿车 · 两幕14波',runtime:true},
+{id:'snake3',title:'双头蛇窟Ⅲ',source:'yxys_snake_03',art:1,waves:7,objective:'守护基地 · 两幕14波',runtime:true},
+{id:'airship3',title:'母舰Ⅲ',source:'yxys_airship_03',art:3,waves:7,objective:'守护基地 · 两幕15波',runtime:true},
+{id:'thunderraid',title:'雷兽突袭',source:'thunder-raid',art:9,waves:8,objective:'双线守矿 · 两幕16波',runtime:true},
+{id:'iron-alien',title:'铁血猎人',source:'iron-alien',art:10,waves:7,objective:'守护铁血猎人 · 两幕14波',runtime:true},
+{id:'greenstar',title:'氪石矿脉',source:'td_009_jmhj',art:6,waves:15,objective:'守护三矿 · 两幕30波',runtime:true},
+{id:'fish3',title:'母巢护卫Ⅲ',source:'yxys_fish_03',art:2,waves:8,objective:'守护基地 · 两幕16波',runtime:true},
+{id:'fortress2',title:'空中堡垒Ⅱ',source:'yxys_mechanics_002',art:4,waves:9,objective:'守护基地 · 两幕18波',runtime:true},
+{id:'scorpion2',title:'地狱魔蝎Ⅱ',source:'yxys_scorpion_02',art:5,waves:9,objective:'守护基地 · 两幕18波',runtime:true}];
 function unlocked(progress,index){return index===0||progress.campaignClears?.[missions[index].id]===true||!!progress.campaignActs?.[missions[index].id]||progress.campaignClears?.[missions[index-1].id]===true;}
 function recordClear(game,id){if(!missions.some(m=>m.id===id)||game.state!=='won')return false;const p=game.progress;p.campaignClears=p.campaignClears||{};if(p.campaignClears[id])return false;p.campaignClears[id]=true;p.campaignActs??={};p.campaignActs[id]={act:3,gold:game.gold||0,convoyLost:game.convoyLost||0};game.progressDirty=true;return true;}
 class MissionMenu{
  constructor(view,onSelect,onResume=null){this.view=view;this.onSelect=onSelect;this.onResume=onResume;this.selected=Math.max(0,missions.findIndex((m,i)=>unlocked(view.game.progress,i)&&!view.game.progress.campaignClears?.[m.id]));this.scroll=0;this.animationTime=0;this.lastFrame=0;this.focus();}
  geometry(){const v=this.view,land=v.w>v.h,area={x:12,y:v.top+30,w:v.w-24,h:Math.max(170,v.h-v.top-182)},step=land?166:156;return {land,area,step,max:Math.max(0,(missions.length-1)*step+(land?72:138)-(land?area.w:area.h)*.62)};}
  focus(){const g=this.geometry();this.scroll=Math.max(0,Math.min(g.max,this.selected*g.step-(g.land?g.area.w:g.area.h)/2+70));}
- layout(){const {land,area,step}=this.geometry();return missions.map((m,i)=>{const cross=[.3,.7,.35,.7,.3,.7,.35,.7][i],cx=land?area.x+72+i*step-this.scroll:area.x+area.w*cross,cy=land?area.y+125:area.y+138+i*step-this.scroll;return {...m,index:i,cx,cy,x:cx-62,y:cy-58,w:124,h:138};});}
- resumeRect(){return {x:this.view.w-Math.min(204,this.view.w-132)-18,y:this.view.h-54,w:Math.min(204,this.view.w-132),h:36};}
+ layout(){const {land,area,step}=this.geometry();return missions.map((m,i)=>{const cross=[.3,.7,.35,.7,.3,.7,.35,.7][i%8],cx=land?area.x+72+i*step-this.scroll:area.x+area.w*cross,cy=land?area.y+125:area.y+138+i*step-this.scroll;return {...m,index:i,cx,cy,x:cx-62,y:cy-58,w:124,h:138};});}
+ restartRect(){return {x:18,y:this.view.h-54,w:108,h:36};}
+ resumeRect(){return {x:this.view.w-Math.min(204,this.view.w-162)-18,y:this.view.h-54,w:Math.min(204,this.view.w-162),h:36};}
  footer(){const v=this.view;return {x:18,y:v.h-145,w:v.w-36,h:128};}
  drawSpace(){
  const v=this.view,c=v.ctx,w=v.w,h=v.h,{land,max}=this.geometry(),now=Date.now();
@@ -49,7 +53,7 @@ class MissionMenu{
  return this.lightLayer;
  }
  drawChapter(r,active,open){
- const c=this.view.ctx,im=this.view.images.campaignNodes,t=this.animationTime;
+ const c=this.view.ctx,im=r.id==='iron-alien'?this.view.images.ironAlienIcon:this.view.images.campaignNodes,t=this.animationTime;
  c.save();c.translate(r.cx,r.cy);
  if(active){
  // Soft upper-left key light and a cool rim light, without a selection ring.
@@ -58,10 +62,10 @@ class MissionMenu{
  c.save();c.translate(-27,-41);c.rotate(-.48);c.scale(.48,1);light=c.createRadialGradient(0,0,1,0,0,86);light.addColorStop(0,'#deedff19');light.addColorStop(.5,'#dcecff0d');light.addColorStop(1,'#b3dbed00');c.fillStyle=light;c.fillRect(-86,-86,172,172);c.restore();c.restore();
  }
  c.globalAlpha*=active?1:open?.83:.45;
- if(im)c.drawImage(im,r.art*160,0,160,160,-54,-54,108,108);
+ if(im)c.drawImage(im,(r.id==='iron-alien'?0:r.art)*160,0,160,160,-54,-54,108,108);
  if(active&&im){
  const layer=this.chapterLayer();
- if(layer){const q=layer.getContext('2d');q.clearRect(0,0,160,160);q.globalCompositeOperation='source-over';q.drawImage(im,r.art*160,0,160,160,0,0,160,160);q.globalCompositeOperation='source-atop';
+ if(layer){const q=layer.getContext('2d');q.clearRect(0,0,160,160);q.globalCompositeOperation='source-over';q.drawImage(im,(r.id==='iron-alien'?0:r.art)*160,0,160,160,0,0,160,160);q.globalCompositeOperation='source-atop';
  const key=q.createRadialGradient(49,35,0,59,52,116);key.addColorStop(0,'#eaf4ff55');key.addColorStop(.53,'#c4e6f517');key.addColorStop(1,'#09122528');q.fillStyle=key;q.fillRect(0,0,160,160);
  // The slow narrow reflection sweeps across opaque pixels only.
  const sweep=(t*.12+r.index*.17)%1,x=-65+sweep*290,shine=q.createLinearGradient(x-24,0,x+24,0);shine.addColorStop(0,'#bfeaff00');shine.addColorStop(.5,'#d8f3ff25');shine.addColorStop(1,'#bfeaff00');q.fillStyle=shine;q.fillRect(0,0,160,160);
@@ -105,11 +109,11 @@ class MissionMenu{
  if(this.mapMaskKey!==key){const mask=q.createLinearGradient(0,0,land?width:0,land?0:height);mask.addColorStop(0,'rgba(255,255,255,0)');for(let i=0;i<=16;i++){const t=i/16;mask.addColorStop((inset+t*fade)/span,'rgba(255,255,255,'+(t*t*(3-2*t))+')');}for(let i=16;i>=0;i--){const t=i/16;mask.addColorStop(1-(inset+t*fade)/span,'rgba(255,255,255,'+(t*t*(3-2*t))+')');}mask.addColorStop(1,'rgba(255,255,255,0)');this.mapMask=mask;this.mapMaskKey=key;}
  q.save();q.globalCompositeOperation='destination-in';q.fillStyle=this.mapMask;q.fillRect(0,0,width,height);q.restore();c.drawImage(layer,a.x,a.y,a.w,a.h);
  }
- draw(){const v=this.view,c=v.ctx,w=v.w,h=v.h,g=this.geometry(),p=v.game.progress;this.drawSpace();this.drawMap();const f=this.footer(),m=missions[this.selected],open=unlocked(p,this.selected);c.fillStyle='#08131eef';c.fillRect(0,f.y-5,w,h-f.y+5);c.fillStyle='#6f9da044';c.fillRect(f.x,f.y,f.w,1);v.text(m.title,f.x+4,f.y+29,20,'#f1ddb0');v.text(m.objective,f.x+4,f.y+72,12,'#b1c7d5');const status=m.runtime&&!open?'测试开放 · 正式解锁需通关'+missions[this.selected-1].title:!open?'通关'+missions[this.selected-1].title+'后解锁':m.runtime?'':'关卡内容待接入';v.text(status,f.x+4,f.y+89,11,'#d3b17b');const bw=118,bx=w-bw-22,by=f.y+17;v.gearPanel(bx,by,bw,38,m.runtime?'#375554':'#273240');v.text(m.runtime?(p.campaignActs?.[m.id]?.act===2?'继续第二幕':'进入战役'):open?'查看战役':'未解锁',bx+bw/2,by+25,16,m.runtime?'#ffe2a2':'#96a7b6','center');v.text('扫除虫患  ›',f.x+4,h-30,14,'#abcbd5');if(this.onResume){const r=this.resumeRect();v.gearPanel(r.x,r.y,r.w,r.h,'#375554');v.text('回到正在进行的战役',r.x+r.w/2,r.y+24,Math.min(14,r.w/12),'#ffe2a2','center');}else v.text(build.label,w-22,h-30,11,'#7f99ab','right');}
- down(x,y){this.drag={x,y,scroll:this.scroll,moved:false};return true;}
- move(x,y){if(!this.drag)return;const g=this.geometry(),d=this.drag,delta=g.land?x-d.x:y-d.y;if(Math.abs(delta)>7)d.moved=true;if(d.moved)this.scroll=Math.max(0,Math.min(g.max,d.scroll-delta));}
- up(x,y,cancel=false){const d=this.drag;if(!d)return;this.move(x,y);this.drag=null;if(cancel||d.moved)return;const v=this.view,f=this.footer(),r=this.resumeRect();if(this.onResume&&x>=r.x&&x<=r.x+r.w&&y>=r.y&&y<=r.y+r.h){this.onResume();return;}if(y>v.h-55&&x<180){this.onSelect('wolf');return;}if(y>=f.y+17&&y<=f.y+55&&x>=v.w-140){const m=missions[this.selected];if(m.runtime)this.onSelect(m.id);return;}const a=this.geometry().area;if(y<a.y||y>a.y+a.h)return;const hit=this.layout().find(r=>x>=r.x&&x<=r.x+r.w&&y>=r.y&&y<=r.y+r.h);if(hit)this.selected=hit.index;}
- wheel(delta){const g=this.geometry();this.scroll=Math.max(0,Math.min(g.max,this.scroll+delta));}
+ draw(){const v=this.view;if(v.bestiaryOpen){const now=Date.now();v.bestiaryClock=(v.bestiaryClock||0)+(this.lastFrame?Math.max(0,Math.min(.1,(now-this.lastFrame)/1000)):0);this.lastFrame=now;v.drawBestiary();return;}const c=v.ctx,w=v.w,h=v.h,g=this.geometry(),p=v.game.progress;this.drawSpace();this.drawMap();v.drawBestiaryEntry();const f=this.footer(),m=missions[this.selected],open=unlocked(p,this.selected);c.fillStyle='#08131eef';c.fillRect(0,f.y-5,w,h-f.y+5);c.fillStyle='#6f9da044';c.fillRect(f.x,f.y,f.w,1);v.text(m.title,f.x+4,f.y+29,20,'#f1ddb0');v.text(m.objective,f.x+4,f.y+72,12,'#b1c7d5');const status=m.runtime&&!open?'测试开放 · 正式解锁需通关'+missions[this.selected-1].title:!open?'通关'+missions[this.selected-1].title+'后解锁':m.runtime?'':'关卡内容待接入';v.text(status,f.x+4,f.y+89,11,'#d3b17b');const bw=118,bx=w-bw-22,by=f.y+17;v.gearPanel(bx,by,bw,38,m.runtime?'#375554':'#273240');v.text(m.runtime?(p.campaignActs?.[m.id]?.act===2?'继续第二幕':'进入战役'):open?'查看战役':'未解锁',bx+bw/2,by+25,16,m.runtime?'#ffe2a2':'#96a7b6','center');if(this.onResume){const r=this.resumeRect();v.gearPanel(r.x,r.y,r.w,r.h,'#375554');v.text('回到正在进行的战役',r.x+r.w/2,r.y+24,Math.min(14,r.w/12),'#ffe2a2','center');}else v.text(build.label,w-22,h-30,11,'#7f99ab','right');if(v.onRestartGame){const r=this.restartRect();v.gearPanel(r.x,r.y,r.w,r.h,'#273240');v.text('一切重新开始',r.x+r.w/2,r.y+24,13,'#b5c3cc','center');}}
+ down(x,y){this.archiveGesture=!!this.view.bestiaryOpen;if(this.archiveGesture){this.drag=null;this.view.down('mission-bestiary',x,y);return true;}this.drag={x,y,scroll:this.scroll,moved:false};return true;}
+ move(x,y){if(this.archiveGesture){if(this.view.bestiaryOpen)this.view.motion('mission-bestiary',x,y);return;}if(!this.drag)return;const g=this.geometry(),d=this.drag,delta=g.land?x-d.x:y-d.y;if(Math.abs(delta)>7)d.moved=true;if(d.moved)this.scroll=Math.max(0,Math.min(g.max,d.scroll-delta));}
+ up(x,y,cancel=false){if(this.archiveGesture){this.archiveGesture=false;if(this.view.bestiaryOpen)this.view.up('mission-bestiary',x,y,cancel);return;}const d=this.drag;if(!d)return;this.move(x,y);this.drag=null;if(cancel||d.moved)return;const v=this.view,book=v.bestiaryBookRect?.();if(book&&x>=book.x&&x<=book.x+book.w&&y>=book.y&&y<=book.y+book.h){v.bestiaryOpen=true;v.bestiaryEntry=null;v.bestiaryClock=0;v.bestiaryDrag=null;return;}const reset=this.restartRect();if(v.onRestartGame&&x>=reset.x&&x<=reset.x+reset.w&&y>=reset.y&&y<=reset.y+reset.h){v.onRestartGame();return;}const f=this.footer(),r=this.resumeRect();if(this.onResume&&x>=r.x&&x<=r.x+r.w&&y>=r.y&&y<=r.y+r.h){this.onResume();return;}if(y>=f.y+17&&y<=f.y+55&&x>=v.w-140){const m=missions[this.selected];if(m.runtime)this.onSelect(m.id);return;}const a=this.geometry().area;if(y<a.y||y>a.y+a.h)return;const hit=this.layout().find(r=>x>=r.x&&x<=r.x+r.w&&y>=r.y&&y<=r.y+r.h);if(hit)this.selected=hit.index;}
+ wheel(delta){const v=this.view;if(v.bestiaryOpen){if(v.bestiaryEntry)v.bestiaryScroll=Math.max(0,Math.min(v.bestiaryScrollMax||0,(v.bestiaryScroll||0)+delta));else v.bestiaryListScroll=Math.max(0,Math.min(v.bestiaryLayout().scrollMax,(v.bestiaryListScroll||0)+delta));return;}const g=this.geometry();this.scroll=Math.max(0,Math.min(g.max,this.scroll+delta));}
 }
 const api={MissionMenu,missions,unlocked,recordClear};if(typeof module!=='undefined')module.exports=api;else globalThis.AlienMissions=api;
 })();

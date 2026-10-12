@@ -1,0 +1,11 @@
+(function(){
+const size=[1920,1344],terrainBounds={x:-96,y:-120,w:2112,h:1640},objective={x:930,y:735,hp:60000,id:917000,scale:1},queen={x:1120,y:735},playerStart={x:1030,y:1050};
+const polygon=[{x:140,y:170},{x:450,y:110},{x:720,y:150},{x:990,y:100},{x:1270,y:140},{x:1540,y:115},{x:1780,y:210},{x:1820,y:490},{x:1870,y:730},{x:1800,y:1040},{x:1630,y:1170},{x:1370,y:1200},{x:1140,y:1150},{x:880,y:1200},{x:620,y:1170},{x:350,y:1200},{x:110,y:1030},{x:85,y:760},{x:115,y:490}];
+const inside=(x,y)=>{let hit=false;for(let i=0,j=polygon.length-1;i<polygon.length;j=i++){const a=polygon[i],b=polygon[j];if((a.y>y)!==(b.y>y)&&x<(b.x-a.x)*(y-a.y)/(b.y-a.y)+a.x)hit=!hit;}return hit;};
+const smooth=points=>{const out=[];for(let i=0;i<points.length-1;i++){const a=points[Math.max(0,i-1)],b=points[i],c=points[i+1],d=points[Math.min(points.length-1,i+2)];for(let k=0;k<12;k++){const t=k/12,t2=t*t,t3=t2*t;out.push({x:.5*((2*b[0])+(-a[0]+c[0])*t+(2*a[0]-5*b[0]+4*c[0]-d[0])*t2+(-a[0]+3*b[0]-3*c[0]+d[0])*t3),y:.5*((2*b[1])+(-a[1]+c[1])*t+(2*a[1]-5*b[1]+4*c[1]-d[1])*t2+(-a[1]+3*b[1]-3*c[1]+d[1])*t3)});}}out.push({x:points.at(-1)[0],y:points.at(-1)[1]});return out;};
+const routes=[smooth([[1730,650],[1660,685],[1510,685],[1390,530],[1270,395],[1010,345],[790,405],[650,565],[590,685],[730,715],[835,735]]),smooth([[1730,650],[1660,685],[1510,685],[1390,870],[1220,1010],[970,1040],[770,965],[650,820],[590,685],[730,715],[835,735]])];
+const distance=(x,y,points)=>{let min=Infinity;for(let i=1;i<points.length;i++){const a=points[i-1],b=points[i],dx=b.x-a.x,dy=b.y-a.y,t=Math.max(0,Math.min(1,((x-a.x)*dx+(y-a.y)*dy)/(dx*dx+dy*dy||1)));min=Math.min(min,Math.hypot(x-a.x-t*dx,y-a.y-t*dy));}return min;};
+const roadDistance=(x,y)=>Math.min(...routes.map(r=>distance(x,y,r))),cellSize=24,cols=80,rows=56;
+const cells=Array.from({length:cols*rows},(_,i)=>{const x=(i%cols+.5)*24,y=(Math.floor(i/cols)+.5)*24;if(!inside(x,y)||x<180||x>1770||y<280||y>1120)return 0;if(roadDistance(x,y)<76||Math.hypot((x-1005)/1.25,y-735)<145)return 2;return 1;});
+const a={size,terrainBounds,objective,queen,playerStart,polygon,inside,routes,roadDistance,roadWidth:144,buildTerrain:{cellSize,cols,rows,cells}};if(typeof module!=='undefined')module.exports=a;else globalThis.IronAlienLayout=a;
+})();

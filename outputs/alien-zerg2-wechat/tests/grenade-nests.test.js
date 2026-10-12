@@ -1,0 +1,8 @@
+const test=require('node:test'),assert=require('node:assert/strict');
+for(const root of ['../shared','../../alien-wolf-wechat/shared']){const {Game}=require(root+'/core');
+ function arena(){const g=new Game({seed:3});g.start();g.wave=14;g.pending=[];g.nextWave=Infinity;g.enemies=[];g.chests=[];g.bullets=[];g.player.fireCd=100;g.player.grenadeBonus=0;g.yoda.hp=0;return g;}
+ function blast(g,x,y,critical=false){g.bullets.push({kind:'grenade',sx:x,sy:y,tx:x,ty:y,x,y,age:0,life:.01,angle:0,critical});g.update(.02);}
+ test(root+' grenade destroys both egg types and drops their reward once',()=>{for(const type of [0,1]){const g=arena(),n=g.addInsectNest({x:900,y:900},type);blast(g,n.x,n.y);assert.equal(n.hp,0);assert(n.rewarded);assert(!g.chests.includes(n));const count=g.pickups.length;blast(g,n.x,n.y);assert.equal(g.pickups.length,count);}});
+ test(root+' nests take exact grenade damage; ordinary boxes and airborne targets are unchanged',()=>{const g=arena(),near=g.addInsectNest({x:900,y:900},2),far=g.addInsectNest({x:1021,y:900},2),box={id:12542,chest:true,x:900,y:900,hp:1000,maxHp:1000,scale:1};g.chests.push(box);const air=g.hatchInsect(near);assert(air?.air);Object.assign(air,{x:900,y:900,frozen:100});const hp=air.hp;blast(g,900,900);assert.equal(near.hp,600);assert.equal(far.hp,3600);assert.equal(box.hp,1000);assert.equal(air.hp,hp);blast(g,900,900);assert.equal(near.hp,0);});
+ test(root+' critical grenade reaches eggs at 150px and destroys 6000HP mother nest',()=>{const g=arena(),egg=g.addInsectNest({x:1050,y:900},0),mother=g.addInsectNest({x:900,y:900},4);blast(g,900,900,true);assert.equal(egg.hp,0);assert.equal(mother.hp,0);});
+}

@@ -8,8 +8,9 @@ for stem,id in [('aerial-hive',915000),('thunderbeast',915001)]:
  def save():
   name=f'{stem}-{len(pages)}.png';im=atlas.crop((0,0,1024,y+row));im.quantize(colors=128,method=Image.Quantize.FASTOCTREE).save(R/'assets'/name,optimize=True);pages.append(name);art['pages'].append(name)
  for src,action in [('stand','stand'),('walk','walk'),('attack','attack'),('die','dead')]:
-  group['anim'][action]={'1':[]};group['intervals'][action]=.12
-  for i,p in enumerate(sorted((S/stem/src).glob('*.png'))):
+  group['anim'][action]={'1':[]};group['intervals'][action]=.18 if id==915000 else .12
+  source=R.parents[1]/'source-art/mail-monsters-20261006/thunderbeast' if stem=='thunderbeast' else S/stem
+  for i,p in enumerate(sorted((source/src).glob('*.png'))):
    im=Image.open(p).convert('RGBA');box=im.getbbox();im=im.crop(box)
    if x+im.width+2>1024:x=0;y+=row;row=0
    if y+im.height+2>1024:save();atlas=Image.new('RGBA',(1024,1024));x=y=row=0
@@ -19,9 +20,9 @@ for stem,id in [('aerial-hive',915000),('thunderbeast',915001)]:
 # Seventeen authored half-circle views become32 directions through renderer mirroring.
 moth=Image.new('RGBA',(1024,384));rows={};page=len(art['pages']);art['pages'].append('zerg-moth.png')
 for direction in range(1,18):
- im=Image.open(S/'zerg-moth'/f'a{direction:02}001.png').convert('RGBA');assert im.size==(128,128)
+ im=Image.open(R.parents[1]/'source-art/mail-monsters-20261004/zerg-moth'/f'a{direction:02}001.png').convert('RGBA');assert im.size==(120,120)
  x=(direction-1)%8*128;y=(direction-1)//8*128;name=f'zerg-moth/{direction}'
- moth.paste(im,(x,y));art['frames'][name]={'page':page,'x':x,'y':y,'w':128,'h':128,'ox':-64,'oy':-64}
+ moth.paste(im,(x+4,y+4));art['frames'][name]={'page':page,'x':x,'y':y,'w':128,'h':128,'ox':-64,'oy':-64}
  rows[str(direction)]=[name]
 moth.save(R/'assets/zerg-moth.png',optimize=True)
 art['groups'][915002]={'dirs':32,'anim':{action:rows for action in ['stand','walk','attack','dead']},'intervals':{action:.12 for action in ['stand','walk','attack','dead']}}

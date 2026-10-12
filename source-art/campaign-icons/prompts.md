@@ -1,0 +1,9 @@
+# 关卡写实图标
+
+使用内置 imagegen 生成。thunderraid.png 与 mine4.png 保存原始透明素材；tools/build-campaign-icons.cjs 将它们放入 campaign-nodes.png 的第 10、9 个图块。
+
+## 雷兽突袭
+Use case: stylized-concept. Production realistic sci-fi campaign-selection icon, square composition, transparent exterior, no frame and no text. Use attached creature as anatomical reference: massive armored alien thunderbeast, burgundy chitin, blue glowing sacs, heavy curled tusks and numerous claws, menacing frontal three-quarter stance. Place it on a small isolated floating charcoal asteroid with jagged mountain ridges, a tiny industrial human mining installation and two glowing cyan ore deposits for scale. Creature dominates and remains readable at 108 pixels. Cinematic realistic game rendering, sharply modeled rock and chitin, cool cyan rim light with warm amber accents. Single coherent miniature diorama, centered with generous transparent padding, no rectangular landscape, no stars painted outside the asteroid. Preserve recognizable creature anatomy from reference.
+
+## 4号矿坑
+Use case: stylized-concept. Production realistic science fiction campaign-selection icon for a level called Mine Pit 4. No text or numbers in the image. One isolated floating asteroid miniature, with two concentric spiral roads carved into a steep dark rocky open-pit mine, a deep sinister alien burrow at the center, small violet organic spires and glowing cyan ore veins, and a tiny human refinery with amber windows at the lower front edge. High oblique top-down view, realistic cinematic game rendering, layered charcoal rock cliffs, dramatic depth, strong clear silhouette readable at 108 pixels. Centered square composition with generous padding. Genuine transparent background outside the irregular floating rock island. No circular metal border, no rectangular terrain, no UI, no landscape backdrop. Match a premium realistic sci-fi campaign icon.

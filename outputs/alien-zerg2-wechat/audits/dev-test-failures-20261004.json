@@ -1,0 +1,1347 @@
+{
+  "command": "npm test",
+  "total": 949,
+  "passed": 727,
+  "failed": 222,
+  "cancelled": 0,
+  "errorTypes": {
+    "AssertionError": 196,
+    "TypeError": 23,
+    "ReferenceError": 1,
+    "Error": 2
+  },
+  "failures": [
+    {
+      "location": "outputs/alien-wolf-wechat/tests/campaign.test.js:2:1",
+      "test": "native campaign dimensions, economy, twelve wave counts and final roster",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly deep-equal:"
+    },
+    {
+      "location": "outputs/alien-wolf-wechat/tests/campaign.test.js:5:1",
+      "test": "preparation waits indefinitely; tower building uses only seven source pads and charges only success",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-wolf-wechat/tests/campaign.test.js:7:1",
+      "test": "summoner inherits remaining route and native stats; boss fireballs are delayed and separated",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-wolf-wechat/tests/campaign.test.js:9:1",
+      "test": "phone input starts wave via visible button and management retains progress",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-wolf-wechat/tests/campaign.test.js:14:1",
+      "test": "rocket has a small grenade impact and muzzle follows reduced unit scale",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-wolf-wechat/tests/campaign.test.js:15:1",
+      "test": "scenery protects every fixed pad and full vehicle frame, including flipped atlas offsets",
+      "errorType": "TypeError",
+      "message": "v.sceneryProtection is not a function"
+    },
+    {
+      "location": "outputs/alien-wolf-wechat/tests/campaign.test.js:17:1",
+      "test": "foreground fades as an intact sprite without rectangular clipping and retains at least 55 percent opacity",
+      "errorType": "TypeError",
+      "message": "v.sceneryOpacity is not a function"
+    },
+    {
+      "location": "outputs/alien-wolf-wechat/tests/campaign.test.js:18:1",
+      "test": "repair duration decreases per computing point, floors at five and gates revival",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-wolf-wechat/tests/campaign.test.js:20:1",
+      "test": "waves wait for pending spawns and living cave enemies, then advance immediately",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-wolf-wechat/tests/campaign.test.js:21:1",
+      "test": "repair permits fixed-pad construction and upgrades without restoring vehicle combat",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/act-first-clear.test.js:4:1",
+      "test": "first clear reward survives a full warehouse and never deletes existing gear",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/act2-retry-loot.test.js:2:1",
+      "test": "act II failure retries from9 with checkpoint crystals and persistent loot but clean combat",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/act2-retry-loot.test.js:3:1",
+      "test": "new roster spans all eight waves; all dragons are air and artillery cannot hit them",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/act2-retry-loot.test.js:4:66",
+      "test": "../shared boss rewards fit ranges, include gear, collect and never duplicate; victory repairs immediately",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/act2-retry-loot.test.js:4:66",
+      "test": "../../alien-wolf-wechat/shared boss rewards fit ranges, include gear, collect and never duplicate; victory repairs immediately",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/ambush-corridor.test.js:3:1",
+      "test": "exactly three ambush waves per act redistribute six/eight/ten ground bugs",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/app-resume.test.js:4:2",
+      "test": "../shared returning from background keeps management interactive and cancels interrupted touches",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/app-resume.test.js:4:2",
+      "test": "../../alien-wolf-wechat/shared returning from background keeps management interactive and cancels interrupted touches",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/app-resume.test.js:23:1",
+      "test": "native loop recovers from suspended callbacks, clock resets and transient render errors",
+      "errorType": "ReferenceError",
+      "message": "cloudStore is not defined"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/attributes.test.js:5:1",
+      "test": "class curves are monotonic; invalid allocations cannot mint points",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/attributes.test.js:7:1",
+      "test": "armor reduces damage without random evasion and UI allocation persists while paused",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/attributes.test.js:8:1",
+      "test": "mobility changes actual fire interval and movement speed; critical player projectiles deal double damage",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/attributes.test.js:13:1",
+      "test": "computing retains critical benefit and old XP keeps level progress on new curve",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/attributes.test.js:15:1",
+      "test": "primary attributes retain main roles with limited secondary benefits",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/attributes.test.js:17:1",
+      "test": "secondary benefits remain weaker than corresponding primary attributes",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/attributes.test.js:19:1",
+      "test": "allocation preview is side-effect free; cancel keeps points and confirm matches preview",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/battle-render-cost.test.js:3:1",
+      "test": "ordinary health uses only two rectangles; bosses get a larger screen-sized detailed bar",
+      "errorType": "TypeError",
+      "message": "Cannot read properties of undefined (reading 'time')"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/blue-gear-and-auto-start.test.js:2:66",
+      "test": "../shared no white gear, migrates inventory and blue fusion consumes two items",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/blue-gear-and-auto-start.test.js:2:66",
+      "test": "../../alien-wolf-wechat/shared no white gear, migrates inventory and blue fusion consumes two items",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/build-shop.test.js:2:1",
+      "test": "bottom center research button and construction body have separate hit areas",
+      "errorType": "TypeError",
+      "message": "Cannot read properties of undefined (reading 'y')"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/bullet-facing.test.js:3:1",
+      "test": "machine-gun sprite longitudinal direction follows bullet travel in all quadrants",
+      "errorType": "TypeError",
+      "message": "Cannot read properties of undefined (reading 'addColorStop')"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/campaign-boss-random.test.js:5:155",
+      "test": "zerg1 boss 12517 casts every themed skill with a warning, no consecutive repeat, and death cancellation",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/campaign-boss-random.test.js:9:1",
+      "test": "reordered campaign art stays associated by ID and old completed/started entries remain accessible",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly deep-equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/campaign-continuation.test.js:3:1",
+      "test": "every completed campaign continues along the intended chain, independent of unlock state",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/campaign-menu.test.js:4:1",
+      "test": "campaign order and sequential unlock persist without changing inventory",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly deep-equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/campaign-menu.test.js:5:1",
+      "test": "all seven implemented missions allow test entry; scrolling does not click",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/campaign-wave-counts.test.js:16:2",
+      "test": "zerg last-wave failure rewards use the corrected end of each act",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/campaign-wave-counts.test.js:16:2",
+      "test": "zerg1 last-wave failure rewards use the corrected end of each act",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/campaign-wave-counts.test.js:16:2",
+      "test": "snake3 last-wave failure rewards use the corrected end of each act",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/campaign-wave-counts.test.js:16:2",
+      "test": "fish3 last-wave failure rewards use the corrected end of each act",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/campaign-wave-counts.test.js:16:2",
+      "test": "airship3 last-wave failure rewards use the corrected end of each act",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/campaign-wave-counts.test.js:16:2",
+      "test": "fortress2 last-wave failure rewards use the corrected end of each act",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/campaign-wave-counts.test.js:16:2",
+      "test": "scorpion2 last-wave failure rewards use the corrected end of each act",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/chest-details.test.js:2:1",
+      "test": "reward details open and dismiss without acknowledging or consuming loot",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/chest-drop-reset.test.js:4:2",
+      "test": "../shared reset starts at level one with no test chests, currency, research or campaign progress",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/chest-drop-reset.test.js:4:2",
+      "test": "../../alien-wolf-wechat/shared reset starts at level one with no test chests, currency, research or campaign progress",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/chest-impact.test.js:4:1",
+      "test": "chests split at 99, restore quantities and cannot equip",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly deep-equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/chest-impact.test.js:5:1",
+      "test": "full warehouse retains uncollected chest remainder on ground",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/chest-impact.test.js:6:1",
+      "test": "ten openings aggregate 10–30 prizes, persist once and survive acknowledgement",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/chest-impact.test.js:7:1",
+      "test": "full warehouse opening safely queues equipment overflow",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/chest-impact.test.js:11:1",
+      "test": "opening animation lasts 1.5 seconds, blocks close and reload shows settled results",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/chest-reduced-rewards.test.js:5:2",
+      "test": "../shared chip rewards are 5-20 per chest, including duplicate operator fallback",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/chest-reduced-rewards.test.js:6:2",
+      "test": "../shared fragment quantity and reward probability boundaries remain unchanged",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/chest-reduced-rewards.test.js:5:2",
+      "test": "../../alien-wolf-wechat/shared chip rewards are 5-20 per chest, including duplicate operator fallback",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/chest-reduced-rewards.test.js:6:2",
+      "test": "../../alien-wolf-wechat/shared fragment quantity and reward probability boundaries remain unchanged",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/chips.test.js:2:1",
+      "test": "research atomically requires both currencies at 100/200/500 tiers",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/chips.test.js:3:1",
+      "test": "native quality salvage removes one warehouse item, persists chips, cannot duplicate or dismantle worn gear",
+      "errorType": "TypeError",
+      "message": "Cannot read properties of undefined (reading 'uid')"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/chips.test.js:5:1",
+      "test": "salvage UI requires a second confirmation and allows cancel",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/combat-audit.test.js:5:1",
+      "test": "Yoda winds up, damages a ground area once, plays full attack, then returns to stand",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/combat-audit.test.js:12:1",
+      "test": "Yoda ignores air and chest targets, acquires ground enemies within source 600 radius",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/combat-audit.test.js:30:1",
+      "test": "laser uses its own splash light, bullet trail fades after projectile expires",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/combat-revisions.test.js:4:1",
+      "test": "../shared pet survives repeated death/repair cycles without attacking while dead",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/combat-revisions.test.js:5:1",
+      "test": "../shared all artillery branches reject close enemies at both launch entry points",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/combat-revisions.test.js:7:1",
+      "test": "../shared tactical cooldown greys icon without repair label or charging a second card",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/combat-revisions.test.js:4:1",
+      "test": "../../alien-wolf-wechat/shared pet survives repeated death/repair cycles without attacking while dead",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/combat-revisions.test.js:5:1",
+      "test": "../../alien-wolf-wechat/shared all artillery branches reject close enemies at both launch entry points",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/combat-revisions.test.js:7:1",
+      "test": "../../alien-wolf-wechat/shared tactical cooldown greys icon without repair label or charging a second card",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/continuation-combo.test.js:5:1",
+      "test": "combo deals half throw damage in radius60 on ground, small native effects and death cancellation",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly deep-equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/continuation-combo.test.js:6:1",
+      "test": "cleanup allows pickup; transition resets towers and retains local currency but preserves earned progression and resources",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/continuation-combo.test.js:7:1",
+      "test": "Act II covers source lanes and species; ramp is monotonic, boss only at16, all groups scheduled once",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/continuation-combo.test.js:8:1",
+      "test": "wave16 ends once, never wraps/restarts; HUD right shift remains on screen",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/core.test.js:2:1",
+      "test": "expanded map preserves source identity, object count, eight waves and final boss",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/core.test.js:3:1",
+      "test": "source clocks and all eight spawns remain navigable",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/core.test.js:4:1",
+      "test": "grenade is free, respects cooldown and moving inertia",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/core.test.js:5:1",
+      "test": "grenade is ground-only and normal radius is 120",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/core.test.js:7:1",
+      "test": "purchase selection never spends before placement",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/core.test.js:9:1",
+      "test": "freeze excludes boss, shield expires, dead ally does not revive",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/core.test.js:10:1",
+      "test": "full four-minute schedule produces all 593 enemies without stuck spawnpoints or invalid coordinates",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/core.test.js:12:1",
+      "test": "stage settlement waits for every wave-8 survivor and delayed boss animation",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/core.test.js:15:1",
+      "test": "grenade works without energy and still enforces cooldown",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/dual-tech-pet-follow.test.js:3:2",
+      "test": "../shared placed tower independently grows both researched directions",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/dual-tech-pet-follow.test.js:3:2",
+      "test": "../../alien-wolf-wechat/shared placed tower independently grows both researched directions",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/equipment-categories.test.js:2:1",
+      "test": "legacy five-slot saves migrate into matching eight slots without losing XP or items",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/equipment-categories.test.js:6:1",
+      "test": "wrong category is rejected atomically; each category supports their matching slot counts",
+      "errorType": "AssertionError",
+      "message": "The input did not match the regular expression /类型/. Input:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/equipment-categories.test.js:11:1",
+      "test": "24 warehouse cells exclude worn gear; full warehouse prevents pickup and unequip but permits replacement",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/equipment-categories.test.js:14:1",
+      "test": "discard frees one warehouse cell, leaves one world item and can be picked up exactly once",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/equipment-categories.test.js:18:1",
+      "test": "legacy overflow is retained, not truncated, and fills a newly freed warehouse cell",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/equipment-categories.test.js:19:1",
+      "test": "sketch layout opens contextual detail, equips and unequips",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/equipment-categories.test.js:22:1",
+      "test": "version two reduction preserves every item and remaps category slots",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/equipment-categories.test.js:24:1",
+      "test": "warehouse drag equips empty slots, swaps occupied slots, rejects mismatches and cancels safely",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/equipment-categories.test.js:31:1",
+      "test": "worn drag returns to target warehouse cell; occupied target finds free space and full bag retains gear",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/equipment-categories.test.js:37:1",
+      "test": "nine-slot save migrates third turret into warehouse while preserving allocation",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly deep-equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/equipment-passives.test.js:6:2",
+      "test": "../shared lightning waits 21s, chains to nine targets, scales with lightning damage and stops on unequip",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/equipment-passives.test.js:7:2",
+      "test": "../shared lightning stays ready without enemies and never fires while dead",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/equipment-passives.test.js:8:2",
+      "test": "../shared alloy armor toggles at half health without stacking, all damage types use vehicle armor",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/equipment-passives.test.js:10:2",
+      "test": "../shared storm adds bounded bullets for machine shots or crits without recursion",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/equipment-passives.test.js:11:2",
+      "test": "../shared ice fragment extends only frost freeze, capped at three stacks",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/equipment-passives.test.js:12:2",
+      "test": "../shared every current item stat has an implemented or explicitly disabled consumer",
+      "errorType": "AssertionError",
+      "message": "风火轮: trail_dps"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/equipment-passives.test.js:6:2",
+      "test": "../../alien-wolf-wechat/shared lightning waits 21s, chains to nine targets, scales with lightning damage and stops on unequip",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/equipment-passives.test.js:7:2",
+      "test": "../../alien-wolf-wechat/shared lightning stays ready without enemies and never fires while dead",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/equipment-passives.test.js:8:2",
+      "test": "../../alien-wolf-wechat/shared alloy armor toggles at half health without stacking, all damage types use vehicle armor",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/equipment-passives.test.js:10:2",
+      "test": "../../alien-wolf-wechat/shared storm adds bounded bullets for machine shots or crits without recursion",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/equipment-passives.test.js:11:2",
+      "test": "../../alien-wolf-wechat/shared ice fragment extends only frost freeze, capped at three stacks",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/equipment-passives.test.js:12:2",
+      "test": "../../alien-wolf-wechat/shared every current item stat has an implemented or explicitly disabled consumer",
+      "errorType": "AssertionError",
+      "message": "风火轮: trail_dps"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/equipment-series.test.js:2:66",
+      "test": "../shared equipment models grow monotonically, persist and change actual combat values",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/equipment-series.test.js:2:66",
+      "test": "../../alien-wolf-wechat/shared equipment models grow monotonically, persist and change actual combat values",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/equipment-series.test.js:7:66",
+      "test": "../shared level caps apply to old saves and new loot",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/equipment-series.test.js:7:66",
+      "test": "../../alien-wolf-wechat/shared level caps apply to old saves and new loot",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/flamethrower.test.js:5:1",
+      "test": "flame uses original forward orientation and 2.4 scale; source impact contains all 20 frames",
+      "errorType": "TypeError",
+      "message": "Cannot read properties of undefined (reading 'addColorStop')"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/four-families.test.js:2:1",
+      "test": "four families expose 3/3/3/2 branches, distinct unmanned bodies and 22 fragment routes",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/four-families.test.js:4:1",
+      "test": "artillery range order is close howitzer / medium cannon / extreme rocket; sniper remains single-target",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/four-families.test.js:5:1",
+      "test": "rocket climbs then falls to fixed ground point, ignores midflight walls, explodes once, never damages air",
+      "errorType": "TypeError",
+      "message": "Cannot read properties of undefined (reading 'life')"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/four-families.test.js:6:1",
+      "test": "fourth build item selects ray family and close button remains reachable",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/fragment-tech-costs.test.js:2:66",
+      "test": "../shared research uses corresponding fragments and chips, never kryptonite",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/fragment-tech-costs.test.js:2:66",
+      "test": "../../alien-wolf-wechat/shared research uses corresponding fragments and chips, never kryptonite",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/fresh-replay.test.js:2:1",
+      "test": "each act starts with two charges, later waves add one capped at seven",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/fresh-replay.test.js:3:1",
+      "test": "fresh replay starts without old test chests and new progress survives reload",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/frost-rocket-rewards.test.js:7:2",
+      "test": "../shared weapon chest immediately rewards once without pickup",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/frost-rocket-rewards.test.js:8:2",
+      "test": "../shared tactical launcher fires three spaced rockets from directional ports",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/frost-rocket-rewards.test.js:7:2",
+      "test": "../../alien-wolf-wechat/shared weapon chest immediately rewards once without pickup",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/frost-rocket-rewards.test.js:8:2",
+      "test": "../../alien-wolf-wechat/shared tactical launcher fires three spaced rockets from directional ports",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/gear-detail-ui.test.js:3:2",
+      "test": "../shared all body armor variants use vehicle atlas and ordered rarity tiers",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly deep-equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/gear-detail-ui.test.js:4:2",
+      "test": "../shared detail close, fusion and confirmed salvage use displayed button bounds in both orientations",
+      "errorType": "TypeError",
+      "message": "Cannot read properties of undefined (reading 'uid')"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/gear-detail-ui.test.js:6:2",
+      "test": "../shared lightning modifier remains active after removing resistances",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/gear-detail-ui.test.js:3:2",
+      "test": "../../alien-wolf-wechat/shared all body armor variants use vehicle atlas and ordered rarity tiers",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly deep-equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/gear-detail-ui.test.js:4:2",
+      "test": "../../alien-wolf-wechat/shared detail close, fusion and confirmed salvage use displayed button bounds in both orientations",
+      "errorType": "TypeError",
+      "message": "Cannot read properties of undefined (reading 'uid')"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/gear-detail-ui.test.js:6:2",
+      "test": "../../alien-wolf-wechat/shared lightning modifier remains active after removing resistances",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/howitzer-starter.test.js:2:78",
+      "test": "../shared/core starter cluster halves footprint and count, increases per-shell damage 20%",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/howitzer-starter.test.js:2:78",
+      "test": "../../alien-wolf-wechat/shared/core starter cluster halves footprint and count, increases per-shell damage 20%",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/lanes-burrow.test.js:2:1",
+      "test": "four roads remain traversable and left/right fronts stay separated until refinery flanks",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/lanes-burrow.test.js:5:1",
+      "test": "burrow cycle telegraphs, hides for travel, emerges vulnerable and cannot immediately dive again",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/lanes-burrow.test.js:8:1",
+      "test": "burrowing hydralisk shares the pictured normal model at eighty percent size; normal type never burrows",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/large-warrior.test.js:2:1",
+      "test": "pictured large warrior gains fifty percent health and twenty percent speed over previous breakthrough values",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/level-hud.test.js:2:1",
+      "test": "eight-wave full clear yields only two levels from Lv7 on the slower curve",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/level-hud.test.js:3:1",
+      "test": "compact bottom equipment entry replaces upper right button and opens armory",
+      "errorType": "TypeError",
+      "message": "Cannot read properties of undefined (reading 'addColorStop')"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/minigame.test.js:2:1",
+      "test": "Mini Game waits for assets, selects the wolf campaign, routes native touch coordinates and survives hide/show",
+      "errorType": "TypeError",
+      "message": "renderBudget.pixelRatio is not a function"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/mission-menu.test.js:2:1",
+      "test": "menu exposes old and new campaigns with hit areas that fit phone sizes",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly deep-equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/mission-menu.test.js:3:1",
+      "test": "both stage modules remain isolated while sharing progression definitions",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/muzzle-calibration.test.js:4:1",
+      "test": "vehicle gun sprite and muzzle use vehicle position with no extra height offset",
+      "errorType": "TypeError",
+      "message": "Cannot read properties of undefined (reading 'addColorStop')"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/native-death-direction.test.js:7:1",
+      "test": "continuation keeps position and does not request new insertion",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/new-player-flow.test.js:3:1",
+      "test": "failed second act can retry current act or previous act with inventory retained",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/new-player-flow.test.js:4:1",
+      "test": "first campaign cleanup proceeds directly to second campaign",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/operator-rewards.test.js:2:66",
+      "test": "../shared rare operator odds, common rewards and persisted reveal queue",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/operator-rewards.test.js:2:66",
+      "test": "../../alien-wolf-wechat/shared rare operator odds, common rewards and persisted reveal queue",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/operator-tower-conversion.test.js:2:66",
+      "test": "alien-zerg2-wechat: operator unlock converts base tower without granting research",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/operator-tower-conversion.test.js:2:66",
+      "test": "alien-wolf-wechat: operator unlock converts base tower without granting research",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/operator-unlock-source.test.js:2:66",
+      "test": "../shared technology ranks and fragments do not grant operators; chest does",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/operator-unlock-source.test.js:2:66",
+      "test": "../../alien-wolf-wechat/shared technology ranks and fragments do not grant operators; chest does",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/orientation.test.js:4:1",
+      "test": "../shared/view landscape warehouse input maps to the correct slot and is cancelled on rotation",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/orientation.test.js:4:1",
+      "test": "../../alien-wolf-wechat/shared/view landscape warehouse input maps to the correct slot and is cancelled on rotation",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/orientation.test.js:5:1",
+      "test": "landscape confirmation remains finger-sized rather than shrinking the entire portrait page",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/page.test.js:2:1",
+      "test": "WeChat page cold start, hide/show, and unload have one animation loop",
+      "errorType": "Error",
+      "message": "ENOENT: no such file or directory, open '/Users/wangxin/Documents/projects/xinline_alien_minigame/outputs/alien-zerg2-wechat/miniprogram/pages/index/index.js'"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/pickup-shadow-gear.test.js:5:2",
+      "test": "../shared every pickup has fixed ground shadow; only double grenade bobs without moving collision position",
+      "errorType": "TypeError",
+      "message": "c.createRadialGradient is not a function"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/pickup-shadow-gear.test.js:5:2",
+      "test": "../../alien-wolf-wechat/shared every pickup has fixed ground shadow; only double grenade bobs without moving collision position",
+      "errorType": "TypeError",
+      "message": "c.createRadialGradient is not a function"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/progression.test.js:2:1",
+      "test": "tank XP crosses multiple levels, heals fully and stays distinct from weapon level",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/progression.test.js:3:1",
+      "test": "equipped items are unique; inventory, equipment and stats survive reload",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/progression.test.js:5:1",
+      "test": "gear drops at intervals of four or five waves; pickup persists once",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/progression.test.js:7:1",
+      "test": "invalid saves fall back safely and level cap does not overflow",
+      "errorType": "Error",
+      "message": "存档读取失败，已停止载入以保留原进度"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/projectile-wave-earlygear.test.js:3:2",
+      "test": "../shared frost width grows with freezing strength, not duration; renderer stretches across heading",
+      "errorType": "TypeError",
+      "message": "c.beginPath is not a function"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/projectile-wave-earlygear.test.js:6:2",
+      "test": "../shared six normal equipment types offer wearable level seven/eight variants, persist and restore",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/projectile-wave-earlygear.test.js:3:2",
+      "test": "../../alien-wolf-wechat/shared frost width grows with freezing strength, not duration; renderer stretches across heading",
+      "errorType": "TypeError",
+      "message": "c.beginPath is not a function"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/projectile-wave-earlygear.test.js:6:2",
+      "test": "../../alien-wolf-wechat/shared six normal equipment types offer wearable level seven/eight variants, persist and restore",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/radar-crystals.test.js:4:66",
+      "test": "../shared radar applies carry only at entry and yield at pickup",
+      "errorType": "TypeError",
+      "message": "Cannot read properties of undefined (reading 'uid')"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/radar-crystals.test.js:4:66",
+      "test": "../../alien-wolf-wechat/shared radar applies carry only at entry and yield at pickup",
+      "errorType": "TypeError",
+      "message": "Cannot read properties of undefined (reading 'uid')"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/radar-crystals.test.js:13:66",
+      "test": "../shared kills use current radar rate once",
+      "errorType": "TypeError",
+      "message": "Cannot read properties of undefined (reading 'uid')"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/radar-crystals.test.js:13:66",
+      "test": "../../alien-wolf-wechat/shared kills use current radar rate once",
+      "errorType": "TypeError",
+      "message": "Cannot read properties of undefined (reading 'uid')"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/rocket-salvo.test.js:5:1",
+      "test": "in-battle targeting skips the nearest enemy in the rocket dead zone",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/rocket-upgrade-marker.test.js:2:106",
+      "test": "../shared 390 rocket research refreshes affordable arrows, including screen edges",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/rocket-upgrade-marker.test.js:2:106",
+      "test": "../shared 844 rocket research refreshes affordable arrows, including screen edges",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/rocket-upgrade-marker.test.js:2:106",
+      "test": "../../alien-wolf-wechat/shared 390 rocket research refreshes affordable arrows, including screen edges",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/rocket-upgrade-marker.test.js:2:106",
+      "test": "../../alien-wolf-wechat/shared 844 rocket research refreshes affordable arrows, including screen edges",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/run-loot.test.js:2:66",
+      "test": "../shared run loot quotas include bosses and survive stage transitions",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/run-loot.test.js:2:66",
+      "test": "../../alien-wolf-wechat/shared run loot quotas include bosses and survive stage transitions",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/run-loot.test.js:3:1",
+      "test": "new save generation starts at level one and subsequent saves persist",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/settings-audio-budget.test.js:7:1",
+      "test": "../shared lightsaber sound fires once with slash and survives crowded sound throttle",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/shop-artillery.test.js:3:1",
+      "test": "../shared all four shop rows and inline technology buttons are visible and clickable",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/shop-artillery.test.js:16:1",
+      "test": "../shared artillery rejects air targets and ground explosions leave aircraft unharmed",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/shop-artillery.test.js:3:1",
+      "test": "../../alien-wolf-wechat/shared all four shop rows and inline technology buttons are visible and clickable",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/shop-artillery.test.js:16:1",
+      "test": "../../alien-wolf-wechat/shared artillery rejects air targets and ground explosions leave aircraft unharmed",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/spawn-caves.test.js:3:1",
+      "test": "boss and flying units retain their original stats and routes through cave entry",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/strategy-map.test.js:2:1",
+      "test": "cleanup and act II release boss camera; expired boss focus never locks movement",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/strategy-map.test.js:3:1",
+      "test": "four authored routes are navigable and road center lines reject building",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/strategy-map.test.js:4:1",
+      "test": "split roads leave buildable island sites and wave nine uses authored routes",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly deep-equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/tech-branch-preview.test.js:2:66",
+      "test": "../shared branch selection shows correct base stats and unlock condition",
+      "errorType": "TypeError",
+      "message": "c.translate is not a function"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/tech-branch-preview.test.js:2:66",
+      "test": "../../alien-wolf-wechat/shared branch selection shows correct base stats and unlock condition",
+      "errorType": "TypeError",
+      "message": "c.translate is not a function"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/tech-test-reset.test.js:2:66",
+      "test": "../shared one-time tech reset adds 200 chests and preserves other progress",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/tech-test-reset.test.js:2:66",
+      "test": "../../alien-wolf-wechat/shared one-time tech reset adds 200 chests and preserves other progress",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/technology-welcome.test.js:4:2",
+      "test": "../shared first technology visit immediately grants machine operator once, and dismiss returns to its unlocked branch",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/technology-welcome.test.js:5:2",
+      "test": "../shared existing owner is not granted twice, chest rewards are preserved",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/technology-welcome.test.js:6:2",
+      "test": "../shared pending welcome resumes safely and pauses combat after restore",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/technology-welcome.test.js:4:2",
+      "test": "../../alien-wolf-wechat/shared first technology visit immediately grants machine operator once, and dismiss returns to its unlocked branch",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/technology-welcome.test.js:5:2",
+      "test": "../../alien-wolf-wechat/shared existing owner is not granted twice, chest rewards are preserved",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/technology-welcome.test.js:6:2",
+      "test": "../../alien-wolf-wechat/shared pending welcome resumes safely and pauses combat after restore",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/test-chest-grant.test.js:2:66",
+      "test": "../shared one-time 200 chest test supply survives reload and full warehouse",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/test-chest-grant.test.js:2:66",
+      "test": "../../alien-wolf-wechat/shared one-time 200 chest test supply survives reload and full warehouse",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/tower-tech.test.js:7:1",
+      "test": "all twenty-two routes can be researched independently; research spends kryptonite and chips and persists",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/tower-tech.test.js:10:1",
+      "test": "research never changes placed towers; crystals upgrade each tower independently to cap",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/tower-tech.test.js:11:1",
+      "test": "single tower commits to one weapon and specialization; other towers choose differently",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/tower-tech.test.js:12:1",
+      "test": "unresearched, unaffordable, invalid and stale upgrades never spend money",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/tower-tech.test.js:13:1",
+      "test": "specializations alter distinct properties and all use native directional models",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/tower-tech.test.js:14:1",
+      "test": "chain specializes damage or target count; targets do not repeat or jump beyond 300",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/tower-tech.test.js:15:1",
+      "test": "shrink strength and duration are separate and restore naturally; bosses remain full size",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/tower-tech.test.js:16:1",
+      "test": "frost applies researched duration; sniper only hits one target",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/tower-tech.test.js:17:1",
+      "test": "cannon blast and piercing wave use local ranks; knockback respects walls",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/tower-tech.test.js:19:1",
+      "test": "weapon browsing costs nothing; research node unlocks cap without spending crystals",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/tower-tech.test.js:20:1",
+      "test": "battle badge affordability and panel upgrade use same rules; world pauses during choice",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/tower-tech.test.js:21:1",
+      "test": "lower-screen tower upgrade marker is moved above controls rather than hidden",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/tower-tech.test.js:23:1",
+      "test": "compact tower menu offers three weapons then two specializations; subsequent upgrades have one icon",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/tower-tech.test.js:25:1",
+      "test": "upgrade arrows disappear at cap and return only when next research and crystals are ready",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/tower-tech.test.js:27:1",
+      "test": "only the lit and affordable specialization appears; no gray pairs",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/universal-equipment.test.js:2:66",
+      "test": "../shared universal slots, level gate and save migration",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/universal-equipment.test.js:2:66",
+      "test": "../../alien-wolf-wechat/shared universal slots, level gate and save migration",
+      "errorType": "AssertionError",
+      "message": "The expression evaluated to a falsy value:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/wave-clear.test.js:2:1",
+      "test": "clear wave advances instantly, but act settlement and cleanup remain explicit",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/white-salvage.test.js:5:2",
+      "test": "../shared batch salvage removes warehouse whites only and refills overflow without consuming it",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly deep-equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/white-salvage.test.js:7:42",
+      "test": "../shared 390 batch button requires second click, can cancel, and leaves normal salvage independent",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/white-salvage.test.js:7:42",
+      "test": "../shared 844 batch button requires second click, can cancel, and leaves normal salvage independent",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/white-salvage.test.js:5:2",
+      "test": "../../alien-wolf-wechat/shared batch salvage removes warehouse whites only and refills overflow without consuming it",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly deep-equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/white-salvage.test.js:7:42",
+      "test": "../../alien-wolf-wechat/shared 390 batch button requires second click, can cancel, and leaves normal salvage independent",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/white-salvage.test.js:7:42",
+      "test": "../../alien-wolf-wechat/shared 844 batch button requires second click, can cancel, and leaves normal salvage independent",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/zerg-breakthrough-escort.test.js:2:1",
+      "test": "large zerg retain breakthrough and warrior bonuses with act scaling preserved",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/zerg1-campaign.test.js:3:2",
+      "test": "zerg two acts: cleanup, checkpoint, retry and final completion",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    },
+    {
+      "location": "outputs/alien-zerg2-wechat/tests/zerg1-campaign.test.js:3:2",
+      "test": "zerg1 two acts: cleanup, checkpoint, retry and final completion",
+      "errorType": "AssertionError",
+      "message": "Expected values to be strictly equal:"
+    }
+  ]
+}

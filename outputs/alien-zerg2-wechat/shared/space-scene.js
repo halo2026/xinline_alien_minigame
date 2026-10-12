@@ -3,7 +3,7 @@ const fract=x=>x-Math.floor(x),rand=n=>fract(Math.sin(n*127.1+311.7)*43758.5453)
 // A small cached soft-star sprite replaces 85 new radial gradients per frame.
 function starSprite(v){if(v.starGlow!==undefined)return v.starGlow;try{const im=typeof wx!=='undefined'&&wx.createOffscreenCanvas?wx.createOffscreenCanvas({type:'2d',width:32,height:32}):typeof OffscreenCanvas!=='undefined'?new OffscreenCanvas(32,32):typeof document!=='undefined'?document.createElement('canvas'):null;if(!im)return v.starGlow=null;im.width=im.height=32;const c=im.getContext('2d'),g=c.createRadialGradient(16,16,0,16,16,16);g.addColorStop(0,'#b3cef2');g.addColorStop(1,'#b3cef200');c.fillStyle=g;c.fillRect(0,0,32,32);return v.starGlow=im;}catch(e){return v.starGlow=null;}}
 const starSeeds=Array.from({length:255},(_,j)=>{const layer=Math.floor(j/85),i=j%85,seed=i+layer*997;return {layer,i,seed,x:rand(seed),y:rand(seed+65),r:(.4+rand(seed+82)*1.1)*(layer===0?1.8:1)};});
-function stars(v){const c=v.ctx,w=v.w,h=v.h,t=v.game.time,cam=v.camera;c.fillStyle='#030712';c.fillRect(0,0,w,h);
+function stars(v){const c=v.ctx,w=v.w,h=v.h,t=v.game.time,cam=v.game.campaignId==='thunderraid'?{x:v.camera.x+t*24,y:v.camera.y+t*10}:v.camera;c.fillStyle='#030712';c.fillRect(0,0,w,h);
  if(v.images.space){const img=v.images.space,scale=Math.max(w/img.width,h/img.height)*1.15,sw=img.width*scale,sh=img.height*scale;c.drawImage(img,(w-sw)/2-Math.sin(cam.x*.0006)*20,(h-sh)/2-Math.sin(cam.y*.0006)*15,sw,sh);}
  const clouds=[[.18,.25,.7,'#19335b'],[.78,.65,.6,'#332744']];for(const [x,y,size,color]of clouds){const cx=x*w-cam.x*.018,cy=y*h-cam.y*.014,r=Math.max(w,h)*size,g=c.createRadialGradient(cx,cy,0,cx,cy,r);g.addColorStop(0,color);g.addColorStop(1,'#03071200');c.fillStyle=g;c.fillRect(0,0,w,h);}
  const stamp=starSprite(v);for(const q of starSeeds){const {layer,i,seed,r}=q,x=((q.x*w-cam.x*(.018+layer*.04))%w+w)%w,y=((q.y*h-cam.y*(.018+layer*.04))%h+h)%h;c.globalAlpha=.28+layer*.16+Math.sin(t*.3+seed)*.08;if(layer===0){if(stamp)c.drawImage(stamp,x-r*3,y-r*3,r*6,r*6);else{const glow=c.createRadialGradient(x,y,0,x,y,r*3);glow.addColorStop(0,'#b3cef2');glow.addColorStop(1,'#b3cef200');c.fillStyle=glow;c.fillRect(x-r*3,y-r*3,r*6,r*6);}}else{c.fillStyle=i%7?'#bddef5':'#f5cdaa';c.fillRect(x,y,r,r);}}c.globalAlpha=1;
@@ -28,7 +28,12 @@ function debris(v){const c=v.ctx,w=v.w,h=v.h,t=v.game.time||0,cam=v.camera;
  }
  c.restore();
 }
-function rim(v,size){
+function prepareRim(images){
+ if(images.staticRim||images.rimCacheAttempted)return images.staticRim;images.rimCacheAttempted=true;
+ try{const w=1628,h=1671,canvas=typeof wx!=='undefined'?(wx.createOffscreenCanvas?wx.createOffscreenCanvas({type:'2d',width:w,height:h}):wx.createCanvas()):typeof OffscreenCanvas!=='undefined'?new OffscreenCanvas(w,h):typeof document!=='undefined'?document.createElement('canvas'):null;if(!canvas)return null;canvas.width=w;canvas.height=h;const ctx=canvas.getContext('2d');ctx.scale(w/2170,h/2227);ctx.translate(256,256);drawRim({ctx,images},[1658,1715]);return images.staticRim=canvas;}catch(e){return null;}
+}
+function rim(v,size){if(size[0]===1658&&size[1]===1715){const image=prepareRim(v.images);if(image){v.ctx.drawImage(image,-256,-256,2170,2227);return;}}drawRim(v,size);}
+function drawRim(v,size){
  const c=v.ctx,[w,h]=size,points=[];
  for(let side=0;side<4;side++)for(let j=0;j<18;j++){const t=j/17,d=(side===1||side===2?6:18)+rand(side*18+j+3)*(side===1||side===2?18:30);points.push(side===0?[t*w,-d]:side===1?[w+d,t*h]:side===2?[(1-t)*w,h+d]:[-d,(1-t)*h]);}
  const path=(offset=0)=>{c.beginPath();points.forEach(([x,y],i)=>c[i?'lineTo':'moveTo'](x,y+offset));c.closePath();};
@@ -50,5 +55,5 @@ function rim(v,size){
  c.restore();
 }
 function ambience(v,size){const c=v.ctx,[w,h]=size;c.save();const factory=v.game.refinery;for(const [dx,dy]of [[-55,20],[60,10]]){const x=factory.x+dx,y=factory.y+dy,g=c.createRadialGradient(x,y,0,x,y,65);g.addColorStop(0,'#69e7ff28');g.addColorStop(1,'#69e7ff00');c.fillStyle=g;c.fillRect(x-65,y-65,130,130);}c.restore();}
-const api={stars,rim,ambience};if(typeof module!=='undefined')module.exports=api;else globalThis.AlienSpace=api;
+const api={stars,rim,drawRim,prepareRim,ambience};if(typeof module!=='undefined')module.exports=api;else globalThis.AlienSpace=api;
 })();

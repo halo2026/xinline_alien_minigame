@@ -1,5 +1,5 @@
 (function(){
-function draw(ctx,image,w,h,progress=0,label='战队正在星际投送中。。。',animation={}){
+function draw(ctx,image,w,h,progress=0,label='虫族入侵人类矿区，战队投送中',animation={}){
  ctx.save();ctx.globalAlpha=1;ctx.globalCompositeOperation='source-over';ctx.fillStyle='#060b14';ctx.fillRect(0,0,w,h);
  if(image?.width){const fit=Math.min(w/image.width,h/image.height),iw=image.width*fit,ih=image.height*fit,x=(w-iw)/2,y=Math.max(0,(h-ih)/2-(h>w?17:0));ctx.drawImage(image,x,y,iw,ih);
  // Fade from the actual image edge, not the screen edge: contain-fit leaves different margins on each phone.

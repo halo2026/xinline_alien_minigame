@@ -1,0 +1,5 @@
+// Desktop synthetic CPU/Canvas benchmark; not phone FPS.
+const root=require('node:path').resolve(__dirname,'..'),{createCanvas}=require('@napi-rs/canvas'),{View}=require(root+'/shared/view'),{performance}=require('node:perf_hooks');
+global.OffscreenCanvas=class{constructor(w,h){return createCanvas(w,h);}};
+const cv=createCanvas(780,1688),c=cv.getContext('2d');c.scale(2,2);const v=new View(c,{},390,844);v.worldVisible=()=>true;
+const bullets=Array.from({length:190},(_,i)=>({mode:'howitzer',cluster:true,sx:100,sy:750,tx:50+(i*17)%300,ty:350+(i*29)%300,age:.5+(i%8)*.08,life:1.4,arc:220}));let paths=0,draws=0;const arc=c.arc.bind(c),draw=c.drawImage.bind(c);c.arc=(...a)=>{paths++;return arc(...a)};c.drawImage=(...a)=>{draws++;return draw(...a)};const times=[];for(let n=0;n<120;n++){c.clearRect(0,0,390,844);const t=performance.now();for(const b of bullets)v.drawArtillery(b);if(n>=20)times.push(performance.now()-t);}console.log(JSON.stringify({meanMs:times.reduce((a,b)=>a+b)/times.length,p95Ms:times.sort((a,b)=>a-b)[95],pathsPerFrame:paths/120,imagesPerFrame:draws/120}));

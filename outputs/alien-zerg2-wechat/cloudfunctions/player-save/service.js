@@ -6,7 +6,7 @@ function validate(data){
 }
 function createService({read,create,change,now=Date.now}){return async(event,identity)=>{
  if(!identity.OPENID||!identity.APPID)throw new Error('UNAUTHENTICATED');
- const owner=crypto.createHash('sha256').update(identity.APPID+':'+identity.OPENID+':'+(event.slot==='simulator'?'simulator':'phone-v1')+(['20260921-1227','20260923-2140','20260924-1506'].includes(event.epoch)?':test-'+event.epoch:'')).digest('hex');
+ const owner=crypto.createHash('sha256').update(identity.APPID+':'+identity.OPENID+':'+(event.slot==='simulator'?'simulator':'phone-v1')+(['20260921-1227','20260923-2140','20260924-1506','20261005-0439','20261008-1722','20261009-0028'].includes(event.epoch)?':test-'+event.epoch:'')).digest('hex');
  const response=(status,record)=>({status,owner,record});
  if(event.action==='read')return response('ok',await read(owner));
  if(event.owner!==owner)throw new Error('ACCOUNT_CHANGED');

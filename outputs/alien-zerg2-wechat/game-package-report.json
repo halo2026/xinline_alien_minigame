@@ -2,20 +2,23 @@
   "packages": {
     "assets1": 1994548,
     "assets2": 1880269,
-    "assets3": 1911793,
+    "assets3": 1915504,
     "assets4": 1711006,
     "assets5": 1957465,
-    "assets6": 1916358,
-    "assets7": 1931384,
-    "assets8": 1690605,
-    "assets9": 1941908,
-    "assets10": 1798720,
-    "assets11": 1759326,
-    "assets12": 1564926,
-    "assets13": 1995434,
-    "assets14": 1764511,
-    "defense-code": 1761396
+    "assets6": 1831870,
+    "assets7": 1836007,
+    "assets8": 1290263,
+    "assets9": 1715457,
+    "assets10": 1828302,
+    "assets11": 1667487,
+    "assets12": 1989166,
+    "assets13": 1987562,
+    "assets14": 1867359,
+    "assets15": 1915320,
+    "assets16": 1877931,
+    "defense-code": 497017,
+    "level-code": 212180
   },
-  "total": 29674912,
-  "main": 2095263
+  "total": 31274516,
+  "main": 1299803
 }

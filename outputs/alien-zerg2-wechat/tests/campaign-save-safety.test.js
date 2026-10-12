@@ -7,7 +7,7 @@ function harness(ViewType=View){
  let data=progressed(),readFails=false,writeFails=false;const writes=[],backups=[],toasts=[];
  const storage={load(){if(readFails)throw Error('storage read failed');return structuredClone(data);},save(s,id){if(writeFails)throw Error('storage full');data=structuredClone(s);writes.push({data,id});}};
  const original=new View({}, {pages:[]},390,844,0,storage);
- const c=vm.createContext({view:original,loading:false,currentMission:'zerg',missionMenu:{open:true},storage,KEY:P.KEY,wx:{setStorageSync:(...args)=>backups.push(args),showToast:o=>toasts.push(o),showModal:o=>toasts.push(o)},stageImages:async()=>({pages:[]}),stages:{zerg1:{api:{View:ViewType}}},ctx:{},w:390,h:844,top:0,bindOrientation(){},sound(){},showMissions(){},console:{error(){}},Date});
+ const c=vm.createContext({view:original,loading:false,currentMission:'zerg',missionMenu:{open:true},storage,KEY:P.KEY,wx:{setStorageSync:(...args)=>backups.push(args),showToast:o=>toasts.push(o),showModal:o=>toasts.push(o)},sceneCache:require('../shared/scene-cache'),imagesCache:new Map(),stageImages:async()=>({pages:[],files:new Set()}),stages:{zerg1:{api:{View:ViewType}}},ctx:{},w:390,h:844,top:0,bindOrientation(){},sound(){},showMissions(){},console:{error(){}},Date});
  vm.runInContext(selectSource,c);
  return {c,original,writes,backups,toasts,readFail:()=>readFails=true,writeFail:()=>writeFails=true,get data(){return data;}};
 }
@@ -33,7 +33,7 @@ test('failed save or new stage construction leaves the old battle attached',asyn
 });
 test('all campaigns retain persistent progression across repeated complete handoffs',()=>{
  const defense=require('../shared/defense-campaign'),art=require('../shared/defense-art');
- const stages=[{api:{View}},require('../shared/zerg1'),...['snake3','airship3'].map(id=>defense.create(require('../shared/'+id+'-data'),art)),require('../shared/greenstar'),...['fish3','fortress2','scorpion2'].map(id=>defense.create(require('../shared/'+id+'-data'),art))];
+ const stages=[{api:{View}},require('../shared/mine4'),require('../shared/zerg1'),...['snake3','airship3'].map(id=>defense.create(require('../shared/'+id+'-data'),art)),require('../shared/greenstar'),...['fish3','fortress2','scorpion2'].map(id=>defense.create(require('../shared/'+id+'-data'),art))];
  let data=progressed();for(const id of ['zerg1','snake3','airship3','greenstar','fish3','fortress2','scorpion2'])data.campaignActs[id]={act:2,gold:2400,cards:{}};for(let round=0;round<3;round++)for(const stage of stages){const v=new stage.api.View({}, {pages:[]},390,844,0,{load:()=>data,save:s=>data=s});v.resize(390,844,98);v.game.start();v.flushSave(true);assert.equal(data.towerEquipment['12200:0'],3);assert.equal(data.level,18);assert.equal(data.chips,321);assert.equal(data.kryptonite,42);assert.equal(data.xp,123);assert.equal(data.allocated.firepower,5);assert.equal(Object.values(data.bestiary)[0].kills,50);assert.equal(data.campaignClears.zerg,true);}
 });
 

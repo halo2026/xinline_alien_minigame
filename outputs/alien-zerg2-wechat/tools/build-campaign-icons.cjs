@@ -1,0 +1,2 @@
+const {createCanvas,loadImage}=require('@napi-rs/canvas'),fs=require('fs'),path=require('path'),R=path.resolve(__dirname,'..');
+(async()=>{const file=path.join(R,'assets/campaign-nodes.png'),old=await loadImage(file),c=createCanvas(1600,160),g=c.getContext('2d');g.drawImage(old,0,0);for(const [name,index]of [['mine4',8],['thunderraid',9]]){const im=await loadImage(path.resolve(R,'../../source-art/campaign-icons/'+name+'-runtime.png'));g.clearRect(index*160,0,160,160);g.drawImage(im,index*160+3,3,154,154);}fs.writeFileSync(file,c.toBuffer('image/png'));})();

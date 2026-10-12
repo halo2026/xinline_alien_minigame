@@ -4,6 +4,15 @@
 
 ## 构建与运行
 
+新电脑开发环境、统一命令和当前验证结果见 [DEVELOPMENT.md](DEVELOPMENT.md)。
+
+```sh
+npm ci
+npm run dev
+```
+
+`npm run test:smoke` 验证打包与启动，`npm run test:render` 验证渲染，`npm test` 运行包括历史用例的全量测试。
+
 使用 Python 3.9+：
 
 ```sh
