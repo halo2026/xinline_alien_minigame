@@ -1,0 +1,16 @@
+{
+  "index": 9,
+  "stars": 2,
+  "role": "purple long-haired shrink ray",
+  "file": "operator-09-2star.png",
+  "reference": "/Users/ryan/Documents/Codex/2026-09-07/x20/outputs/alien-zerg2-wechat/source-art/operator-stars/original-aligned-v3/references/operator-09.png",
+  "generated_path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-71f2bcce-26eb-4e99-8a39-f98aae0fb4b5.png",
+  "prompt": "Use case: identity-preserve, measured composition. ORIGINAL base portrait card is the sole identity and pose reference for purple long-haired shrink ray. Generate ONE TWO-STAR upgrade. Exact layout on a 300x485 proportional canvas: TOP OF HAIR or hat at y=100 (20.6% from top); EYE LINE y=170 (35.1%); FACE CENTER x=156 (52.0% width). Head including hair approx 110/300 canvas width. Top approximately ONE QUARTER of canvas is EMPTY BACKGROUND. Keep character in original position UNDER original title region even though that text will be removed. DO NOT zoom or enlarge/recenter subject to fill canvas! No head at the image top. Preserve face, expression, hair, anatomy, exact pose, hand gestures and weapon orientation. Match ORIGINAL crisp detailed 2D painted anime GAME style and original colors/background; not a new artist or glossy 3D. Upgrade only modest refined armor and weapon-panel details, subtle small energy seams. Practical nonsexual costume. Remove EVERY frame, title, word, logo, QR code, nameplate, star, badge, rank, UI panel; extend original background into those removed areas, no patches. Render clean illustration full 300:485 aspect at high resolution. No letters, text, borders or decorative stars. ",
+  "anchors": {
+    "hairTop": 100,
+    "eyeY": 170,
+    "faceX": 156,
+    "headWidth": 110
+  },
+  "method": "built-in image_gen, measured original base reference"
+}

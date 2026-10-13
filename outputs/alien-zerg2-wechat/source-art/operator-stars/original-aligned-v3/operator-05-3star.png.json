@@ -1,0 +1,16 @@
+{
+  "index": 5,
+  "stars": 3,
+  "role": "light brown ponytail lightning hammer",
+  "file": "operator-05-3star.png",
+  "reference": "/Users/ryan/Documents/Codex/2026-09-07/x20/outputs/alien-zerg2-wechat/source-art/operator-stars/original-aligned-v3/references/operator-05.png",
+  "generated_path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-02b033bf-9dd7-42f7-a1c0-63ee9fba36f0.png",
+  "prompt": "Use case: identity-preserve, measured composition. ORIGINAL base portrait card is the sole identity and pose reference for light brown ponytail lightning hammer. Generate ONE THREE-STAR upgrade. Exact layout on a 300x485 proportional canvas: TOP OF HAIR or hat at y=116 (23.9% from top); EYE LINE y=177 (36.5%); FACE CENTER x=141 (47.0% width). Head including hair approx 100/300 canvas width. Top approximately ONE QUARTER of canvas is EMPTY BACKGROUND. Keep character in original position UNDER original title region even though that text will be removed. DO NOT zoom or enlarge/recenter subject to fill canvas! No head at the image top. Preserve face, expression, hair, anatomy, exact pose, hand gestures and weapon orientation. Match ORIGINAL crisp detailed 2D painted anime GAME style and original colors/background; not a new artist or glossy 3D. Upgrade armor and weapon with advanced industrial materials and restrained gold inlays, more sophisticated details but same silhouette and colors. Practical nonsexual costume. Remove EVERY frame, title, word, logo, QR code, nameplate, star, badge, rank, UI panel; extend original background into those removed areas, no patches. Render clean illustration full 300:485 aspect at high resolution. No letters, text, borders or decorative stars. ",
+  "anchors": {
+    "hairTop": 116,
+    "eyeY": 177,
+    "faceX": 141,
+    "headWidth": 100
+  },
+  "method": "built-in image_gen, measured original base reference"
+}

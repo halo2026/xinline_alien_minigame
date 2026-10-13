@@ -22,7 +22,7 @@ const normalIds=new Map();for(const [id,t]of Object.entries(D.unitTypes)){const 
 const spawn=p.spawn;p.spawn=function(event){event=remap(event);const original=data.roster[campaign+':'+event.unit],source=original&&byKey[original.key],family=source&&families.get(source.family);let chosen=null;
 if(family?.normal&&family.elite&&source.tier!=='boss'&&!event.miniBoss&&!D.campaignConfig?.bossIds?.includes(event.unit)){
  this.eliteCadence??={};const count=this.eliteCadence[source.family]??={normal:0,next:10+Math.floor(this.random()*11)};
- const ready=count.normal>=count.next&&this.enemies.filter(e=>e.elite&&e.hp>0).length<2&&this.time>=(this.nextEliteArrival||0);chosen=ready?family.elite:family.normal;
+ const ready=(!event.zergSquad||event.squadLeader)&&count.normal>=count.next&&this.enemies.filter(e=>e.elite&&e.hp>0).length<2&&this.time>=(this.nextEliteArrival||0);chosen=ready?family.elite:family.normal;
  if(ready){count.normal=0;count.next=10+Math.floor(this.random()*11);this.nextEliteArrival=this.time+6;}else count.normal++;
  event={...event,unit:normalIds.get(source.family)||event.unit,hpScale:(event.hpScale||1)/(event.rosterHpScale||1),attackScale:(event.attackScale||1)/(event.rosterAttackScale||1)};
 }

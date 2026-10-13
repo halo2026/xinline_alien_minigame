@@ -1,0 +1,10 @@
+{
+  "index": 0,
+  "stars": 2,
+  "role": "machine gun",
+  "file": "operator-00-2star.png",
+  "reference": "references/operator-00.png",
+  "generated_path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-e77e63e3-c4e0-4a28-8b16-80a599637771.png",
+  "prompt": "Use case: identity-preserve. Edit target is the ORIGINAL base-game pink-haired adult female machine-gun operator card. Generate ONE upgraded TWO-STAR portrait. Preserve the original illustration's exact character identity, youthful adult facial design, slim anatomy, pink ponytail with bow, expression, camera, pose, hands and heavy machine gun pointing right. Preserve ORIGINAL placement: on a 300x485 proportional canvas hair top near (93,102), eyes near y185, face center near (140,193), belt near y330. Do NOT zoom in, enlarge the head, move character downward or change pose. Match original detailed painted anime game rendering, crisp hair and face, not glossy 3D or a different anime artist. Upgrade ONLY armor and weapon surface details modestly with refined industrial plating, tiny teal energy seams; same original grey/olive palette and orange fiery space background. Remove ALL card UI: title, text, border, QR code, logos, badges, stars, panels; reconstruct continuous background in those areas, keep original character coordinates. Full image 300:485 aspect ratio, high resolution. No letters, numbers, rank marks, decorative frame or watermark. Output one image only.",
+  "method": "built-in image_gen direct original reference"
+}

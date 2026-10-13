@@ -1,0 +1,16 @@
+{
+  "index": 8,
+  "stars": 3,
+  "role": "short dark-brown-haired female backpack missile",
+  "file": "operator-08-3star.png",
+  "reference": "/Users/ryan/Documents/Codex/2026-09-07/x20/outputs/alien-zerg2-wechat/source-art/operator-stars/original-aligned-v3/references/operator-08.png",
+  "generated_path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-a7768f1a-8d2a-42d1-aaa3-0a0ddc637465.png",
+  "prompt": "Use case: identity-preserve, measured composition. ORIGINAL base portrait card is the sole identity and pose reference for short dark-brown-haired female backpack missile. Generate ONE THREE-STAR upgrade. Exact layout on a 300x485 proportional canvas: TOP OF HAIR or hat at y=103 (21.2% from top); EYE LINE y=168 (34.6%); FACE CENTER x=133 (44.3% width). Head including hair approx 125/300 canvas width. Top approximately ONE QUARTER of canvas is EMPTY BACKGROUND. Keep character in original position UNDER original title region even though that text will be removed. DO NOT zoom or enlarge/recenter subject to fill canvas! No head at the image top. Preserve face, expression, hair, anatomy, exact pose, hand gestures and weapon orientation. Match ORIGINAL crisp detailed 2D painted anime GAME style and original colors/background; not a new artist or glossy 3D. Upgrade armor and weapon with advanced industrial materials and restrained gold inlays, more sophisticated details but same silhouette and colors. Practical nonsexual costume. Remove EVERY frame, title, word, logo, QR code, nameplate, star, badge, rank, UI panel; extend original background into those removed areas, no patches. Render clean illustration full 300:485 aspect at high resolution. No letters, text, borders or decorative stars. Must remain a WOMAN, short messy brown bob, olive jumpsuit, two backpack rocket pods and two control grips; no male face, no handheld rifle.",
+  "anchors": {
+    "hairTop": 103,
+    "eyeY": 168,
+    "faceX": 133,
+    "headWidth": 125
+  },
+  "method": "built-in image_gen, measured original base reference"
+}

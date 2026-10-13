@@ -1,0 +1,16 @@
+{
+  "index": 1,
+  "stars": 2,
+  "role": "blonde twin-tail shotgun",
+  "file": "operator-01-2star.png",
+  "reference": "/Users/ryan/Documents/Codex/2026-09-07/x20/outputs/alien-zerg2-wechat/source-art/operator-stars/original-aligned-v3/references/operator-01.png",
+  "generated_path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-b7c807f3-3005-4e3f-83f5-ec8405f0b6fc.png",
+  "prompt": "Use case: identity-preserve, measured composition. ORIGINAL base portrait card is the sole identity and pose reference for blonde twin-tail shotgun. Generate ONE TWO-STAR upgrade. Exact layout on a 300x485 proportional canvas: TOP OF HAIR or hat at y=108 (22.3% from top); EYE LINE y=174 (35.9%); FACE CENTER x=146 (48.7% width). Head including hair approx 95/300 canvas width. Top approximately ONE QUARTER of canvas is EMPTY BACKGROUND. Keep character in original position UNDER original title region even though that text will be removed. DO NOT zoom or enlarge/recenter subject to fill canvas! No head at the image top. Preserve face, expression, hair, anatomy, exact pose, hand gestures and weapon orientation. Match ORIGINAL crisp detailed 2D painted anime GAME style and original colors/background; not a new artist or glossy 3D. Upgrade only modest refined armor and weapon-panel details, subtle small energy seams. Practical nonsexual costume. Remove EVERY frame, title, word, logo, QR code, nameplate, star, badge, rank, UI panel; extend original background into those removed areas, no patches. Render clean illustration full 300:485 aspect at high resolution. No letters, text, borders or decorative stars. ",
+  "anchors": {
+    "hairTop": 108,
+    "eyeY": 174,
+    "faceX": 146,
+    "headWidth": 95
+  },
+  "method": "built-in image_gen, measured original base reference"
+}

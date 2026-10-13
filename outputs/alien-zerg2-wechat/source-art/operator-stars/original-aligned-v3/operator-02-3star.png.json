@@ -1,0 +1,10 @@
+{
+  "index": 2,
+  "stars": 3,
+  "role": "sniper",
+  "file": "operator-02-3star.png",
+  "reference": "references/operator-02.png",
+  "generated_path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-3de7a058-15cd-4e4c-8bed-85b86c68f1f8.png",
+  "prompt": "Use case: identity-preserve precise compositional correction. Reference is ORIGINAL silver-haired female sniper portrait. Make her THREE-STAR advanced upgraded armor with restrained gold inlays and subtle energy seams, but keep original face, pale silver bob, red eyes, raised thumb pose, clothes silhouette and colors. Crucial layout in 300x485 proportional canvas: TOP OF HAIR at y=119 (24.5% from top); EYES at y=171 (35.3% from top), face center x=146 (49% width), chin at y=201 (41.4% from top). Character head WIDTH approx85/300 (28% canvas width), NOT large 40% head. Empty background fills top quarter of canvas. Do NOT put hair/head near top edge. Keep these measured anchors, not a typical full-page portrait composition. Retain original hand-painted anime game style and detailed 2D artwork. Remove all text/card frame/QR/nameplate/UI/labels/stars and extend the original starfield/ship backdrop there, while leaving character at original coordinates. No border, no stars, no black patches, no badges. Crisp high-resolution 300:485 canvas, refined functional black-and-white armor details but NO other major change.",
+  "method": "built-in image_gen measured original reference"
+}

@@ -21,10 +21,10 @@ for(const root of ['../shared','../../alien-wolf-wechat/shared']){
 test('portrait renderer selects exact star row and character column, with original fallback',()=>{
  const {View}=require('../shared/view'),P=require('../shared/progression'),calls=[];
  const ctx={drawImage:(...a)=>calls.push(a),save(){},restore(){},fillRect(){}};
- const portraits={width:3300},operatorStars={width:2640};
+ const portraits={width:3300},operatorStars={width:3300};
  const v={ctx,images:{portraits,operatorStars},game:{progress:P.fresh()},text(){},techPlate(){},sprite(){}};
  View.prototype.operatorPortrait.call(v,'12205:2',0,0,180,180,false,3);
- assert.equal(calls[0][0],operatorStars);assert.equal(calls[0][1],8*240);assert.equal(calls[0][2],360);assert.equal(calls[0][4],192);assert.equal(calls[0][6],36);assert.equal(calls[0][8],144);
+ assert.equal(calls[0][0],operatorStars);assert.equal(calls[0][1],(8*240+24)*1.25);assert.equal(calls[0][2],(388+83.42)*1.25+30);assert.equal(calls[0][4],186.24*1.25);assert(Math.abs(calls[0][6]-2.7)<1e-9);assert(Math.abs(calls[0][8]-174.6)<1e-9);
  View.prototype.operatorPortrait.call(v,'12200:0',0,0,180,180,false,1);assert.equal(calls[1][0],portraits);
 });
 test('direct grants cannot skip any prerequisite star and existing high stars are retained',()=>{for(const root of ['../shared','../../alien-wolf-wechat/shared']){const P=require(root+'/progression'),s=P.fresh(),key='12202:0';for(const expected of [1,2,3]){P.grantOperator(s,key,3);assert.equal(P.operatorStar(s,key),expected);}assert.equal(P.operatorStar(P.restore(s),key),3);P.grantOperator(s,key,1);assert.equal(P.operatorStar(s,key),3);}});

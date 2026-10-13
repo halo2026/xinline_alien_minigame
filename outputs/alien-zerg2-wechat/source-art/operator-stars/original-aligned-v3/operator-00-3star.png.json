@@ -1,0 +1,10 @@
+{
+  "index": 0,
+  "stars": 3,
+  "role": "machine gun",
+  "file": "operator-00-3star.png",
+  "reference": "operator-00-2star.png (direct original-aligned edit)",
+  "generated_path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-474e867c-2eff-4408-987f-1fc7ca15a9d3.png",
+  "prompt": "Use case: precise-object-edit, identity-preserve. This is the approved original-aligned TWO-star machine gun operator. Make her THREE-star version by editing ONLY the armor plating and gun surface details: more advanced layered gunmetal plating, restrained fine gold trim, subtle teal energy details. EVERYTHING ELSE must remain geometrically identical: pixel-position of the face, eyes, top of ponytail, body, arms, weapon, camera framing, canvas size, background, light and pose. Do not shrink or enlarge the character; do not move her in any direction. Do not redraw a new face, do not change hair/bow/color. Keep same detailed 2D painted anime style. No stars, text, symbols, emblems, frame, QR code, UI, badges or watermark. This is a texture-and-armor-detail edit, not a new composition.",
+  "method": "built-in image_gen detail-only edit of original-aligned 2-star"
+}

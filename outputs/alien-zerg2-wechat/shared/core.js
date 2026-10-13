@@ -51,9 +51,23 @@ for(let i=4;i<zergWaveMixes.length;i++){const n=[1,2,3,3,4,4][i-4];zergWaveMixes
 let zergOriginalCount=0,zergReducedCount=0;
 for(const mix of zergWaveMixes){const total=mix.reduce((n,e)=>n+e[1],0);zergOriginalCount+=total;const count=Math.round(zergOriginalCount*.7)-zergReducedCount;zergReducedCount+=count;const rows=mix.map(([id,n],i)=>({id,i,n:Math.floor(n*count/total),fraction:n*count/total%1}));let remaining=count-rows.reduce((n,r)=>n+r.n,0);for(const r of [...rows].sort((a,b)=>b.fraction-a.fraction||a.i-b.i)){if(remaining-->0)r.n++;}mix.splice(0,mix.length,...rows.filter(r=>r.n).map(r=>[r.id,r.n]));}
 function zergSpawnGap(index){return [1.05,1,.95,.9,.9,.85,.8,.8][index%firstWaves]*(index>=firstWaves?.9:1)/.7*.9;}
-function scheduleZergWave(index,start){const second=index>=firstWaves,round=index%firstWaves,mix=zergWaveMixes[round],counts=mix.map(()=>0),total=mix.reduce((n,e)=>n+e[1],0),out=[],spawns=[2,4,6,7,1,3,5,8],gap=zergSpawnGap(index),hpScale=(second?1.2+.4*round/(firstWaves-1):1)*.9,attackScale=(second?1.1+.2*round/(firstWaves-1):1)*.9,lead=index===0?3:0;
- for(let i=0;i<total;i++){let best=0,deficit=-Infinity;for(let j=0;j<mix.length;j++){const d=(i+1)*mix[j][1]/total-counts[j];if(counts[j]<mix[j][1]&&d>deficit){best=j;deficit=d;}}counts[best]++;const spawn=spawns[(Math.floor(i/3)+round)%spawns.length],route=D.waves[0].find(e=>e.spawn===spawn);out.push({...route,unit:mix[best][0],count:1,ordinal:i,time:start+lead+i*gap,hpScale,attackScale});}
- const ambush=D.ambush,ambushIndex=ambush?[5,6,8].indexOf(round+1):-1;if(ambushIndex>=0){const candidates=out.filter(e=>e.unit===12500||e.unit===12501),count=Math.min(Math.round(ambush.counts[ambushIndex]*.7),candidates.length);for(let i=0;i<count;i++){const e=candidates[Math.floor(i*candidates.length/count)];e.spawn=ambush.spawn;e.path=5;e.ambush=true;}}
+function scheduleZergWave(index,start){
+ const second=index>=firstWaves,round=index%firstWaves,mix=zergWaveMixes[round],out=[],spawns=[2,4,6,7,1,3,5,8],gap=zergSpawnGap(index),hpScale=(second?1.2+.4*round/(firstWaves-1):1)*.9,attackScale=(second?1.1+.2*round/(firstWaves-1):1)*.9;
+ // Keep the authored population, but send recognisable families from light to heavy.
+ const family=id=>id===12503?12501:id===190001?12502:id,pools=[12500,12501,12502,12509].map(id=>mix.filter(([unit])=>family(unit)===id).flatMap(([unit,n])=>Array(n).fill(unit)));
+ const ambush=D.ambush,ambushIndex=ambush?[5,6,8].indexOf(round+1):-1;
+ let flank=ambushIndex>=0?Math.min(Math.round(ambush.counts[ambushIndex]*.7),pools[0].length+pools[1].filter(id=>id===12501).length):0,squad=0,time=start+(index===0?3:0);
+ for(const pool of pools){const side=[],main=[];for(const unit of pool){if(flank>0&&(unit===12500||unit===12501)){side.push(unit);flank--;}else main.push(unit);}
+  for(const [units,isAmbush]of [[main,false],[side,true]]){
+   // Balanced 3–5 member squads where possible; small remaining families stay together.
+   const groups=Math.ceil(units.length/5);let cursor=0;
+   for(let group=0;group<groups;group++){
+    const size=Math.floor(units.length/groups)+(group<units.length%groups?1:0),spawn=isAmbush?ambush.spawn:spawns[(squad+round)%spawns.length],route=D.waves[0].find(e=>e.spawn===spawn)||D.waves[0][0];
+    for(let member=0;member<size;member++){out.push({...route,spawn,path:isAmbush?5:route.path,ambush:isAmbush,unit:units[cursor++],count:1,ordinal:out.length,time,hpScale,attackScale,zergSquad:true,squad,squadLeader:member===0&&size>1});time+=gap;}
+    time+=gap*.5;squad++;
+   }
+  }
+ }
  if(round===firstWaves-1){const boss=D.waves.flat().find(e=>e.unit===12504);out.push({...boss,unit:second?D.zergSecondActBossId:12504,count:1,ordinal:0,time:out.at(-1).time+4,hpScale:hpScale*(second?1.25:1),attackScale});}return out;
 }
 // Every two-act campaign repeats its standard wave groups once in Act II.

@@ -1,0 +1,330 @@
+[
+  {
+    "index": 0,
+    "stars": 2,
+    "role": "machine gun",
+    "file": "operator-00-2star.png",
+    "reference": "references/operator-00.png",
+    "generated_path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-e77e63e3-c4e0-4a28-8b16-80a599637771.png",
+    "prompt": "Use case: identity-preserve. Edit target is the ORIGINAL base-game pink-haired adult female machine-gun operator card. Generate ONE upgraded TWO-STAR portrait. Preserve the original illustration's exact character identity, youthful adult facial design, slim anatomy, pink ponytail with bow, expression, camera, pose, hands and heavy machine gun pointing right. Preserve ORIGINAL placement: on a 300x485 proportional canvas hair top near (93,102), eyes near y185, face center near (140,193), belt near y330. Do NOT zoom in, enlarge the head, move character downward or change pose. Match original detailed painted anime game rendering, crisp hair and face, not glossy 3D or a different anime artist. Upgrade ONLY armor and weapon surface details modestly with refined industrial plating, tiny teal energy seams; same original grey/olive palette and orange fiery space background. Remove ALL card UI: title, text, border, QR code, logos, badges, stars, panels; reconstruct continuous background in those areas, keep original character coordinates. Full image 300:485 aspect ratio, high resolution. No letters, numbers, rank marks, decorative frame or watermark. Output one image only.",
+    "method": "built-in image_gen direct original reference"
+  },
+  {
+    "index": 0,
+    "stars": 3,
+    "role": "machine gun",
+    "file": "operator-00-3star.png",
+    "reference": "operator-00-2star.png (direct original-aligned edit)",
+    "generated_path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-474e867c-2eff-4408-987f-1fc7ca15a9d3.png",
+    "prompt": "Use case: precise-object-edit, identity-preserve. This is the approved original-aligned TWO-star machine gun operator. Make her THREE-star version by editing ONLY the armor plating and gun surface details: more advanced layered gunmetal plating, restrained fine gold trim, subtle teal energy details. EVERYTHING ELSE must remain geometrically identical: pixel-position of the face, eyes, top of ponytail, body, arms, weapon, camera framing, canvas size, background, light and pose. Do not shrink or enlarge the character; do not move her in any direction. Do not redraw a new face, do not change hair/bow/color. Keep same detailed 2D painted anime style. No stars, text, symbols, emblems, frame, QR code, UI, badges or watermark. This is a texture-and-armor-detail edit, not a new composition.",
+    "method": "built-in image_gen detail-only edit of original-aligned 2-star"
+  },
+  {
+    "index": 1,
+    "stars": 2,
+    "role": "blonde twin-tail shotgun",
+    "file": "operator-01-2star.png",
+    "reference": "/Users/ryan/Documents/Codex/2026-09-07/x20/outputs/alien-zerg2-wechat/source-art/operator-stars/original-aligned-v3/references/operator-01.png",
+    "generated_path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-b7c807f3-3005-4e3f-83f5-ec8405f0b6fc.png",
+    "prompt": "Use case: identity-preserve, measured composition. ORIGINAL base portrait card is the sole identity and pose reference for blonde twin-tail shotgun. Generate ONE TWO-STAR upgrade. Exact layout on a 300x485 proportional canvas: TOP OF HAIR or hat at y=108 (22.3% from top); EYE LINE y=174 (35.9%); FACE CENTER x=146 (48.7% width). Head including hair approx 95/300 canvas width. Top approximately ONE QUARTER of canvas is EMPTY BACKGROUND. Keep character in original position UNDER original title region even though that text will be removed. DO NOT zoom or enlarge/recenter subject to fill canvas! No head at the image top. Preserve face, expression, hair, anatomy, exact pose, hand gestures and weapon orientation. Match ORIGINAL crisp detailed 2D painted anime GAME style and original colors/background; not a new artist or glossy 3D. Upgrade only modest refined armor and weapon-panel details, subtle small energy seams. Practical nonsexual costume. Remove EVERY frame, title, word, logo, QR code, nameplate, star, badge, rank, UI panel; extend original background into those removed areas, no patches. Render clean illustration full 300:485 aspect at high resolution. No letters, text, borders or decorative stars. ",
+    "anchors": {
+      "hairTop": 108,
+      "eyeY": 174,
+      "faceX": 146,
+      "headWidth": 95
+    },
+    "method": "built-in image_gen, measured original base reference"
+  },
+  {
+    "index": 1,
+    "stars": 3,
+    "role": "blonde twin-tail shotgun",
+    "file": "operator-01-3star.png",
+    "reference": "/Users/ryan/Documents/Codex/2026-09-07/x20/outputs/alien-zerg2-wechat/source-art/operator-stars/original-aligned-v3/references/operator-01.png",
+    "generated_path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-85963e74-50bf-4628-973b-bfd0b3531b6c.png",
+    "prompt": "Use case: identity-preserve, measured composition. ORIGINAL base portrait card is the sole identity and pose reference for blonde twin-tail shotgun. Generate ONE THREE-STAR upgrade. Exact layout on a 300x485 proportional canvas: TOP OF HAIR or hat at y=108 (22.3% from top); EYE LINE y=174 (35.9%); FACE CENTER x=146 (48.7% width). Head including hair approx 95/300 canvas width. Top approximately ONE QUARTER of canvas is EMPTY BACKGROUND. Keep character in original position UNDER original title region even though that text will be removed. DO NOT zoom or enlarge/recenter subject to fill canvas! No head at the image top. Preserve face, expression, hair, anatomy, exact pose, hand gestures and weapon orientation. Match ORIGINAL crisp detailed 2D painted anime GAME style and original colors/background; not a new artist or glossy 3D. Upgrade armor and weapon with advanced industrial materials and restrained gold inlays, more sophisticated details but same silhouette and colors. Practical nonsexual costume. Remove EVERY frame, title, word, logo, QR code, nameplate, star, badge, rank, UI panel; extend original background into those removed areas, no patches. Render clean illustration full 300:485 aspect at high resolution. No letters, text, borders or decorative stars. ",
+    "anchors": {
+      "hairTop": 108,
+      "eyeY": 174,
+      "faceX": 146,
+      "headWidth": 95
+    },
+    "method": "built-in image_gen, measured original base reference"
+  },
+  {
+    "index": 2,
+    "stars": 2,
+    "role": "sniper",
+    "file": "operator-02-2star.png",
+    "reference": "references/operator-02.png",
+    "generated_path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-14d429fc-a07c-4c08-a539-1bae050ecb34.png",
+    "prompt": "Use case: identity-preserve precise compositional correction. Reference is ORIGINAL silver-haired female sniper portrait. Make her TWO-STAR modestly upgraded armor, but keep original face, pale silver bob, red eyes, raised thumb pose, clothes silhouette and colors. Crucial layout in 300x485 proportional canvas: TOP OF HAIR at y=119 (24.5% from top); EYES at y=171 (35.3% from top), face center x=146 (49% width), chin at y=201 (41.4% from top). Character head WIDTH approx85/300 (28% canvas width), NOT large 40% head. Empty background fills top quarter of canvas. Do NOT put hair/head near top edge. Keep these measured anchors, not a typical full-page portrait composition. Retain original hand-painted anime game style and detailed 2D artwork. Remove all text/card frame/QR/nameplate/UI/labels/stars and extend the original starfield/ship backdrop there, while leaving character at original coordinates. No border, no stars, no black patches, no badges. Crisp high-resolution 300:485 canvas, refined functional black-and-white armor details but NO other major change.",
+    "method": "built-in image_gen measured original reference"
+  },
+  {
+    "index": 2,
+    "stars": 3,
+    "role": "sniper",
+    "file": "operator-02-3star.png",
+    "reference": "references/operator-02.png",
+    "generated_path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-3de7a058-15cd-4e4c-8bed-85b86c68f1f8.png",
+    "prompt": "Use case: identity-preserve precise compositional correction. Reference is ORIGINAL silver-haired female sniper portrait. Make her THREE-STAR advanced upgraded armor with restrained gold inlays and subtle energy seams, but keep original face, pale silver bob, red eyes, raised thumb pose, clothes silhouette and colors. Crucial layout in 300x485 proportional canvas: TOP OF HAIR at y=119 (24.5% from top); EYES at y=171 (35.3% from top), face center x=146 (49% width), chin at y=201 (41.4% from top). Character head WIDTH approx85/300 (28% canvas width), NOT large 40% head. Empty background fills top quarter of canvas. Do NOT put hair/head near top edge. Keep these measured anchors, not a typical full-page portrait composition. Retain original hand-painted anime game style and detailed 2D artwork. Remove all text/card frame/QR/nameplate/UI/labels/stars and extend the original starfield/ship backdrop there, while leaving character at original coordinates. No border, no stars, no black patches, no badges. Crisp high-resolution 300:485 canvas, refined functional black-and-white armor details but NO other major change.",
+    "method": "built-in image_gen measured original reference"
+  },
+  {
+    "index": 3,
+    "stars": 2,
+    "role": "red braided flamethrower",
+    "file": "operator-03-2star.png",
+    "reference": "/Users/ryan/Documents/Codex/2026-09-07/x20/outputs/alien-zerg2-wechat/source-art/operator-stars/original-aligned-v3/references/operator-03.png",
+    "generated_path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-d185ec0b-c0d2-45d6-9e70-8a3ef64f9e19.png",
+    "prompt": "Use case: identity-preserve, measured composition. ORIGINAL base portrait card is the sole identity and pose reference for red braided flamethrower. Generate ONE TWO-STAR upgrade. Exact layout on a 300x485 proportional canvas: TOP OF HAIR or hat at y=108 (22.3% from top); EYE LINE y=174 (35.9%); FACE CENTER x=141 (47.0% width). Head including hair approx 96/300 canvas width. Top approximately ONE QUARTER of canvas is EMPTY BACKGROUND. Keep character in original position UNDER original title region even though that text will be removed. DO NOT zoom or enlarge/recenter subject to fill canvas! No head at the image top. Preserve face, expression, hair, anatomy, exact pose, hand gestures and weapon orientation. Match ORIGINAL crisp detailed 2D painted anime GAME style and original colors/background; not a new artist or glossy 3D. Upgrade only modest refined armor and weapon-panel details, subtle small energy seams. Practical nonsexual costume. Remove EVERY frame, title, word, logo, QR code, nameplate, star, badge, rank, UI panel; extend original background into those removed areas, no patches. Render clean illustration full 300:485 aspect at high resolution. No letters, text, borders or decorative stars. ",
+    "anchors": {
+      "hairTop": 108,
+      "eyeY": 174,
+      "faceX": 141,
+      "headWidth": 96
+    },
+    "method": "built-in image_gen, measured original base reference"
+  },
+  {
+    "index": 3,
+    "stars": 3,
+    "role": "red braided flamethrower",
+    "file": "operator-03-3star.png",
+    "reference": "/Users/ryan/Documents/Codex/2026-09-07/x20/outputs/alien-zerg2-wechat/source-art/operator-stars/original-aligned-v3/references/operator-03.png",
+    "generated_path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-aefc6b20-e0ab-45cb-9ae5-3e3056a47669.png",
+    "prompt": "Use case: identity-preserve, measured composition. ORIGINAL base portrait card is the sole identity and pose reference for red braided flamethrower. Generate ONE THREE-STAR upgrade. Exact layout on a 300x485 proportional canvas: TOP OF HAIR or hat at y=108 (22.3% from top); EYE LINE y=174 (35.9%); FACE CENTER x=141 (47.0% width). Head including hair approx 96/300 canvas width. Top approximately ONE QUARTER of canvas is EMPTY BACKGROUND. Keep character in original position UNDER original title region even though that text will be removed. DO NOT zoom or enlarge/recenter subject to fill canvas! No head at the image top. Preserve face, expression, hair, anatomy, exact pose, hand gestures and weapon orientation. Match ORIGINAL crisp detailed 2D painted anime GAME style and original colors/background; not a new artist or glossy 3D. Upgrade armor and weapon with advanced industrial materials and restrained gold inlays, more sophisticated details but same silhouette and colors. Practical nonsexual costume. Remove EVERY frame, title, word, logo, QR code, nameplate, star, badge, rank, UI panel; extend original background into those removed areas, no patches. Render clean illustration full 300:485 aspect at high resolution. No letters, text, borders or decorative stars. ",
+    "anchors": {
+      "hairTop": 108,
+      "eyeY": 174,
+      "faceX": 141,
+      "headWidth": 96
+    },
+    "method": "built-in image_gen, measured original base reference"
+  },
+  {
+    "index": 4,
+    "stars": 2,
+    "role": "ice-blue long-haired frost gun",
+    "file": "operator-04-2star.png",
+    "reference": "/Users/ryan/Documents/Codex/2026-09-07/x20/outputs/alien-zerg2-wechat/source-art/operator-stars/original-aligned-v3/references/operator-04.png",
+    "generated_path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-9780f0e5-0120-48df-b842-b4539025e7bc.png",
+    "prompt": "Use case: identity-preserve, measured composition. ORIGINAL base portrait card is the sole identity and pose reference for ice-blue long-haired frost gun. Generate ONE TWO-STAR upgrade. Exact layout on a 300x485 proportional canvas: TOP OF HAIR or hat at y=103 (21.2% from top); EYE LINE y=155 (32.0%); FACE CENTER x=143 (47.7% width). Head including hair approx 83/300 canvas width. Top approximately ONE QUARTER of canvas is EMPTY BACKGROUND. Keep character in original position UNDER original title region even though that text will be removed. DO NOT zoom or enlarge/recenter subject to fill canvas! No head at the image top. Preserve face, expression, hair, anatomy, exact pose, hand gestures and weapon orientation. Match ORIGINAL crisp detailed 2D painted anime GAME style and original colors/background; not a new artist or glossy 3D. Upgrade only modest refined armor and weapon-panel details, subtle small energy seams. Practical nonsexual costume. Remove EVERY frame, title, word, logo, QR code, nameplate, star, badge, rank, UI panel; extend original background into those removed areas, no patches. Render clean illustration full 300:485 aspect at high resolution. No letters, text, borders or decorative stars. ",
+    "anchors": {
+      "hairTop": 103,
+      "eyeY": 155,
+      "faceX": 143,
+      "headWidth": 83
+    },
+    "method": "built-in image_gen, measured original base reference"
+  },
+  {
+    "index": 4,
+    "stars": 3,
+    "role": "ice-blue long-haired frost gun",
+    "file": "operator-04-3star.png",
+    "reference": "/Users/ryan/Documents/Codex/2026-09-07/x20/outputs/alien-zerg2-wechat/source-art/operator-stars/original-aligned-v3/references/operator-04.png",
+    "generated_path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-c67cd484-1fdb-4fc0-b24f-3f063d20bdbe.png",
+    "prompt": "Use case: identity-preserve, measured composition. ORIGINAL base portrait card is the sole identity and pose reference for ice-blue long-haired frost gun. Generate ONE THREE-STAR upgrade. Exact layout on a 300x485 proportional canvas: TOP OF HAIR or hat at y=103 (21.2% from top); EYE LINE y=155 (32.0%); FACE CENTER x=143 (47.7% width). Head including hair approx 83/300 canvas width. Top approximately ONE QUARTER of canvas is EMPTY BACKGROUND. Keep character in original position UNDER original title region even though that text will be removed. DO NOT zoom or enlarge/recenter subject to fill canvas! No head at the image top. Preserve face, expression, hair, anatomy, exact pose, hand gestures and weapon orientation. Match ORIGINAL crisp detailed 2D painted anime GAME style and original colors/background; not a new artist or glossy 3D. Upgrade armor and weapon with advanced industrial materials and restrained gold inlays, more sophisticated details but same silhouette and colors. Practical nonsexual costume. Remove EVERY frame, title, word, logo, QR code, nameplate, star, badge, rank, UI panel; extend original background into those removed areas, no patches. Render clean illustration full 300:485 aspect at high resolution. No letters, text, borders or decorative stars. ",
+    "anchors": {
+      "hairTop": 103,
+      "eyeY": 155,
+      "faceX": 143,
+      "headWidth": 83
+    },
+    "method": "built-in image_gen, measured original base reference"
+  },
+  {
+    "index": 5,
+    "stars": 2,
+    "role": "light brown ponytail lightning hammer",
+    "file": "operator-05-2star.png",
+    "reference": "/Users/ryan/Documents/Codex/2026-09-07/x20/outputs/alien-zerg2-wechat/source-art/operator-stars/original-aligned-v3/references/operator-05.png",
+    "generated_path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-03032eae-085c-4eef-b045-ba78e9f9819d.png",
+    "prompt": "Use case: identity-preserve, measured composition. ORIGINAL base portrait card is the sole identity and pose reference for light brown ponytail lightning hammer. Generate ONE TWO-STAR upgrade. Exact layout on a 300x485 proportional canvas: TOP OF HAIR or hat at y=116 (23.9% from top); EYE LINE y=177 (36.5%); FACE CENTER x=141 (47.0% width). Head including hair approx 100/300 canvas width. Top approximately ONE QUARTER of canvas is EMPTY BACKGROUND. Keep character in original position UNDER original title region even though that text will be removed. DO NOT zoom or enlarge/recenter subject to fill canvas! No head at the image top. Preserve face, expression, hair, anatomy, exact pose, hand gestures and weapon orientation. Match ORIGINAL crisp detailed 2D painted anime GAME style and original colors/background; not a new artist or glossy 3D. Upgrade only modest refined armor and weapon-panel details, subtle small energy seams. Practical nonsexual costume. Remove EVERY frame, title, word, logo, QR code, nameplate, star, badge, rank, UI panel; extend original background into those removed areas, no patches. Render clean illustration full 300:485 aspect at high resolution. No letters, text, borders or decorative stars. ",
+    "anchors": {
+      "hairTop": 116,
+      "eyeY": 177,
+      "faceX": 141,
+      "headWidth": 100
+    },
+    "method": "built-in image_gen, measured original base reference"
+  },
+  {
+    "index": 5,
+    "stars": 3,
+    "role": "light brown ponytail lightning hammer",
+    "file": "operator-05-3star.png",
+    "reference": "/Users/ryan/Documents/Codex/2026-09-07/x20/outputs/alien-zerg2-wechat/source-art/operator-stars/original-aligned-v3/references/operator-05.png",
+    "generated_path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-02b033bf-9dd7-42f7-a1c0-63ee9fba36f0.png",
+    "prompt": "Use case: identity-preserve, measured composition. ORIGINAL base portrait card is the sole identity and pose reference for light brown ponytail lightning hammer. Generate ONE THREE-STAR upgrade. Exact layout on a 300x485 proportional canvas: TOP OF HAIR or hat at y=116 (23.9% from top); EYE LINE y=177 (36.5%); FACE CENTER x=141 (47.0% width). Head including hair approx 100/300 canvas width. Top approximately ONE QUARTER of canvas is EMPTY BACKGROUND. Keep character in original position UNDER original title region even though that text will be removed. DO NOT zoom or enlarge/recenter subject to fill canvas! No head at the image top. Preserve face, expression, hair, anatomy, exact pose, hand gestures and weapon orientation. Match ORIGINAL crisp detailed 2D painted anime GAME style and original colors/background; not a new artist or glossy 3D. Upgrade armor and weapon with advanced industrial materials and restrained gold inlays, more sophisticated details but same silhouette and colors. Practical nonsexual costume. Remove EVERY frame, title, word, logo, QR code, nameplate, star, badge, rank, UI panel; extend original background into those removed areas, no patches. Render clean illustration full 300:485 aspect at high resolution. No letters, text, borders or decorative stars. ",
+    "anchors": {
+      "hairTop": 116,
+      "eyeY": 177,
+      "faceX": 141,
+      "headWidth": 100
+    },
+    "method": "built-in image_gen, measured original base reference"
+  },
+  {
+    "index": 6,
+    "stars": 2,
+    "role": "long brown-haired shoulder cannon",
+    "file": "operator-06-2star.png",
+    "reference": "/Users/ryan/Documents/Codex/2026-09-07/x20/outputs/alien-zerg2-wechat/source-art/operator-stars/original-aligned-v3/references/operator-06.png",
+    "generated_path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-45df84c8-3f78-4b92-a55d-a17550248cab.png",
+    "prompt": "Use case: identity-preserve, measured composition. ORIGINAL base portrait card is the sole identity and pose reference for long brown-haired shoulder cannon. Generate ONE TWO-STAR upgrade. Exact layout on a 300x485 proportional canvas: TOP OF HAIR or hat at y=102 (21.0% from top); EYE LINE y=170 (35.1%); FACE CENTER x=150 (50.0% width). Head including hair approx 110/300 canvas width. Top approximately ONE QUARTER of canvas is EMPTY BACKGROUND. Keep character in original position UNDER original title region even though that text will be removed. DO NOT zoom or enlarge/recenter subject to fill canvas! No head at the image top. Preserve face, expression, hair, anatomy, exact pose, hand gestures and weapon orientation. Match ORIGINAL crisp detailed 2D painted anime GAME style and original colors/background; not a new artist or glossy 3D. Upgrade only modest refined armor and weapon-panel details, subtle small energy seams. Practical nonsexual costume. Remove EVERY frame, title, word, logo, QR code, nameplate, star, badge, rank, UI panel; extend original background into those removed areas, no patches. Render clean illustration full 300:485 aspect at high resolution. No letters, text, borders or decorative stars. ",
+    "anchors": {
+      "hairTop": 102,
+      "eyeY": 170,
+      "faceX": 150,
+      "headWidth": 110
+    },
+    "method": "built-in image_gen, measured original base reference"
+  },
+  {
+    "index": 6,
+    "stars": 3,
+    "role": "long brown-haired shoulder cannon",
+    "file": "operator-06-3star.png",
+    "reference": "/Users/ryan/Documents/Codex/2026-09-07/x20/outputs/alien-zerg2-wechat/source-art/operator-stars/original-aligned-v3/references/operator-06.png",
+    "generated_path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-19a483e2-dab1-4b8d-863d-4430474194eb.png",
+    "prompt": "Use case: identity-preserve, measured composition. ORIGINAL base portrait card is the sole identity and pose reference for long brown-haired shoulder cannon. Generate ONE THREE-STAR upgrade. Exact layout on a 300x485 proportional canvas: TOP OF HAIR or hat at y=102 (21.0% from top); EYE LINE y=170 (35.1%); FACE CENTER x=150 (50.0% width). Head including hair approx 110/300 canvas width. Top approximately ONE QUARTER of canvas is EMPTY BACKGROUND. Keep character in original position UNDER original title region even though that text will be removed. DO NOT zoom or enlarge/recenter subject to fill canvas! No head at the image top. Preserve face, expression, hair, anatomy, exact pose, hand gestures and weapon orientation. Match ORIGINAL crisp detailed 2D painted anime GAME style and original colors/background; not a new artist or glossy 3D. Upgrade armor and weapon with advanced industrial materials and restrained gold inlays, more sophisticated details but same silhouette and colors. Practical nonsexual costume. Remove EVERY frame, title, word, logo, QR code, nameplate, star, badge, rank, UI panel; extend original background into those removed areas, no patches. Render clean illustration full 300:485 aspect at high resolution. No letters, text, borders or decorative stars. ",
+    "anchors": {
+      "hairTop": 102,
+      "eyeY": 170,
+      "faceX": 150,
+      "headWidth": 110
+    },
+    "method": "built-in image_gen, measured original base reference"
+  },
+  {
+    "index": 7,
+    "stars": 2,
+    "role": "silver-haired seated energy-disc",
+    "file": "operator-07-2star.png",
+    "reference": "/Users/ryan/Documents/Codex/2026-09-07/x20/outputs/alien-zerg2-wechat/source-art/operator-stars/original-aligned-v3/references/operator-07.png",
+    "generated_path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-73ea72f3-5cf4-4bc2-9c28-bbf8dba36ba4.png",
+    "prompt": "Use case: identity-preserve, measured composition. ORIGINAL base portrait card is the sole identity and pose reference for silver-haired seated energy-disc. Generate ONE TWO-STAR upgrade. Exact layout on a 300x485 proportional canvas: TOP OF HAIR or hat at y=105 (21.6% from top); EYE LINE y=174 (35.9%); FACE CENTER x=125 (41.7% width). Head including hair approx 95/300 canvas width. Top approximately ONE QUARTER of canvas is EMPTY BACKGROUND. Keep character in original position UNDER original title region even though that text will be removed. DO NOT zoom or enlarge/recenter subject to fill canvas! No head at the image top. Preserve face, expression, hair, anatomy, exact pose, hand gestures and weapon orientation. Match ORIGINAL crisp detailed 2D painted anime GAME style and original colors/background; not a new artist or glossy 3D. Upgrade only modest refined armor and weapon-panel details, subtle small energy seams. Practical nonsexual costume. Remove EVERY frame, title, word, logo, QR code, nameplate, star, badge, rank, UI panel; extend original background into those removed areas, no patches. Render clean illustration full 300:485 aspect at high resolution. No letters, text, borders or decorative stars. ",
+    "anchors": {
+      "hairTop": 105,
+      "eyeY": 174,
+      "faceX": 125,
+      "headWidth": 95
+    },
+    "method": "built-in image_gen, measured original base reference"
+  },
+  {
+    "index": 7,
+    "stars": 3,
+    "role": "silver-haired seated energy-disc",
+    "file": "operator-07-3star.png",
+    "reference": "/Users/ryan/Documents/Codex/2026-09-07/x20/outputs/alien-zerg2-wechat/source-art/operator-stars/original-aligned-v3/references/operator-07.png",
+    "generated_path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-579716cb-1aa3-49b4-aa30-2b8134868797.png",
+    "prompt": "Use case: identity-preserve, measured composition. ORIGINAL base portrait card is the sole identity and pose reference for silver-haired seated energy-disc. Generate ONE THREE-STAR upgrade. Exact layout on a 300x485 proportional canvas: TOP OF HAIR or hat at y=105 (21.6% from top); EYE LINE y=174 (35.9%); FACE CENTER x=125 (41.7% width). Head including hair approx 95/300 canvas width. Top approximately ONE QUARTER of canvas is EMPTY BACKGROUND. Keep character in original position UNDER original title region even though that text will be removed. DO NOT zoom or enlarge/recenter subject to fill canvas! No head at the image top. Preserve face, expression, hair, anatomy, exact pose, hand gestures and weapon orientation. Match ORIGINAL crisp detailed 2D painted anime GAME style and original colors/background; not a new artist or glossy 3D. Upgrade armor and weapon with advanced industrial materials and restrained gold inlays, more sophisticated details but same silhouette and colors. Practical nonsexual costume. Remove EVERY frame, title, word, logo, QR code, nameplate, star, badge, rank, UI panel; extend original background into those removed areas, no patches. Render clean illustration full 300:485 aspect at high resolution. No letters, text, borders or decorative stars. ",
+    "anchors": {
+      "hairTop": 105,
+      "eyeY": 174,
+      "faceX": 125,
+      "headWidth": 95
+    },
+    "method": "built-in image_gen, measured original base reference"
+  },
+  {
+    "index": 8,
+    "stars": 2,
+    "role": "short dark-brown-haired female backpack missile",
+    "file": "operator-08-2star.png",
+    "reference": "/Users/ryan/Documents/Codex/2026-09-07/x20/outputs/alien-zerg2-wechat/source-art/operator-stars/original-aligned-v3/references/operator-08.png",
+    "generated_path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-1a45293d-7f67-474d-b616-5ec32550dbed.png",
+    "prompt": "Use case: identity-preserve, measured composition. ORIGINAL base portrait card is the sole identity and pose reference for short dark-brown-haired female backpack missile. Generate ONE TWO-STAR upgrade. Exact layout on a 300x485 proportional canvas: TOP OF HAIR or hat at y=103 (21.2% from top); EYE LINE y=168 (34.6%); FACE CENTER x=133 (44.3% width). Head including hair approx 125/300 canvas width. Top approximately ONE QUARTER of canvas is EMPTY BACKGROUND. Keep character in original position UNDER original title region even though that text will be removed. DO NOT zoom or enlarge/recenter subject to fill canvas! No head at the image top. Preserve face, expression, hair, anatomy, exact pose, hand gestures and weapon orientation. Match ORIGINAL crisp detailed 2D painted anime GAME style and original colors/background; not a new artist or glossy 3D. Upgrade only modest refined armor and weapon-panel details, subtle small energy seams. Practical nonsexual costume. Remove EVERY frame, title, word, logo, QR code, nameplate, star, badge, rank, UI panel; extend original background into those removed areas, no patches. Render clean illustration full 300:485 aspect at high resolution. No letters, text, borders or decorative stars. Must remain a WOMAN, short messy brown bob, olive jumpsuit, two backpack rocket pods and two control grips; no male face, no handheld rifle.",
+    "anchors": {
+      "hairTop": 103,
+      "eyeY": 168,
+      "faceX": 133,
+      "headWidth": 125
+    },
+    "method": "built-in image_gen, measured original base reference"
+  },
+  {
+    "index": 8,
+    "stars": 3,
+    "role": "short dark-brown-haired female backpack missile",
+    "file": "operator-08-3star.png",
+    "reference": "/Users/ryan/Documents/Codex/2026-09-07/x20/outputs/alien-zerg2-wechat/source-art/operator-stars/original-aligned-v3/references/operator-08.png",
+    "generated_path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-a7768f1a-8d2a-42d1-aaa3-0a0ddc637465.png",
+    "prompt": "Use case: identity-preserve, measured composition. ORIGINAL base portrait card is the sole identity and pose reference for short dark-brown-haired female backpack missile. Generate ONE THREE-STAR upgrade. Exact layout on a 300x485 proportional canvas: TOP OF HAIR or hat at y=103 (21.2% from top); EYE LINE y=168 (34.6%); FACE CENTER x=133 (44.3% width). Head including hair approx 125/300 canvas width. Top approximately ONE QUARTER of canvas is EMPTY BACKGROUND. Keep character in original position UNDER original title region even though that text will be removed. DO NOT zoom or enlarge/recenter subject to fill canvas! No head at the image top. Preserve face, expression, hair, anatomy, exact pose, hand gestures and weapon orientation. Match ORIGINAL crisp detailed 2D painted anime GAME style and original colors/background; not a new artist or glossy 3D. Upgrade armor and weapon with advanced industrial materials and restrained gold inlays, more sophisticated details but same silhouette and colors. Practical nonsexual costume. Remove EVERY frame, title, word, logo, QR code, nameplate, star, badge, rank, UI panel; extend original background into those removed areas, no patches. Render clean illustration full 300:485 aspect at high resolution. No letters, text, borders or decorative stars. Must remain a WOMAN, short messy brown bob, olive jumpsuit, two backpack rocket pods and two control grips; no male face, no handheld rifle.",
+    "anchors": {
+      "hairTop": 103,
+      "eyeY": 168,
+      "faceX": 133,
+      "headWidth": 125
+    },
+    "method": "built-in image_gen, measured original base reference"
+  },
+  {
+    "index": 9,
+    "stars": 2,
+    "role": "purple long-haired shrink ray",
+    "file": "operator-09-2star.png",
+    "reference": "/Users/ryan/Documents/Codex/2026-09-07/x20/outputs/alien-zerg2-wechat/source-art/operator-stars/original-aligned-v3/references/operator-09.png",
+    "generated_path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-71f2bcce-26eb-4e99-8a39-f98aae0fb4b5.png",
+    "prompt": "Use case: identity-preserve, measured composition. ORIGINAL base portrait card is the sole identity and pose reference for purple long-haired shrink ray. Generate ONE TWO-STAR upgrade. Exact layout on a 300x485 proportional canvas: TOP OF HAIR or hat at y=100 (20.6% from top); EYE LINE y=170 (35.1%); FACE CENTER x=156 (52.0% width). Head including hair approx 110/300 canvas width. Top approximately ONE QUARTER of canvas is EMPTY BACKGROUND. Keep character in original position UNDER original title region even though that text will be removed. DO NOT zoom or enlarge/recenter subject to fill canvas! No head at the image top. Preserve face, expression, hair, anatomy, exact pose, hand gestures and weapon orientation. Match ORIGINAL crisp detailed 2D painted anime GAME style and original colors/background; not a new artist or glossy 3D. Upgrade only modest refined armor and weapon-panel details, subtle small energy seams. Practical nonsexual costume. Remove EVERY frame, title, word, logo, QR code, nameplate, star, badge, rank, UI panel; extend original background into those removed areas, no patches. Render clean illustration full 300:485 aspect at high resolution. No letters, text, borders or decorative stars. ",
+    "anchors": {
+      "hairTop": 100,
+      "eyeY": 170,
+      "faceX": 156,
+      "headWidth": 110
+    },
+    "method": "built-in image_gen, measured original base reference"
+  },
+  {
+    "index": 9,
+    "stars": 3,
+    "role": "purple long-haired shrink ray",
+    "file": "operator-09-3star.png",
+    "reference": "/Users/ryan/Documents/Codex/2026-09-07/x20/outputs/alien-zerg2-wechat/source-art/operator-stars/original-aligned-v3/references/operator-09.png",
+    "generated_path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-3a69fcee-9eb7-47c9-b7ed-c10cf8c61f5e.png",
+    "prompt": "Use case: identity-preserve, measured composition. ORIGINAL base portrait card is the sole identity and pose reference for purple long-haired shrink ray. Generate ONE THREE-STAR upgrade. Exact layout on a 300x485 proportional canvas: TOP OF HAIR or hat at y=100 (20.6% from top); EYE LINE y=170 (35.1%); FACE CENTER x=156 (52.0% width). Head including hair approx 110/300 canvas width. Top approximately ONE QUARTER of canvas is EMPTY BACKGROUND. Keep character in original position UNDER original title region even though that text will be removed. DO NOT zoom or enlarge/recenter subject to fill canvas! No head at the image top. Preserve face, expression, hair, anatomy, exact pose, hand gestures and weapon orientation. Match ORIGINAL crisp detailed 2D painted anime GAME style and original colors/background; not a new artist or glossy 3D. Upgrade armor and weapon with advanced industrial materials and restrained gold inlays, more sophisticated details but same silhouette and colors. Practical nonsexual costume. Remove EVERY frame, title, word, logo, QR code, nameplate, star, badge, rank, UI panel; extend original background into those removed areas, no patches. Render clean illustration full 300:485 aspect at high resolution. No letters, text, borders or decorative stars. ",
+    "anchors": {
+      "hairTop": 100,
+      "eyeY": 170,
+      "faceX": 156,
+      "headWidth": 110
+    },
+    "method": "built-in image_gen, measured original base reference"
+  },
+  {
+    "index": 10,
+    "stars": 2,
+    "role": "white bob orange-headband shockwave cannon",
+    "file": "operator-10-2star.png",
+    "reference": "/Users/ryan/Documents/Codex/2026-09-07/x20/outputs/alien-zerg2-wechat/source-art/operator-stars/original-aligned-v3/references/operator-10.png",
+    "generated_path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-936ed4f4-840c-47bc-b14c-259e88827c40.png",
+    "prompt": "Use case: identity-preserve, measured composition. ORIGINAL base portrait card is the sole identity and pose reference for white bob orange-headband shockwave cannon. Generate ONE TWO-STAR upgrade. Exact layout on a 300x485 proportional canvas: TOP OF HAIR or hat at y=108 (22.3% from top); EYE LINE y=183 (37.7%); FACE CENTER x=163 (54.3% width). Head including hair approx 95/300 canvas width. Top approximately ONE QUARTER of canvas is EMPTY BACKGROUND. Keep character in original position UNDER original title region even though that text will be removed. DO NOT zoom or enlarge/recenter subject to fill canvas! No head at the image top. Preserve face, expression, hair, anatomy, exact pose, hand gestures and weapon orientation. Match ORIGINAL crisp detailed 2D painted anime GAME style and original colors/background; not a new artist or glossy 3D. Upgrade only modest refined armor and weapon-panel details, subtle small energy seams. Practical nonsexual costume. Remove EVERY frame, title, word, logo, QR code, nameplate, star, badge, rank, UI panel; extend original background into those removed areas, no patches. Render clean illustration full 300:485 aspect at high resolution. No letters, text, borders or decorative stars. ",
+    "anchors": {
+      "hairTop": 108,
+      "eyeY": 183,
+      "faceX": 163,
+      "headWidth": 95
+    },
+    "method": "built-in image_gen, measured original base reference"
+  },
+  {
+    "index": 10,
+    "stars": 3,
+    "role": "white bob orange-headband shockwave cannon",
+    "file": "operator-10-3star.png",
+    "reference": "/Users/ryan/Documents/Codex/2026-09-07/x20/outputs/alien-zerg2-wechat/source-art/operator-stars/original-aligned-v3/references/operator-10.png",
+    "generated_path": "/Users/ryan/.codex/generated_images/01a0cea4-15b5-7430-90ef-fd79106d2f60/exec-b609cb1a-977f-44ce-8fc1-6b0979395ac7.png",
+    "prompt": "Use case: identity-preserve, measured composition. ORIGINAL base portrait card is the sole identity and pose reference for white bob orange-headband shockwave cannon. Generate ONE THREE-STAR upgrade. Exact layout on a 300x485 proportional canvas: TOP OF HAIR or hat at y=108 (22.3% from top); EYE LINE y=183 (37.7%); FACE CENTER x=163 (54.3% width). Head including hair approx 95/300 canvas width. Top approximately ONE QUARTER of canvas is EMPTY BACKGROUND. Keep character in original position UNDER original title region even though that text will be removed. DO NOT zoom or enlarge/recenter subject to fill canvas! No head at the image top. Preserve face, expression, hair, anatomy, exact pose, hand gestures and weapon orientation. Match ORIGINAL crisp detailed 2D painted anime GAME style and original colors/background; not a new artist or glossy 3D. Upgrade armor and weapon with advanced industrial materials and restrained gold inlays, more sophisticated details but same silhouette and colors. Practical nonsexual costume. Remove EVERY frame, title, word, logo, QR code, nameplate, star, badge, rank, UI panel; extend original background into those removed areas, no patches. Render clean illustration full 300:485 aspect at high resolution. No letters, text, borders or decorative stars. ",
+    "anchors": {
+      "hairTop": 108,
+      "eyeY": 183,
+      "faceX": 163,
+      "headWidth": 95
+    },
+    "method": "built-in image_gen, measured original base reference"
+  }
+]
