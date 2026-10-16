@@ -1,5 +1,5 @@
 const test=require('node:test'),assert=require('node:assert/strict');
-for(const root of ['../shared','../../alien-wolf-wechat/shared'])test(root+' universal slots, level gate and save migration',()=>{
+for(const root of ['../shared'])test(root+' universal slots, level gate and save migration',()=>{
  const P=require(root+'/progression'),{Game}=require(root+'/core'),g=new Game();g.start();g.progress.level=40;
  for(let slot=0;slot<8;slot++){assert(g.collectGear({id:20302}));const item=g.progress.inventory.at(-1);assert(g.equip(item.uid,slot));}
  assert.equal(g.progress.equipped.filter(Boolean).length,8);

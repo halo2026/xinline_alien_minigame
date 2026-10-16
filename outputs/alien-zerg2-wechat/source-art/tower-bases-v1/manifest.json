@@ -1,0 +1,69 @@
+{
+  "generator": "built-in image_gen",
+  "frames": [
+    {
+      "frame": "tower-base/12200",
+      "source": "12200.png",
+      "sha256": "35ccbc9195346564d1a8053566c19ec130a480168265951dec090171ffb69858",
+      "crop": [
+        318,
+        301,
+        1057,
+        864
+      ],
+      "mountPivot": [
+        687,
+        505
+      ],
+      "worldWidth": 78
+    },
+    {
+      "frame": "tower-base/12202",
+      "source": "12202.png",
+      "sha256": "7adbad4bf65d93b68ef9149b4a7160d31703a448f71da78958c0ff4cf092659e",
+      "crop": [
+        236,
+        135,
+        1212,
+        933
+      ],
+      "mountPivot": [
+        724,
+        393
+      ],
+      "worldWidth": 83
+    },
+    {
+      "frame": "tower-base/12205",
+      "source": "12205.png",
+      "sha256": "12249db341d436a9d007dc19d406b4aa59e7a4e35495cf2aea440771258fe758",
+      "crop": [
+        45,
+        90,
+        1329,
+        1042
+      ],
+      "mountPivot": [
+        687,
+        455
+      ],
+      "worldWidth": 94
+    },
+    {
+      "frame": "tower-base/12204",
+      "source": "12204.png",
+      "sha256": "63fff03ebf518bfba372b5e96583c1490841f85c5b54c6636b21c1acf5774193",
+      "crop": [
+        307,
+        165,
+        1070,
+        914
+      ],
+      "mountPivot": [
+        687,
+        510
+      ],
+      "worldWidth": 78
+    }
+  ]
+}

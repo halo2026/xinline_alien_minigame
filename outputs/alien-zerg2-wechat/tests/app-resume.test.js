@@ -1,5 +1,5 @@
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
-for(const root of ['../shared','../../alien-wolf-wechat/shared']){
+for(const root of ['../shared']){
  const {View}=require(root+'/view');
  test(root+' returning from background keeps management interactive and cancels interrupted touches',()=>{
   for(const page of ['vehicle','technology']){

@@ -1,0 +1,15 @@
+{
+  "note": "Desktop Canvas microbenchmark, not phone FPS. 180 frames, camera moving, full stars at DPR2.",
+  "before": {
+    "meanMs": 0.3391157388888887,
+    "p95Ms": 0.4017499999999927,
+    "gradients": 361,
+    "cloudBytes": 0
+  },
+  "after": {
+    "meanMs": 0.29642569444444766,
+    "p95Ms": 0.3418749999999591,
+    "gradients": 3,
+    "cloudBytes": 1597824
+  }
+}

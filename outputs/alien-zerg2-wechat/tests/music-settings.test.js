@@ -1,5 +1,5 @@
 const test=require('node:test'),assert=require('node:assert/strict');
-for(const root of ['../shared','../../alien-wolf-wechat/shared']){
+for(const root of ['../shared']){
  const {View}=require(root+'/view'),P=require(root+'/progression');
  test(root+' music stays disabled and effects remain independent and persistent',()=>{
   let saved;const v=new View({}, {pages:[]},390,844,0,{load:()=>({...P.fresh(),audioSettings:{music:true,effects:true}}),save:s=>saved=s}),events=[];v.onSound=e=>events.push(e);v.paused=true;

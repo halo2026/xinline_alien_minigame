@@ -2,6 +2,8 @@ let View,load,MissionMenu,recordClear,KEY,fresh,campaignSelectionUnlocked;const 
 const assets=require('./shared/game-assets');
 const renderBudget=require('./shared/render-budget');
 const sceneCache=require('./shared/scene-cache');
+const battleProfiler=new (require('./shared/battle-profiler').BattleProfiler)();
+const perfClock=typeof performance!=='undefined'&&typeof performance.now==='function'?()=>performance.now():()=>Date.now();
 const loadingScreen=require('./shared/loading-screen');
 let launchShip=null,bootTimer=null;
 let launchCover=null,loadProgress=0,loadLabel='虫族入侵人类矿区，战队投送中';
@@ -14,6 +16,13 @@ let view=null,hidden=false,frame=null,sounds={},missionMenu=null,loading=false,i
 const cloudConfig=require('./shared/cloud-config');
 let cloudStore=null,syncBlocked=false,cloudErrorShown=false;
 const storage={load:()=>cloudStore?cloudStore.load():wx.getStorageSync(KEY),save:(data,mission=currentMission)=>cloudStore?cloudStore.save({...data,lastCampaign:mission}):wx.setStorageSync(KEY,{...data,lastCampaign:mission})};
+let payments=null;
+function bindPayments(target){
+ const get=()=>payments||(payments=new (require('./shared/payment-client').PaymentClient)({wx,cloudStore,epoch:cloudConfig.epoch}));
+ const apply=r=>{if(r){target.game.progress=JSON.parse(JSON.stringify(r.record.data));target.game.progressDirty=false;}};
+ target.onPurchaseSupply=async index=>{if(cloudConfig.paymentEnabled!==true)throw Error('微信支付审核中，暂未开放');const r=await get().buy(index);apply(r);return r;};
+ const open=target.switchManagement;target.switchManagement=function(page){const result=open.call(this,page);if(page==='store'&&cloudConfig.paymentEnabled===true&&this.storeOpen&&cloudStore&&!this.storePaymentBusy){this.flushSave(true);this.storePaymentBusy=true;get().recover(apply).then(r=>{if(r)this.storeMessage='未完成订单已到账';}).catch(e=>{this.storeMessage=e.message||'订单查询暂不可用';}).finally(()=>{this.storePaymentBusy=false;});}return result;};
+}
 function modal(options){return new Promise(resolve=>wx.showModal({...options,success:resolve,fail:()=>resolve({cancel:true})}));}
 let conflictRecord=null,conflictDialog=false;
 function cloudConflictRetry(){if(conflictRecord&&!conflictDialog)cloudConflict(conflictRecord).catch(console.error);}
@@ -42,7 +51,7 @@ async function startCloud(){
 // Ordinary network refresh must never hold the touch/UI lock across backgrounding.
 // Only an actual revision conflict or an explicit reset may suspend interaction.
 let cloudRefreshing=false;
-async function refreshCloud(){if(!cloudStore||!view||syncBlocked||cloudRefreshing||view.vipAdActive)return;cloudRefreshing=true;try{view.flushSave(true);await cloudStore.refresh();}catch(e){console.warn('[Cloud refresh]',e);}finally{cloudRefreshing=false;}}
+async function refreshCloud(){if(!cloudStore||!view||syncBlocked||cloudRefreshing||view.vipAdActive||view.storePaymentBusy)return;cloudRefreshing=true;try{view.flushSave(true);await cloudStore.refresh();}catch(e){console.warn('[Cloud refresh]',e);}finally{cloudRefreshing=false;}}
 
 // Landscape capsule coordinates can remain in portrait space during rotation.
 // Use only the top safe inset; the side capsule must not push the HUD down.
@@ -70,7 +79,7 @@ function imageFile(file){
  const attempt=()=>new Promise((resolve,reject)=>{const src=assets.files[file];if(!src){reject(new Error('缺少关卡素材：'+file));return;}const i=wx.createImage();let done=false;const finish=(error)=>{if(done)return;done=true;clearTimeout(timer);i.onload=i.onerror=null;error?reject(error):resolve(i);},timer=setTimeout(()=>finish(new Error('素材解码超时：'+file)),15000);i.onload=()=>finish();i.onerror=e=>finish(new Error('素材加载失败：'+file+' '+(e?.errMsg||'')));i.src=src;});
  const pending=attempt().catch(()=>attempt()).catch(error=>{if(imagesCache.get(file)===pending)imagesCache.delete(file);throw error;});imagesCache.set(file,pending);return pending;
 }
-async function stageImages(id){const a=stages[id].art,files=new Set(),load=f=>{files.add(f);return imageFile(f);};return {files,desert:id==='airship3'?await load('airship-desert.jpg'):null,campaignSpace:await load('campaign-space.jpg'),campaignNebula:await load('campaign-nebula.jpg'),campaignNodes:await load('campaign-nodes.png'),ironAlienIcon:await load('iron-alien-icon.png'),portraits:await load('operator-portraits.jpg'),operatorStars:await load('operator-stars.jpg'),sideCave:['zerg1','zerg','greenstar'].includes(id)?await load('hive-cave-side.png'):null,caves:id!=='wolf'?await Promise.all(['hive-cave-a.png','hive-cave-b.png'].map(load)):[],debris:id!=='wolf'?await load('space-debris.png'):null,rock:id!=='wolf'?await load('asteroid-rock.jpg'):null,space:id!=='wolf'?await load('deep-space.jpg'):null,terrain:await load(id==='wolf'?'wolf-terrain.png':id==='zerg'?'terrain.png':id+(['greenstar','mine4','thunderraid','iron-alien'].includes(id)?'-terrain.jpg':'-terrain.png')),pages:await Promise.all(a.pages.map(load))};}
+async function stageImages(id){const a=stages[id].art,files=new Set(),load=f=>{files.add(f);return imageFile(f);};return {files,desert:id==='airship3'?await load('airship-desert.jpg'):null,campaignSpace:await load('campaign-space.jpg'),campaignNebula:await load('campaign-nebula.jpg'),campaignNodes:await load('campaign-nodes.png'),ironAlienIcon:await load('iron-alien-icon.png'),portraits:await load('operator-portraits.jpg'),operatorStars:await load('operator-stars.jpg'),sideCave:['zerg1','zerg','greenstar'].includes(id)?await load('hive-cave-side.png'):null,caves:await Promise.all(['hive-cave-a.png','hive-cave-b.png'].map(load)),debris:await load('space-debris.png'),rock:await load('asteroid-rock.jpg'),space:await load('deep-space.jpg'),terrain:await load(id==='zerg'?'terrain.png':id+(['greenstar','mine4','ringmine','thunderraid','iron-alien'].includes(id)?'-terrain.jpg':'-terrain.png')),pages:await Promise.all(a.pages.map(load))};}
 function sound(e){if(e.startsWith('music'))return;if(e==='effectsStop'){for(const a of Object.values(sounds))a.stop();return;}const a=sounds[e];if(a){a.stop();a.play();}}
 async function selectMission(id){
  if(loading)return;loading=true;let phase='保存当前进度',next;
@@ -86,7 +95,7 @@ async function selectMission(id){
   // Build completely before publishing the new view or allowing it to save.
   phase='初始化关卡';next=new stages[id].api.View(ctx,images,w,h,top,{load:()=>progress});
   next.resize?.(w,h,top);bindOrientation(next);
-  next.onSound=sound;next.onNextCampaign=selectMission;next.onExitCampaign=showMissions;
+  bindPayments(next);next.onSound=sound;next.onNextCampaign=selectMission;next.onExitCampaign=showMissions;
   next.game.start();
   phase='保存切换进度';storage.save(next.game.saveProgress(),id);
   next.storage=storage;next.game.progressDirty=false;
@@ -125,23 +134,23 @@ function message(s,p=loadProgress){loadLabel=s;loadProgress=p;loadingScreen.draw
 // Invalidate callbacks across app visibility changes; old frames must never revive a second loop.
 let loopEpoch=0;
 function stopLoop(){loopEpoch++;if(frame!==null)cancelAnimationFrame(frame);frame=null;}
-function loop(){if(hidden||!view||frame!==null)return;let prev=null;const epoch=loopEpoch;
+function loop(){if(hidden||!view||frame!==null)return;let prev=null;const scheduler=renderBudget.createScheduler(),epoch=loopEpoch;battleProfiler.reset();
  const tick=t=>{if(epoch!==loopEpoch)return;frame=null;if(hidden)return;
-  try{if(!view||loading)return;if(!renderBudget.due(t,prev,renderBudget.interval(view,missionMenu)))return;
+  try{if(!view||loading)return;if(!scheduler.due(t,renderBudget.interval(view,missionMenu)))return;
    const dt=prev==null?0:Math.max(0,Math.min(.1,(t-prev)/1000));prev=t;
-   ctx.save();try{if(flipped&&w>h){ctx.translate(w,h);ctx.rotate(Math.PI);}if(missionMenu)missionMenu.draw();else{if(!syncBlocked)view.step(dt);if(recordClear(view.game,currentMission))view.flushSave(true);view.draw();if(canGoHome()){const r=homeRect();view.gearPanel(r.x,r.y,r.w,r.h,'#263641');view.text('战役选择',w/2,r.y+25,15,'#cfdee0','center');}}}finally{ctx.restore();}
+   ctx.save();try{if(flipped&&w>h){ctx.translate(w,h);ctx.rotate(Math.PI);}if(missionMenu)missionMenu.draw();else{const profiling=!!view.game.progress.showFps&&!syncBlocked&&!view.paused&&!view.inventoryOpen&&!view.techTower&&!view.storeOpen&&!view.attributesOpen&&!view.shop&&!view.selectedTower&&!view.chestDialog&&view.game.state==='playing';const updateStart=profiling?perfClock():0;if(!syncBlocked)view.step(dt);const updateEnd=profiling?perfClock():0;if(recordClear(view.game,currentMission))view.flushSave(true);const drawStart=profiling?perfClock():0;view.draw();if(profiling){const sample=battleProfiler.sample(t,updateEnd-updateStart,perfClock()-drawStart,view.game,{mission:currentMission,width:w,height:h,dpr,zoom:view.zoom});if(sample){view.performanceSample=sample;console.info('[BattlePerf]',JSON.stringify(sample));}}else{battleProfiler.reset();view.performanceSample=null;}if(canGoHome()){const r=homeRect();view.gearPanel(r.x,r.y,r.w,r.h,'#263641');view.text('战役选择',w/2,r.y+25,15,'#cfdee0','center');}}}finally{ctx.restore();}
   }catch(e){console.error('[Game frame]',e);}finally{if(!hidden&&epoch===loopEpoch)frame=requestAnimationFrame(tick);}
  };frame=requestAnimationFrame(tick);
 }
-wx.onHide(()=>{hidden=true;stopLoop();if(missionMenu)missionMenu.drag=null;if(view)view.suspend();cloudStore?.flush().catch(()=>{});});
+wx.onHide(()=>{if(battleProfiler.history.length)try{wx.setStorageSync('alien-battle-performance-v1',battleProfiler.history);}catch(_){}hidden=true;stopLoop();if(missionMenu)missionMenu.drag=null;if(view)view.suspend();cloudStore?.flush().catch(()=>{});});
 wx.onShow(()=>{hidden=false;stopLoop();view?.resume();if(missionMenu)missionMenu.drag=null;turning=false;candidate=null;resizeWindow();if(orientationMode!=='auto')turn(orientationMode);loop();refreshCloud();});
 (async()=>{try{
  const ship=wx.createImage();ship.onload=()=>{launchShip=ship;};ship.src='loading-dropship.png';bootTimer=setInterval(()=>{if(!hidden)message(loadLabel);},33);
  message('虫族入侵人类矿区，战队投送中',0);await new Promise(resolve=>{const i=wx.createImage();let settled=false;const finish=()=>{if(settled)return;settled=true;clearTimeout(timer);resolve();};const timer=setTimeout(finish,5000);i.onload=()=>{if(settled)return;launchCover=i;message(loadLabel);finish();};i.onerror=finish;i.src='launch-cover.jpg';});
  for(let i=0;i<assets.packages.length;i++){const label='虫族入侵人类矿区，战队投送中';message(label,i/assets.packages.length*.85);await new Promise((resolve,reject)=>{const task=wx.loadSubpackage({name:assets.packages[i].name,success:()=>{message(label,(i+1)/assets.packages.length*.85);resolve();},fail:reject});task?.onProgressUpdate?.(e=>message(label,(i+Math.max(0,Math.min(100,e.progress))/100)/assets.packages.length*.85));});}message('虫族入侵人类矿区，战队投送中',.9);
 
- ({View,load}=require('./shared/view'));({MissionMenu,recordClear}=require('./shared/mission-menu'));Object.assign(stages,{zerg:{api:require('./shared/view'),art:require('./shared/art-data')},wolf:{api:require('./shared/campaigns/wolf/view'),art:require('./shared/campaigns/wolf/art-data')}});({KEY,fresh,campaignSelectionUnlocked}=require('./shared/progression'));require('./shared/bestiary').configure(imageFile);
- stages.zerg1=require('./shared/zerg1');stages.mine4=require('./shared/mine4');
+ ({View,load}=require('./shared/view'));({MissionMenu,recordClear}=require('./shared/mission-menu'));Object.assign(stages,{zerg:{api:require('./shared/view'),art:require('./shared/art-data')}});({KEY,fresh,campaignSelectionUnlocked}=require('./shared/progression'));require('./shared/bestiary').configure(imageFile);
+ stages.zerg1=require('./shared/zerg1');stages.mine4=require('./shared/mine4');stages.ringmine=require('./shared/ringmine');
  const defense=require('./shared/defense-campaign'),art=require('./defense-code/defense-art');
  for(const id of ['snake3','fish3','airship3','fortress2','scorpion2'])stages[id]=defense.create(require('./defense-code/'+id+'-data'),art);
  stages.greenstar=require('./shared/greenstar');stages.thunderraid=require('./shared/thunder-raid');stages['iron-alien']=require('./shared/iron-alien');

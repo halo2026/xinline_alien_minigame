@@ -1,7 +1,7 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
 
-for (const campaign of ['alien-zerg2-wechat', 'alien-wolf-wechat']) {
+for (const campaign of ['alien-zerg2-wechat']) {
   const P = require(`../../${campaign}/shared/progression`);
   const { Game } = require(`../../${campaign}/shared/core`);
   function equip(items) {

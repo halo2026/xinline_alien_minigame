@@ -1,5 +1,5 @@
 const test=require('node:test'),assert=require('node:assert/strict');
-for(const root of ['../shared','../../alien-wolf-wechat/shared']){
+for(const root of ['../shared']){
  const {View}=require(root+'/view'),P=require(root+'/progression');
  test(root+' all tower families fit without scrolling and rail/upgrade taps match scaled rendering',()=>{
  for(const [w,h,top,projected] of [[390,844,98],[390,667,98],[320,568,44],[420,840,0,true]]){

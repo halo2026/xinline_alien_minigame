@@ -1,5 +1,5 @@
 const test=require('node:test'),assert=require('node:assert/strict');
-for(const root of ['../shared','../../alien-wolf-wechat/shared']){
+for(const root of ['../shared']){
 const {Game}=require(root+'/core'),{View}=require(root+'/view');
 test(root+' pet survives repeated death/repair cycles without attacking while dead',()=>{const g=new Game();g.start();for(let n=0;n<3;n++){g.yoda.shield=0;g.yoda.attackAge=.29;g.hurt(g.yoda,100000);assert.equal(g.yoda.hp,0);assert.equal(g.yoda.attackAge,null);assert.equal(g.yoda.respawn,20);g.updateYoda(19);assert.equal(g.yoda.hp,0);g.updateYoda(1);assert.equal(g.yoda.hp,50000);assert.equal(g.yoda.shield,2);assert(Math.hypot(g.yoda.x-g.player.x,g.yoda.y-g.player.y)<140);}});
 test(root+' all artillery branches reject close enemies at both launch entry points',()=>{const g=new Game();g.start();for(let branch=0;branch<3;branch++){const t={id:12205,techBranch:branch,techSpec:0,techRank:1,x:800,y:800,angle:0},s=g.towerStats(t),near={x:800+s.minRange-1,y:800};assert(s.minRange>=128);assert.equal(g.fireArtillery(t,near,s),false);assert.equal(g.launchArtillery(t,near,s),false);assert(g.fireArtillery(t,{x:800+s.minRange+2,y:800},s)!==false);}});

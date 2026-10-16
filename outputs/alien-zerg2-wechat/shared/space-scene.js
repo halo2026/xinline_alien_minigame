@@ -3,9 +3,23 @@ const fract=x=>x-Math.floor(x),rand=n=>fract(Math.sin(n*127.1+311.7)*43758.5453)
 // A small cached soft-star sprite replaces 85 new radial gradients per frame.
 function starSprite(v){if(v.starGlow!==undefined)return v.starGlow;try{const im=typeof wx!=='undefined'&&wx.createOffscreenCanvas?wx.createOffscreenCanvas({type:'2d',width:32,height:32}):typeof OffscreenCanvas!=='undefined'?new OffscreenCanvas(32,32):typeof document!=='undefined'?document.createElement('canvas'):null;if(!im)return v.starGlow=null;im.width=im.height=32;const c=im.getContext('2d'),g=c.createRadialGradient(16,16,0,16,16,16);g.addColorStop(0,'#b3cef2');g.addColorStop(1,'#b3cef200');c.fillStyle=g;c.fillRect(0,0,32,32);return v.starGlow=im;}catch(e){return v.starGlow=null;}}
 const starSeeds=Array.from({length:255},(_,j)=>{const layer=Math.floor(j/85),i=j%85,seed=i+layer*997;return {layer,i,seed,x:rand(seed),y:rand(seed+65),r:(.4+rand(seed+82)*1.1)*(layer===0?1.8:1)};});
+const clouds=[[.18,.25,.7,'#19335b'],[.78,.65,.6,'#332744']];
+function paintClouds(c,w,h,cam,pad=0){for(const [x,y,size,color]of clouds){const cx=x*w-cam.x*.018+pad,cy=y*h-cam.y*.014+pad,r=Math.max(w,h)*size,g=c.createRadialGradient(cx,cy,0,cx,cy,r);g.addColorStop(0,color);g.addColorStop(1,'#03071200');c.fillStyle=g;c.fillRect(0,0,w+pad*2,h+pad*2);}}
+// Both clouds move at the same parallax speed. Reuse their composite with overscan;
+// moving the camera shifts the bitmap, while large moves and resize repaint it.
+function drawClouds(v,cam){const c=v.ctx,w=v.w,h=v.h,pad=48;let q=v.spaceCloudCache;
+ if(q&&(q.w!==w||q.h!==h)){q.canvas.width=q.canvas.height=1;q=v.spaceCloudCache=null;}
+ if(!q){try{const cw=Math.ceil(w+pad*2),ch=Math.ceil(h+pad*2),canvas=typeof wx!=='undefined'&&wx.createOffscreenCanvas?wx.createOffscreenCanvas({type:'2d',width:cw,height:ch}):typeof OffscreenCanvas!=='undefined'?new OffscreenCanvas(cw,ch):typeof document!=='undefined'?document.createElement('canvas'):null;
+ if(canvas){if(canvas.width!==cw)canvas.width=cw;if(canvas.height!==ch)canvas.height=ch;const ctx=canvas.getContext('2d');if(ctx)q=v.spaceCloudCache={canvas,ctx,w,h,x:NaN,y:NaN};}
+ }catch(_){}}
+ if(!q){paintClouds(c,w,h,cam);return;}
+ let dx=(q.x-cam.x)*.018,dy=(q.y-cam.y)*.014;
+ if(!Number.isFinite(dx)||Math.abs(dx)>pad-2||Math.abs(dy)>pad-2){q.ctx.clearRect(0,0,q.canvas.width,q.canvas.height);paintClouds(q.ctx,w,h,cam,pad);q.x=cam.x;q.y=cam.y;dx=dy=0;}
+ c.drawImage(q.canvas,pad-dx,pad-dy,w,h,0,0,w,h);
+}
 function stars(v){const c=v.ctx,w=v.w,h=v.h,t=v.game.time,cam=v.game.campaignId==='thunderraid'?{x:v.camera.x+t*24,y:v.camera.y+t*10}:v.camera;c.fillStyle='#030712';c.fillRect(0,0,w,h);
  if(v.images.space){const img=v.images.space,scale=Math.max(w/img.width,h/img.height)*1.15,sw=img.width*scale,sh=img.height*scale;c.drawImage(img,(w-sw)/2-Math.sin(cam.x*.0006)*20,(h-sh)/2-Math.sin(cam.y*.0006)*15,sw,sh);}
- const clouds=[[.18,.25,.7,'#19335b'],[.78,.65,.6,'#332744']];for(const [x,y,size,color]of clouds){const cx=x*w-cam.x*.018,cy=y*h-cam.y*.014,r=Math.max(w,h)*size,g=c.createRadialGradient(cx,cy,0,cx,cy,r);g.addColorStop(0,color);g.addColorStop(1,'#03071200');c.fillStyle=g;c.fillRect(0,0,w,h);}
+ drawClouds(v,cam);
  const stamp=starSprite(v);for(const q of starSeeds){const {layer,i,seed,r}=q,x=((q.x*w-cam.x*(.018+layer*.04))%w+w)%w,y=((q.y*h-cam.y*(.018+layer*.04))%h+h)%h;c.globalAlpha=.28+layer*.16+Math.sin(t*.3+seed)*.08;if(layer===0){if(stamp)c.drawImage(stamp,x-r*3,y-r*3,r*6,r*6);else{const glow=c.createRadialGradient(x,y,0,x,y,r*3);glow.addColorStop(0,'#b3cef2');glow.addColorStop(1,'#b3cef200');c.fillStyle=glow;c.fillRect(x-r*3,y-r*3,r*6,r*6);}}else{c.fillStyle=i%7?'#bddef5':'#f5cdaa';c.fillRect(x,y,r,r);}}c.globalAlpha=1;
  debris(v);
 }
@@ -55,5 +69,5 @@ function drawRim(v,size){
  c.restore();
 }
 function ambience(v,size){const c=v.ctx,[w,h]=size;c.save();const factory=v.game.refinery;for(const [dx,dy]of [[-55,20],[60,10]]){const x=factory.x+dx,y=factory.y+dy,g=c.createRadialGradient(x,y,0,x,y,65);g.addColorStop(0,'#69e7ff28');g.addColorStop(1,'#69e7ff00');c.fillStyle=g;c.fillRect(x-65,y-65,130,130);}c.restore();}
-const api={stars,rim,drawRim,prepareRim,ambience};if(typeof module!=='undefined')module.exports=api;else globalThis.AlienSpace=api;
+const api={stars,drawClouds,rim,drawRim,prepareRim,ambience};if(typeof module!=='undefined')module.exports=api;else globalThis.AlienSpace=api;
 })();

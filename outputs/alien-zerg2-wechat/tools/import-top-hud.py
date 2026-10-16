@@ -1,7 +1,7 @@
 from pathlib import Path
 import json,plistlib,re
 from PIL import Image
-r=Path(__file__).resolve().parents[1];src=r.parent/'alien-mac/source/XLFramework/Projects/alien_source/data/image';p=r/'shared/art-data.js';s=p.read_text();a=json.loads(s[s.index('const d=')+8:s.index(';if(typeof module')]);prov=json.loads((r/'art-provenance.json').read_text());out=Image.new('RGBA',(160,80));x=0
+r=Path(__file__).resolve().parents[1];src=r.parent/'alien-mac/source/XLFramework/Projects/alien_source/data/image';p=r/'shared/art-data.js';s=p.read_text();a=json.loads(s[s.index('=',s.index('const '))+1:s.index(';if(typeof module')]);prov=json.loads((r/'art-provenance.json').read_text());out=Image.new('RGBA',(160,80));x=0
 for name,file in [('hud-wave','misc/wave_icon.png'),('hud-kills','ui/icon_killcount.png')]:
  f=src/file
  if f.exists():im=Image.open(f).convert('RGBA')

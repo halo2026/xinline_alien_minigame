@@ -1,0 +1,181 @@
+{
+  "note": "Remote debug CPU samples, not GPU timings or production FPS. Capture begins after user reports opening near 40 FPS; exact wave not recorded.",
+  "topGameInclusive": [
+    {
+      "function": "r",
+      "url": "https://usr/game.js",
+      "line0": 251,
+      "column0": 12842,
+      "ms": 5912.83
+    },
+    {
+      "function": "f.draw",
+      "url": "https://usr/game.js",
+      "line0": 167,
+      "column0": 14230,
+      "ms": 4866.03
+    },
+    {
+      "function": "u.draw",
+      "url": "https://usr/game.js",
+      "line0": 227,
+      "column0": 205121,
+      "ms": 4864.1
+    },
+    {
+      "function": "c.draw",
+      "url": "https://usr/defense-code/game.js",
+      "line0": 8,
+      "column0": 26102,
+      "ms": 4863.95
+    },
+    {
+      "function": "u.draw",
+      "url": "https://usr/game.js",
+      "line0": 227,
+      "column0": 204226,
+      "ms": 4863.08
+    },
+    {
+      "function": "n.draw",
+      "url": "https://usr/game.js",
+      "line0": 92,
+      "column0": 2255,
+      "ms": 4855.63
+    },
+    {
+      "function": "a.draw",
+      "url": "https://usr/game.js",
+      "line0": 74,
+      "column0": 6325,
+      "ms": 4855.63
+    },
+    {
+      "function": "n.draw",
+      "url": "https://usr/game.js",
+      "line0": 197,
+      "column0": 14907,
+      "ms": 4854.59
+    },
+    {
+      "function": "w.draw",
+      "url": "https://usr/game.js",
+      "line0": 203,
+      "column0": 14023,
+      "ms": 4848.99
+    },
+    {
+      "function": "a.draw",
+      "url": "https://usr/game.js",
+      "line0": 182,
+      "column0": 4806,
+      "ms": 4800.45
+    },
+    {
+      "function": "value",
+      "url": "https://usr/game.js",
+      "line0": 227,
+      "column0": 151371,
+      "ms": 4724.45
+    },
+    {
+      "function": "stars",
+      "url": "https://usr/game.js",
+      "line0": 200,
+      "column0": 3317,
+      "ms": 1357.57
+    },
+    {
+      "function": "c.step",
+      "url": "https://usr/defense-code/game.js",
+      "line0": 8,
+      "column0": 26263,
+      "ms": 864.71
+    },
+    {
+      "function": "f.step",
+      "url": "https://usr/game.js",
+      "line0": 167,
+      "column0": 14342,
+      "ms": 864.71
+    },
+    {
+      "function": "u.step",
+      "url": "https://usr/game.js",
+      "line0": 227,
+      "column0": 204051,
+      "ms": 863.68
+    },
+    {
+      "function": "value",
+      "url": "https://usr/game.js",
+      "line0": 227,
+      "column0": 56618,
+      "ms": 769.01
+    },
+    {
+      "function": "value",
+      "url": "https://usr/game.js",
+      "line0": 227,
+      "column0": 91274,
+      "ms": 636.67
+    },
+    {
+      "function": "a.step",
+      "url": "https://usr/game.js",
+      "line0": 74,
+      "column0": 5866,
+      "ms": 636.45
+    },
+    {
+      "function": "n.step",
+      "url": "https://usr/game.js",
+      "line0": 92,
+      "column0": 2100,
+      "ms": 635.36
+    },
+    {
+      "function": "c.sprite",
+      "url": "https://usr/defense-code/game.js",
+      "line0": 8,
+      "column0": 11559,
+      "ms": 619.0
+    },
+    {
+      "function": "w.step",
+      "url": "https://usr/game.js",
+      "line0": 203,
+      "column0": 3821,
+      "ms": 591.46
+    },
+    {
+      "function": "value",
+      "url": "https://usr/game.js",
+      "line0": 227,
+      "column0": 174863,
+      "ms": 587.32
+    },
+    {
+      "function": "value",
+      "url": "https://usr/game.js",
+      "line0": 227,
+      "column0": 90650,
+      "ms": 531.54
+    },
+    {
+      "function": "y.update",
+      "url": "https://usr/game.js",
+      "line0": 167,
+      "column0": 7060,
+      "ms": 478.25
+    },
+    {
+      "function": "h.update",
+      "url": "https://usr/defense-code/game.js",
+      "line0": 8,
+      "column0": 8967,
+      "ms": 474.07
+    }
+  ],
+  "gcSelfMs": 1373.72
+}

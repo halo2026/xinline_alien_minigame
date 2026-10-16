@@ -1,10 +1,7 @@
-const test=require('node:test'),assert=require('node:assert/strict');
-for(const root of ['../shared','../../alien-wolf-wechat/shared']){
- const {View}=require(root+'/view'),P=require(root+'/progression');
- test(root+' early inventory visit does not consume level five hint; actual level button dismisses permanently',()=>{
-  const v=new View({}, {},390,844);v.game.start();v.game.progress.level=4;v.switchManagement('vehicle');assert(v.game.progress.managementVisited);v.closeManagement();assert(!v.levelButtonHint());v.game.progress.level=5;assert(v.levelButtonHint());v.game.progress=P.restore(v.game.saveProgress());assert(v.levelButtonHint());const r=v.vehicleHUDLayout();v.down(1,r.buttonX+r.buttonW/2,r.y+r.h/2);assert(v.inventoryOpen);assert(v.game.progress.levelFiveHintAcknowledged);v.closeManagement();assert(!v.levelButtonHint());v.game.progress=P.restore(v.game.saveProgress());v.game.progress.level=6;assert(!v.levelButtonHint());
- });
- test(root+' old visited flag and pre-five button click cannot suppress new hint',()=>{
-  const v=new View({}, {},390,844);v.game.progress.level=4;v.acknowledgeLevelButtonHint();assert(!v.game.progress.levelFiveHintAcknowledged);const s=v.game.saveProgress();delete s.levelFiveHintAcknowledged;s.managementVisited=true;s.level=5;v.game.progress=P.restore(s);assert(v.levelButtonHint());v.inventoryOpen=true;assert(!v.levelButtonHint());v.inventoryOpen=false;v.techTower=12200;assert(!v.levelButtonHint());v.techTower=null;assert(v.levelButtonHint());
- });
-}
+const test=require('node:test'),assert=require('node:assert/strict'),{View}=require('../shared/view'),P=require('../shared/progression');
+function scene(w=390,h=844){const v=new View({}, {},w,h);v.game.start();Object.assign(v.game.progress,{battleIntroStep:3,resourceIntroStep:5,level:3});v.entryGame=v.game;v.insertion=null;return v;}
+test('previous vehicle equipment visits suppress level three guidance, including restored saves',()=>{const v=scene();v.game.progress.level=2;v.switchManagement('vehicle');v.closeManagement();v.game.progress.level=3;assert(!v.levelButtonHint());v.game.progress=P.restore(v.game.saveProgress());assert(!v.levelButtonHint());});
+test('unvisited level three guide pauses combat, blocks other taps and opens equipment via level button',()=>{for(const [w,h]of [[390,844],[844,390]]){const v=scene(w,h),g=v.game;assert(v.levelEquipmentGuideActive());const time=g.time;g.move={x:1,y:0};v.step(.05);assert.equal(g.time,time);assert.deepEqual(g.move,{x:0,y:0});v.down(1,10,100);assert(!v.inventoryOpen);const r=v.vehicleHUDLayout();v.down(1,r.buttonX+r.buttonW/2,r.y+r.h/2);assert(v.inventoryOpen);assert(g.progress.vehicleEquipmentViewed);assert(g.progress.levelFiveHintAcknowledged);v.closeManagement();assert(!v.levelEquipmentGuideActive());g.progress=P.restore(g.saveProgress());assert(!v.levelEquipmentGuideActive());}});
+test('technology page alone does not count as viewing vehicle equipment',()=>{const v=scene();v.switchManagement('technology');v.closeManagement();assert(!v.game.progress.vehicleEquipmentViewed);v.game.progress.pendingTechnologyGift=false;assert(v.levelEquipmentGuideActive());});
+
+test('equipment guide starts at level three, not level two',()=>{const v=scene();v.game.progress.level=2;assert(!v.levelEquipmentGuideActive());v.game.progress.level=3;assert(v.levelEquipmentGuideActive());});

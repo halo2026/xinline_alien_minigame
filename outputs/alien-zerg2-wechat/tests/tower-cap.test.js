@@ -1,5 +1,5 @@
 const test=require('node:test'),assert=require('node:assert/strict');
-for(const name of ['alien-zerg2-wechat','alien-wolf-wechat']){const {Game}=require('../../'+name+'/shared/core');
+for(const name of ['alien-zerg2-wechat']){const {Game}=require('../../'+name+'/shared/core');
  test(name+' allows repeated builds, caps active towers at 20 and releases capacity',()=>{
   const g=new Game();g.start();g.gold=100000;
   // Isolate the capacity contract from terrain, tested separately by roadside-build.

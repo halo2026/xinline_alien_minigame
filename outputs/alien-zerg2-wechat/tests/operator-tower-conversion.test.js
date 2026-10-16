@@ -1,5 +1,5 @@
 const test=require('node:test'),assert=require('node:assert/strict');
-for(const campaign of ['alien-zerg2-wechat','alien-wolf-wechat'])test(campaign+': operator unlock converts base tower without granting research',()=>{
+for(const campaign of ['alien-zerg2-wechat'])test(campaign+': operator unlock converts base tower without granting research',()=>{
  const {Game}=require('../../'+campaign+'/shared/core'),g=new Game(),t={id:12200,x:900,y:1000,techRank:0};g.state='playing';g.towers=[t];g.gold=10000;
  assert.equal(g.upgradePlacedTower(t,2,-1),false);g.progress.operators['12200:2']=true;
  const cost=g.towerUpgradeOptions(t).find(o=>o.branch===2).cost,before=g.gold;

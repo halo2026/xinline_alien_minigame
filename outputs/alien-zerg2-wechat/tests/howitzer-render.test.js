@@ -1,7 +1,7 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const { createCanvas } = require('@napi-rs/canvas');
-for (const root of ['../shared', '../../alien-wolf-wechat/shared']) {
+for (const root of ['../shared']) {
   const { View } = require(root + '/view');
   const A = require(root + '/art-data');
   test(root + ': cluster texture is reused and unavailable offscreen Canvas retains vector drawing', () => {

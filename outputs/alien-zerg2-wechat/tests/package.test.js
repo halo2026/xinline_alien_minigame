@@ -7,7 +7,7 @@ test('level subpackage preserves campaign exports and leaves room for main-packa
  const config=JSON.parse(fs.readFileSync(path.join(root,'minigame/game.json')));
  assert(config.subpackages.some(p=>p.name==='level-code'&&p.root==='level-code'));
  assert(report.main<2*1024*1024-256*1024,'main package needs at least 256 KiB of headroom');
- for(const campaign of ['', 'campaigns/wolf/'])for(const name of ['level-data.js','art-data.js']){
+ for(const campaign of [''])for(const name of ['level-data.js','art-data.js']){
   const original=path.join(root,'shared',campaign,name),packaged=path.join(root,'minigame/shared',campaign,name);
   assert.deepEqual(require(packaged),require(original),campaign+name);
 
@@ -25,3 +25,5 @@ test('compressed campaign data restores exact exports without host decoding APIs
 });
 
 test('new static art compression restores exports without Buffer or atob',()=>{const root=path.resolve(__dirname,'../minigame'),decoder={module:{exports:{}},TextDecoder:undefined,TextEncoder:undefined};vm.runInNewContext(fs.readFileSync(path.join(root,'defense-code/packed-level-data.js'),'utf8'),decoder);for(const [file,source] of [['defense-code/defense-art.js','defense-art'],['defense-code/mechanical-snake-art.js','mechanical-snake-art'],['defense-code/bestiary-data.js','bestiary-data'],['level-code/art-data.js','art-data'],['level-code/level-data.js','level-data']]){const context={module:{exports:{}},require:id=>{assert.equal(path.resolve(path.dirname(path.join(root,file)),id),path.join(root,'defense-code/packed-level-data.js'));return decoder.module.exports;}};vm.runInNewContext(fs.readFileSync(path.join(root,file),'utf8'),context);assert.deepEqual(JSON.parse(JSON.stringify(context.module.exports)),require('../shared/'+source));}});
+
+test('retired wolf runtime and exclusive assets are excluded from package',()=>{const root=path.resolve(__dirname,'../minigame');assert(!fs.existsSync(path.join(root,'shared/campaigns/wolf')));assert(!fs.existsSync(path.join(root,'level-code/campaigns/wolf')));assert(!Object.keys(require('../minigame/shared/game-assets').files).some(name=>name.startsWith('wolf-')));assert(!fs.readFileSync(path.join(root,'game.js'),'utf8').includes('campaigns/wolf'));});

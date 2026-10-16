@@ -1,4 +1,13 @@
 (function(){
+// Original edition data: alien_source/data/tabs/tab_string.lua:81–84.
+// Copyright holder confirmed by the project owner on 2026-10-15.
+const publicationLines=[
+ '游戏著作权人：上海鑫线信息技术有限公司',
+ '出版单位：上海晨路信息科技股份有限公司',
+ '批准文号：国新出审【2021】226号',
+ '出版物号：ISBN 978-7-498-08757-7',
+ '著作权登记号：2019SR0506795'
+];
 function draw(ctx,image,w,h,progress=0,label='虫族入侵人类矿区，战队投送中',animation={}){
  ctx.save();ctx.globalAlpha=1;ctx.globalCompositeOperation='source-over';ctx.fillStyle='#060b14';ctx.fillRect(0,0,w,h);
  if(image?.width){const fit=Math.min(w/image.width,h/image.height),iw=image.width*fit,ih=image.height*fit,x=(w-iw)/2,y=Math.max(0,(h-ih)/2-(h>w?17:0));ctx.drawImage(image,x,y,iw,ih);
@@ -10,7 +19,13 @@ function draw(ctx,image,w,h,progress=0,label='虫族入侵人类矿区，战队�
  if(x>1){fade(x,0,x+fx,0,x,y,fx,ih);fade(x+iw,0,x+iw-fx,0,x+iw-fx,y,fx,ih);}
  }
  const shade=ctx.createLinearGradient(0,h*.72,0,h);shade.addColorStop(0,'#050b1400');shade.addColorStop(1,'#050b14f5');ctx.fillStyle=shade;ctx.fillRect(0,h*.72,w,h*.28);
- const bw=Math.min(310,w*.76),x=(w-bw)/2,y=h-Math.max(65,h*.085),p=Math.max(0,Math.min(1,progress));// Beveled armored housing with a recessed, segmented energy channel.
+ // Reserve a quiet footer below the progress bar, including gesture-area clearance.
+ const footerHeight=118,footerTop=h-footerHeight;
+ const footerShade=ctx.createLinearGradient(0,footerTop-18,0,footerTop+14);footerShade.addColorStop(0,'#060b1400');footerShade.addColorStop(1,'#060b14fa');ctx.fillStyle=footerShade;ctx.fillRect(0,footerTop-18,w,footerHeight+18);
+ ctx.strokeStyle='#7098ad55';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(Math.max(20,w/2-200),footerTop);ctx.lineTo(Math.min(w-20,w/2+200),footerTop);ctx.stroke();
+ ctx.font='12px "PingFang SC", "Heiti SC", sans-serif';ctx.textAlign='center';ctx.fillStyle='#c4d4df';
+ publicationLines.forEach((line,i)=>ctx.fillText(line,w/2,footerTop+21+i*16,w-28));
+ const bw=Math.min(310,w*.76),x=(w-bw)/2,y=footerTop-49,p=Math.max(0,Math.min(1,progress));// Beveled armored housing with a recessed, segmented energy channel.
  const panel=(px,py,pw,ph,cut)=>{ctx.beginPath();ctx.moveTo(px+cut,py);ctx.lineTo(px+pw-cut,py);ctx.lineTo(px+pw,py+cut);ctx.lineTo(px+pw,py+ph-cut);ctx.lineTo(px+pw-cut,py+ph);ctx.lineTo(px+cut,py+ph);ctx.lineTo(px,py+ph-cut);ctx.lineTo(px,py+cut);ctx.closePath();};
  panel(x-3,y-10,bw+6,30,7);ctx.fillStyle='#02070deb';ctx.fill();
  const metal=ctx.createLinearGradient(0,y-9,0,y+17);metal.addColorStop(0,'#a6bfcb');metal.addColorStop(.16,'#526d7d');metal.addColorStop(.48,'#263c4d');metal.addColorStop(.78,'#102333');metal.addColorStop(1,'#668b9e');panel(x,y-9,bw,26,6);ctx.fillStyle=metal;ctx.fill();ctx.strokeStyle='#819ca8';ctx.lineWidth=1;ctx.stroke();
@@ -23,12 +38,12 @@ function draw(ctx,image,w,h,progress=0,label='虫族入侵人类矿区，战队�
  for(const dx of [x+3,x+bw-5]){ctx.fillStyle='#e7bb69';ctx.fillRect(dx,y,2,7);}
  ctx.strokeStyle='#bcdce980';ctx.beginPath();ctx.moveTo(x+9,y-7);ctx.lineTo(x+bw-9,y-7);ctx.stroke();
  if(p>0){const edge=ix+iw*p;ctx.fillStyle='#ddfaff';ctx.fillRect(Math.max(ix,edge-2),iy,Math.min(2,iw*p),ih);}
- ctx.font='13px sans-serif';ctx.textAlign='center';ctx.fillStyle='#e9e4d3';ctx.fillText(label,w/2,y-57);ctx.font='11px sans-serif';ctx.fillStyle='#9ab2c1';ctx.fillText(Math.round(p*100)+'%',w/2,y+36);if(animation.ship?.width){const ship=animation.ship,sw=Math.min(72,w*.18),sh=sw*ship.height/ship.width,head=x+10+(bw-20)*p,t=animation.time||0,cy=y-12+Math.sin(t*3)*1.2;
+ ctx.font='800 18px "PingFang SC", "Heiti SC", sans-serif';ctx.textAlign='center';ctx.lineJoin='round';ctx.lineWidth=4;ctx.strokeStyle='#07121f';ctx.strokeText(label,w/2,y-57,w-32);ctx.fillStyle='#fff3cf';ctx.fillText(label,w/2,y-57,w-32);ctx.font='11px sans-serif';ctx.fillStyle='#9ab2c1';ctx.fillText(Math.round(p*100)+'%',w/2,y+36);if(animation.ship?.width){const ship=animation.ship,sw=Math.min(72,w*.18),sh=sw*ship.height/ship.width,head=x+10+(bw-20)*p,t=animation.time||0,cy=y-12+Math.sin(t*3)*1.2;
  ctx.drawImage(ship,head-sw/2,cy-sh/2,sw,sh);
  // Nozzles follow the reference's underside perspective; jets brake vertically downward.
  for(const [nx,ny,phase,amber] of [[-.336,.07,0,false],[.18,.005,2,false],[-.07,.164,4,true]]){const ex=head+sw*nx,ey=cy+sh*ny,len=sw*(amber?.16:.30)*(1+.15*Math.sin(t*24+phase)+.07*Math.sin(t*39)),r=amber?1.5:2.6,g=ctx.createLinearGradient(ex,ey,ex,ey+len);g.addColorStop(0,amber?'#fff4d5':'#f1fcff');g.addColorStop(.35,amber?'#ffac56ee':'#6dc6ffff');g.addColorStop(1,amber?'#ef793000':'#3589ff00');ctx.fillStyle=g;ctx.beginPath();ctx.moveTo(ex-r,ey);ctx.quadraticCurveTo(ex-r*.7,ey+len*.6,ex,ey+len);ctx.quadraticCurveTo(ex+r*.7,ey+len*.6,ex+r,ey);ctx.closePath();ctx.fill();}
  }
  ctx.restore();
 }
-const api={draw};if(typeof module!=='undefined')module.exports=api;else globalThis.AlienLoading=api;
+const api={draw,publicationLines};if(typeof module!=='undefined')module.exports=api;else globalThis.AlienLoading=api;
 })();

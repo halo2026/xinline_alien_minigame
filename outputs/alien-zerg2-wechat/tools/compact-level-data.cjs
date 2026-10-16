@@ -12,7 +12,7 @@ buildSync({stdin:{contents:decoder,resolveDir:process.cwd(),sourcefile:'packed-l
 const decoderFile=path.join(root,'packed-level-data.js'),license=fs.readFileSync(path.resolve(path.dirname(require.resolve('fflate')),'../LICENSE'),'utf8');
 fs.writeFileSync(decoderFile,'/* fflate — '+license+' */\n'+fs.readFileSync(decoderFile,'utf8'));
 let saved=-fs.statSync(decoderFile).size;
-for(const name of ['snake3-data','fish3-data','airship3-data','fortress2-data','scorpion2-data','greenstar-data','zerg1-data','defense-art','mechanical-snake-art','bestiary-data','../level-code/art-data','../level-code/level-data','../level-code/campaigns/wolf/art-data','../level-code/campaigns/wolf/level-data']){
+for(const name of ['snake3-data','fish3-data','airship3-data','fortress2-data','scorpion2-data','greenstar-data','zerg1-data','defense-art','mechanical-snake-art','bestiary-data','../level-code/art-data','../level-code/level-data']){
  const file=path.join(root,name+'.js'),original=require(file),before=fs.statSync(file).size,encoded=Buffer.from(zlibSync(strToU8(JSON.stringify(original)),{level:9})).toString('base64');
  const output="module.exports=require("+JSON.stringify("./"+path.relative(path.dirname(file),decoderFile))+")("+JSON.stringify(encoded)+");\n";fs.writeFileSync(file,output);delete require.cache[file];assert.deepEqual(require(file),original,name);saved+=before-Buffer.byteLength(output);
 }

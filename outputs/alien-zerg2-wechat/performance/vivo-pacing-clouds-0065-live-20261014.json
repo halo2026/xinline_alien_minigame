@@ -1,0 +1,133 @@
+{
+  "source": "Native Remote Debug Console BattlePerf logs; no Performance recording this run",
+  "device": "vivo-V1914A",
+  "mission": "mine4",
+  "width": 360,
+  "height": 780,
+  "dpr": 2,
+  "connection": "Wi-Fi Normal RTT221ms",
+  "note": "New session after successful rebuild/upload with scheduler and cloud cache. Zoom and battle states differ from old run; not controlled A/B.",
+  "samples": [
+    {
+      "gameTime": 3.76,
+      "wave": 1,
+      "zoom": 0.4216,
+      "fps": 48.99,
+      "updateMs": 0.34,
+      "drawMs": 5.7,
+      "enemies": 0,
+      "towers": 0,
+      "corpses": 0
+    },
+    {
+      "gameTime": 8.77,
+      "wave": 1,
+      "zoom": 0.4216,
+      "fps": 51.83,
+      "updateMs": 0.37,
+      "drawMs": 4.78,
+      "enemies": 4,
+      "towers": 0,
+      "corpses": 0
+    },
+    {
+      "gameTime": 13.78,
+      "wave": 1,
+      "zoom": 0.32,
+      "fps": 50.13,
+      "updateMs": 0.52,
+      "drawMs": 5.1,
+      "enemies": 8,
+      "towers": 0,
+      "corpses": 0
+    },
+    {
+      "gameTime": 29.44,
+      "wave": 1,
+      "zoom": 0.32,
+      "fps": 30,
+      "updateMs": 2.35,
+      "drawMs": 10.99,
+      "enemies": 12,
+      "towers": 6,
+      "corpses": 6
+    },
+    {
+      "gameTime": 34.27,
+      "wave": 1,
+      "zoom": 0.32,
+      "fps": 30.54,
+      "updateMs": 1.44,
+      "drawMs": 9.67,
+      "enemies": 11,
+      "towers": 6,
+      "corpses": 7
+    },
+    {
+      "gameTime": 50.31,
+      "wave": 1,
+      "zoom": 0.32,
+      "fps": 27.11,
+      "updateMs": 4.29,
+      "drawMs": 11.24,
+      "enemies": 3,
+      "towers": 7,
+      "corpses": 15
+    },
+    {
+      "gameTime": 55.14,
+      "wave": 1,
+      "zoom": 0.32,
+      "fps": 29.17,
+      "updateMs": 1.57,
+      "drawMs": 10.62,
+      "enemies": 1,
+      "towers": 7,
+      "corpses": 17
+    },
+    {
+      "gameTime": 59.79,
+      "wave": 2,
+      "zoom": 0.32,
+      "fps": 27.12,
+      "updateMs": 2.35,
+      "drawMs": 11.74,
+      "enemies": 2,
+      "towers": 7,
+      "corpses": 19
+    },
+    {
+      "gameTime": 64.56,
+      "wave": 2,
+      "zoom": 0.32,
+      "fps": 26.65,
+      "updateMs": 2.87,
+      "drawMs": 10.13,
+      "enemies": 6,
+      "towers": 7,
+      "corpses": 20
+    },
+    {
+      "gameTime": 69.49,
+      "wave": 2,
+      "zoom": 0.32,
+      "fps": 28.26,
+      "updateMs": 1.85,
+      "drawMs": 9.73,
+      "enemies": 12,
+      "towers": 7,
+      "corpses": 20
+    },
+    {
+      "gameTime": 74.49,
+      "wave": 2,
+      "zoom": 0.32,
+      "fps": 29.16,
+      "updateMs": 2.08,
+      "drawMs": 9.73,
+      "enemies": 17,
+      "towers": 7,
+      "corpses": 20
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 const test=require('node:test'),assert=require('node:assert/strict');
-for(const root of ['../shared','../../alien-wolf-wechat/shared']){
+for(const root of ['../shared']){
  const {Game}=require(root+'/core');
  function setup(){const g=new Game(),t={id:12202,x:900,y:900,angle:0,techRank:0},e={id:12501,x:1050,y:900,hp:2000,maxHp:2000,scale:.6};g.enemies=[e];g.fire(t,'energy',{target:e});return {g,t,e,b:g.bullets[0]};}
  test(root+' energy tracks a turning target beyond original range, hits once and has no trail',()=>{const {g,e,b}=setup();assert.equal(b.target,e);assert.equal(b.speed,420);assert.equal(b.life,Infinity);for(let i=0;i<200&&b.life;i++){e.y+=i<30?7:-3;e.x+=3;g.updateHomingEnergy(b,.025);}assert.equal(e.hp,1700);assert.equal(b.hit.size,1);assert.equal(b.life,0);assert.equal(g.trails.length,0);});

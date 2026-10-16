@@ -1,5 +1,5 @@
 const test=require('node:test'),assert=require('node:assert/strict');
-for(const root of ['../shared','../../alien-wolf-wechat/shared']){
+for(const root of ['../shared']){
  test(root+' placed tower independently grows both researched directions',()=>{
   const {Game}=require(root+'/core'),g=new Game();g.start();g.gold=100000;
   g.progress.towerPaths[12200][0]=[2,2];const t={id:12200,x:200,y:200,techRank:0};g.towers=[t];
@@ -23,7 +23,7 @@ for(const root of ['../shared','../../alien-wolf-wechat/shared']){
   g.enemies=[];g.yoda.target=null;g.yoda.attackAge=null;Object.assign(g.player,{x:1100,y:1200});const before=Math.hypot(g.yoda.x-1100,g.yoda.y-1200);g.updateYoda(.1);assert(Math.hypot(g.yoda.x-1100,g.yoda.y-1200)<before);
  });
 }
-for(const root of ['../shared','../../alien-wolf-wechat/shared'])test(root+' following eases in/out and does not chatter near resting distance',()=>{
+for(const root of ['../shared'])test(root+' following eases in/out and does not chatter near resting distance',()=>{
  const {Game}=require(root+'/core'),g=new Game();g.start();g.nav={clear:()=>true,blocked:()=>false};g.enemies=[];
  Object.assign(g.player,{x:1000,y:1000,vx:0,vy:0});Object.assign(g.yoda,{x:1160,y:1000,attackAge:null});
  g.updateYoda(1/60);const first=1160-g.yoda.x;g.updateYoda(1/60);assert(1160-g.yoda.x-first>first);

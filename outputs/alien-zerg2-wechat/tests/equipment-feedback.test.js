@@ -1,5 +1,5 @@
 const test=require('node:test'),assert=require('node:assert/strict');
-for(const root of ['../shared','../../alien-wolf-wechat/shared']){
+for(const root of ['../shared']){
 const {View}=require(root+'/view');
 test(root+' tutorial holds visible placed equipment before attribute lesson',()=>{for(const [w,h]of [[390,844],[844,390]]){const v=new View({}, {},w,h);v.inventoryOpen=true;v.game.progress.resourceIntroStep=4;v.pendingTechnologyGiftKey=()=>null;v.uiEffectTime=10;const t=v.resourceIntroTarget(),r=v.resourceIntroSlots()[0];v.down(1,t.x+t.w/2,t.y+t.h/2);v.up(1,r.x+r.w/2,r.y+r.h/2,true);assert(!v.gearPlacementFlash);v.down(2,t.x+t.w/2,t.y+t.h/2);v.up(2,r.x+r.w/2,r.y+r.h/2);assert.equal(v.game.progress.equipped[r.index],3);assert.equal(v.gearPlacementFlash.slot,r.index);assert.equal(v.game.progress.resourceIntroStep,5);assert(!v.attributeIntroActive());v.uiEffectTime=10.7;assert(!v.attributeIntroActive());v.down(3,0,0);assert(v.inventoryOpen);v.uiEffectTime=11.11;assert(v.attributeIntroActive());}});
 test(root+' ordinary equipment uses same success-only flash',()=>{const v=new View({}, {},390,844);assert(!v.equipWithFeedback(-1,2));assert(!v.gearPlacementFlash);assert(v.equipWithFeedback(3,2));assert.equal(v.gearPlacementFlash.slot,2);});

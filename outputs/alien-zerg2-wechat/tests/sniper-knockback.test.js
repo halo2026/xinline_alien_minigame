@@ -1,5 +1,5 @@
 const test=require('node:test'),assert=require('node:assert/strict');
-for(const campaign of ['alien-zerg2-wechat','alien-wolf-wechat']){
+for(const campaign of ['alien-zerg2-wechat']){
  const {Game}=require('../../'+campaign+'/shared/core');
  test(campaign+': sniper is not a knockback weapon',()=>{const g=new Game();for(let i=0;i<8;i++){const t={id:12200,techBranch:2,techSpec:0,techRank:1,x:900,y:1000,angle:i*Math.PI/4};assert.equal(g.towerStats(t).knockback,0);g.fire(t,'laser');assert.equal(g.bullets.at(-1).knockback,0);assert.equal(g.bullets.at(-1).sniper,true);}});
  test(campaign+': only lethal sniper hits slide small ground enemies, respecting walls',()=>{

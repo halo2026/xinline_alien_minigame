@@ -1,12 +1,13 @@
 // Rebuild browsing-only combat references from committed campaign attributes.
 const fs=require('node:fs'),path=require('node:path');
 const root=path.resolve(__dirname,'..');
-require(root+'/shared/core');require(root+'/../alien-wolf-wechat/shared/core');
+require(root+'/shared/core');
 const data=require(root+'/shared/bestiary-data'),factory=require(root+'/shared/defense-campaign'),art=require(root+'/shared/defense-art');
 const nestArt=require(root+'/shared/insect-nest-art');
-const stages={zerg:require(root+'/shared/level-data'),wolf:require(root+'/../alien-wolf-wechat/shared/level-data'),zerg1:require(root+'/shared/zerg1').data,greenstar:require(root+'/shared/greenstar').data};
+const stages={zerg:require(root+'/shared/level-data'),zerg1:require(root+'/shared/zerg1').data,greenstar:require(root+'/shared/greenstar').data};
 for(const id of ['snake3','fish3','airship3','fortress2','scorpion2'])stages[id]=factory.create(require(root+'/shared/'+id+'-data'),art).data;
 for(const e of data.entries){
+ if(e.stage==='wolf')continue; // Preserve archived reference stats without loading retired runtime.
  const a=stages[e.stage]?.unitTypes[e.id]?.attr;
  if(!a)throw Error('Missing bestiary combat source: '+e.key);
  const normal=data.entries.find(n=>n.family===e.family&&n.tier==='normal'),base=normal&&stages[normal.stage]?.unitTypes[normal.id]?.attr;
@@ -21,5 +22,5 @@ for(const e of data.entries){
  }
 }
 const text='(function(){const data='+JSON.stringify(data)+';if(typeof module!=="undefined")module.exports=data;else globalThis.BestiaryData=data;})();\n';
-for(const p of [root+'/shared/bestiary-data.js',root+'/../alien-wolf-wechat/shared/bestiary-data.js'])fs.writeFileSync(p,text);
+for(const p of [root+'/shared/bestiary-data.js'])fs.writeFileSync(p,text);
 console.log('Bestiary combat references:',data.entries.length);

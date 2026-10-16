@@ -1,5 +1,5 @@
 const test=require('node:test'),assert=require('node:assert/strict');
-for(const project of ['alien-zerg2-wechat','alien-wolf-wechat']){
+for(const project of ['alien-zerg2-wechat']){
  const P=require('../../'+project+'/shared/progression'),{View}=require('../../'+project+'/shared/view');
  const setup=()=>{const v=new View({}, {},390,844);v.game.progress.chips=0;v.game.progress.fragments={};v.techTower=12200;return v;};
  test(project+' notification follows every family, branch and actual rank cost',()=>{for(const id of P.towerIds)for(let b=0;b<P.towerTech[id].branches.length;b++)for(let spec=0;spec<2;spec++)for(let rank=0;rank<5;rank++){const v=setup(),p=v.game.progress,key=id+':'+b+':'+spec;p.towerPaths[id][b][spec]=rank;p.operators[id+':'+b]=true;p.fragments[key]=P.fragmentCosts[rank];p.chips=P.chipCosts[rank];assert(v.hasTechUpgrade());assert(v.hasTechUpgrade(id));assert(v.hasTechUpgrade(id,b));for(const other of P.towerIds.filter(x=>x!==id))assert(!v.hasTechUpgrade(other));assert(v.techNodeReady({family:id,branch:b,spec,rank}));assert(!v.techNodeReady({family:id,branch:b,spec,rank:rank+1}));p.chips--;assert(!v.hasTechUpgrade());p.chips++;p.fragments[key]--;assert(!v.hasTechUpgrade());p.fragments[key]++;p.operators[id+':'+b]=false;assert(!v.hasTechUpgrade());p.operators[id+':'+b]=true;p.towerPaths[id][b][spec]=5;assert(!v.hasTechUpgrade());}});

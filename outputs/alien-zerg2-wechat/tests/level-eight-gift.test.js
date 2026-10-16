@@ -1,5 +1,5 @@
 const test=require('node:test'),assert=require('node:assert/strict');
-for(const root of ['../shared','../../alien-wolf-wechat/shared']){
+for(const root of ['../shared']){
  const {View}=require(root+'/view'),{Game}=require(root+'/core');
  test(root+' level eight gift grants rocket, and never repeats',()=>{
   for(const [rocket,ice,expected]of [[false,false,'12205:2'],[true,false,null],[true,true,null]]){

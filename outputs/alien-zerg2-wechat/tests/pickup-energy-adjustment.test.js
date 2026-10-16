@@ -1,5 +1,5 @@
 const test=require('node:test'),assert=require('node:assert/strict');
-for(const root of ['../shared','../../alien-wolf-wechat/shared']){
+for(const root of ['../shared']){
  const {Game}=require(root+'/core'),{View}=require(root+'/view'),A=require(root+'/art-data');
  test(root+' base energy sound is independent of gunfire',()=>{const g=new Game();g.fire({id:12202,x:900,y:900,angle:0,techRank:0},'energy');assert(g.events.includes('energy'));assert(!g.events.includes('gun'));});
  test(root+' chip drop cutoff is 4.8 percent',()=>{for(const [roll,expected]of [[.04799,true],[.048,false]]){const g=new Game();g.dropRunLoot=()=>{};g.random=()=>roll;g.kill({id:12501,x:900,y:1200,scale:.6,angle:0,age:0},'energy');assert.equal(g.pickups.some(p=>p.chips),expected);}});

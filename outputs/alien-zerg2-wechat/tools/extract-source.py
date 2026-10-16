@@ -92,7 +92,7 @@ for y in range(h):
     ax,ay=(a-1)%4*64,(a-1)//4*64;mask=alpha.crop((ax,ay,ax+64,ay+64)).getchannel('A');im.putalpha(ImageChops.multiply(im.getchannel('A'),mask))
    ground.alpha_composite(im,(x*64,y*64))
 ground.save(R/'assets/terrain.png',optimize=True)
-data={'map':'world/yxys_zerg_002','title':'异虫Ⅱ','size':[w*64,h*64],'terrainTiles':tiles,'units':units,'triggers':triggers,'settings':settings,'waves':waves,'unitTypes':unitdata,'itemTypes':itemdata}
+data={'map':'world/yxys_zerg_002','title':'异虫','size':[w*64,h*64],'terrainTiles':tiles,'units':units,'triggers':triggers,'settings':settings,'waves':waves,'unitTypes':unitdata,'itemTypes':itemdata}
 # Experimental roadside construction mask. Classify the original blended terrain,
 # not pathfinding waypoints: texture 6 is road, 4/5 roadside, others void/edge.
 mask=Image.new('L',(w*64,h*64))

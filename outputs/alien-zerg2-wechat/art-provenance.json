@@ -8521,14 +8521,6 @@
     "source": "image/misc/chariotconfig/chip.png"
   },
   {
-    "frame": "hud-wave",
-    "source": "image/misc/wave_icon.png"
-  },
-  {
-    "frame": "hud-kills",
-    "source": "image/ui/icon_killcount.png"
-  },
-  {
     "frame": "tech-icon/range",
     "source": "AI image_gen; artwork/tower-tech-icons/range.png"
   },
@@ -9123,5 +9115,221 @@
   {
     "frame": "familyicon/6022",
     "source": "image/icon/item/gun_16.png"
+  },
+  {
+    "frame": "pincerfx/impact/0",
+    "source": "image/effect/pojiadanbaozha.plist"
+  },
+  {
+    "frame": "pincerfx/impact/1",
+    "source": "image/effect/pojiadanbaozha.plist"
+  },
+  {
+    "frame": "pincerfx/impact/2",
+    "source": "image/effect/pojiadanbaozha.plist"
+  },
+  {
+    "frame": "pincerfx/impact/3",
+    "source": "image/effect/pojiadanbaozha.plist"
+  },
+  {
+    "frame": "pincerfx/impact/4",
+    "source": "image/effect/pojiadanbaozha.plist"
+  },
+  {
+    "frame": "pincerfx/dust/0",
+    "source": "image/effect/dust2.plist"
+  },
+  {
+    "frame": "pincerfx/dust/1",
+    "source": "image/effect/dust2.plist"
+  },
+  {
+    "frame": "pincerfx/dust/2",
+    "source": "image/effect/dust2.plist"
+  },
+  {
+    "frame": "pincerfx/dust/3",
+    "source": "image/effect/dust2.plist"
+  },
+  {
+    "frame": "pincerfx/dust/4",
+    "source": "image/effect/dust2.plist"
+  },
+  {
+    "frame": "pincerfx/dust/5",
+    "source": "image/effect/dust2.plist"
+  },
+  {
+    "frame": "pincerfx/dust/6",
+    "source": "image/effect/dust2.plist"
+  },
+  {
+    "frame": "pincerfx/dust/7",
+    "source": "image/effect/dust2.plist"
+  },
+  {
+    "frame": "pincerfx/dust/8",
+    "source": "image/effect/dust2.plist"
+  },
+  {
+    "frame": "pincerfx/dust/9",
+    "source": "image/effect/dust2.plist"
+  },
+  {
+    "frame": "pincerfx/dust/10",
+    "source": "image/effect/dust2.plist"
+  },
+  {
+    "frame": "pincerfx/burst/0",
+    "source": "image/effect/burst_2.png"
+  },
+  {
+    "frame": "pincerfx/burst/1",
+    "source": "image/effect/burst_2.png"
+  },
+  {
+    "frame": "pincerfx/burst/2",
+    "source": "image/effect/burst_2.png"
+  },
+  {
+    "frame": "pincerfx/burst/3",
+    "source": "image/effect/burst_2.png"
+  },
+  {
+    "frame": "pincerfx/burst/4",
+    "source": "image/effect/burst_2.png"
+  },
+  {
+    "frame": "pincerfx/burst/5",
+    "source": "image/effect/burst_2.png"
+  },
+  {
+    "frame": "car-base-20261013/1",
+    "source": "source-art/jeep-base-20261013/a01000.png"
+  },
+  {
+    "frame": "car-base-20261013/2",
+    "source": "source-art/jeep-base-20261013/a02000.png"
+  },
+  {
+    "frame": "car-base-20261013/3",
+    "source": "source-art/jeep-base-20261013/a03000.png"
+  },
+  {
+    "frame": "car-base-20261013/4",
+    "source": "source-art/jeep-base-20261013/a04000.png"
+  },
+  {
+    "frame": "car-base-20261013/5",
+    "source": "source-art/jeep-base-20261013/a05000.png"
+  },
+  {
+    "frame": "car-base-20261013/6",
+    "source": "source-art/jeep-base-20261013/a06000.png"
+  },
+  {
+    "frame": "car-base-20261013/7",
+    "source": "source-art/jeep-base-20261013/a07000.png"
+  },
+  {
+    "frame": "car-base-20261013/8",
+    "source": "source-art/jeep-base-20261013/a08000.png"
+  },
+  {
+    "frame": "car-base-20261013/9",
+    "source": "source-art/jeep-base-20261013/a09000.png"
+  },
+  {
+    "frame": "car-base-20261013/10",
+    "source": "source-art/jeep-base-20261013/a10000.png"
+  },
+  {
+    "frame": "car-base-20261013/11",
+    "source": "source-art/jeep-base-20261013/a11000.png"
+  },
+  {
+    "frame": "car-base-20261013/12",
+    "source": "source-art/jeep-base-20261013/a12000.png"
+  },
+  {
+    "frame": "car-base-20261013/13",
+    "source": "source-art/jeep-base-20261013/a13000.png"
+  },
+  {
+    "frame": "car-base-20261013/14",
+    "source": "source-art/jeep-base-20261013/a14000.png"
+  },
+  {
+    "frame": "car-base-20261013/15",
+    "source": "source-art/jeep-base-20261013/a15000.png"
+  },
+  {
+    "frame": "car-base-20261013/16",
+    "source": "source-art/jeep-base-20261013/a16000.png"
+  },
+  {
+    "frame": "car-base-20261013/17",
+    "source": "source-art/jeep-base-20261013/a17000.png"
+  },
+  {
+    "frame": "brainfx/spiral/0",
+    "source": "image/effect/luoxuan.png"
+  },
+  {
+    "frame": "brainfx/warning/0",
+    "source": "image/effect/warning.png"
+  },
+  {
+    "frame": "brainfx/warning/1",
+    "source": "image/effect/warning.png"
+  },
+  {
+    "frame": "tower-base/12200",
+    "source": "source-art/tower-bases-v2/12200.png",
+    "generator": "built-in image_gen"
+  },
+  {
+    "frame": "tower-base/12202",
+    "source": "source-art/tower-bases-v2/12202.png",
+    "generator": "built-in image_gen"
+  },
+  {
+    "frame": "tower-base/12205",
+    "source": "source-art/cannon-siege-base-v3/12205.png",
+    "generator": "built-in image_gen"
+  },
+  {
+    "frame": "tower-base/12204",
+    "source": "source-art/tower-bases-v2/12204.png",
+    "generator": "built-in image_gen"
+  },
+  {
+    "frame": "hud-wave",
+    "source": "image/misc/wave_icon.png"
+  },
+  {
+    "frame": "hud-kills",
+    "source": "image/ui/icon_killcount.png"
+  },
+  {
+    "frame": "random-red-equipment",
+    "source": "artwork/challenge-ui-0074/random-red-equipment.png",
+    "generator": "built-in imagegen; wave variants based on original misc/wave_icon.png"
+  },
+  {
+    "frame": "hud-wave-1",
+    "source": "artwork/challenge-ui-0074/hud-wave-1.png",
+    "generator": "built-in imagegen; wave variants based on original misc/wave_icon.png"
+  },
+  {
+    "frame": "hud-wave-2",
+    "source": "artwork/challenge-ui-0074/hud-wave-2.png",
+    "generator": "built-in imagegen; wave variants based on original misc/wave_icon.png"
+  },
+  {
+    "frame": "hud-wave-3",
+    "source": "artwork/challenge-ui-0074/hud-wave-3.png",
+    "generator": "built-in imagegen; wave variants based on original misc/wave_icon.png"
   }
 ]

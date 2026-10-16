@@ -1,0 +1,25 @@
+{
+  "note": "Desktop Canvas microbenchmark: seeded variable-size fragments; not phone FPS.",
+  "results": [
+    {
+      "mode": "before",
+      "fragments": 1344,
+      "canvasCreates": 1344,
+      "getContextCalls": 1344,
+      "meanBatchMs": 2.222866291666662,
+      "p95BatchMs": 2.7837089999999876,
+      "idleCanvasCount": 0,
+      "idleBytes": 0
+    },
+    {
+      "mode": "after",
+      "fragments": 1344,
+      "canvasCreates": 234,
+      "getContextCalls": 234,
+      "meanBatchMs": 1.9890834583333306,
+      "p95BatchMs": 2.460667000000001,
+      "idleCanvasCount": 64,
+      "idleBytes": 760832
+    }
+  ]
+}

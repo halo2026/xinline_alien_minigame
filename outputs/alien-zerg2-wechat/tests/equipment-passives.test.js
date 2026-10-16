@@ -1,5 +1,5 @@
 const test=require('node:test'),assert=require('node:assert/strict');
-for(const root of ['../shared','../../alien-wolf-wechat/shared']){
+for(const root of ['../shared']){
  const {Game}=require(root+'/core'),P=require(root+'/progression');
  const equip=(g,ids)=>{g.progress.inventory=ids.map((id,i)=>({id,uid:i+1,requiredLevel:1}));g.progress.equipped=g.progress.inventory.map(i=>i.uid);g.applyEquipment();};
  const enemy=(g,x=50)=>({id:12501,x:g.player.x+x,y:g.player.y,hp:1e7,maxHp:1e7,scale:1,air:false});

@@ -1,0 +1,117 @@
+{
+  "generator": "built-in image_gen",
+  "frames": [
+    {
+      "frame": "tower-base/12200",
+      "source": "source-art/tower-bases-v2/12200.png",
+      "sha256": "798caa890f6de1e27e524ab53860f09b5397b2711b09cb586769c68134b883e7",
+      "crop": [
+        256,
+        241,
+        1119,
+        913
+      ],
+      "mountPivot": [
+        687,
+        495
+      ],
+      "mountDropWorld": 4,
+      "worldWidth": 78,
+      "contactBaked": true,
+      "basePixelOffset": [
+        44,
+        0
+      ],
+      "atlasWorldBounds": [
+        -57.210127955425165,
+        -26.95712630359212,
+        114.51063829787235,
+        73.43617021276596
+      ]
+    },
+    {
+      "frame": "tower-base/12202",
+      "source": "source-art/tower-bases-v2/12202.png",
+      "sha256": "15d2445c0246194427a14310f363535ca79d5be7b4c23f128c842b0296dd2812",
+      "crop": [
+        136,
+        75,
+        1312,
+        1021
+      ],
+      "mountPivot": [
+        724,
+        385
+      ],
+      "mountDropWorld": 4,
+      "worldWidth": 83,
+      "contactBaked": true,
+      "basePixelOffset": [
+        42,
+        0
+      ],
+      "atlasWorldBounds": [
+        -60.04255319148936,
+        -25.87925170068027,
+        120.08510638297871,
+        79.9095744680851
+      ]
+    },
+    {
+      "frame": "tower-base/12205",
+      "source": "source-art/cannon-siege-base-v3/12205.png",
+      "sha256": "c3267dce90228bee580ec56f3be6da675cbfabbe4718c3c862f201bc425deef5",
+      "crop": [
+        13,
+        80,
+        1362,
+        1084
+      ],
+      "mountPivot": [
+        687,
+        474
+      ],
+      "mountDropWorld": 4,
+      "worldWidth": 94,
+      "contactBaked": true,
+      "basePixelOffset": [
+        39,
+        0
+      ],
+      "atlasWorldBounds": [
+        -66.46515937731652,
+        -31.454410674573758,
+        133.0,
+        83.0
+      ]
+    },
+    {
+      "frame": "tower-base/12204",
+      "source": "source-art/tower-bases-v2/12204.png",
+      "sha256": "ca5fad74c369c2f2dcb919ecc9a7ba78f35220abe8f5ff288d867cc6a6d0fef0",
+      "crop": [
+        166,
+        76,
+        1207,
+        1087
+      ],
+      "mountPivot": [
+        687,
+        554
+      ],
+      "mountDropWorld": 6,
+      "worldWidth": 78,
+      "contactBaked": true,
+      "basePixelOffset": [
+        44,
+        0
+      ],
+      "atlasWorldBounds": [
+        -57.292783125881414,
+        -41.815561959654175,
+        114.51063829787235,
+        88.7872340425532
+      ]
+    }
+  ]
+}

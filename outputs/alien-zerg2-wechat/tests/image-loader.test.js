@@ -1,7 +1,7 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
 
-for (const root of ['../shared', '../../alien-wolf-wechat/shared']) {
+for (const root of ['../shared']) {
   const {load} = require(root + '/view');
   test(root + ' image proxies retain identity without Promise assimilation', {timeout: 1000}, async () => {
     const created = [], progress = [];

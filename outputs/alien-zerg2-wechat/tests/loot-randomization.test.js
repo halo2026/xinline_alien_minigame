@@ -1,5 +1,5 @@
 const test=require('node:test'),assert=require('node:assert/strict');
-for(const root of ['../shared','../../alien-wolf-wechat/shared']){
+for(const root of ['../shared']){
  const P=require(root+'/progression'),{Game}=require(root+'/core');
  test(root+' generated equipment varies ±20%, levels vary, restores exactly',()=>{
   for(const id of Object.keys(P.catalog).map(Number)){

@@ -1,4 +1,4 @@
 const test=require('node:test'),assert=require('node:assert/strict');
-for(const root of ['alien-zerg2-wechat','alien-wolf-wechat'])test(root+' rocket prefers valid air targets and falls back to ground',()=>{
+for(const root of ['alien-zerg2-wechat'])test(root+' rocket prefers valid air targets and falls back to ground',()=>{
  const {Game}=require('../../'+root+'/shared/core'),g=new Game(),t={id:12205,x:1000,y:1000,techBranch:2,techRank:1},tech=g.towerStats(t),ground={x:1300,y:1000,hp:100,air:false},air={x:1500,y:1000,hp:100,air:true};g.chests=[];g.enemies=[ground,air];assert.equal(g.towerTarget(t,tech),air);air.x=1100;assert.equal(g.towerTarget(t,tech),ground);air.x=2000;assert.equal(g.towerTarget(t,tech),ground);air.x=1500;air.hidden=true;assert.equal(g.towerTarget(t,tech),ground);air.hidden=false;air.hp=0;assert.equal(g.towerTarget(t,tech),ground);ground.hp=0;assert.equal(g.towerTarget(t,tech),null);
 });

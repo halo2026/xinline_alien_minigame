@@ -1,5 +1,5 @@
 const test=require('node:test'),assert=require('node:assert/strict');
-for(const root of ['../shared','../../alien-wolf-wechat/shared']){
+for(const root of ['../shared']){
  const {Game}=require(root+'/core'),{View}=require(root+'/view');
  test(root+' both summoned towers remain for thirteen seconds',()=>{for(const id of [12014,12017]){const g=new Game();g.start();g.enemies=[];g.nav.blocked=()=>false;g.takeCard(id);assert(g.useCard(id));assert(g.tacticalTowers.length);assert(g.tacticalTowers.every(t=>t.life===13));g.updateTactics(10);assert(g.tacticalTowers.length);g.updateTactics(2.9);assert(g.tacticalTowers.length);g.updateTactics(.11);assert.equal(g.tacticalTowers.length,0);}});
  test(root+' only level and arrow open vehicle inventory in both orientations',()=>{for(const [w,h]of [[390,844],[844,390]])for(const [offset,opens]of [[60,false],[160,false],[220,false],[260,true],[323,true]]){const v=new View({}, {},w,h);v.game.start();Object.assign(v.game.progress,{battleIntroStep:99,resourceIntroStep:99,firstDefenseTowerBuilt:true,pendingTechnologyGift:false,levelFiveHintAcknowledged:true,grenadeKillHintSeen:true});v.insertionBlocksInput=()=>false;const r=v.vehicleHUDLayout();v.down(1,r.x+offset*r.scale,r.y+r.h/2);assert.equal(v.inventoryOpen,opens,`${w} x=${offset}`);}});

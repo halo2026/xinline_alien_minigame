@@ -1,5 +1,5 @@
 const test=require('node:test'),assert=require('node:assert/strict');
-for(const root of ['../shared','../../alien-wolf-wechat/shared']){
+for(const root of ['../shared']){
 test(root+' all four shop rows and inline technology buttons are visible and clickable',()=>{
  const {View}=require(root+'/view');
  for(const [w,h] of [[844,390],[667,375],[390,844]]){

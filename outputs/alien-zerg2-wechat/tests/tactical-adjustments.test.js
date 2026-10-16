@@ -1,5 +1,5 @@
 const test=require('node:test'),assert=require('node:assert/strict');
-for(const root of ['../shared','../../alien-wolf-wechat/shared']){const {Game}=require(root+'/core');
+for(const root of ['../shared']){const {Game}=require(root+'/core');
 function game(){const g=new Game();g.start();g.enemies=[];g.chests=[];g.nav.blocked=()=>false;return g;}
 function enemy(x,y,air=false){return {id:12501,x,y,air,hp:10000,maxHp:10000,scale:1,frozen:0};}
 test(root+' tactical rocket tracks and damages airborne enemies',()=>{const g=game(),e=enemy(100,0,true);g.enemies=[e];g.tacticalMissile({x:0,y:0},e,{rocket:true,damage:100,shootY:0,speed:600});const b=g.tacticalShots[0];e.y=50;g.time=.05;g.updateTactics(.05);assert(b.y>0);assert(b.trail.length);for(let i=0;i<10;i++){g.time+=.05;g.updateTactics(.05);}assert.equal(e.hp,9900);assert(!g.tacticalShots.length);assert(g.fx.some(f=>f.kind==='missileAirburst'&&f.debris.length===7));});

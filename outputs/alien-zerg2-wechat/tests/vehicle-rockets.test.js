@@ -1,5 +1,5 @@
 const test=require('node:test'),assert=require('node:assert/strict');
-for(const root of ['../shared','../../alien-wolf-wechat/shared']){
+for(const root of ['../shared']){
  const {Game}=require(root+'/core'),P=require(root+'/progression');
  function setup(){const g=new Game();g.start();g.progress.kryptonite=800;P.buyVehicleWeapon(g.progress,'rocket');g.applyEquipment();g.player.critChance=0;g.bullets=[];g.enemies=[];g.chests=[];g.pending=[];g.nextWave=Infinity;return g;}
  test(root+' vehicle salvo uses 2 seconds, four full-damage rockets 0.21 seconds apart and bounded scatter',()=>{const g=setup(),e={x:g.player.x+200,y:g.player.y,hp:10000,age:3};assert.equal(g.player.fireRate,.5);g.fire(g.player,'bullet',{target:e});const start=g.time;assert.equal(g.bullets.length,1);for(let i=1;i<4;i++){g.time=start+i*.21-.001;g.updateVehicleRocketSalvo();assert.equal(g.bullets.length,i);g.time+=.001;g.updateVehicleRocketSalvo();assert.equal(g.bullets.length,i+1);}for(const b of g.bullets){assert.equal(b.damage,1200);assert(Math.hypot(b.impactOffset.x,b.impactOffset.y)<=20);assert.equal(b.tx,e.x+b.impactOffset.x);assert.equal(b.ty,e.y+b.impactOffset.y);}assert(new Set(g.bullets.map(b=>b.tx)).size>1);g.time+=2;g.updateVehicleRocketSalvo();assert.equal(g.bullets.length,4);});

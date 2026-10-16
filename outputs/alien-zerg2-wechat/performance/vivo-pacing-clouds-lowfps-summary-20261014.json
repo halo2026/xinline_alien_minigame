@@ -1,0 +1,344 @@
+{
+  "note": "CPU sample self times, not GPU costs. Capture adds overhead; FPS below recorded before capture.",
+  "selfTop": [
+    {
+      "ms": 1640.68,
+      "frame": {
+        "functionName": "",
+        "scriptId": 0,
+        "url": "hidden",
+        "lineNumber": 0,
+        "columnNumber": 0,
+        "codeType": "other"
+      }
+    },
+    {
+      "ms": 1377.32,
+      "frame": {
+        "functionName": "ret.subscribeHandler",
+        "scriptId": 74,
+        "url": "",
+        "lineNumber": 73,
+        "columnNumber": 35,
+        "codeType": "JS"
+      }
+    },
+    {
+      "ms": 1273.02,
+      "frame": {
+        "functionName": "(garbage collector)",
+        "scriptId": 0,
+        "url": "",
+        "lineNumber": -1,
+        "columnNumber": -1,
+        "codeType": "other"
+      }
+    },
+    {
+      "ms": 1236.18,
+      "frame": {
+        "functionName": "_",
+        "scriptId": 0,
+        "url": "hidden",
+        "lineNumber": 0,
+        "columnNumber": 0,
+        "codeType": "other"
+      }
+    },
+    {
+      "ms": 1085.96,
+      "frame": {
+        "functionName": "getContext",
+        "scriptId": 0,
+        "url": "",
+        "lineNumber": -1,
+        "columnNumber": -1,
+        "codeType": "JS"
+      }
+    },
+    {
+      "ms": 567.65,
+      "frame": {
+        "functionName": "(program)",
+        "scriptId": 0,
+        "url": "",
+        "lineNumber": -1,
+        "columnNumber": -1,
+        "codeType": "other"
+      }
+    },
+    {
+      "ms": 547.96,
+      "frame": {
+        "functionName": "(idle)",
+        "scriptId": 0,
+        "url": "",
+        "lineNumber": -1,
+        "columnNumber": -1,
+        "codeType": "other"
+      }
+    },
+    {
+      "ms": 518.01,
+      "frame": {
+        "functionName": "value",
+        "scriptId": 157,
+        "url": "https://usr/game.js",
+        "lineNumber": 95,
+        "columnNumber": 99710,
+        "codeType": "JS"
+      }
+    },
+    {
+      "ms": 495.93,
+      "frame": {
+        "functionName": "stars",
+        "scriptId": 157,
+        "url": "https://usr/game.js",
+        "lineNumber": 200,
+        "columnNumber": 4689,
+        "codeType": "JS"
+      }
+    },
+    {
+      "ms": 432.09,
+      "frame": {
+        "functionName": "value",
+        "scriptId": 157,
+        "url": "https://usr/game.js",
+        "lineNumber": 227,
+        "columnNumber": 151371,
+        "codeType": "JS"
+      }
+    },
+    {
+      "ms": 336.96,
+      "frame": {
+        "functionName": "c.sprite",
+        "scriptId": 214,
+        "url": "https://usr/defense-code/game.js",
+        "lineNumber": 8,
+        "columnNumber": 11559,
+        "codeType": "JS"
+      }
+    },
+    {
+      "ms": 327.85,
+      "frame": {
+        "functionName": "processTimers",
+        "scriptId": 10,
+        "url": "node:internal/timers",
+        "lineNumber": 495,
+        "columnNumber": 24,
+        "codeType": "JS"
+      }
+    },
+    {
+      "ms": 324.45,
+      "frame": {
+        "functionName": "",
+        "scriptId": 157,
+        "url": "https://usr/game.js",
+        "lineNumber": 251,
+        "columnNumber": 10561,
+        "codeType": "JS"
+      }
+    },
+    {
+      "ms": 268.06,
+      "frame": {
+        "functionName": "set fillStyle",
+        "scriptId": 0,
+        "url": "",
+        "lineNumber": -1,
+        "columnNumber": -1,
+        "codeType": "JS"
+      }
+    },
+    {
+      "ms": 244.22,
+      "frame": {
+        "functionName": "emit",
+        "scriptId": 0,
+        "url": "hidden",
+        "lineNumber": 0,
+        "columnNumber": 0,
+        "codeType": "other"
+      }
+    },
+    {
+      "ms": 233.78,
+      "frame": {
+        "functionName": "counter",
+        "scriptId": 0,
+        "url": "hidden",
+        "lineNumber": 0,
+        "columnNumber": 0,
+        "codeType": "other"
+      }
+    },
+    {
+      "ms": 216.26,
+      "frame": {
+        "functionName": "subscribeHandler",
+        "scriptId": 0,
+        "url": "hidden",
+        "lineNumber": 0,
+        "columnNumber": 0,
+        "codeType": "other"
+      }
+    },
+    {
+      "ms": 208.81,
+      "frame": {
+        "functionName": "value",
+        "scriptId": 157,
+        "url": "https://usr/game.js",
+        "lineNumber": 227,
+        "columnNumber": 124104,
+        "codeType": "JS"
+      }
+    },
+    {
+      "ms": 194.49,
+      "frame": {
+        "functionName": "u.update",
+        "scriptId": 157,
+        "url": "https://usr/game.js",
+        "lineNumber": 224,
+        "columnNumber": 5619,
+        "codeType": "JS"
+      }
+    },
+    {
+      "ms": 184.26,
+      "frame": {
+        "functionName": "",
+        "scriptId": 0,
+        "url": "hidden",
+        "lineNumber": 0,
+        "columnNumber": 0,
+        "codeType": "other"
+      }
+    }
+  ],
+  "preCaptureSamples": [
+    {
+      "gameTime": 159.77,
+      "fps": 21.64,
+      "updateMs": 2.89,
+      "drawMs": 12.39,
+      "towers": 11,
+      "enemies": 7,
+      "corpses": 62
+    },
+    {
+      "gameTime": 164.65,
+      "fps": 20.88,
+      "updateMs": 2.47,
+      "drawMs": 11.82,
+      "towers": 11,
+      "enemies": 7,
+      "corpses": 62
+    },
+    {
+      "gameTime": 169.38,
+      "fps": 23.28,
+      "updateMs": 2.76,
+      "drawMs": 12.62,
+      "towers": 11,
+      "enemies": 11,
+      "corpses": 63
+    },
+    {
+      "gameTime": 174.35,
+      "fps": 25.34,
+      "updateMs": 2.61,
+      "drawMs": 11.43,
+      "towers": 11,
+      "enemies": 16,
+      "corpses": 64
+    },
+    {
+      "gameTime": 179.15,
+      "fps": 24.25,
+      "updateMs": 2.74,
+      "drawMs": 12.48,
+      "towers": 11,
+      "enemies": 19,
+      "corpses": 65
+    }
+  ],
+  "zoom": 0.4143094794924198,
+  "getContextStacks": [
+    {
+      "ms": 1085.964,
+      "stack": [
+        {
+          "functionName": "getContext",
+          "scriptId": 0,
+          "url": "",
+          "lineNumber": -1,
+          "columnNumber": -1,
+          "codeType": "JS"
+        },
+        {
+          "functionName": "e.getContext",
+          "scriptId": 0,
+          "url": "hidden",
+          "lineNumber": 0,
+          "columnNumber": 0,
+          "codeType": "other"
+        },
+        {
+          "functionName": "t.getContext",
+          "scriptId": 0,
+          "url": "hidden",
+          "lineNumber": 0,
+          "columnNumber": 0,
+          "codeType": "other"
+        },
+        {
+          "functionName": "value",
+          "scriptId": 157,
+          "url": "https://usr/game.js",
+          "lineNumber": 227,
+          "columnNumber": 85595,
+          "codeType": "JS"
+        },
+        {
+          "functionName": "value",
+          "scriptId": 157,
+          "url": "https://usr/game.js",
+          "lineNumber": 227,
+          "columnNumber": 86366,
+          "codeType": "JS"
+        },
+        {
+          "functionName": "value",
+          "scriptId": 157,
+          "url": "https://usr/game.js",
+          "lineNumber": 227,
+          "columnNumber": 91274,
+          "codeType": "JS"
+        },
+        {
+          "functionName": "value",
+          "scriptId": 157,
+          "url": "https://usr/game.js",
+          "lineNumber": 227,
+          "columnNumber": 151371,
+          "codeType": "JS"
+        },
+        {
+          "functionName": "a.draw",
+          "scriptId": 157,
+          "url": "https://usr/game.js",
+          "lineNumber": 182,
+          "columnNumber": 4806,
+          "codeType": "JS"
+        }
+      ]
+    }
+  ]
+}

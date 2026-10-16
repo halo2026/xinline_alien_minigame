@@ -10,7 +10,7 @@ def unit(uid):
  if uid not in cache:
   hit=list(re.finditer(r'_tab_unit\['+str(uid)+r'\]\s*=',source))[-1];raw=native(lua.eval(table(source,hit.end())));cache[uid]={k:raw[k] for k in ['name','model','xlobj','scale','box','attr','drop','zOrder'] if k in raw}
  return cache[uid]
-configs=[('snake3','yxys_snake_03','双头蛇窟Ⅲ',16013,17000),('fish3','yxys_fish_03','母巢护卫Ⅲ',12983,12983),('airship3','yxys_airship_03','母舰Ⅲ',11623,17200),('fortress2','yxys_mechanics_002','空中堡垒Ⅱ',11699,17200),('scorpion2','yxys_scorpion_02','地狱魔蝎Ⅱ',13216,13216)]
+configs=[('snake3','yxys_snake_03','双头蛇窟',16013,17000),('fish3','yxys_fish_03','母巢护卫',12983,12983),('airship3','yxys_airship_03','母舰',11623,17200),('fortress2','yxys_mechanics_002','空中堡垒',11699,17200),('scorpion2','yxys_scorpion_02','地狱魔蝎',13216,13216)]
 allmaps={};models={};frames={};groups={};items=[];sheets={};plists={}
 baseart=json.loads((R/'shared/art-data.js').read_text().split('const data=',1)[1].split(';if(',1)[0]) if False else None
 # Crop packed sprites with their authored source anchors. Density retains world size.

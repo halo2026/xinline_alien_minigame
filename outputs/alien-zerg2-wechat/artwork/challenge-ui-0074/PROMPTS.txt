@@ -1,0 +1,15 @@
+Built-in imagegen, transparent_background=true. All four images copied to this directory from generated_images; original outputs retained. Runtime atlas is downscaled only, preserving alpha.
+
+random-red-equipment:
+Use case: stylized-concept. Asset type: single small inventory UI icon for a realistic science-fiction tower defense game. Make one square equipment slot, straight-on orthographic front view, chunky dark gunmetal beveled frame with clipped corners, deep crimson red textured inner backing and restrained bright red edge accents. Inside is one very large bold ivory metallic question mark, exact text "?". The mark is immediately legible at 32 pixels. Slot fills 90% of square canvas, centered, actual transparent outside corners. Refined game asset, restrained worn metal texture, clean silhouette. No equipment object, no numbers, no labels, no extra text, no external shadow, no scene. Red background belongs inside slot only.
+
+Wave reference/edit target: outputs/alien-mac/source/XLFramework/Projects/alien_source/data/image/misc/wave_icon.png
+Shared prompt (replace DETAIL below with each tier's text):
+Edit target: supplied original wave monster icon. Make one upgraded variant only, DETAIL. Preserve recognizable original silhouette: squat bulky alien, domed head, wide hunched shoulders, two bent outstretched claw arms, separated short legs, symmetric frontal pose. Keep the solid black silhouette interior and the simple thick colored outer contour from the reference. Flat tiny game HUD glyph, bold and readable at 24px. Do not turn into face badge or portrait or shield. No frame, no box, no background, no text, no numbers, no weapons. Transparent outside silhouette and between limbs. Centered single icon occupying 90% of canvas. Upgrade only the existing creature shape.
+
+hud-wave-1 DETAIL: first enhanced difficulty: retain rounded head and original shoulders, add just two small shoulder spikes, orange-red contour
+hud-wave-2 DETAIL: second enhanced difficulty: retain rounded head and original shoulders, add two short head horns and medium angular shoulder spikes, bright crimson contour
+hud-wave-3 DETAIL: third enhanced difficulty: retain original head/body proportions, add a small crown of three head spikes and larger shoulder spikes, vivid magenta-crimson contour
+
+Nightmare chest eye edit (built-in imagegen):
+Edit this nightmare wave monster icon. Change only one detail: add a single ominous eye centered on its upper chest, below the head and between the shoulders. The eye must be large and readable at a 24px HUD icon size: simple sharp almond shape, bright yellow ivory sclera, crimson iris and black vertical slit pupil, thin magenta outline. Preserve exactly the existing black body silhouette, the three crown spikes, shoulder spikes, claws, short legs, vivid magenta outer contour, framing and transparent background. No other eyes, no face, no extra ornaments, no text or numbers. Clean flat small game UI glyph.

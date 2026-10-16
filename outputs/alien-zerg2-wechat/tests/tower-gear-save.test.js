@@ -1,5 +1,5 @@
 const test=require('node:test'),assert=require('node:assert/strict');
-for(const root of ['../shared','../../alien-wolf-wechat/shared']){const P=require(root+'/progression'),{View}=require(root+'/view');
+for(const root of ['../shared']){const P=require(root+'/progression'),{View}=require(root+'/view');
  test(root+' tower equipment survives save restoration and cold-start View construction',()=>{
  for(const id of Object.keys(P.catalog).map(Number).filter(id=>['antiair','satellite'].includes(P.catalog[id].kind)))for(const key of P.operatorKeys){
  const s=P.fresh(),item=P.createEquipment(id,500,()=>.5);s.level=40;s.xp=123;s.chips=456;s.kryptonite=78;s.operators[key]=true;item.fusionRank=3;item.fusionStats=Object.fromEntries(Object.entries(P.catalog[id].stats).map(([k,v])=>[k,v*1.2]));s.inventory.push(item);s.towerEquipment[key]=item.uid;s.campaignActs={airship3:{act:2,gold:3200,cards:{}}};let raw=JSON.stringify(s);

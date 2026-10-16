@@ -1,5 +1,5 @@
 const test=require('node:test'),assert=require('node:assert/strict');
-for(const root of ['../shared','../../alien-wolf-wechat/shared'])test(root+' all star portraits retain original crop size and destination with calibrated face focus',()=>{
+for(const root of ['../shared'])test(root+' all star portraits retain original crop size and destination with calibrated face focus',()=>{
  const P=require(root+'/progression'),{View}=require(root+'/view'),calls=[],v={game:{progress:P.fresh()},images:{portraits:{width:3300},operatorStars:{width:3300}},ctx:{drawImage(...a){calls.push(a);},fillRect(){}},techPlate(){},sprite(){}};
  for(const [id,rows]of Object.entries(P.operatorPortraits))for(let branch=0;branch<rows.length;branch++)for(const share of [false,true])for(const [w,h]of [[60,60],[180,180],[240,388]]){
   const key=id+':'+branch;calls.length=0;

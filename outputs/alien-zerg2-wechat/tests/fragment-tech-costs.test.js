@@ -1,5 +1,5 @@
 const test=require('node:test'),assert=require('node:assert/strict');
-for(const root of ['../shared','../../alien-wolf-wechat/shared'])test(root+' research uses corresponding fragments and chips, never kryptonite',()=>{
+for(const root of ['../shared'])test(root+' research uses corresponding fragments and chips, never kryptonite',()=>{
  const P=require(root+'/progression'),{Game}=require(root+'/core');
  for(const id of P.towerIds)for(let branch=0;branch<P.towerTech[id].branches.length;branch++)for(let spec=0;spec<2;spec++){
  const s=P.fresh(),key=`${id}:${branch}:${spec}`;s.operators[`${id}:${branch}`]=true;s.kryptonite=0;const g=new Game({progress:s});

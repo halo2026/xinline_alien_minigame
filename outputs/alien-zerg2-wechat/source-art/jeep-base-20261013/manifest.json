@@ -1,0 +1,200 @@
+{
+  "mailbox": "xinline_report@qq.com",
+  "sender": "Tommy",
+  "subject": "2026主角战车1014渲染",
+  "received": "2026-10-13 17:49 Asia/Shanghai",
+  "description": "17方向主角战车带灯光",
+  "pivot": [
+    128,
+    115.2
+  ],
+  "frames": [
+    {
+      "frame": "car-base-20261013/1",
+      "source": "a01000.png",
+      "sha256": "94e05fad9b7333721ac772ce80bc6faa50dc00f821b3aeb2460b590a2f274ac0",
+      "crop": [
+        81,
+        53,
+        175,
+        216
+      ]
+    },
+    {
+      "frame": "car-base-20261013/2",
+      "source": "a02000.png",
+      "sha256": "2961ffde3d074fd9509695042bf4d3e2c4c2fb8dad0d21ba538418cc98c9cf6f",
+      "crop": [
+        74,
+        51,
+        186,
+        220
+      ]
+    },
+    {
+      "frame": "car-base-20261013/3",
+      "source": "a03000.png",
+      "sha256": "0a3a4eb05cfb0ad1e0f757e7fca4b41af2c1bd632c1e3fe6b62fb19218a9a841",
+      "crop": [
+        68,
+        52,
+        202,
+        220
+      ]
+    },
+    {
+      "frame": "car-base-20261013/4",
+      "source": "a04000.png",
+      "sha256": "b09d334362cc41dcc2297a2bf62d2115aba45644ad1e1409ec58359ab02bc8af",
+      "crop": [
+        64,
+        54,
+        217,
+        216
+      ]
+    },
+    {
+      "frame": "car-base-20261013/5",
+      "source": "a05000.png",
+      "sha256": "c738a25326f7a67050bd8db511338ed7ab8bd7a880dcb2419fa12f9820951c7c",
+      "crop": [
+        63,
+        58,
+        228,
+        211
+      ]
+    },
+    {
+      "frame": "car-base-20261013/6",
+      "source": "a06000.png",
+      "sha256": "71805fd4d1d390632b239df9d04f3b235f8055b8daf9cb7db06dd9df0b447a61",
+      "crop": [
+        64,
+        61,
+        235,
+        202
+      ]
+    },
+    {
+      "frame": "car-base-20261013/7",
+      "source": "a07000.png",
+      "sha256": "99dd87007484979c720a93cd14feb5a36a4b73a10cd764019a0716f91db2e445",
+      "crop": [
+        66,
+        63,
+        239,
+        190
+      ]
+    },
+    {
+      "frame": "car-base-20261013/8",
+      "source": "a08000.png",
+      "sha256": "f092056cc4ca48b40bbfc8d52a3f3c952350a1698bbfa9f67a2b6b76e978e740",
+      "crop": [
+        70,
+        66,
+        238,
+        178
+      ]
+    },
+    {
+      "frame": "car-base-20261013/9",
+      "source": "a09000.png",
+      "sha256": "9dfa2c28e21bba83ac754b10db5fe2ee671b1ad7006e1250c661fcf4cdaf188b",
+      "crop": [
+        72,
+        70,
+        235,
+        169
+      ]
+    },
+    {
+      "frame": "car-base-20261013/10",
+      "source": "a10000.png",
+      "sha256": "26a5e5ff6673d48e68b1c0c140aa9d6637ff2a3c47d38aa78524ce74f6d21183",
+      "crop": [
+        70,
+        54,
+        238,
+        174
+      ]
+    },
+    {
+      "frame": "car-base-20261013/11",
+      "source": "a11000.png",
+      "sha256": "192cfa39034e24ad6d6eb66d9a3ecfd3483393c02d76b3ac3f9a7128394a411a",
+      "crop": [
+        66,
+        40,
+        239,
+        179
+      ]
+    },
+    {
+      "frame": "car-base-20261013/12",
+      "source": "a12000.png",
+      "sha256": "f9c6bb20daa5a555fce08718cc46054ae621a85427e137686f5096a660c8c2f8",
+      "crop": [
+        64,
+        28,
+        235,
+        182
+      ]
+    },
+    {
+      "frame": "car-base-20261013/13",
+      "source": "a13000.png",
+      "sha256": "a1855425f720c903df40a58cd96a25e4db74fbd3b3392a50e7ee96bdf61fa89a",
+      "crop": [
+        62,
+        19,
+        228,
+        183
+      ]
+    },
+    {
+      "frame": "car-base-20261013/14",
+      "source": "a14000.png",
+      "sha256": "935a9d4df268bb7f17c9667387cc9d5978a51d703262c7a7eec0a12c8b420c3f",
+      "crop": [
+        65,
+        13,
+        217,
+        183
+      ]
+    },
+    {
+      "frame": "car-base-20261013/15",
+      "source": "a15000.png",
+      "sha256": "ffc34707da1d89b28c3431b75c61ea05c2ae9a7b2cbb781679cb883ad0b4b67a",
+      "crop": [
+        68,
+        9,
+        202,
+        182
+      ]
+    },
+    {
+      "frame": "car-base-20261013/16",
+      "source": "a16000.png",
+      "sha256": "deb963b62f70078e2a055563cc863e9abc42acb6a35ec0e7f7466fd55ae35a38",
+      "crop": [
+        74,
+        8,
+        186,
+        178
+      ]
+    },
+    {
+      "frame": "car-base-20261013/17",
+      "source": "a17000.png",
+      "sha256": "740f2d0d7d076a7dae813a1a7fcd81f2eaad0f89b23386e41adaa96a24bdde39",
+      "crop": [
+        81,
+        11,
+        175,
+        177
+      ]
+    }
+  ]
+}

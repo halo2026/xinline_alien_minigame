@@ -556,3 +556,305 @@
 0052上传尝试：2026-10-13用户说继续，在当前微信开发者工具确认覆盖体验版，填写0.10.13.0052与22张肖像重绘备注，点击Upload后显示Uploading。但后续AX及截图读取多次超时（AppleEvent -1712），App仍运行但窗口无响应。日志2026-10-13-02-24-34-484.log仅记录02:25:11 uploadFile progressStart，没有成功凭据。不可声称0052上传成功，最新已确认0051；没有重启工具（项目要求明确授权才重启），待用户恢复窗口或授权重启。
 
 0052已发布：2026-10-13用户明确授权重启开发者工具并重试。通过App退出并重新打开，核对同一项目与AppID后确认覆盖体验版，上传0.10.13.0052；最终AX界面明确显示“Upload Successfully”。最新已确认体验版0052，下一版0053。存档KEY/epoch0028保留，未部署云函数或推送GitHub。
+
+## 2026-10-13 接续：微信更多游戏与0053
+
+用户亲自确认“更多游戏”原生按钮可手指拖动，拖到右上可收纳隐藏，遮挡已通过原生交互解决；没有为此改方向/菜单API。
+
+0053已完成操作员按具体分支逐级获取修复、wolf旧工程停用和喷火螳螂北侧/东北侧优先合法出场。旧“同族共享星级/同步维护wolf”要求被本轮用户要求覆盖。旧已拥有星级保留、存档0028保持。33 smoke、38针对和15 render通过；扩展6项失败经旧代码回跑证实既有。详细审计audits/20261013-0053-operator-prerequisites-retire-wolf-mantis.md。正在当前App上传0.10.13.0053，成功结果待核实。
+
+0053已通过用户当前打开的微信开发者工具App上传：核对工程路径/AppID，填写0.10.13.0053和三项更新说明，点击Upload后亲见“Upload Successfully”。最新上传0053，下一版0054；未清档、未部署云函数、未推送GitHub。本次覆盖确认步骤发生在用户操作UI期间，助手未直接读到该弹窗；上传成功已直接核实。
+
+## 0054 钳虫首领重设计（本地完成，未上传）
+
+第一关12504新增锁定路线冲撞，1.5秒蓄力、接触即停、1.1秒收招。矿厂按实际受击区瞄准，单次伤害并摇晃0.65秒；车辆单次受伤，0.6秒旋转腾空弹开最多110px，碰墙截停，之后恢复控制。破甲裂地六段+重钳震击沿原技能21012/17656重做，使用原版3060/3110爆裂、3139烟尘共22帧，非新生成美术。原“冰冻”技能实际用破甲爆裂素材，已按实际画面改名；半血追速降低，主要通过技能间隔加快制造压力。矿坑同ID和第二幕未改；存档0028保持。
+
+11针对（含实际地图8方向矿厂碰撞、真实update车辆冲撞、绘制矩阵恢复）、33smoke、15render通过。扩展campaign-boss-random剩3项既有失败，以HEAD core内存回退复现（zerg1旧技能预期、fortress11700旧预期、旧关卡顺序）；本关状态机另有专门测试。原版素材来源详BOSS-SKILL-SOURCES.md；预览work/pincer-redesign-preview.png已目检。最终包30456702/main1059347字节，未清档/未上传/未推送。最新已确认上传仍0053，下次0054。
+
+0054追加：战斗底部血条/经验条及其左侧区域改为移动触摸优先，移除整行HUD拦截；在世界塔标记/建造/卡牌判定之前接管该区域，避免穿透点击。已有摇杆触摸不会被第二根手指重置；拖动越过等级按钮不打开装备，明确点击右侧等级/箭头仍保留装备入口。9项新触摸测试+3项0046回归通过，横竖屏扩展2通过/1既有仓库关闭失败（HEAD view内存回退同样失败），33 smoke通过并已构建。仍未上传，存档不变。
+
+0054已发布：2026-10-13在用户当前微信开发者工具App核对项目路径及AppID wx290826620512561a，确认覆盖体验版，填写0.10.13.0054及钳虫/摇杆更新说明后上传。最终界面Upload Successfully，构建日志Upload completed, cost: 13910ms。最新体验版0054，下一版0055；未清档、未部署云函数、未推送GitHub。
+
+## 0055 新基础吉普车（本地接入，未上传）
+
+QQ邮箱 xinline_report@qq.com，Tommy 于2026-10-13 17:49发送「2026主角战车1014渲染」，正文17方向主角战车带灯光。新标签页恢复登录会话后下载同名587K附件。17张256×256原图与原始ZIP保存主工程source-art/jeep-base-20261013，manifest记录来源/哈希。import-base-jeep.py无损裁透明边并打包jeep-base-20261013.png（579325字节）；car与car-blue指向新17方向，沿原32向镜像规则；原画布挂点(128,115.2)保持，车灯不参与重新居中。站立/行驶各方向共用邮件单帧，未虚构行驶动画。其他皮肤、蓝影属性、炮塔、残骸、存档0028不变。
+
+17裁片像素/全画布alpha/锚点核验通过，32方向实渲染含炮塔预览work/jeep-base-runtime-preview.png已目检，5皮肤检查与33smoke通过，6战役适配器继承检查通过。未上传/未推送，当前体验版仍0054，下次0055。用户明确今后优先用已登录项目邮箱的邮箱App，已写入AGENTS.md。
+
+0055已发布：2026-10-13通过当前微信开发者工具App确认覆盖体验版，上传0.10.13.0055（基础吉普车17方向带灯光新模型），最终亲见Upload Successfully及Upload completed, cost: 13528ms。最新体验版0055，下一版0056。包31036884/main1059816字节；未清档、未部署云函数、未推送GitHub。
+
+## 0056 四族防守塔专属基座（本地完成，未上传）
+
+按名称/属性以built-in image_gen生成4张透明母版，source-art/tower-bases-v1保存PNG、完整prompts.json、挂点manifest和runtime-preview.png。射击12200紧凑钢装甲/供弹/散热，能量12202圆环电容/铜管/蓝光，炮12205四向液压支撑/重平台，射线12204精密环座/紫色校准节点。build-tower-bases.py裁透明边、打包232813字节独立图集，校准安装盘挂点，逻辑宽78/83/94/78。drawTowerBase按family ID选材；战场含升起/回收、基础塔预览、科技分支、建造落点使用同族基座。炮头、属性、碰撞与存档0028不变，旧wolf不动。
+
+实渲染四种完整塔、两种炮头朝向和战场.527缩放已目检；33smoke、15render、1科技朝向通过。扩展tech-branch-preview既有ctx模拟缺translate失败，用内存还原本轮所有基座调用复现同一错误，未修改无关测试。总包31270223/main1060018，预算内。当前体验版仍0055，本轮未上传/未推送，下次0056。
+
+0056已发布：用户要求换进游戏试试，通过当前微信开发者工具App核对项目路径/AppID，确认覆盖体验版，上传0.10.13.0056（四种防守塔专属基座）。亲见Upload Successfully及本次Upload completed, cost: 14173ms。最新体验版0056，下次0057；存档0028保留，未部署云函数、未推送GitHub。
+
+## 0057 基座提亮（已发布）
+用户反馈0056基座灰暗压抑。使用built-in image_gen逐张编辑4款原图，暖金/亮蓝/沙金橙/银白紫配色，提升中间色、减少污渍。新母版与完整prompts.json/manifest/runtime-preview保存source-art/tower-bases-v2，v1保留。build-tower-bases.py改读v2并校准生成图安装盘中心，世界宽78/83/94/78不变；沿用runtime tower-bases-v1.png文件名替换内容，避免重复打包。新图集250281字节，总包31287699/main1060018；33smoke+15render通过，两种朝向和.527缩放实渲染已目检。存档0028、炮头及属性保持。
+通过当前微信开发者工具App核对项目后确认覆盖体验版，上传0.10.13.0057，最终Upload Successfully及本次Upload completed, cost: 12981ms。最新体验版0057，下次0058；未清档、未部署云函数、未推送GitHub。
+
+## 0058 基座锚点下移（已发布）
+用户要求中心锚点略低以匹配视角。build-tower-bases.py新增MOUNT_DROP=4（世界像素），四族frame.oy减4，使炮头相对安装盘落点下移；战场、科技/商店/建造预览共用帧，无需重绘素材。manifest记录mountDropWorld，runtime-preview重渲染目检，33smoke通过。保持存档0028。当前App确认覆盖体验版上传0.10.13.0058，亲见Upload Successfully与Upload completed, cost: 11975ms。最新0058，下次0059；未推送/部署云函数。
+
+## 0059 炮塔架炮底盘（已发布）
+按用户星际争霸坦克架炮感觉重新设计12205基座，built-in image_gen编辑为军绿厚装甲、两侧履带、四向展开液压支腿/宽抓地脚与较小中央安装盘，区别暖金射击塔。原图/完整提示词/实渲染预览保存在source-art/cannon-siege-base-v3。build-tower-bases.py仅12205读取新源，挂点(687,474)，世界宽94及MOUNT_DROP=4保持，其他三塔不变；manifest source改为工程相对路径，provenance同步。图集249869字节，33smoke通过、实渲染.527缩放和两朝向已目检。当前开发者工具App确认覆盖后上传0.10.13.0059，最终Upload Successfully及Upload completed, cost: 14695ms。最新0059，下次0060；存档0028保持，未推送/部署云函数。
+
+## 0060 装备提示、队列首尾精英、第二幕脑怪（已发布）
+防守塔绿色＋：Game.towerGearReadyKeys按已拥有操作员、空槽、仓库/溢出库存、未占用、等级与towerCompatible实时判定。管理防守塔页入口、家族、分支、详情空槽与场上已入驻塔显示；不增加点击热区，装配后即时消失。基础塔无槽不显示世界提示。每帧场景只生成一次ready集合。
+异虫两幕每族主队列/侧袭队列首尾转精英，中间普通；单只队列只转一只，不增加数量。旧随机门槛/同屏2只/6秒精英间隔不再限制这些明确排定的精英，其他关卡保持旧逻辑；193只/幕与普通拥挤限流保持。
+第二幕13214恢复14046混乱螺旋和17909→17910隐身换位三轮六向变速弹幕；新增每12秒3只、最多6存活小脑虫，1.6秒预警。原素材/原技能证据见BOSS-SKILL-SOURCES.md、import-brain-effects.py。存档0028保持。21针对通过/1旧wolf跳过，另6脑怪测试通过（含真实update弹速和小怪无Boss奖励）；33smoke与15render通过，work/0060-preview.png已目检。总包31310316/main1065234，预算内。尚未上传，当前体验版0059；下一版0060（日期已10月14日）。
+0060上传已完成：当前微信开发者工具App确认覆盖体验版，提交0.10.14.0060及三项更新说明，亲见Upload Successfully与本次Upload completed, cost: 18205ms。以上待上传记录已被本条完成状态取代。最新体验版0060，下次0061；存档0028保留，未部署云函数、未推送GitHub。
+
+## 0061 射线塔锚点与第二幕起始水晶（本地完成，未上传）
+射线塔12204在原4世界像素下移基础上额外下移2，build-tower-bases.py按塔独立mount_drop并更新manifest/art-data；其他塔保持。实渲染预览已目检。异虫zerg第二幕从存档进入/失败重试默认水晶800→1100，装备入场加成另算；第一幕连战沿用实际剩余水晶。8项second-act-entry-crystals及33smoke通过，已构建。本次未上传，当前体验版仍0.10.14.0060，存档0028保持。
+0061补充：未分配属性点>3时，drawAttributePlus统一以uiEffectTime驱动3.2秒周期透明度0.6～1与暖金辉光，管理页/属性页所有可用十字同步呼吸；<=3常亮，原按压反馈保留。重新构建33smoke+15render通过。仍未上传，体验版0060。
+0061科技界面：移除节点下方升级文字按钮及右上角节点徽章；可升级节点左侧轻叠原生tower-upgrade-arrow，uiEffectTime驱动1.8秒上下浮动，独立32×42逻辑点击区，点击直接upgradeTower并保存；点击科技主体仍打开对比确认。底部详情190→220高，横屏投影分栏边界仍为y420；操作员肖像×1.15，属性改标签/数值分行34间距，装备槽下移至174。横竖屏已目检，8项科技/安全区测试及33smoke通过。仍未上传。
+
+0061已发布：用户要求更新，通过当前微信开发者工具App核对alien-zerg2项目路径及AppID，确认覆盖体验版后上传0.10.14.0061，亲见Upload Successfully及本次Upload completed, cost: 28436ms。包含上述锚点、水晶、加点呼吸、科技箭头/肖像布局全部改动。最新体验版0061，下次0062；存档0028保持，未部署云函数、未推送GitHub。
+
+## 0062 第二幕默认初始水晶1800（本地完成，未上传）
+按用户明确数值，异虫第二幕从存档进入/失败重试默认水晶改为1800（替代0061的1100）；装备入场水晶加成额外计算，第一幕连战仍保留实际剩余水晶。8项入场测试及33smoke通过，已构建，存档0028不变。当前体验版仍0.10.14.0061；下次0062。
+0062补充驻守地图双指缩放：mine4在已有单指地图拖动上接入第二个地图触点，按两指距离比调整zoom（有效范围0.32～0.95），双指中点地图坐标保持并受现有地图边界约束；farView倍率补偿；两指释放/取消均吞掉建塔点击，最后一指放开前不恢复单指动作；resize/新game重置手势。UI按钮和战车转向不纳入地图捏合；驻守说明加入双指提示。25项mine4测试全部通过（含横竖屏捏合上下限、取消不建塔、farView与中点锚定），33smoke通过。仍未上传，当前体验版0061。
+
+0062已发布：当前微信开发者工具App核对项目并确认覆盖体验版，上传0.10.14.0062（第二幕默认初始水晶1800、驻守地图双指缩放），亲见Upload Successfully与本次Upload completed, cost: 19290ms。最新体验版0062，下次0063；存档0028保持，未推送GitHub、未部署云函数。
+
+## 0063 驻守缩放上限与说明恢复（本地完成，未上传）
+mine4最近缩放改为标准视野倍率×1.2；标准倍率取初始0.527或resize后的_normalZoom，与每次手势分离，连续捏合不能累计突破上限。最远0.32保持。驻守说明恢复原文“只需拖动地图查看战场，建造升级防守塔。”，不再提双指。25项mine4（含连续手势上限）及33smoke通过，已构建。体验版仍0062，下一版0063；存档0028保持。
+0063补充：四基座新增drawTowerContact程序绘制地面层（分层柔和接触阴影、低透明中性沙土与13枚小碎石，位置固定种子变化）。仅世界实塔和建造预览使用，菜单不加土；升起/撤收时地面层独立于塔身位移并淡入淡出。不新增图集；work/0063-contact.png实渲染目检。mine4地面出怪标记1/3向中心移动20世界像素（y1260→1240），空中原本中心出怪保持，绕行路径不变。25mine4+33smoke+15render通过，已构建，尚未上传。
+
+0063已发布：用户要求上传，当前微信开发者工具App确认覆盖体验版后上传0.10.14.0063，亲见Upload Successfully与本次Upload completed, cost: 21383ms。包含基座接触阴影/沙土碎石、矿坑出怪点内移20像素、最近缩放120%上限、关卡说明恢复。最新体验版0063，下次0064；存档0028保持，未部署云函数、未推送GitHub。
+
+## 0064 真实支付进行中（未完成、未部署、未上传）
+USB识别vivo iQOO Neo。已核对微信小游戏官方道具直购2.0、签名、queryOrder文档。新增game-payment云函数：固定三档价格/数量、code2session、双签名、查单、事务幂等发货及存档revision保护，默认不开启。shared/payment-client.js接安卓支付与订单补查；minigame/game.js绑定并在支付中禁止商店输入/step与refreshCloud。store关闭本地模拟加币，改真实购买入口，修复窄横屏补给布局。13支付/商店测试及33smoke通过；daily-store另有两个旧皮肤属性预期失败，未改属性。
+尚缺后台开通信息/OfferID/云端密钥、云函数部署、发货推送应答、退款、氪石经济服务端权威校验、待确认单分页归档及真单验收。详见cloudfunctions/game-payment/README.md，不可称已能真付。异步已询问支付开通/云端配置情况，未收到答复。密钥不要发聊天。当前体验版0063，存档0028保留。不可上传/启用半成品支付。
+0064追加检查：补查订单每笔成功后立即向当前View应用云端存档，避免后续订单失败导致已到账余额没有刷新。新增断网回归测试，payment+store共12项通过。补给站844横屏渲染已目检。开发者工具当前cloudfunctions显示No Env Selected，未选择环境/部署；Upload Successfully为既有0063状态，不是本轮上传。
+
+## 0064 性能与真机调试（进行中）
+用户确认虚拟支付尚在微信后台审核；继续保持关闭，不做真单。用户要求用USB连接的vivo/iQOO低性能安卓机实测中后期掉帧。
+已按用户最新指示将地面阴影/碎石直接烘焙进四基座图集（build-tower-bases.py），删除drawTowerContact运行时路径及临时缓存；挂点按扩展边界补偿，原底座像素保留，图集296296字节。开启原有FPS开关后新增5秒窗口的update/draw CPU均值、帧间隔P95和实体数；console [BattlePerf]，后台时存最近24窗口到alien-battle-performance-v1（无玩家数据）。新增battle-profiler.js及2测试，现有3 FPS测试通过；33smoke+15render通过。battle-render-cost旧测试缺game.time的fixture报错，尚未修该无关测试。桌面基准100怪绘制66.57→62.92ms，300怪69.70→66.48ms；drawImage次数312/458均不增加；仅桌面原生Canvas对比，不能当手机帧率。真机调试已在当前App点击Remote Debug并选Android，正在上传调试包，未更新体验版。当前发布仍0063。
+0064真机链路已验证：用户扫码后启动成功；点击主窗口Remote Debug切到独立Remote Debug窗口，vivo-V1914A/V1914Aarm64-v8a、OS字段29、微信8.0.69、面板基础库3.17.4[1607]（启动日志另报3.15.3，勿混为一致），连接/服务Normal，实际通道Wi-Fi（不是USB），RTT约200~1938ms。能读取日志并录制/停止/导出Performance，已获得32.492秒时间线（Scripting6490ms，Idle26001ms，非完整帧率/GPU结论），原始文件Downloads/alien-vivo-first-profile-20261014.json，副本performance/vivo-first-20261014.json。当前没有确认处于中后期密集战斗；需在用户复现掉帧时再录。保持调试连接未停止。启动日志有Orientation sensor重复start警告和微信内部backgroundfetch privacy错误，尚未证明为低帧原因。
+2026-10-14 12:14用户报告频繁低于30FPS后，立即录制第二段Performance并导出Downloads/alien-vivo-lowfps-20261014.json，副本performance/vivo-lowfps-20261014.json；主窗口32.305秒选区Scripting15296ms/Idle17008ms，不能拿JS占比当GPU或实际FPS。Sources通过Ctrl+P打开usr/game.js，右键tab Save as导出Downloads/alien-vivo-runtime-20261014.js，未编辑运行源码。用运行代码行列映射，getContext热点来自View.remainsTexture→drawRemains→draw；该函数对非12501怪物的每个随机裁片单独创建离屏Canvas，每只最多7张，可能造成密集击杀卡顿。CPU self采样GC约2417ms/getContext881ms，非GPU计时，尚未做手机前后优化对照。详细对比performance/vivo-lowfps-summary-20261014.json。未更改游戏行为/重启/清档；当前真机仍保持连接。后续优先减少碎片画布创建与分配，再测星空等绘制热点，不可宣称低帧已修复。
+
+0064已发布：用户要求先统一开发版/测试版；当前App明确确认覆盖体验版，提交0.10.14.0064，亲见Upload Successfully及本次Upload completed,cost:34881ms。含基座阴影碎石合图、可选性能采样、关闭模拟充值；cloud-config.paymentEnabled=false，客户端购买提示微信支付审核中且不调用未部署game-payment，商店不再自动补查。服务端仍默认关闭，未部署云函数。33smoke通过，存档0028保留。死亡碎片性能优化尚未实现，下一版0065。
+
+## 0065 死亡碎片画布复用（本地完成，未上传）
+按真机热点优化shared/view.js remainsTexture：非12501随机裁片使用按16px尺寸档位匹配的画布/2D context池，不再每块死亡碎片重新getContext/反复resize初始128画布。保留原裁片宽高供drawImage取样，重新使用时clear+clip并restore状态，透明边缘/颜色和动画不变。每0.25秒回收已淡出、被128尸体上限移除或上一Game的碎片；在场碎片不复用。闲置池最多64张且<=1MiB，超额像素缓冲缩到1x1，切场景releaseRenderCaches彻底释放。基础钳虫原命名碎片仍走原共享缓存。
+新remains-pool.test.js验证逐像素一致、活跃隔离、过期回收、切关释放、连续死亡复用；连同remains-edge及scene-cache共9项通过，另33smoke+15render通过并已构建。桌面固定种子可变尺寸微基准work/gear-render/profile-remains-0065.cjs，报告performance/remains-pool-20261014.json：1344碎片canvas/getContext从1344降234（约82.6%减少），每批均值2.223→1.989ms，p95 2.784→2.461ms，闲置760832字节。不是手机FPS结论，未真机复测/上传；当前开发上传/体验版仍0064，下次0065。游戏属性、数量、奖励、难度、存档0028与支付关闭状态保持。此前运行源码work/view-before-0065.js保留作基准。
+
+## 0065 Android profiling 2026-10-14
+0065 remote-debug package regenerated in native app and connected vivo-V1914A; NOT published. User reports opening about 40fps then below30. Saved performance/vivo-opening-0065-20261014.json (~21s) and vivo-lowfps-0065-20261014.json (~27s). Opening capture did not begin on first frame; wave not recorded. Opening CPU samples: game tick inclusive5913ms, draw4866ms, stars1358ms, GC self1374ms; see opening summary. These are not GPU timings.
+Observed Console BattlePerf: mine4 360x780 DPR2 zoom.4216 wave4 gameTime179.44 fps24.60 update1.98ms draw12.98ms enemies20 towers10 corpses63; gameTime184.45 fps25.57 update2.08 draw13.72; gameTime188.63 fps20.99 update7.45 draw16.33. Remote link subsequently Not Connected / RTT49436ms; user confirms phone still playing. Later9-15fps samples contaminated by remote-debug instability; require non-debug comparison. Parser reported8/13 missing samples. Both traces successfully saved.
+Code issue: render-budget.due compares last actual draw with16.667-.75ms, minigame loop resets prev=t. Synthetic60Hz callbacks with seeded +/-1.5ms jitter give44.4 rendered FPS. This is reproduction, not measured phone callback cadence. No fix yet. Prioritize jitter-safe frame scheduling then space-scene full-screen gradient/background caching; preserve gameplay/save epoch.
+
+## 0065追加：帧率调度与星云缓存（本地完成并构建，未发布）
+用户要求继续优化。shared/render-budget新增createScheduler，使用固定deadline保留余量与最多4ms提前容差，替代minigame loop依赖上次实际draw时间的due；dt仍按实际prev计算，15/30/60档位切换与新loop立即重置，长停顿无补帧连发。60/90/120/144Hz带±1.5ms抖动的10秒回归均约600帧。旧due保留兼容现有调用/测试，运行入口已用新scheduler。
+space-scene两个同速星云渐变合成逻辑分辨率离屏缓存，48px overscan跟镜头平移，小移动不重画，大移动/横竖屏resize重建；星星/流星/碎石动画保留。无离屏API回退原渐变，切场景释放cloudCache及starGlow。360x780缓存1597824字节；相同移动位置与原渐变逐像素平均差<0.6/255、最大<=3/255，work/0065-space-compare.png左右对比已目检。
+新增frame-pacing-clouds.test.js三项均通过，连scene-cache五项通过；settings-audio-budget额外4通过/光剑音效1失败，经work/gear-render/pre-pacing-baseline.cjs内存还原本轮三个shared模块复现同一0!=1，属既有。33smoke+15render通过，日志work/0065-pacing-{smoke,render}.log，包已重新构建。桌面180帧star微基准performance/space-cache-0065.json：径向渐变361->3，调用均值0.339->0.296ms；为桌面API计时非手机GPU/FPS结论。
+未更新手机当前调试会话或发布。下一次0065调试/上传包含碎片池+调度+星云缓存；线上仍0064。存档0028/支付关闭/难度属性不变。
+
+0065新包复测已开始：当前原生App停止旧会话、重新点击Android生成最新调试包，亲见Upload Code Done、30662KB、新二维码13:41过期。用户确认扫码开始游戏后，Remote Debug新winid d86cd5ad-9e08-4bf0-9fe3-a3d151dfe8a9连接同一vivo-V1914A，Wi-Fi Normal RTT221ms。本轮未开启Performance录制，仅观察BattlePerf。样本保存performance/vivo-pacing-clouds-0065-live-20261014.json：开局3.76/8.77/13.78秒48.99/51.83/50.13fps，draw4.78~5.70ms。6塔后30~30.54fps；7塔后26.65~29.17fps，draw9.67~11.74ms，逻辑多为1.44~2.87ms。用户从zoom.4216缩到最远.32，不能直接和旧.4216不同塔数量/波次数据当严格A/B。没有达到稳定60，后续应在相同缩放/塔数比较，并排查塔/建造区绘制及远程调试之外的表现。启动有13条音频路径not node js file system日志（VM76微信内部），未证明导致持续掉帧。当前会话保持连接，没有发布体验版。
+
+0065继续低帧证据：用户报告稳定17–26FPS，录制前Console已读到zoom.414309、11塔、62–65尸体，159.77–179.15秒分别21.64/20.88/23.28/25.34/24.25fps，draw11.43–12.62ms，逻辑2.47–2.89ms，Wi-Fi Normal RTT190–355ms。不能再把问题归咎最远视野或重型录制。随后完成约28.9秒Performance并保存Downloads/Profile-20261014T132209.json，副本performance/vivo-pacing-clouds-lowfps-20261014.json，摘要同名-summary。GC self1273ms，getContext self1086ms，stars self496ms。getContext调用链game.js:227 col85595 ->86366 ->91274 ->151371，对应碎片池相关区域（尚未导出本次编译源码做精确method定位）；本地acquireRemainsTexture仍只复用精确16px宽高档位，idle上限64/1MiB，大量同时存活14秒的碎片会需要新画布，池未解决所有分配。下一步核实池实际命中率/档位分布，考虑按容量复用或统一小画布尺寸，不能减少死亡视觉时长冒充等价优化。buildArea也仍每帧创建Map/visible数组，即使没有建造选择，待热点分解。当前未改新代码，真机连接保留，未启动长驻录制。
+
+## 0065追加：容量复用和隐藏建造范围跳过（本地完成）
+用户继续优化。shared/view.js acquireRemainsTexture从精确宽高匹配改为选择最小足够容量的空闲画布；无足够容量时resize一个空闲画布并继续使用原2D context。绘制仍clear+clip到实际纹理宽高，活跃碎片不复用，闲置64张/1MiB限制保持。drawBuildArea在未选择建塔时立即返回，不再无谓生成Map/可见tile数组或构建隐藏图块；选择后按原每帧最多4块/2ms预算逐步生成，首次打开可能有渐进显示，已有缓存和塔位失效规则保留。
+14针对检查（含变化尺寸逐像素、context复用、600帧隐藏零计算、重开后塔位更新）、33smoke、15render通过，构建已完成。work/view-before-pool-capacity-0065.js保留前版。固定1344片基准performance/pool-capacity-0065.json：新建canvas/getContext234->56（减少76%），闲置760832->854016字节仍<1MiB；mean batch1.962->2.003ms没有明显改善，p952.382->2.193，仅桌面微基准，不能声称手机FPS提升。基准work/gear-render/profile-pool-capacity-0065.cjs。
+当前手机仍跑容量复用前的0065调试包，新变更未推到手机/未上传体验版。发布仍0064，存档0028保持。
+
+0065已发布：2026-10-14用户要求更新测试版，在当前微信开发者工具App核对alien-zerg2路径/AppID wx290826620512561a，亲见并确认覆盖trial version提示，填0.10.14.0065及性能优化说明，上传后亲见Upload Successfully和本次Upload completed,cost30327ms。含帧率调度、星云缓存、死亡碎片容量复用、隐藏建造范围跳过全部优化。最新开发/体验版0065，下一版0066。存档0028不变，支付关闭，未部署云函数/推送GitHub。最终容量复用尚未真机复测，不宣称稳定60fps。
+
+## 0066 科技升级成功反馈（本地完成，未上传）
+用户要求确认升级窗口关闭后，对应科技图标播放发亮光环并点亮新增一格。shared/view新增techUpgradeFeedback，以family/branch/spec和升级后rank定位，使用uiEffectTime计时1.2秒。确认成功后关闭弹窗即在图标绘制扩散薄环/内辉光/6短光线，新增格短暂暗到亮后闪亮回落到常亮；其它已亮格不变。直接箭头升级也接相同成功反馈，取消/失败不播放，离开管理页清理，过期step清理。无需图片或常驻离屏画布，不影响战斗帧耗时。5针对测试通过，33smoke和15render通过并构建。未上传，最新发布0065，下一版0066；存档0028与支付关闭保持。
+0066时长修订：用户指定1秒足矣，升级光环、格子闪亮与过期清理统一1秒；新增格保留0.12秒引入，余0.88秒闪亮。2针对测试通过并重新构建，未上传。
+0066追加：关卡底部HUD红心与EXP各右移2屏幕逻辑像素，drawVehicleHUD中的既有3/layout.scale偏移改为5/layout.scale，适配HUD缩放；数值/血条/经验条位置不变。已构建，未上传。
+0066追加：所有11个当前关卡的第二幕默认初始水晶统一1800，core构造act2检查点不再限campaignId=zerg。装备crystal_carry额外加成、第一幕连续进入第二幕的结余继承规则不变，旧检查点gold不作默认基数。second-act-entry-crystals扩展mine4/thunderraid/iron-alien，11关卡覆盖直接进入/失败重试/返回第一幕/连续过幕全部通过；33smoke通过并构建。未上传，最新发布0065。
+0066追加：护送矿车spawnConvoy初始hp/maxHp统一按现有配置×1.15取整，当前6000→6900，两幕均生效。矿厂/玩家生命不变。两幕实际生成断言及3护送损失/受击提示测试通过，已构建，未上传。
+
+0066已发布：2026-10-14用户要求更新测试版，当前微信开发者工具App核对alien-zerg2路径/AppID wx290826620512561a，确认覆盖trial version提示，填写0.10.14.0066及本轮说明，点击上传后亲见Uploading编译过程及新出现的Upload Successfully。包含1秒科技升级光环/新增等级格反馈、底部红心和EXP右移2像素、全部11关第二幕默认水晶1800、两幕护送矿车生命6000→6900。最新开发/体验版0066，下次0067；存档0028保留，支付仍关闭，未部署云函数/推送GitHub。
+
+## 0067 维修组件修复护送矿车（本地完成，未上传）
+2026-10-15用户要求战车维修组件对矿车生效。shared/vehicle-gear.js修复目标加入convoys，排除delivered；沿用180距离、装备实际repair_rate、存活/受损/满血封顶规则，复用gearRepairs维修提示。已毁和已送达矿车不修复，战车死亡/未装备/cleanup不生效。装备说明同步提及护送矿车。新增convoy-repair测试以zerg1实际spawnConvoy验证全部品质与失效边界，连stationary-repair共4通过；构建及33smoke通过。vehicle-gear旧测试15项中7失败，内存移除本轮维修改动重跑仍同样7失败（work/0067-repair-baseline.log），涉及旧固定装备数值预期，不改无关属性。未上传；线上0066，下一版0067，存档0028保持。
+
+0067已发布：2026-10-15用户要求更新测试版，在当前微信开发者工具App核对alien-zerg2路径/AppID wx290826620512561a，确认覆盖trial version提示，提交0.10.15.0067及矿车维修说明，亲见本次Uploading编译过程和新出现的Upload Successfully。包含维修组件修复180范围内受损护送矿车及说明更新。最新开发/体验版0067，下次0068；保留存档0028，支付仍关闭，未部署云函数/推送GitHub。
+
+## 0068 战役挑战模式（本地完成，未上传）
+2026-10-15用户要求每关普通通关后显示挑战按钮，三档紧张/困难/噩梦，难度+50%/+100%/+200%，独立首通奖励。shared/progression新增challengeModes、challengeSelections（每关选择）、challengeActs（id:level独立幕检查点）、challengeClears（id:level首次奖励领取标记），恢复时过滤关卡/档位。普通通关记录在重玩时保留，不再因checkpoint从act3变act1/2而被restore删除。首次任一普通战役完整通关即允许星图选择（原先需zerg1），便于立即进入该关挑战。原存档KEY0028不变，旧存档新增字段默认空。
+shared/mission-menu.js已通关节点旁挑战按钮，弹窗介绍/三档选择/首通奖励状态/普通模式切换；选择后立即保存，星图节点下及底栏显示当前难度，进入战役沿选中档位载入。支持横竖屏、拖动/取消不触发，弹窗阻止底层点击。当前战斗challengeLevel固定，星图改选不改变仍在进行的战斗；retry保持本局难度。浏览器恢复旧战斗同步菜单中的选择字段。
+难度通过共享damage入口按1/1.5、1/2、1/3折算伤害，提高敌方有效耐久（实际基础hp数值不重写，避免精英/召唤继承重复倍率）；hurt入口敌方对友方伤害乘1.5/2/3，不增加敌人数、速度或波次。宝箱耐久不变，自爆怪自行销毁补偿耐久倍率；铁血女王剧情耐久也折算。普通模式系数1，玩家/矿车/矿厂maxHp不变。
+普通与三档挑战检查点隔离；挑战第一幕无额外首通奖励，第二幕完整胜利才按每关每档首次发奖：紧张1000芯元+10箱，困难30箱+总计50个随机分配至各塔科技的碎片，噩梦现有redDropIds红装池随机1件（品质值5/tier4，按当前等级生成）。奖励与领取标记一起持久化；满仓走overflow不丢失，不覆盖pendingChestRewards。胜利页展示奖励，红装显示名称；挑战打扫完返回星图，不自动去下一关。
+新增campaign-challenges.test.js覆盖11关第一幕/第二幕/恢复/重试/重复奖励、难度边界、满仓、三档奖励、选择输入及普通通关，连second-act-entry-crystals共28通过；33smoke通过并构建，15render通过。日志work/0068-{challenges-tests,smoke,render}.log。work/gear-render/challenges-0068.cjs生成390/320竖屏及844横屏截图，已目检390星图与390/844挑战弹窗（work/0068-{map,modal}-*.png）。未真机试玩、未上传；线上仍0.10.15.0067，下一版0068。支付关闭，未部署云函数/推送GitHub。
+
+0068追加星数：用户指定普通1、紧张2、困难3、噩梦5星。challengeModes新增stars；campaignStars按每关最高已完成难度返回0/1/2/3/5，totalCampaignStars仅求当前11关总和（最高55），不将各档累加；从现有campaignClears/challengeClears即时推导，不增加重复存档字段，选难度/重试/重复通关不会增星或降星。mission-menu节点上方5星位，已获亮金、未获18%透明；顶部战役总星数N/55；挑战选项显示对应星数，普通模式按钮标1星。复用已打包原版26x26 operator-star-native.png，无新增素材。sprite需显式传当前globalAlpha，已修复默认alpha=1覆盖暗星/地图边缘淡化的问题。campaign-stars+campaign-challenges19项通过，33smoke通过，最后alpha修改后重新构建。390/844星图与390挑战弹窗已目检，预览work/0068-stars-{map,modal}-{320,390,844}.png，脚本work/gear-render/challenge-stars-0068.cjs。仍未上传，线上0067，下一版0068，存档0028保留。
+
+0068星数规则修正（覆盖上条最高难度/55星规则）：用户明确各档独立累加，普通+1、紧张+2、困难+3、噩梦+4，每关满10星，11关满110。campaignStars由普通clear与各档challengeClears求和，未通关档不补星，重复通关不重复加，旧记录自动按新权重计算。节点改原版星图标+N/10，顶部N/110，弹窗噩梦4星及独立累计说明。无需新增存档字段。campaign-stars+campaign-challenges20测试通过，33smoke通过并构建；重新生成截图，390节点计数/844弹窗目检。仍未上传，线上0067，下一版0068。
+
+0068追加失败通关提示：按用户文案在shared/view.js添加11关对应两条failureTips，失败界面统计下、操作按钮上留独立底色提示区，标题“通关提示 · 关卡名”。长句按面板宽度换行，失败面板随提示行数增高，横屏/小屏统一缩放，按钮布局/命中共用failureLayout。铁血文案错字“保护后铁血猎人的身后”按已告知用户修成“保护好铁血猎人的身后”，其它文案保留。普通/挑战同一关共用提示。
+所有当前关卡显示名去掉Ⅱ/Ⅲ：双头蛇窟、母舰、母巢护卫、空中堡垒、地狱魔蝎；更新mission-menu、view下一关标题、五个shared/*-data.js、对应browser页面title及import-defense-campaigns.py生成配置；extract-source.py异虫标题也统一。ID/路径/存档key不变，4号矿坑保留数字4，旧wolf未改。
+失败流程现有测试4通过1既有skip；11关名称与两条提示核对、33组320/390/844横竖布局无提示按钮重叠校验通过；33smoke通过并构建。work/gear-render/failure-tips-0068.cjs截图已目检320矿坑长提示、390异虫、844铁血。尚未上传，线上仍0067，下次0068。
+
+0068追加重来按钮位置：按用户要求，mission-menu移除固定底栏“一切重新开始”，有onRestartGame时在滚动星图末尾额外预留一节点间距，按钮放在最后一关之后。仅scroll到max（1px容差）才绘制/允许点击，绘制在地图裁切/淡出层内；横屏沿横向滚动末端。原确认和重置回调不变，未执行真实重置。320/390/844布局断言覆盖首屏旧位置不触发、末尾可见可点击、取消点击不触发、离开末尾隐藏；33smoke通过并构建。390竖/844横末尾截图已目检work/0068-restart-tail-*.png。未上传，线上0067，下一版0068。
+
+0068已发布：2026-10-15用户要求更新测试版，当前微信开发者工具App核对alien-zerg2路径和AppID wx290826620512561a，确认覆盖trial version后提交0.10.15.0068与本轮说明，亲见新出现Upload Successfully及本次Upload completed,cost23838ms。包含三档挑战/独立首通奖励、1+2+3+4累计星数（每关10/总110）、11关失败提示、关卡名去罗马数字、重来按钮仅星图末端显示。最新开发/体验版0068，下一版0069；存档0028保留，支付关闭，未部署云函数/推送GitHub。尚未安卓真机复测本轮挑战功能。
+
+## 0069 地鸣炮弹数科技（本地完成，未上传）
+用户要求基础弹数减少20%，弹数随科技等级增加。原基础10/任意科技升级后19，改为clusterCount=8+2*x，其中x为现有重型爆破等级0～5；每轮8/10/12/14/16/18颗。重型爆破保留原威力效果并追加每级+2颗，震荡冲击不再单独触发19颗。fireArtillery默认弹数也改8；范围/单颗伤害/击退/射速保持现有计算。techValues加入每轮炮弹颗数，升级确认与科技详情显示实际变化，不改变科技路径/碎片键/存档等级。
+更新howitzer-cluster与howitzer-starter测试（后者清理此前已陈旧的120/240半径预期，保留当前60/120实际半径），全部等级×震荡等级发射颗数、散布、伤害、预览验证，加howitzer-render共7通过；33smoke通过并构建。日志work/0069-howitzer-tests.log与0069-smoke.log。未上传，线上0068，下一版0069；存档0028保留。
+
+0069已发布：2026-10-15用户要求更新测试版，在当前微信开发者工具App确认alien-zerg2路径/AppID wx290826620512561a，确认覆盖trial version，提交0.10.15.0069及地鸣炮弹数说明。亲见本次Uploading后新出现Upload Successfully，日志Upload completed,cost28486ms。包含基础每轮10→8颗、重型爆破每级+2颗（满级18颗）及科技弹数预览。最新开发/体验版0069，下次0070；存档0028保留，支付关闭，未部署云函数/推送GitHub。
+
+## 0070 战役星图与挑战界面重排（本地完成，未上传）
+2026-10-15用户要求星图简化及挑战四档选择。星数改普通0、紧张1、困难2、噩梦3独立累加，每关6、全部66；从旧clear记录直接重算，无新增存档字段/不重发旧奖励。总数仅原版星图标+数字；普通通关后节点侧边2×3空心星及底纹，获得后用原版星图填实心，普通未通关不画星和底纹。挑战按钮仅已通关且当前选中节点绘制和命中。
+挑战弹窗标题“关卡名 难度挑战”；普通/紧张/困难/噩梦四框，移除倍率说明，标题行难度+首通奖励领取状态，奖励行原版星图标与物资并排；选中整框提亮和金边。打开暂存之前难度，点击行只改pendingChallengeLevel，确认才调用selectChallenge保存，右上×直接关闭不更改保存难度。
+普通奖励grantActReward改完整第二幕首通500芯元+10箱，第一幕不再发10箱，已有campaignClears或第二幕领取标记不重发；胜利文案同步。紧张首通1000芯元+20箱，困难30箱+50随机科技碎片、噩梦1随机红装不变。旧玩家已领取奖励不追回、不自动补差。支付关闭，存档0028保留。
+22项挑战/星数/选择取消/旧存档/重复奖励测试及33smoke通过，已构建。work/0070-tests.log、0070-smoke.log。work/gear-render/challenge-stars-0070.cjs生成320/390竖屏及844横屏截图，目检390星图及390/844弹窗。当前尚未上传/真机测试，线上0.10.15.0069，下一版0070。
+
+0070名称修订：用户要求难度“普通”改为“简单”，已修改challengeModes[0].name，星图当前难度与挑战四档共用此名称；奖励/倍率/存档值不变。重新构建，未上传。
+0070底栏排布修订：星图底部进入战役栏左侧只显示关卡名；非简单难度追加放大的中点和难度名，同一行，去掉“当前：”及额外说明文字。按左侧可用空间缩字号，避免长关卡名撞上进入按钮；按钮原命中范围保持。已生成320/390/844预览并目检320，重新构建成功，未上传。
+0070图鉴入口位置：按用户要求移到星图滚动末尾左侧，与重来按钮同一行，只有到末尾才绘制/响应；原左上固定入口移除。bestiaryRect与绘制命中共用，drawBestiaryEntry可传位置，保留原图标和未读点。即使没有重来回调仍预留末尾空间。320/390/844检查首屏旧位置无响应、末尾点击打开、范围无重叠、离开末尾隐藏；320末尾截图目检通过，构建成功。未上传，线上0069。
+
+0070已发布：2026-10-15用户要求更新测试版，在当前微信开发者工具alien-zerg2核对路径和AppID wx290826620512561a，确认覆盖trial version，填写0.10.15.0070及完整更新说明并提交，亲见Uploading后新出现Upload Successfully和本次Upload completed,cost19996ms。包含星数0+1+2+3、六星节点显示、仅选中节点挑战入口、四档确认/取消、简单名称及简单/紧张奖励调整、底部关卡名中点难度、图鉴末尾左侧全部变更。线上开发/体验版0070，下次0071；存档0028保留，支付关闭，未部署云函数/推送GitHub。
+
+0071末尾按钮位置（本地完成未上传）：用户明确星图尾部不再拉长，已保留0070 geometry.max原值。重来/图鉴从地图渐隐层移至额外UI层，仍仅到末尾触发显示；位置不参与滚动长度，离开末尾隐藏。两按钮组底部（图鉴点击框底）距底栏背景顶部40逻辑像素，重来与图鉴水平同排，点击使用同一矩形。320/390/844断言滚动长度不变、40px间距、互不重叠及点击开图鉴通过；390截图目检及构建通过。线上仍0070，下次0071。
+0071已发布：2026-10-15用户要求更新测试版，当前微信开发者工具alien-zerg2核对路径/AppID后确认覆盖体验版，提交0.10.15.0071。亲见本次Uploading转Upload Successfully，日志Upload completed,cost21803ms。包含星图长度不变、末尾触发额外按钮组、距进入战役栏40px及离开末尾隐藏。最新开发/体验版0071，下次0072；保留存档0028，支付关闭，未部署云函数/推送GitHub。
+
+0072星星样式（本地完成未上传）：按用户要求移除星图总星数及每关星数的单色方形底框；每关六颗空心/实心星改同一排，保留原版实心星素材，靠屏幕边缘时限制中心避免截断。删除关卡图标左侧01等小编号。挑战奖励星原本无独立底框，保留难度选择框。生成320/390/844预览，目检320星图通过，重新构建成功。线上仍0071，下次0072，存档不变。
+0072追加难度波次图标：原版image/misc/addition/difficulty_01～04.png为四档难度徽记（原phone_dlcmapfrm等引用），查阅图像后采用02黄眼、03红尖角、04紫多角分别作紧张/困难/噩梦波次HUD图标，简单保留原wave_icon。view.draw使用本局game.challengeLevel选图，菜单改选不改变正在进行战斗图标；图标同为24px占位。import-top-hud.py扩入hud-wave-1/2/3到同一top-hud-native.png，384×80，并兼容art-data变量名，更新来源记录。使用work/greenstar-python/bin/python导入。33smoke通过并重新构建，未上传，下一版0072；包含此前无底框单排星和去关卡编号。
+0072通关提示精简：按用户要求缩短11关每条提示，删除数字编号，failureLayout每条固定一行，不再拆行；绘制字号按可用宽度适配，完整显示无截断。保留原提示含义。生成320/390/844失败页预览，目检320矿坑两条单行通过，重新构建成功。尚未上传，线上0071，下次0072。
+0072已发布：2026-10-15用户要求更新，当前微信开发者工具alien-zerg2核对项目/AppID，确认覆盖体验版，填写0.10.15.0072并提交。亲见本次Uploading后新出现Upload Successfully。包含星星无方形底框/六星单排/去节点编号、三档增强难度波次徽记、11关精简单行无编号通关提示。最新开发/体验版0072，下次0073；保留存档0028，支付关闭，未部署云函数/推送GitHub。
+
+0073挑战奖励图标（本地完成未上传）：挑战四档奖励行增加现有芯元loot-processing-chip、物资箱loot-chest-native、科技碎片towerSpecGlyph及红色装备gearIcon示意，红装红色轮廓与随机标签；星星仍无底框。按剩余行宽均分奖励槽，图标24逻辑px，文字自适应字号，同排展示，奖励实际逻辑不变。work/gear-render/challenge-rewards-0073.cjs载入全部atlas，生成320/390/844截图，目检320所有奖励图标与文字完整、无重叠，构建成功。线上0072，下次0073，存档不变。
+0073总星数强调：星图总星图标22→26.4px（+20%），数量19→23px并使用700粗体，微调间距与基线，无背景框。重新构建成功，未上传。
+0073追加开箱报喜顺序并已发布：view.currentChestReveal把氪石移到操作员之前，保留后续红装→金装；socket-ui原先equipmentTech优先包装改为先调用基础reveal，无其它报喜才显示高级芯片。沿用各类已展示计数，奖励本身和掉率不变。混合奖励（含两件红装）验证顺序氪石→操作员→红装×2→金装→高级芯片，全部完成无漏项；33smoke通过并构建。2026-10-15用户要求更新测试版，当前开发者工具alien-zerg2核对路径/AppID并确认覆盖体验版，提交0.10.15.0073，亲见本次Uploading后新出现Upload Successfully。包括挑战奖励图标、总星图+20%/23px粗体、开箱报喜排序。最新开发/体验版0073，下次0074；存档0028保留、支付关闭，未部署云函数/推送GitHub。
+
+0074挑战素材改进（本地完成，未上传）：挑战奖励星13→19.5px（+50%），奖励文字统一13px，调整起始位置避免重叠；噩梦奖励文案“随机一件顶级红色装备”，使用内置imagegen生成红底金属装备格问号图标。三档波次图标基于原misc/wave_icon.png怪物轮廓生成，分别橙红肩刺、红色双角、紫红冠刺，噩梦按用户追加要求胸口加入单只竖瞳邪眼，替换0072误用的难度徽记。原始生成图与提示词保存artwork/challenge-ui-0074；import-challenge-ui.py统一缩至96px并打包384×96 challenge-ui-generated.png，art-data/provenance更新。import-top-hud恢复仅基础波次与击杀图标。已有view按本局challengeLevel选帧逻辑不变，无新增逐帧绘制操作。320/390/844挑战预览已生成，目检320奖励文字完整不重叠、图集透明效果正常。npm run test:smoke构建及33测试全通过（work/0074-smoke.log）。未上传；最新线上0073，下一版0074，存档0028保留、支付关闭。
+
+0074追加菜单按钮重设计（本地完成，未上传）：按用户青绿圆润按钮参考图，新增view.uiRoundPath/actionPlate/menuGlyph，采用青绿渐变、圆角、底部厚度、双层亮边和短科技指示线，无新增图片/动画/模糊阴影。menuActionButton改用统一皮肤和清晰白字，游戏菜单继续/退出/视角/音效/FPS带独立简洁图标，屏幕方向选项同步。星图挑战/进入/回到战役/重来、挑战四档选择卡及确认按钮接入，选中挑战卡亮青描边；科技/属性/装备等明确b/q操作矩形及教学下一步接入，完整信息面板与装备卡保留，不按尺寸自动误判按钮。原布局/点击范围/逻辑保持。使用既有text路径保证字体一致。生成work/0074-menu-{320,390,844}.png及挑战预览，目检320/844菜单文字完整无重叠。重新构建及33smoke全通过，未上传，线上仍0073。后续可继续统一尚未接入的定制绘制按钮；不要将gearPanel全局改为按钮，以免影响装备/信息面板。
+
+0074已发布：2026-10-15用户要求更新测试版，在已打开微信开发者工具alien-zerg2核对工程路径/AppID wx290826620512561a，关闭旧成功提示，亲见并确认覆盖trial version提示，填写0.10.15.0074及更新说明，提交后亲见本次Uploading转为新Upload Successfully。包含青绿科幻圆角菜单按钮、挑战星+50%/奖励文字加大/随机顶级红装问号图标、基于原怪物造型的三档波次图标及噩梦胸口邪眼。最新开发/体验版0074，下次0075；存档0028保留，支付关闭，未部署云函数/推送GitHub。
+
+0075加点数字反馈（本地完成未上传）：用户要求战车装备界面确认加点后所有变化数值瞬间跳动放大。view成功allocateAttribute前后比较equipmentNumberValues按实际显示精度的值，记录变化属性基础/附加数值、四类已分配点数及剩余点数。只在成功加点时排队；取消/不足不触发；等待装备页可见且无加点覆盖层才开始，连续未展示加点合并变化项。0.55秒单次正弦弹跳，上移最多3px、放大最多22%，属性行整体变换避免基础值/装备加成文字重叠，横向放大受列宽限制。完成清理不重复播放，未新增图片/粒子/模糊。3针对测试（四类实际加点精确变化集/延迟开始及取消/变换恢复）通过，33smoke通过并构建。尚未上传，最新线上0074，下一版0075；存档0028保持。
+
+0075追加新手教学与建塔提醒（本地完成未上传）：造塔教学完成切入battleIntroStep=2时清零grenadeTutorialDistance，榴弹教学直到实际累计驾驶600世界距离才激活；仅统计core正常驾驶walk后的实际位移，碰墙/原地/出生传送/击飞不计，计数截断600且随progress保存恢复（旧存档默认0）。等待期间正常玩法/移动，教学完成仍step3永久不再弹；step2触发可延续至第一幕后续波次，避免600距离时第一波结束导致丢失，第二幕仍不弹。升级完成教学文案改为先驾驶前进稍后学榴弹。关卡建塔提示精确替换“绿色块区域里点击放塔”。needsFirstTowerHint从zerg且存档首次改为所有战役本局hasBuiltDefenseTower未成功建过、playing非打扫、余量>0且水晶>=300；成功placeTower置本局标记，历史首次存档字段继续保留，取消/无效放置不停止。buildButtonWiggle沿用每3秒中0.9秒轻晃，管理/商店/暂停/选塔/放置时不晃。7教学与提醒测试、33smoke通过并构建。未上传，线上0074，下次0075，包含此前加点数字反馈。
+
+0075追加战斗与图鉴（本地完成未上传）：
+- view.step把game.buildSelected纳入暂停条件；选定塔看绿色区域时模拟不推进，UI/放置命中仍可用，取消/成功放置即恢复，render-budget该模式30fps。
+- core.hurt玩家每次由存活变死亡时gold+200，已死亡再受击不重复；正常复活与胜利修复复活调用playPlayerRevival，原版tanklevelup放大2.8、持续0.9秒，记录playerRevivedAt。倒地倒计时/复活文字用800粗体最高30px带深色描边，死亡显示额外200水晶，复活提示1.2秒。
+- hurt新增source参数，精英且非boss/miniBoss伤害仅对player减半（护甲/挑战倍率继续生效）；普通攻击、enemyVolley子弹、精英专属地面技能、部分技能伤害传sourceEnemy/owner，未给普通子弹加owner而改变死亡后子弹行为。对矿厂/矿车不减伤。精英单次实际扣血>=max(150,maxHp*.08)触发0.38秒vehicleHeavyHit，原hit-light/machine闪光+扩散环/6短光线，重叠重击刷新同一效果，护盾/低伤不触发。
+- 地鸣炮clusterRadius按(.85+.03*x)缩放，x为重型爆破等级0..5；8弹时收紧15%，18弹恢复原范围，弹数/射程/单弹爆炸半径与伤害不变。
+- 地面车头提示箭头从开局至第三波pending出怪清空显示，随player.angle旋转，双线轻亮呼吸，无阴影/新增图片；死亡/步行/打扫/非战斗/空降时隐藏，不影响输入。
+- bestiary-data铁血战士及精英改名铁血猎人；worldSize>=280的巨型图鉴形象最多放大55%，以缓存的全部实际动画帧宽高限制防裁切，竖屏详情预览区也适当增高；不改战斗模型尺寸。work/0075-bestiary-{320,390,844}.png已生成，目检320/390效果。
+验证：20战斗/复活/精英/地鸣炮针对测试通过，33smoke全通过并最终构建。未上传，线上仍0074，下次0075；含本节之前所有0075更改，存档0028保留，支付关闭。
+
+0075已发布：2026-10-15用户要求更新测试版，当前微信开发者工具alien-zerg2核对工程路径及AppID wx290826620512561a，确认覆盖trial version提示，填写0.10.15.0075及更新说明后提交，亲见本次Uploading转新Upload Successfully。包含此前0075全部加点动画、教学延后/建塔提示与暂停、复活/死亡200水晶、精英减伤及重击反馈、地鸣炮聚拢、前三波车头箭头、图鉴改名及巨型形象调整。最新开发/体验版0075，下次0076；存档0028保留，支付关闭，未部署云函数/推送GitHub。
+
+0076死亡水晶提示缩短（本地完成未上传）：用户反馈额外200水晶文字不应贯穿复活倒计时。view.draw仅在vehicleDeath.born后0.9秒内显示，最后0.25秒淡出；倒计时及实际发奖保持。构建成功，未上传，线上0075，下次0076，存档不变。
+
+0076追加建塔提醒口径修正：用户要求教程引导塔不算本关玩家另外造塔。core.placeTower增加可选tutorial标记，battle-intro唯一引导放置调用传tutorial:true；该塔仍扣水晶、计建造统计、更新历史首次存档字段，但不设置hasBuiltDefenseTower。正常放置才设置本局独立建塔标记，因此教程结束且水晶>=300/未满塔时继续间歇晃动，成功自行造塔后停止；不通过重置标记覆盖已有自主建造记录。8教学/提醒测试与33smoke通过并构建。未上传，线上0075，下次0076，包含前条0.9秒死亡水晶提示。
+
+0076追加5级装备暂停引导与矿厂爆炸结算：新增progress.vehicleEquipmentViewed，首次实际打开战车页即持久化；新存档不把查看科技算作装备访问，旧存档缺字段按已有managementVisited迁移。>=5且未访问/未确认提示，在可战斗且无其它教学/管理/礼物覆盖时暂停模拟、清移动输入，遮罩高亮底部等级按钮，只接受该按钮点击，文案“点击查看战车等级和装备”；点击开装备并永久完成。沿用原levelFiveHintAcknowledged兼容历史完成者，提前访问装备免提示。界面渲染30fps。
+矿厂致命受击failMission(target)记录failureExplosion，状态立即lost防止继续伤害，镜头聚焦被毁矿厂，原版大爆炸播放1.1秒期间不出失败结算/不响应结算按钮；view.step只推进爆炸年龄而不推进战斗，结束正常显示失败界面。重复failMission不重播；护送失败无矿厂保持原逻辑。8装备引导/爆炸/原教学测试及33smoke全通过并构建。未上传，最新线上0075，下一版0076；包含此前0.9秒水晶文字和排除教程塔提醒。存档0028保留。
+
+0076已发布：2026-10-15用户要求更新测试版，在当前微信开发者工具alien-zerg2核对项目路径/AppID wx290826620512561a，确认覆盖trial version，填写0.10.15.0076及本轮说明并提交，亲见本次Uploading转为新Upload Successfully。包含死亡200水晶文字0.9秒淡出、教程塔不计自主建塔提醒、5级未访问装备暂停引导、矿厂爆炸1.1秒后失败结算。最新开发/体验版0076，下次0077；存档0028保留，支付关闭，未部署云函数/推送GitHub。
+
+0077提示及战车图像（本地完成未上传）：放塔文案“绿色块区域里点击放塔”由13px普通字改为18px/800粗体，浅绿字配4px深绿描边，原居中位置不变。装备界面左上战车车体及武器同步缩放.31944→.383328（+20%），中心与等级/经验条布局不变。构建成功，未上传，线上0076，下次0077，存档不变。
+0077追加装备引导提前：首次战车等级/装备暂停引导触发与确认门槛从5级改为3级，保留vehicleEquipmentViewed及历史levelFiveHintAcknowledged字段兼容，不重复提示已完成者。4引导测试通过并构建，未上传，线上0076。
+
+0077已发布：2026-10-15经当前微信开发者工具确认覆盖体验版，提交0.10.15.0077并亲见本次Uploading转为Upload Successfully。包含3级首次装备引导、放塔文字18px粗体描边、装备页战车及武器放大20%。最新开发/体验版0077，下次0078；存档0028保留。
+
+0078本地完成未上传：按微信审核截图在shared/loading-screen.js底部预留118px深色信息区、细分隔线、12px五行版号信息，进度条上移至信息区上49px，底部留33px。原版alien-mac/source/XLFramework/Projects/alien_source/data/tabs/tab_string.lua:81–84提供著作权登记号2019SR0506795、ISBN 978-7-498-08757-7、国新出审【2021】226号、出版单位上海晨路信息科技股份有限公司；用户明确确认著作权人为上海鑫线信息技术有限公司。390/844横竖屏预览已目检，320预览已生成work/0078-loading-*.png；3加载测试通过并构建。移除view.draw世界防守塔可安装装备badge及每帧readyKeys扫描，保留科技管理和操作员详情装备提示。存档0028保持，线上仍0077，下次0078。
+
+0078已发布：2026-10-15用户要求更新测试版，经当前微信开发者工具alien-zerg2核对路径/AppID wx290826620512561a，确认覆盖trial version，提交0.10.15.0078，亲见本次Uploading后新Upload Successfully。包含登录加载页底部五行出版/著作权信息及进度布局、移除场上每座塔装备badge（保留管理界面提示）。最新开发/体验版0078，下次0079；存档0028保留，支付配置未改，无云函数部署/推送。
+
+0079本地完成未上传：登录加载状态文字（投送/同步等共用）13px普通字改为18px/800粗体、亮奶白#fff3cf、4px深色描边；保留当前高度，限制w-32宽避免窄屏溢出。构建及3加载测试通过，320px实际Canvas预览已目检清晰无重叠。线上仍0078，下次0079，存档保留。
+
+0079科技界面追加并已发布：去除分支塔已获得/未获得文字；未获得塔图案右下角用drawSmallLock(cx+25,b.y+41)。塔装备槽始终按unlocked绘制空加号，不画锁；未获操作员右侧两行“装备仓”“需先获得操作员”，已获空槽显示装备仓选择/可装入，实际装备及权限逻辑保留。390科技实际渲染已目检work/0079-tech-main.png，33smoke通过。2026-10-15通过当前微信开发者工具alien-zerg2核对路径/AppID、确认覆盖trial version，上传0.10.15.0079并亲见Uploading→Upload Successfully，开发/体验统一0079，下次0080。更新说明按用户要求首条强调登录页著作权人、出版单位、批准文号、ISBN及登记号已补齐，其后登录文字放大和科技/装备提示调整；界面字数限制后精简并核实完整未截断。存档0028保留。
+
+0080本地完成未上传：部署防御的四塔及矿车建造按钮新增专用深蓝青渐变（#245768→#102c40），保留青色圆角边缘。价格文案13→14px/800粗体，亮奶白配2px深描边；drawCrystalLabel增加可选bold参数并save/restore，只建造价格启用。水晶原图保持，在深底上更清晰；不足/满额依旧区分。构建成功，实际Canvas 390预览work/0080-build-main.png已目检，横屏预览已生成。线上0079，下次0080，存档不变。
+
+0080/0081已发布（2026-10-15）：0080含建造按钮对比优化和钳虫火柱修正。原pincerImpact将横向pojiadanbaozha随攻击角旋转造成横倒，现impact固定-Math.PI/2朝上，落点方向保留；12钳虫测试通过，原帧目检work/pincer-orientation.png。0080本次Uploading→Upload Successfully已核实。
+上传过程中用户追加，0081继续完成并上传：失败爆炸位置改refineryBounds(target).bottom；专用drawRefineryFailureExplosion使用旋转后frame.ox定位每帧底部，避免原drawGroundExplosion固定上移96*scale造成错位。1.1秒爆炸后烟环残留至1.6秒，8原版dust帧烟团扩散环+3上升烟冠，无新增图片；原失败状态立即lost和停止伤害逻辑保留。failure-explosion测试已调整17次步进通过，work/0081-failure-{0.3,0.8,1.2}.png已生成、0.8目检。入驻/升级操作按钮深底build样式+亮色粗体描边价格，入驻肖像62→68.2(+10%)，移除卡内对空对地badge。构建成功。当前工具alien-zerg2/AppID核对、确认覆盖trial version，0081亲见Uploading→Upload Successfully。最新开发/体验版0.10.15.0081，下次0082；说明首条仍强调版号五项齐全；存档0028保留。
+
+0082本地完成未上传：任务失败统计波数/击杀/建塔文字区域去除独立矩形底框；通关提示与底部操作按钮的布局间隔14→28px（按屏幕缩放），点击区域跟随failureLayout一致移动。保留整体结算外框与提示区域。构建成功，390实际预览work/0082-failure-main.png已目检，横屏预览已生成。线上0081，下一版0082，存档不变。
+
+0082已发布：2026-10-15微信开发者工具核对项目，确认覆盖体验版，0.10.15.0082亲见Uploading→Upload Successfully。包含失败统计底框移除与提示按钮间距。下一版0083，存档保留。
+0083修正：用户再次指出多人入驻面板对空对地标签。0081删除字符串缺techRank:0导致未匹配，实际上漏删；本次准确删除drawPlacedTower中b.weapon的drawTowerTargetBadge调用。肖像已是68.2相对原62放大10%，保持该尺寸不重复叠加。
+0083构建成功，实际drawPlacedTower多人选择预览work/0083-arrival-main.png已核实：无对空对地标签，三肖像均68.2px，名称/威力/入驻按钮不重叠。未上传，线上0082。
+
+0083已发布：用户上传请求中追加通关提示框简化，已将L.tips深色整块底框改1px低对比细分隔线，保留文字和0082加大间距，构建及390实际预览已目检。2026-10-15当前微信开发者工具alien-zerg2核对工程/AppID，确认覆盖trial version，提交0.10.15.0083且亲见本次Uploading→Upload Successfully。包含多人入驻卡真正移除目标标签、保持肖像+10%、通关提示简化。最新开发/体验0083，下次0084；存档0028保留。
+
+0084已发布（2026-10-15）：造塔绿色区域仅在playing且buildSelected时惰性生成，普通战斗不预生成。view.prepareBuildAreaQuery用terrain/nav二维前缀和取代每个采样点重复扫描足迹，矿厂/塔重叠仍实时校验；缓存沿用nav/clearedProps/矿厂位置失效及造塔邻近tile失效。可视tile按镜头距离排序，优先中心，生成预算8ms/帧，移除原最多4tile限制。5项build-area-cache测试（包括密集网格对照实际buildSiteError、加塔后对照）通过，33smoke通过并构建。加农炮射程250→300（+20%），其它炮种不改。当前微信开发者工具alien-zerg2/AppID wx290826620512561a确认覆盖trial version，填写0.10.15.0084及说明并提交，亲见本次Uploading→Upload Successfully。最新开发/体验0084，下次0085；存档20261009-0028保留，支付/云函数不改。更新说明首条继续强调登录页版号五项信息已补齐。
+
+0085本地完成未上传：用户要求第一关骚扰喷火螳螂威力-30%、喷射间隔+3秒、攻击距离-200，并询问关卡递增机制。tank-mantis spawn首关lavaDamageScale .5→.35（喷射500→350DPS、地面熔岩160→112DPS，倍率前），lavaRest 8 vs其它5秒，首次出场2秒等待不改。首关lavaAttackRange300（名义atk_radius500-200），瞄准落点中心按本体至矿厂方向截断300；此前技能无视名义射程直接锁定矿厂，因此现在远距离喷射会落在矿厂前方，预警/火焰/地面池共同使用受限lavaTarget。其它关卡Infinity保留既有行为，火焰覆盖范围不变。11螳螂/出生方向测试、33smoke通过并构建。未上传，线上0084，下一版0085，存档保留。
+递增审计：mail-monsters giantCampaigns=['zerg','mine4','zerg1','snake3','airship3','thunderraid','greenstar','fish3','fortress2','scorpion2']，giantScale=1+.2*index，用于螳螂、脑虫、蜂巢HP/攻击；机械蛇独立使用同序列且snake3额外1.3。此历史序列不等于当前星图顺序，缺iron-alien；mine4/thunderraid还有.85修正。未擅自重设递增曲线。
+
+0085追加本地完成，尚未上传（2026-10-15）：
+- 用户要求内部关卡顺序与当前星图一致，并据此递增骚扰巨兽。新增shared/campaign-order.js抽取mission-menu原missions，保持当前星图真实顺序：zerg,mine4,zerg1,snake3,airship3,thunderraid,iron-alien,greenstar,fish3,fortress2,scorpion2。mission-menu、view.nextCampaign、progression挑战及恢复列表、mail-monsters和mechanical-enemies共用；browser非wolf页面最前加载，package-game.py在defense-code放campaign-order转发到shared。giantScale仍1+.2*index，补上此前遗漏的iron-alien，使后续阶梯正确。mine4/thunderraid的.85普通怪修正跳过已有giantAttackScale的骚扰巨兽，避免阶梯回落；机械蛇snake3专属1.3保留。
+- 通过原生Mail App QQ Inbox收取Tommy《虫族小飞蛾渲染3》（23:00），附件下载/Users/ryan/Downloads/虫族小飞蛾渲染3.zip。144x144，17方向x2帧，用户明确两帧用于缓慢明暗。保存source-art/mail-monsters-20261015/enhanced-moth，新增tools/import-enhanced-moth.py，向mail-monsters-art追加915003和enhanced-moth.png。
+- 强化飞蛾915003：独立空中单位，hp16000，damage540，speed150，range320，间隔2.4秒，绿色腐蚀能量弹。mail-monsters安装时把D.waves所有11693替成915003并删除旧unitTypes11693，图鉴蓝甲飞碟删除，旧记录legacy映射到强化飞蛾普通。图鉴新增普通/精英及所有关卡roster，精英遵循现有4倍HP/1.6倍damage、4/3体型和acid技能机制。独立飞蛾替换母舰蓝甲波次，所有关卡所有波次测试确认无11693。
+- nightmare challengeLevel===3蜂巢召唤ENHANCED，damage540*giantScale vs普通180*giantScale，独立外观/图鉴key，沿用6只上限、飞出/俯冲/返航和母体死后独立作战。hiveSummon标记防止自动精英抽取；非噩梦DRONE915002保持。
+- 战斗增强飞蛾用17方向两张native帧按cos周期2.4秒叠绘平滑明暗，不增帧；精英金光仅35%单层以免两帧叠加过曝，bestiary elite sprite支持传入alpha。实际Canvas预览work/enhanced-moth-review.png已目检普通明暗/精英/吉普车。
+- 新素材初包31877010bytes(30.40MiB)，超30MiB上限419730。用户要求分析包体成分，已统计初包图片27.99MiB92.1%，代码数据1.27MiB4.2%，音效1.14MiB3.7%。图片分类：原版混合图集8.17MiB、地形遮罩4.61、虫巢动画3.16、大型怪物2.68、独立特效2.19、车与死亡1.56、其余5.63。音频17个wav，无mp3背景乐打包。
+- 在不减分辨率/方向/帧数下用256色PNG压缩enhanced-moth(421966→99804)和jeep-base-20261013(579325→121020)，原始邮件PNG保留，两个import脚本同步编码。压缩属于有损调色板，预览检查颜色/轮廓；未改其它大图。最新包31096595bytes=29.656MiB，剩360685bytes约352KiB，图片27.25MiB91.9%，代码1.27MiB4.3%，音效1.14MiB3.8%。详细统计work/0085-package-composition.json。
+验证：45项强化飞蛾/关卡倍率/挑战/机械敌人/螳螂针对测试通过，最终变更后强化飞蛾5项再次通过，33smoke及构建通过。宽扫旧测试另发现历史失效断言：campaign-menu/mission-menu仍假定7关或旧两关名/旧footer，hive-moth-art仍假定6400hp而现有属性早已12800，mail-monsters和moth伤害断言未计现有战车护甲；未改生产行为迎合旧断言，未改这些旧测试。日志work/0085-regressions.log及0085-moth.log。最新线上仍0084，0085包含本节及上节首关螳螂削弱，等待用户上传指令；存档0028保留。
+
+0085素材256色试压对比（未替换生产assets）：用户要求试压虫巢和大型怪物，检查体积与画质。28张图集备份于work/monster-palette-trial/original，候选compressed，脚本compare.py/detail.py及results.json可复现。大型怪物18张已经是P模式128/256色（蜂巢/雷兽128，螳螂256，脑虫/机械蛇<=256），重新编码不小于原文件，保留原文件，无节省无画面变化。虫巢10张3315032→1521581 bytes，节省1793451=1.71037MiB/54.1%。初次FASTOCTREE所有RGBA得到59.3%，进一步发现insect-nests-2/3/4仅257种RGBA（两个全透明不同RGB）；改为合并完全透明色再精确映射256色，保留所有可见颜色，少省约172KB换这三张可见像素不变。其它RGBA用256色FASTOCTREE，已有P的5号保持。分辨率不变，482个图集帧矩形校验通过，动画元数据完全未改。
+实际静态对比深/浅底已目检work/monster-palette-trial/nest-comparison.jpg及comparison-light.png：整体形状/主色/细节接近；有损图的细微色阶减少，空中巢穴下方软阴影在浅底上出现更明显阶梯边缘，不能称完全无损。生产包仍29.656MiB；若采用当前候选预计27.946MiB，尚未应用/上传。原有0085代码与包仍保留。
+
+0085已发布（2026-10-16）：用户要求将之前改动更新体验版。重新执行npm run test:smoke，构建与33项测试全通过，包31096595bytes（29.656MiB）。在现有微信开发者工具alien-zerg2核对工程路径/AppID wx290826620512561a，关闭旧成功提示，亲见并确认覆盖trial version，填写0.10.16.0085及完整更新说明（首条强调登录页五项出版/著作权信息），提交后亲见本次Uploading转为新的Upload Successfully。包含首关螳螂削弱、共享关卡顺序及巨兽阶梯、强化飞蛾普通/精英与噩梦蜂巢替换、飞蛾/吉普车素材压缩。虫巢256色试压仍仅对比稿，未替换生产素材。最新开发/体验版0.10.16.0085，下次0086；存档20261009-0028保留，支付仍未启用，未部署云函数或推送GitHub。验证日志work/0085-upload-smoke.log。
+
+0086本地完成未上传（2026-10-16）：用户要求强化飞蛾配高空阴影。view.usesHighFlightShadow加入MODEL:ZERG_MOTH_ENHANCED，共用原有高空单位drawCarrierShadow（右下偏移18/62*scale、柔和椭圆地面投影），自动取消原贴身小圆影；普通/精英/噩梦蜂巢强化飞蛾均适用，隐藏/死亡/无地面时沿用过滤，精英及缩小效果同步尺寸。不改飞行/俯冲/伤害位置，不增加素材。实际Canvas三形态预览work/0086-moth-shadow.png已目检，构建和33smoke通过（work/0086-shadow-smoke.log）。线上仍0.10.16.0085，下一版0086，存档不变。
+0086追加图鉴尺寸：用户称“赤蛇”，图鉴实际条目为刺蛇（UNIT_Hydralisk_small），普通/精英图鉴肖像统一缩小15%；喷火螳螂TANK_MANTIS图鉴肖像放大15%并保留全动画边界防裁切。仅bestiaryPortrait展示倍率，不改worldSize或战斗尺寸。work/0086-bestiary-320/390/844.png生成，目检刺蛇及螳螂竖屏。33smoke通过并最终构建。尚未上传，线上0085。
+
+0086已发布（2026-10-16）：用户要求更新体验版，经当前微信开发者工具alien-zerg2核对工程路径/AppID wx290826620512561a，确认覆盖trial version，提交0.10.16.0086并亲见本次Uploading转新的Upload Successfully。包括强化飞蛾高空地面阴影（普通/精英/蜂巢召唤）及图鉴刺蛇-15%、喷火螳螂+15%。更新说明首条继续强调登录页出版/著作权五项齐全。最新开发/体验版0086，下一版0087；存档20261009-0028保留，支付仍关闭，无云函数部署/Git推送。
+
+0087本地完成未上传（2026-10-16）：用户反馈绿块点击不能造塔、失败缺提示，并要求暂停造塔及更明显文字。
+- 发现绿块采样为固定4 mod 8网格，而nearestBuildSite只使用点击位置相对8格；极窄合法区域可被后者漏采。保留原160范围及最近距离排序，追加固定采样网格候选，所有候选仍通过buildCheck，保证绿块附近有效点可找到，不放宽地形/重叠校验。
+- 原落点点击截止竖屏h-225/横屏h-110，而绿色绘制未限制；下方可见绿块存在无响应区。新增buildPlacementBounds共用top+42至实际vehicleHUDLayout.y用于绘制裁剪和点击，现有建造/取消按钮命中保留；选塔期间其它区域点击直接返回，不再落入投弹/移动逻辑。
+- 放置失败时view记录世界坐标红色双圈，按UI时间1秒扩散淡出，附近显示具体原因及“未扣水晶”。位置失败保留选塔以便重试，战斗继续暂停；抑制旧lootNotice重复/暂停不消失。成功清除失败反馈。失败不扣资源，余额/上限等实际校验不变。
+- 造塔提示18px/800→最高23px/900，亮白绿、5px深色描边，窄屏自动适配。shop与buildSelected沿用暂停逻辑，UI时间仍推进。
+验证：新增4项针对回归（窄岛网格偏移、旧底部无响应区、失败保留选择/不扣水晶/UI暂停计时、菜单暂停），加缓存与道路建造共13项全通过；33smoke全通过并构建。实际Canvas竖/横截图work/0087-build-main.png及landscape.png生成，竖屏红圈/文字已目检。线上仍0.10.16.0086，下次0087；存档保留，未上传。
+0087追加战术卡（本地完成未上传）：用户要求护盾/加速+2s、十字火焰+1s、星空漩涡+2s并可半强度牵引boss。tactics.js盾时长2.6+.1lv+.5tier→4.6+.1lv+.5tier（1级2.7→4.7秒，护盾与加速共用tacticalShield）；十字541区2.9+.1lv→3.9+.1lv（1级3→4秒）；漩涡3177区5+.2lv→7+.2lv（1级5.2→7.2秒）。移除boss/12504牵引豁免，boss/miniBoss/12504牵引25世界单位/s，普通仍50，重叠每模拟帧只拉一次、40中心保留距离、地面墙阻挡不变；只普通怪附加frozen，boss仅位移避免持续定身。combat-hints更新护盾加速及首领减半牵引说明。
+新增tactical-duration-boss.test.js验证各等级时长及两个dt下普通/boss/mini/旧12504位移与不叠加/不定身，联同tactical-adjustments共6项通过，33smoke通过并构建。tactics.test盾过期断言2.71→4.71。扩展25项检查23过2失败：旧tactics全清理测试advance12却临时塔既有life13、旧displacement HUD提示要求strokeRect次数，与本次卡时长/牵引无关，未改生产行为迎合。日志work/0087-tactics.log、0087-tactical-smoke.log。包含此前0087造塔修正，线上仍0086，尚未上传。
+
+0087已发布（2026-10-16）：用户要求更新测试版，当前微信开发者工具alien-zerg2工程路径/AppID wx290826620512561a核对，确认覆盖trial version，填写0.10.16.0087和更新说明，亲见本次Uploading转新Upload Successfully。包含0087全部造塔网格/点击范围/失败红圈与原因/保留选塔暂停/提示加粗，以及盾加速+2s、十字火焰+1s、漩涡+2s及boss半强度牵引。最新开发/体验版0087，下一版0088；存档0028保留，支付不变，无云函数部署或Git推送。
+
+0088本地完成未上传（2026-10-16）：用户要求强化飞蛾飞行-30%、喷小绿毒珠、大幅降低威力。mail-monsters ENHANCED属性move_speed150→105（关卡原速度倍率继续应用），基础damage540→216（-60%，已向用户说明取值）；蜂巢增强飞蛾轨迹速度230→161、damage216*giantScale，普通蜂巢飞蛾不变。新增spitEnhancedMoth复用enemyVolley但kind=enemyacid、poisonBead=true，保留sourceEnemy/精英伤害缩减/挑战倍率，独立单位间隔2.4秒不变；射程到目标落点，不再硬写540飞行距离。原color/element不满足owner绘制分支实际仍为火球，现view专门画5世界像素深绿边/亮绿芯/小高光毒珠，无新素材或模糊。蜂巢强化飞蛾距目标160以内喷一颗、置flightHit，飞至末端返航，避免旧接触伤害重复；不影响普通飞蛾俯冲。bestiary强化飞蛾普通/精英combat速度/伤害及攻击文案同步。6项enhanced-moth测试（增加蜂巢减速/一次喷射/无接触伤害）通过、33smoke及构建通过，日志work/0088-moth.log和0088-smoke.log。线上仍0.10.16.0087，下一版0088；存档保留，未上传。
+0088已发布（2026-10-16）：用户要求更新体验版，当前微信开发者工具alien-zerg2确认路径/AppID wx290826620512561a，确认覆盖trial version，提交0.10.16.0088，亲见本次Uploading转新Upload Successfully。包含强化飞蛾飞行-30%、基础伤害-60%、小绿毒珠及噩梦蜂巢喷射后返航，图鉴数值同步。最新开发/体验版0088，下次0089；存档0028保留，支付不变，无云函数部署/Git推送。
+
+0089本地完成未上传（2026-10-16）：按用户要求简化无效造塔反馈为0.35秒短闪的单红圈+中心叉号，无填充/内圈；同时间落点上方冒字“此位置无法建造”上移12px并淡出。失败立即清除buildPoint，避免原建塔预览在红圈处绘制具体塔座；清空顶部常驻buildError显示，保留内部反馈reason与已选塔/暂停重试、不扣款逻辑。4项放置反馈回归及33smoke通过并构建，日志work/0089-feedback.log、0089-smoke.log。线上仍0088，下一版0089，未上传，存档不变。
+0089追加母舰第二幕波次（本地完成未上传）：按用户“母舰2”对应母舰第二幕，独立6辆四足战车波次逐辆perUnitDelay3000→3900ms（+30%），首辆等待和总数不变；该幕强化飞蛾各波次按累计分配round(total*.8)减少20%，保持原路线与其它单位，第一幕/其它关卡/蜂巢召唤数量不变。mechanical-enemies创建secondActWaves时应用，之后插入四足波次。shared机械配置、空中堡垒源数据及图鉴“步行战车”统一改“四足战车”，内部id/存档key不变。8机械测试通过，新增验证3.9秒实际schedule间隔及逐波飞蛾数量；33smoke构建通过。日志work/0089-waves.log及0089-waves-smoke.log。包含此前0089短闪红圈叉号提示，线上仍0088，未上传。
+0089追加底部战车等级提示（本地完成未上传）：view.drawVehicleRankBadge在等级框内上方绘制两道金色军衔向上折线，下方Lv标识，等级数字32→28为装饰留空间；原点击区域及升级数字弹跳、3级教程引导保留。右上角圆形感叹号按UI时间2.4秒缓慢呼吸，仅P.unspent>3，或战车六装备位含空位且仓库实际有满足等级的装备时出现，状态解除即时消失。不新增贴图。2项条件回归通过，33smoke通过并构建；实际Canvas预览work/0089-level-hud.png已目检。线上仍0088，未上传，存档不变。
+0089等级徽章视觉修订：用户要求写实军衔放数字下方、去掉Lv、绿色感叹号稍移框外。drawVehicleRankBadge改为两条有金属渐变/亮边/暗轮廓厚度的实心军衔(y50/59)，数字中心上移9逻辑像素；提示圆标改绿色#69ec8f并移到(307,4)略超右上框，闪烁条件不变。构建通过，work/0089-level-hud.png实际绘制已目检；未上传。
+0089军衔再次微调：双杠整体缩小10%，两条起点间距9→7逻辑像素，改银色金属渐变和冷白高光；等级数字和绿色提示保持。构建成功，实际HUD预览已目检，尚未上传。
+0089已发布（2026-10-16）：用户要求更新体验版，当前微信开发者工具alien-zerg2核实项目/AppID wx290826620512561a，确认覆盖trial version，提交0.10.16.0089，亲见本次Uploading→Upload Successfully。包含银色紧凑军衔等级框、绿色框外加点/装备提示、0.35秒造塔失败红圈叉号冒字、母舰二幕四足战车出场间隔+30%及强化飞蛾数量-20%、四足战车改名。说明首条继续著作权人等五项登录页信息。最新开发/体验0089，下次0090；存档20261009-0028保留。
+0090本地完成未上传（2026-10-16）：用户反馈双头蛇技能攻击过频。mechanical-enemies普通激光间隔1.2→1.8秒、初次3.2→4.8秒；扇形激光9→12、雷电弹幕7→10、喷火5→8、召唤12→16、护盾17→22秒，首轮同样延后。castSnakeSkill设置公共技能间隔2.5秒、延后普通激光至少1.8秒；update优先选技能且当帧return，避免同帧普攻/技能及多个技能相邻帧连放。召唤哨戒头5秒普攻、单次伤害/弹数/低血量弹数增强不变。10机械测试（新增同时到期技能与普攻错开、普通激光间隔）及33smoke通过并构建，日志work/0090-snake.log、0090-smoke.log。线上仍0089，未上传，存档保留。
+0090追加四足战车调整（本地未上传）：母舰第二幕独立六辆波次perUnitDelay3900→5070ms，在0089基础再+30%；初始等待及数量不变。MODEL:METAL_BEAST全体出生尺寸倍率1.15→1.15*.8，普通/大体型同族战斗尺寸再-20%，母舰普通最终scale .92→.736，沿用其它关卡已有尺寸修正。10机械测试通过（验证母舰5.07秒实际schedule及.736尺寸），33smoke及构建通过。线上0089，待发布0090同时包含双头蛇频率调整，未上传。
+0090追加简单难度下调20%：progression.challengeModes[0].multiplier 1→.8，复用统一damage/hurt倍率，所有战役简单敌人等效耐久及对友军伤害均为原80%；紧张1.5/困难2/噩梦3不变，波次/奖励/存档不变。30挑战/机械回归通过，覆盖11关四档倍率与实际承伤/伤害；33smoke通过并构建。原失败结算测试用hp裸伤害模拟必杀，现减伤后不足以击杀，已修正测试入参按倍率换算；机械单次伤害断言同步。日志work/0090-easy.log、0090-easy-smoke.log。线上0089，未上传，待0090含双头蛇/四足战车调整。
+0090追加新驻守关卡“R星前哨”（用户图纸IMG_8294.HEIC；2026-10-16，本地完成未上传）：
+- ringmine内部ID，星图snake3之后airship3之前；campaign-order共用顺序自动更新nextCampaign、挑战星数与giantScale阶梯。名字用户确认R星前哨，源于R形采矿/怪物通道；新增失败提示。progression补supplies/首通奖励白名单，普通/挑战独立存档共用动态campaign名单，不清档。
+- shared/ringmine-layout.js 2304x2112世界：左虫洞(410,1320)向上经环路绕行，内虫洞(790,1040)汇入斜通道，两路在底部U形折返再到右上矿厂(1890,700)；驻守位(1740,875)面向下方来路。圆环上方围绕空心坑，空地三小坑(600,1530)/(1230,620)/(1810,1430)。格子地形阻止道路/坑/山边建塔；全路径采样无阻塞，主要空地足够造塔。
+- shared/ringmine.js基于现有mine4驻守机制独立关卡，固定车位/自动拾取/自动攻击/旋转车头/拖图/双指缩放最近标准+20%/暂停造塔，按作者路径移动避免穿越山坑抄近路。两幕各7波，双虫洞错峰7秒，钳虫/刺蛇/大甲虫混合和末波首领；一幕3000水晶，二幕1800。图鉴使用bestiarySource zerg使同种怪物沿用图鉴/精英。新增场景的放塔失败沿用短闪红圈并保留选择重试。
+- tools/build-ringmine.cjs使用原版outputs/alien-ios/hero_alien.app/data地表/碎石/停车平台和现有source-art/thunder-raid-asteroid的山脉/环形坑/岩层横截面、iron-alien直立北山。地表羽化随机拼接，碎石路裁取完整不透明图块，避免原地形atlas的缺角。北山不旋转，左右山镜像朝内；横截面逐条跟随前缘轮廓，边缘噪声alpha融合，素材全烘焙无需运行时生成。新terrain JPEG60+独立无损alpha mask，共约300KiB；全包31,425,413 bytes <30MiB，余31,867 bytes，后续加素材注意限制。
+- minigame/game.js加载模块与jpg；browser/ringmine.html可独立运行。实际全景work/0090-ringmine-overview.png、手机work/0090-ringmine-phone.png已目检，初始camera x1750保障矿厂不被右边裁切；地图图稿work/ringmine-asteroid-preview.png。
+- 新关卡7项（顺序/保存/地形路线/怪物到矿/驻守二幕/双指/打包入口）+挑战21项=28通过，33smoke通过并构建；日志work/0090-ring-tests.log、0090-ring-smoke.log。新关卡自动测试覆盖难度及通关奖励。未上传，线上仍0089；下一版0090含此前简单难度.8、双头蛇放缓、四足战车5.07秒与尺寸-20%。未真机实玩新关卡。
+0090 R星前哨按用户反馈修订（本地未上传）：新增path3左虫洞→下半环→原共用尾路，两幕左虫洞波次按奇偶交替path1上半环长路/path3下半环捷径，内侧虫洞path2不变；出生点仍仅两个，route3内部路径节点独立。道路铺图仍全圆环，寻路/禁造地形同步。build-ringmine生成器改用异虫compose-strategic-terrain同款t04岩地、t05土壤、t06沙路及alpha01四角过渡，路肩叠43px不规则土层和沿线碎岩/接触阴影，消除原简单碎石贴边；基础地表仅采原版右侧完整纹理。四座环形山洞口按原crater素材中心透明区域flood fill生成切除mask，最后destination-out贯穿完整地形，保留内壁锯齿及alpha，真正露出动态星空，不填黑色。全景work/0090-ringmine-overview.png已重新渲染目检。9新关测试（含所有路径可走、波次交替、路径长短、洞口alpha0/岩壁不透明）与33smoke通过并构建；日志work/0090-ring-revision.log及0090-ring-revision-smoke.log。新素材仍包内烘焙，无新增逐帧过渡绘制；线上0089，未上传。
+0090 R星前哨第三次修订（本地未上传）：矿厂平台改不规则多边形轮廓、12px羽化混凝土边缘、岩土外缘与碎石；入场沙路按横向alpha渐隐接入平台，去掉原硬矩形/圆头贴片。驻守车位(1740,875)→(1740,540)，矿厂(1890,700)左上方，朝下保持可旋转。新增上方中央山洞(1152,350)和route4，经(1290,420)/(1440,500)/(1560,610)/(1660,730)抵矿；使用原生hive cave带前景遮挡，campaign caves=true/spawnIds=[4]仅画北洞，原两虫洞仍烘焙。两幕每幕3/5/7波第26秒出现6/8/10只偷袭（第二幕+2），1.9秒逐只间隔，第5波刺蛇其余钳虫；首只出现提示“北侧山洞偷袭 · 注意矿厂上方”，4秒消失。保留原R环路交替与内侧虫洞波次。10关卡测试+33smoke通过并构建，实绘work/0090-ringmine-overview.png已检查。日志work/0090-outpost-ambush.log与smoke。线上0089，尚未上传0090。
+0090驻守维修距离修正：用户要求停车可修矿厂；审计vehicle-gear.repairBuildings统一中心距离<=180，旧停车(1740,540)离矿(1890,700)219.3确实超限。将车位/实际停车/烘焙底座统一移(1770,580)，仍在矿厂左上，距离169.7；保持全局维修半径与速率不变。新增四档维修装备真实装备并updateEquipmentEffects验证矿厂按repair_rate回血、gearRepairs反馈与卸装停止；11关卡测试+33smoke通过并构建，预览重生成并检查。日志work/0090-repair-tests.log和0090-repair-smoke.log。未上传，线上0089。
+
+2026-10-16 新任务交接（战车属性精简，尚未上传）：
+- 用户要求新任务命名“异星要塞-星河战队小游戏开发”，继续当前开发。真实工程仍本仓库outputs/alien-zerg2-wechat，禁止旧wolf同步，保留存档。
+- 当前shared/view.js新增vehicleStatRows/vehicleStatsButton，两页单列显示：第一页攻击伤害、生命、射速、暴击几率、移动速度；第二页按用户最终修正为榴弹伤害、榴弹冷却、轮刀伤害、复活间隔、设施修复。底部翻页按钮，设施修复是装备真实repair_rate，复活间隔是repairTime。数值弹跳保留，加入repairRate和repairTime。
+- core.js移除战车护甲减伤、装备护甲赋值置0；progression.derived armor置0，撞击装备删除def_physic和护甲介绍；属性加点/确认页删除护甲显示，生命加点仍保留。vehicle-gear.syncEquipmentEffects增加repairRate与baseStats.repairRate=0。矿厂/矿车/铁血猎人已有维修逻辑（iron-alien使用refinery代表猎人），未改其维修半径或速率。旧armor字段暂留0兼容，检查是否需进一步清理界面名称。
+- 预览脚本work/gear-render/vehicle-stat-pages-preview.cjs，实际图work/vehicle-stats-basic.png与effects.png，第二页目检排版正常，5行+按钮位于旧属性栏区域，无新资源。
+- 最新npm run test:smoke 33通过，日志work/stats-pages-smoke.log。equipment-number-feedback 3通过。新增vehicle-stat-pages.test.js 2项中无护甲伤害测试通过，但点击翻页测试仍失败（未切页，可能被新手引导拦截，应查明，不要删断言）。该测试设level10、start、resourceIntroStep5、battleIntroStep3仍失败。实际页面画出来正常但交互未验证完成。work/stats-pages-final.log。attributes.test.js仅plating预期allowed去armor，尚未运行全部该文件。继续修正交互/测试，然后构建验证。
+- 0090原先R星前哨等上传始终停Uploading，尚未观察Upload Successfully。最后确认线上0089；禁止声称0090已成功。新属性变化本地构建过但未发起上传。当前用户仅要求继续开发，不是新一轮上传指令。
+
+2026-10-16 战车属性精简续任务完成验证（本地，未上传）：
+- vehicle-stat-pages点击失败确认为测试fixture的attributeIntroDone=false，socket-ui强制属性教学拦截。补齐已完成教学及已查看装备状态；保留真实down点击断言，390x844及844x390均经resourceIntroProject按实际屏幕按钮坐标往返翻页通过。无需修改生产点击/教学逻辑。
+- 更新ram-armor回归为四档撞击装备不再加护甲、实际受伤按挑战倍率、卸装为0；旧融合存档def_physic忽略而ram_damage保留。另增四档维修装备repairRate及卸装清零验证。
+- 分页/护甲/维修/数值反馈9项通过。最终实际构建成功，总31427416 bytes，33项smoke在最终构建后全通过；日志work/stats-pages-build-final.log、stats-pages-smoke-final.log、stats-pages-verified.log。
+- attributes.test.js完整运行7过5失败，日志work/stats-attributes-final.log。包含repairTime随computing下降与旧“全数值单调递增/限定收益”断言冲突、旧UI/教学状态及存档比较断言；未改生产行为迎合旧测试。护甲受伤旧预期已改为当前挑战倍率，新独立护甲测试通过。不能宣称全测试套件通过。
+- 既有Canvas两页预览保留。第一页攻击伤害/生命/射速/暴击几率/移动速度；第二页榴弹伤害/榴弹冷却/轮刀伤害/复活间隔/设施修复。护甲退出战车减伤和展示，设施维修目标说明矿厂/矿车/铁血猎人。
+- 未上传、未操作微信工具、未清存档或改存档key，最后确认线上仍0089；0090历史Uploading无成功证据。

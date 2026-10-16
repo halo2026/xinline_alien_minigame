@@ -1,0 +1,264 @@
+{
+  "initial": {
+    "sampleDurationMs": 32248.641,
+    "functionCallTotalMs": 6490.258,
+    "topSelfSamples": [
+      {
+        "function": "stars",
+        "url": "https://usr/game.js",
+        "sampleMs": 10986.19
+      },
+      {
+        "function": "(idle)",
+        "url": "",
+        "sampleMs": 2386.55
+      },
+      {
+        "function": "set fillStyle",
+        "url": "",
+        "sampleMs": 2160.99
+      },
+      {
+        "function": "",
+        "url": "",
+        "sampleMs": 2043.6
+      },
+      {
+        "function": "",
+        "url": "hidden",
+        "sampleMs": 1689.82
+      },
+      {
+        "function": "addColorStop",
+        "url": "",
+        "sampleMs": 1515.18
+      },
+      {
+        "function": "createRadialGradient",
+        "url": "",
+        "sampleMs": 1287.01
+      },
+      {
+        "function": "fillRect",
+        "url": "",
+        "sampleMs": 928.19
+      },
+      {
+        "function": "_",
+        "url": "hidden",
+        "sampleMs": 803.99
+      },
+      {
+        "function": "draw",
+        "url": "https://usr/game.js",
+        "sampleMs": 737.74
+      },
+      {
+        "function": "ret.subscribeHandler",
+        "url": "",
+        "sampleMs": 659.98
+      },
+      {
+        "function": "set globalAlpha",
+        "url": "",
+        "sampleMs": 615.24
+      },
+      {
+        "function": "(program)",
+        "url": "",
+        "sampleMs": 613.06
+      },
+      {
+        "function": "(garbage collector)",
+        "url": "",
+        "sampleMs": 442.98
+      },
+      {
+        "function": "drawBuildArea",
+        "url": "https://usr/game.js",
+        "sampleMs": 442.56
+      },
+      {
+        "function": "",
+        "url": "https://usr/game.js",
+        "sampleMs": 342.04
+      },
+      {
+        "function": "emit",
+        "url": "hidden",
+        "sampleMs": 254.73
+      },
+      {
+        "function": "t",
+        "url": "hidden",
+        "sampleMs": 202.38
+      },
+      {
+        "function": "x",
+        "url": "hidden",
+        "sampleMs": 202.24
+      },
+      {
+        "function": "subscribeHandler",
+        "url": "hidden",
+        "sampleMs": 194.57
+      },
+      {
+        "function": "q",
+        "url": "https://usr/game.js",
+        "sampleMs": 154.62
+      },
+      {
+        "function": "h",
+        "url": "hidden",
+        "sampleMs": 151.28
+      },
+      {
+        "function": "l.emit",
+        "url": "hidden",
+        "sampleMs": 144.22
+      },
+      {
+        "function": "drawImage",
+        "url": "",
+        "sampleMs": 133.4
+      },
+      {
+        "function": "l.towerGearReadyKeys",
+        "url": "https://usr/game.js",
+        "sampleMs": 118.16
+      }
+    ]
+  },
+  "lowFps": {
+    "sampleDurationMs": 29401.249,
+    "functionCallTotalMs": 15296.423,
+    "topSelfSamples": [
+      {
+        "function": "",
+        "url": "hidden",
+        "sampleMs": 3889.17
+      },
+      {
+        "function": "(garbage collector)",
+        "url": "",
+        "sampleMs": 2417.25
+      },
+      {
+        "function": "_",
+        "url": "hidden",
+        "sampleMs": 1985.1
+      },
+      {
+        "function": "ret.subscribeHandler",
+        "url": "",
+        "sampleMs": 1261.14
+      },
+      {
+        "function": "c.sprite",
+        "url": "https://usr/defense-code/game.js",
+        "sampleMs": 937.97
+      },
+      {
+        "function": "update",
+        "url": "https://usr/game.js",
+        "sampleMs": 899.79
+      },
+      {
+        "function": "getContext",
+        "url": "",
+        "sampleMs": 880.95
+      },
+      {
+        "function": "draw",
+        "url": "https://usr/game.js",
+        "sampleMs": 757.43
+      },
+      {
+        "function": "",
+        "url": "https://usr/game.js",
+        "sampleMs": 740.01
+      },
+      {
+        "function": "(idle)",
+        "url": "",
+        "sampleMs": 731.69
+      },
+      {
+        "function": "drawImage",
+        "url": "",
+        "sampleMs": 654.45
+      },
+      {
+        "function": "stars",
+        "url": "https://usr/game.js",
+        "sampleMs": 641.68
+      },
+      {
+        "function": "(program)",
+        "url": "",
+        "sampleMs": 640.61
+      },
+      {
+        "function": "emit",
+        "url": "hidden",
+        "sampleMs": 581.1
+      },
+      {
+        "function": "x",
+        "url": "hidden",
+        "sampleMs": 497.92
+      },
+      {
+        "function": "drawBuildArea",
+        "url": "https://usr/game.js",
+        "sampleMs": 404.51
+      },
+      {
+        "function": "subscribeHandler",
+        "url": "hidden",
+        "sampleMs": 345.67
+      },
+      {
+        "function": "_object_spread",
+        "url": "https://usr/game.js",
+        "sampleMs": 328.51
+      },
+      {
+        "function": "save",
+        "url": "",
+        "sampleMs": 320.19
+      },
+      {
+        "function": "l.emit",
+        "url": "hidden",
+        "sampleMs": 297.25
+      },
+      {
+        "function": "sprite",
+        "url": "https://usr/game.js",
+        "sampleMs": 274.85
+      },
+      {
+        "function": "",
+        "url": "",
+        "sampleMs": 273.12
+      },
+      {
+        "function": "drawRemains",
+        "url": "https://usr/game.js",
+        "sampleMs": 257.06
+      },
+      {
+        "function": "set fillStyle",
+        "url": "",
+        "sampleMs": 252.27
+      },
+      {
+        "function": "restore",
+        "url": "",
+        "sampleMs": 247.23
+      }
+    ]
+  }
+}

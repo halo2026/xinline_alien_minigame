@@ -1,5 +1,5 @@
 const test=require('node:test'),assert=require('node:assert/strict');
-for(const modulePath of ['../shared/view','../../alien-wolf-wechat/shared/view','../shared/greenstar']){
+for(const modulePath of ['../shared/view','../shared/greenstar']){
  test(modulePath+' repair drag pans, tap builds, revival follows again',()=>{
  const stage=require(modulePath),{View}=stage.api||stage,v=new View({}, {},390,844,0);v.resize(390,844,0);v.game.start();v.game.player.hp=0;v.updateCamera();
  const start={...v.camera};v.down(7,210,220);v.motion(7,160,250);v.up(7,160,250);

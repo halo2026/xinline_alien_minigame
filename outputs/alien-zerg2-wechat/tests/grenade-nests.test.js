@@ -1,5 +1,5 @@
 const test=require('node:test'),assert=require('node:assert/strict');
-for(const root of ['../shared','../../alien-wolf-wechat/shared']){const {Game}=require(root+'/core');
+for(const root of ['../shared']){const {Game}=require(root+'/core');
  function arena(){const g=new Game({seed:3});g.start();g.wave=14;g.pending=[];g.nextWave=Infinity;g.enemies=[];g.chests=[];g.bullets=[];g.player.fireCd=100;g.player.grenadeBonus=0;g.yoda.hp=0;return g;}
  function blast(g,x,y,critical=false){g.bullets.push({kind:'grenade',sx:x,sy:y,tx:x,ty:y,x,y,age:0,life:.01,angle:0,critical});g.update(.02);}
  test(root+' grenade destroys both egg types and drops their reward once',()=>{for(const type of [0,1]){const g=arena(),n=g.addInsectNest({x:900,y:900},type);blast(g,n.x,n.y);assert.equal(n.hp,0);assert(n.rewarded);assert(!g.chests.includes(n));const count=g.pickups.length;blast(g,n.x,n.y);assert.equal(g.pickups.length,count);}});

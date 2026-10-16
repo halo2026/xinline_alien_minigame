@@ -1,5 +1,5 @@
 const test=require('node:test'),assert=require('node:assert/strict');
-for(const root of ['../shared','../../alien-wolf-wechat/shared']){
+for(const root of ['../shared']){
  const {Game}=require(root+'/core');
  test(root+' frost has no trail and stronger capped slow',()=>{const g=new Game(),t={id:12202,x:900,y:900,angle:0,techBranch:1,techRank:1,techSpec:0};g.fire(t,'frost');assert.equal(g.trails.length,0);assert(g.bullets[0].slow>=.5);for(let rank=1;rank<=5;rank++)assert(g.towerStats({...t,techRank:rank}).slow<=.8);});
  test(root+' rockets alone accept flying targets and airburst damages air only',()=>{const g=new Game(),t={id:12205,x:800,y:800,angle:0,techRank:1},air={x:1200,y:800,hp:10000,air:true};for(const branch of [0,1])assert.equal(g.fireArtillery(t,air,g.towerStats({...t,techBranch:branch})),false);assert(g.fireArtillery(t,air,g.towerStats({...t,techBranch:2})));assert(g.bullets[0].airTarget);const ground={x:1200,y:800,hp:10000,air:false};g.enemies=[air,ground];g.damage=(e,d)=>e.hp-=d;g.cannonImpact({...g.bullets[0],x:1200,y:800});assert(air.hp<10000);assert.equal(ground.hp,10000);assert(g.fx.some(f=>f.kind==='missileAirburst'));assert(!g.fx.some(f=>f.kind==='cannoncrater'));});

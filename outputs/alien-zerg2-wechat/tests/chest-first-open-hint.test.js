@@ -1,5 +1,5 @@
 const test=require('node:test'),assert=require('node:assert/strict');
-for(const root of ['../shared','../../alien-wolf-wechat/shared']){
+for(const root of ['../shared']){
  const {Game}=require(root+'/core'),{View}=require(root+'/view'),P=require(root+'/progression');
  const make=g=>Object.assign(Object.create(View.prototype),{game:g,inventoryOpen:true,flushSave(){this.saved=this.game.saveProgress();}});
  const finish=g=>Object.assign(g.progress,{resourceIntroStep:5,attributeIntroDone:true});

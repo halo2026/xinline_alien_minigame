@@ -1,5 +1,5 @@
 const test=require('node:test'),assert=require('node:assert/strict');
-for(const root of ['../shared','../../alien-wolf-wechat/shared']){
+for(const root of ['../shared']){
  const P=require(root+'/progression'),S=require(root+'/store'),{View}=require(root+'/view');
  test(root+' supply station appears only after both Zerg acts and survives replay/save',()=>{
   const v=new View({}, {},390,844),s=v.game.progress;

@@ -1,5 +1,5 @@
 const test=require('node:test'),assert=require('node:assert/strict');
-for(const root of ['../shared','../../alien-wolf-wechat/shared'])test(root+' rare operator odds, common rewards and persisted reveal queue',()=>{
+for(const root of ['../shared'])test(root+' rare operator odds, common rewards and persisted reveal queue',()=>{
 const P=require(root+'/progression'),{Game}=require(root+'/core'),{View}=require(root+'/view');
 function draw(roll,owned=false){const s=P.fresh();if(owned)for(const key of P.operatorKeys)s.operators[key]=true;const g=new Game({progress:s});g.collectChest({count:1});let q=[0,roll,0,0];g.random=()=>q.shift()??0;return {g,result:g.openChests(1)};}
 assert.equal(draw(.04499).result.rewards[0].kind,'operator');assert.equal(draw(.045).result.rewards[0].kind,'fragment');assert.equal(draw(.5).result.rewards[0].kind,'chips');assert.equal(draw(.84999).g.progress.chips,100);assert.equal(draw(.85).result.rewards[0].kind,'kryptonite');assert.equal(draw(.95).result.rewards[0].kind,'gear');assert.equal(draw(.01,true).result.rewards[0].kind,'fragment');

@@ -1,5 +1,5 @@
 const test=require('node:test'),assert=require('node:assert/strict');
-for(const root of ['../shared','../../alien-wolf-wechat/shared']){
+for(const root of ['../shared']){
  const {View}=require(root+'/view'),P=require(root+'/progression');
  function setup(w=390,h=844){const v=new View({}, {},w,h),g=v.game,s=g.progress;s.inventory=[{uid:901,id:41001},{uid:902,id:41011},{uid:903,id:41021},{uid:904,id:41002},{uid:905,id:41031}];s.warehouse=Array(24).fill(null);s.warehouse.splice(0,3,901,902,904);s.equipped=[903,null,null,null,null,null];s.overflow=[905];s.chips=0;for(let n=0;n<18;n++){s.inventory.push({uid:1000+n,id:41002});s.warehouse[3+n]=1000+n;}P.syncWarehouseMaterials(s);v.inventoryOpen=true;v.selectedGear=901;return {v,g,s,item:s.inventory[0]};}
  test(root+' batch salvage removes warehouse whites only and refills overflow without consuming it',()=>{const {g,s}=setup();const plan=g.whiteSalvagePlan();assert.deepEqual(plan,{uids:[901,902],count:2,value:6});assert(g.salvageWhiteGear(plan.uids));assert.equal(s.chips,6);assert.deepEqual(s.inventory.filter(i=>i.uid<1000&&i.id>=41000).map(i=>i.uid),[903,904,905]);assert(s.warehouse.includes(905));assert(s.equipped.includes(903));assert(!g.salvageWhiteGear(plan.uids));assert.equal(s.chips,6);});
